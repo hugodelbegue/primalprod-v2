@@ -1,0 +1,37 @@
+.hidden {
+    overflow: hidden !important;
+
+    @media #{$mobileMenuVisible} {
+        padding-right: 9px !important;
+    }
+}
+
+.frameworkX {
+    padding-left: var(--side-x);
+    padding-right: var(--side-x);
+
+    @media #{$mobileScreen} {
+        --side-x: calc(50% - var(--desktop) / 2);
+        // --side-x: max(var(--side), calc(50% - var(--desktop) / 2));
+    }
+}
+
+.frameworkY {
+    padding-top: var(--side-y);
+    padding-bottom: var(--side-y);
+}
+
+.padding-block {
+    padding: 1rem;
+}
+
+.margin-around {
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.middle {
+    display: flex;
+    place-content: center;
+    place-items: center;
+}

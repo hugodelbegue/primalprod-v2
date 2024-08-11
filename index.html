@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimalProd</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      .loading {
+        position: absolute;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: #f28f52;
+        z-index: 3;
+      }
+      .loading::before,
+      .loading::after {
+        position: absolute;
+        content: "";
+        border: 5px solid #2c3e50;
+        border-radius: 3px;
+        height: 50px;
+        width: 50px;
+        animation-name: rotateLoading;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+      .loading::before {
+        animation-duration: 5000ms;
+      }
+      .loading::after {
+        /* margin: auto; */
+        transform: rotate(45deg);
+        animation-duration: 2500ms;
+        animation-direction: reverse;
+      }
+      @keyframes rotateLoading {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <div id="app"></div>
+    <script>
+      const load = document.querySelector(".loading");
+      window.addEventListener("load", () => {
+        document.body.style.overflow = "initial";
+        load.remove();
+      });
+    </script>
+    <script type="module" src="/src/main.js" defer></script>
+  </body>
+</html>
