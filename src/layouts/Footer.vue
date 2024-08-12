@@ -1,16 +1,15 @@
 <template>
     <footer class="wrapper-footer frameworkX">
         <div class="block-footer margin-around">
-            FOOTER
             <ReadMore />
-            <!-- <Legality /> -->
+            <SocialLinks />
         </div>
-        <!-- <SocialLinks /> -->
+        <!-- <Legality /> -->
     </footer>
 </template>
 
 <script setup>
-// import SocialLinks from '@/components/SocialLinks.vue'
+import SocialLinks from '@/components/footer/SocialLinks.vue'
 import ReadMore from '@/components/footer/ReadMore.vue'
 // import Legality from '@/components/Legality.vue'
 </script>
@@ -33,6 +32,7 @@ footer {
 }
 
 .block-footer {
+    display: flex;
     padding: var(--side-y) var(--side);
     background-color: var(--orange);
 }
