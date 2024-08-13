@@ -9,6 +9,9 @@ body {
   line-height: var(--f-line-global);
   font-weight: var(--f-regular);
   font-size: var(--f-size-global);
+  letter-spacing: var(--f-space-global);
+  font-optical-sizing: auto;
+  font-style: normal;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +24,8 @@ body {
 #app {
   width: 100%;
   margin: 0 auto;
-  font-weight: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -32,19 +36,20 @@ body {
 
 a,
 .burger,
-.mentions__link {
+.link-mentions {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
-  transition: .3s;
+  transition: opacity var(--time-transition);
 
-  @media #{$desktopDownScreen} {
+  @media #{$mobileScreen} {
     &:hover {
-      color: var(--color-link);
+      opacity: .5;
     }
   }
 
   &:active {
-    color: var(--color-link);
+    opacity: .5;
   }
 }
 
@@ -84,8 +89,15 @@ a.router-link-active {
   }
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--f-family-title);
+  line-height: 1;
+}
+
 h1 {
-  font-size: 3.25em;
+  font-size: 2.4em;
   font-weight: var(--weight-very-bold);
   color: var(--color-heading);
   transition: .4s;
@@ -137,11 +149,6 @@ textarea {
 }
 
 // Scrollbar
-::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-}
-
 ::-webkit-scrollbar-track {
   background: var(--parchment);
   padding: 1px;

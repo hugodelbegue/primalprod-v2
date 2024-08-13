@@ -21,13 +21,18 @@
     padding-bottom: var(--side-y);
 }
 
-.padding-block {
-    padding: 1rem;
+.padding-x {
+    padding-left: var(--side);
+    padding-right: var(--side);
+}
+
+.color-block {
+    background: var(--background-second);
 }
 
 .margin-around {
-    margin: 10px;
-    border-radius: 4px;
+    margin: var(--margin-block);
+    border-radius: var(--radius-block);
 }
 
 .middle {

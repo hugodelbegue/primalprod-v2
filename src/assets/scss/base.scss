@@ -1,19 +1,25 @@
-// @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rock+Salt&display=swap');
 
 :root {
   // font
-  --f-outfit: 'Outfit', sans-serif;
+  --f-verdana: 'Verdana', sans-serif;
+  --f-rubik: 'Rubik', sans-serif;
+  --f-rock: 'Rock Salt', cursive;
 
-  --f-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  // --f-family-title: var(--f-futura);
+  --f-family: var(--f-verdana);
+  --f-family-title: var(--f-rubik);
   // --f-family-button: var(--f-outfit);
   --f-regular: 400;
   --f-bold: 600;
+
   --f-size-global: 16px;
   --f-size-important: 1.9em;
   --f-menu: 1em;
+  --f-footer: 14px;
+
   --f-line-global: 1.6;
+  --f-space-global: .5px;
 
   // layout
   --max-desktop: 1920px;
@@ -22,10 +28,18 @@
   --mobile: 767px;
   --index: calc(1vw + 1vh);
 
-  --side: 1rem;
+  --side: 2rem;
   --side-y: 5rem;
   --side-x: calc(50% - var(--mobile) / 2);
   // --side-x: max(var(--side), calc(50% - var(--mobile) / 2));
+  --size-line: 4px;
+
+  // layout block
+  --margin-block: 10px;
+  --radius-block: 5px;
+
+  // animations
+  --time-transition: 300ms;
 
   // colors
   --background-main: var(--beige);
@@ -234,7 +248,12 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
+  padding: 0;
   list-style-type: none;
   outline: transparent !important;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
