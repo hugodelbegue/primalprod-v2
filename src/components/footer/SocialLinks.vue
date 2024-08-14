@@ -105,6 +105,7 @@ export default {
     h2 {
         color: var(--text-light);
         font-size: 1.5em;
+        line-height: inherit;
         margin: 0;
     }
 

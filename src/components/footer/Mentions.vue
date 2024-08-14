@@ -294,9 +294,9 @@ export default {
 
     h3 {
         color: var(--text-light);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        padding-top: 1em;
+        margin-top: 3em;
+        margin-bottom: 2em;
+        padding-top: 3em;
         border-top: calc(var(--size-line) / 2) solid var(--color-separation-line);
     }
 

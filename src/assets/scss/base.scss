@@ -40,18 +40,21 @@
 
   // animations
   --time-transition: 300ms;
+  --time-animations: 500ms;
 
   // colors
   --background-main: var(--beige);
   --background-second: var(--orange);
 
   --color-text: var(--black);
+  --color-text-hover: var(--black-light);
 
   --color-separation-line: var(--black-very-light);
 
   --orange: #f28f52;
   --beige: #f5e9cd;
   --black: #2c3e50;
+  --black-light: rgba(43, 61, 79, 0.5);
   --black-very-light: rgba(43, 61, 79, 0.2);
 
 

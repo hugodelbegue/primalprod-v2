@@ -28,6 +28,6 @@ import Logo from '../items/Logo.vue'
 }
 
 .footer-logo {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
 }
 </style>

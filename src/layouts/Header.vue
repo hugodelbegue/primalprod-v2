@@ -9,6 +9,7 @@
                 </template>
             </Logo>
             <div class="layout-nav frameworkY margin-around padding-x color-block">
+                <NavMobile />
                 <NavDesktop />
             </div>
         </div>
@@ -49,6 +50,7 @@
 <script setup>
 import Logo from '@/components/items/Logo.vue'
 import NavDesktop from '@/components/header/navbar/NavDesktop.vue'
+import NavMobile from '@/components/header/navbar/NavMobile.vue'
 </script>
 
 <script>
@@ -122,10 +124,13 @@ header {
 
 .layout-header {
     display: flex;
+    place-content: space-between;
 }
 
 .layout-nav {
-    width: 100%;
+    @media #{$switch} {
+        width: 100%;
+    }
 }
 
 .nav__part {
