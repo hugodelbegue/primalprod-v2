@@ -1,42 +1,50 @@
 <template>
-  <div class="layout-home middle">
-    <Logo class="avatar">
-      <template #picture>
-        <img class="avatar-img" alt="Avatar" src="@/components/home/avatar.svg" />
-      </template>
-    </Logo>
-    <AboutMe />
+  <div class="layout-home frameworkY middle">
+    <div class="layout-aboutme frameworkX middle margin-around">
+      <Logo class="avatar">
+        <template #picture>
+          <img class="avatar-img" alt="Avatar" src="@/components/home-page/section-aboutme/avatar.svg" />
+        </template>
+      </Logo>
+      <AboutMe />
+    </div>
+    <Test class="frameworkX" />
   </div>
 </template>
 
 <script setup>
 import Logo from '@/components/items/Logo.vue'
-import AboutMe from '@/components/home/AboutMe.vue'
+import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
+import Test from '@/components/home-page/section-test/Test.vue'
 </script>
 
 <style lang="scss" scoped>
 .layout-home {
-  min-height: calc(100vh - calc(var(--side-y) * 2) - calc(var(--margin-block) * 3) - 48px);
   flex-direction: column;
+}
+
+.layout-aboutme {
+  --side-x: calc(50% - var(--tablet) / 2);
+  flex-direction: column;
+  min-height: calc(100vh - calc(var(--side-y) * 1) - calc(var(--margin-block) * 4) - 48px);
   gap: 2.5rem;
+  padding-bottom: calc(48px * 2);
 
   @media #{$mobileScreen} {
-    max-width: 80%;
+    // max-width: var(--tab:let);
   }
 
   @media #{$tabletScreen} {
     flex-direction: row;
     gap: 5rem;
-    max-width: 60%;
   }
-
-  @media #{$desktopScreen} {}
 }
 
 .avatar {
   display: flex;
   place-content: center;
   place-items: flex-start;
+  margin-left: 10rem;
 
   &::before {
     content: "";
@@ -51,7 +59,7 @@ import AboutMe from '@/components/home/AboutMe.vue'
     place-content: center;
     place-items: center;
     font-weight: var(--weight-bold);
-    color: #333;
+    color: var(--black);
     font-family: var(--f-rock);
   }
 
@@ -61,7 +69,7 @@ import AboutMe from '@/components/home/AboutMe.vue'
     height: 17px;
     border-radius: 50%;
     background: var(--orange);
-    border: 1px solid #333;
+    border: 1px solid var(--black);
     position: absolute;
     visibility: hidden;
     transform: translate(-333%, 110%);
@@ -75,16 +83,6 @@ import AboutMe from '@/components/home/AboutMe.vue'
   width: 125px;
   height: auto;
   aspect-ratio: calc(264 / 447) / 1;
-}
-
-span {
-  font-size: .85em;
-  color: var(--color-heading);
-  margin-left: .8em;
-}
-
-img {
-  place-content: none;
 }
 
 // Animation
@@ -115,13 +113,13 @@ img {
     opacity: .8;
     filter: blur(5px);
     transform: translate(-180%, -20%) matrix(1, 2, 1, 1, 5, 6);
-    background: #ff0000;
+    background: var(--red);
     content: "";
     height: 70px;
   }
 
   38% {
-    border: 1px solid #333;
+    border: 1px solid var(--black);
     opacity: 1;
     filter: blur(0px);
     transform: translate(-180%, -20%);
@@ -133,7 +131,7 @@ img {
   }
 
   80% {
-    border: 1px solid #333;
+    border: 1px solid var(--black);
     transform: translate(-180%, -20%);
     border-radius: 50%;
     font-size: 14px;

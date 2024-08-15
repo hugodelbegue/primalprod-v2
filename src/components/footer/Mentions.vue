@@ -263,6 +263,7 @@
                 78-17
                 du 6
                 janvier 1978).
+                <br><br><br>
             </p>
         </div>
     </div>
@@ -310,7 +311,7 @@ export default {
 
     .scroll {
         overflow-y: scroll;
-        height: calc(58vh - 1em);
+        height: 75vh;
         padding-right: 2em;
         border-bottom: var(--size-line) solid var(--color-separation-line);
     }

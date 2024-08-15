@@ -1,7 +1,7 @@
 <template>
     <div class="aboutme">
         <h1>Hello ! Phrase d'accroche</h1>
-        <br><br>
+        <br>
         <p>
             Développeur web junior curieux et impliqué, je souhaite mettre à profit mes compétences pour mener à bien
             mes missions, en cultivant de <strong>bonnes pratiques</strong> et un <strong>travail bien fait</strong>..
@@ -11,6 +11,7 @@
 
 <style lang="scss" scoped>
 .aboutme {
+    margin-right: 10rem;
 
     h1,
     p {

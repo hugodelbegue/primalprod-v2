@@ -1,8 +1,8 @@
 <template>
   <div class="layout" :class="showPaint">
     <Header />
-    <main class="wrapper-main frameworkX">
-      <div class="layout-main frameworkY middle margin-around">
+    <main class="wrapper-main">
+      <div class="layout-main">
         <RouterView />
       </div>
     </main>
@@ -53,11 +53,6 @@ export default {
 
 
 <style lang="scss" scoped>
-.layout-main {
-  padding-left: var(--side);
-  padding-right: var(--side);
-}
-
 // Label background
 .paint {
   background-image: url(@/assets/img/label.svg);

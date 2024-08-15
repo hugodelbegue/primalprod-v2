@@ -3,16 +3,16 @@
         <BurgerMenu :open-menu="openMenu" ref="burgerMenu" :text="text" :textKey="textKey" />
         <div class="nav-burger-links" ref="menu">
             <ul class="wrapper-burger-links">
-                <li class="nav-link two-link">
-                    <router-link :to="{ name: 'services' }" @click="closeMenu">Mes prestatins</router-link>
+                <li class="nav-link one-link">
+                    <router-link :to="{ name: 'services' }" @click="closeMenu">Mes prestations</router-link>
                 </li>
-                <li class="nav-link four-link">
+                <li class="nav-link two-link">
                     <router-link :to="{ name: 'projects' }" @click="closeMenu">Réalisations</router-link>
                 </li>
-                <li class="nav-link four-link">
+                <li class="nav-link three-link">
                     <router-link :to="{ name: 'about' }" @click="closeMenu">À propos</router-link>
                 </li>
-                <li class="nav-link five-link">
+                <li class="nav-link four-link">
                     <router-link :to="{ name: 'contact' }" @click="closeMenu">Contact</router-link>
                 </li>
             </ul>
@@ -34,7 +34,7 @@ export default {
         document.addEventListener("click", (event) => {
             if (event.target == overlay && overlay.contains(event.target)) {
                 if (event.target !== burger && !burger.contains(event.target)) {
-                    this.closeMenu();
+                    this.closeMenu()
                 }
             }
         });
@@ -48,11 +48,9 @@ export default {
     methods: {
         openMenu() {
             const lines = this.$refs.burgerMenu.$refs.lines
-            const { menu, overlay, submenu } = this.$refs
-            const header = this.$parent.$refs.header
+            const { menu, overlay } = this.$refs
             if (menu.classList.contains('hide') || !menu.classList.contains('show')) {
                 menu.classList.remove('hide');
-                header.classList.remove('down-menu')
                 menu.classList.add('show')
                 menu.style.display = "flex"
                 lines.classList.remove('crossDeforms')
@@ -64,34 +62,31 @@ export default {
             } else {
                 menu.classList.remove('show')
                 lines.classList.remove('crossForms')
-                header.classList.remove("fixe-menu-scroll")
                 lines.classList.add('crossDeforms')
                 overlay.classList.remove('overlay')
                 document.body.classList.remove('hidden')
                 menu.classList.add('hide')
-                submenu.style.display = ""
                 this.text = 'menu'
                 this.textKey += 1
                 setTimeout(() => {
                     menu.style.display = ""
-                }, 500);
+                }, 250);
             }
         },
         closeMenu() {
             const lines = this.$refs.burgerMenu.$refs.lines
-            const { menu, overlay, submenu } = this.$refs
+            const { menu, overlay } = this.$refs
             menu.classList.remove('show')
             lines.classList.remove('crossForms')
             lines.classList.add('crossDeforms')
             overlay.classList.remove('overlay')
             document.body.classList.remove('hidden')
             menu.classList.add('hide')
-            submenu.style.display = ""
             this.text = 'menu'
             this.textKey += 1
             setTimeout(() => {
                 menu.style.display = ""
-            }, 500)
+            }, 250)
         }
     }
 }
@@ -100,8 +95,7 @@ export default {
 <style lang="scss" scoped>
 nav {
     --space-link: 10vh;
-    --burger-size: 30px;
-    --time-animation: 500ms;
+    --burger-size: 1em;
     font-size: var(--f-menu);
 }
 
@@ -129,37 +123,9 @@ nav {
     }
 }
 
-.wrapper-submenu-links {
-    display: none;
-    position: absolute;
-    top: -.5rem;
-    left: 6rem;
-    width: max-content;
-}
-
-.submenu-link:first-of-type {
-    margin-bottom: 1em;
-}
-
-.submenu-link {
-    animation: appearanceSublink var(--time-animation) cubic-bezier(.28, .76, .82, .96) both;
-    opacity: 0;
-}
-
-.submenu-link+.one-sublink {
-    animation-delay: 0ms;
-}
-
-.submenu-link+.two-sublink {
-    animation-delay: 100ms;
-}
-
-.submenu-link+.three-sublink {
-    animation-delay: 200ms;
-}
-
 .overlay {
-    background: var(--main-background);
+    background: var(--background-overlay);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;
@@ -170,8 +136,8 @@ nav {
 }
 
 .nav-link {
-    --delay: 125ms;
-    --animation: 500ms;
+    --delay: 100ms;
+    --animation: 250ms;
     animation: rollOut var(--animation) cubic-bezier(.28, .76, .82, .96) both;
     opacity: 0;
 }
@@ -190,10 +156,6 @@ nav {
 
 .nav-link+.four-link {
     animation-delay: calc(var(--delay) * 3);
-}
-
-.nav-link+.five-link {
-    animation-delay: calc(var(--delay) * 4);
 }
 
 // toggle menu

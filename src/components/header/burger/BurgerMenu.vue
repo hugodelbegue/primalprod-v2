@@ -46,13 +46,15 @@ input[type="checkbox"] {
 }
 
 .burger {
+    --space-lines: 7px;
     cursor: pointer;
     z-index: 4;
     position: relative;
     display: flex;
     align-items: center;
-    width: 30px;
-    height: auto;
+    width: auto;
+    height: var(--burger-size);
+    ;
     aspect-ratio: 3 / 2;
     transition: width var(--time-transition);
 
@@ -80,12 +82,12 @@ input[type="checkbox"] {
 .burger-lines::before {
     position: absolute;
     right: 0;
-    top: 10px;
+    top: var(--space-lines);
 }
 
 .burger-lines::after {
     position: absolute;
-    bottom: 10px;
+    bottom: var(--space-lines);
 }
 
 // hover menu
@@ -108,12 +110,12 @@ input[type="checkbox"] {
 .crossDeforms {
     &:before {
         right: 0;
-        top: 10px;
+        top: var(--space-lines);
         transform: rotate(0deg);
     }
 
     &:after {
-        bottom: 10px;
+        bottom: var(--space-lines);
         transform: rotate(0deg);
     }
 }

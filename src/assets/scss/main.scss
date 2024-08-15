@@ -28,12 +28,6 @@ body {
   flex-direction: column;
 }
 
-
-
-.add__padding {
-  padding-top: 56px;
-}
-
 a,
 .burger,
 .link-mentions {
@@ -54,9 +48,17 @@ a,
 }
 
 a.router-link-active {
-  // transition: .3s;
-  color: var(--color-link);
+  cursor: default;
+  color: var(--red);
+  opacity: 1;
 }
+
+.nav-link {
+  // links menu
+}
+
+
+
 
 .important__shadow {
   transition: .4s;

@@ -1,9 +1,5 @@
 .hidden {
     overflow: hidden !important;
-
-    @media #{$mobileMenuVisible} {
-        padding-right: 9px !important;
-    }
 }
 
 .frameworkX {

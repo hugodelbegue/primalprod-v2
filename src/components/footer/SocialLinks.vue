@@ -79,10 +79,10 @@ export default {
 }
 
 .mentions {
-    z-index: 1;
+    z-index: 4;
     display: none;
     place-items: center;
-    background: var(--color-separation-line);
+    background: var(--background-mentions);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;

@@ -40,22 +40,29 @@
 
   // animations
   --time-transition: 300ms;
-  --time-animations: 500ms;
+  --time-animation: 500ms;
 
   // colors
   --background-main: var(--beige);
   --background-second: var(--orange);
 
-  --color-text: var(--black);
-  --color-text-hover: var(--black-light);
+  --background-overlay: var(--beige-opaque);
+  --background-mentions: var(--color-separation-line);
 
-  --color-separation-line: var(--black-very-light);
+  --color-text: var(--black);
+  --color-text-hover: var(--black-opaque);
+  --color-heading: var(--black);
+
+  --color-separation-line: var(--black-very-opaque);
 
   --orange: #f28f52;
+  --red: #ff0000;
   --beige: #f5e9cd;
+  --beige-opaque: rgba(245, 233, 205, 0.75);
   --black: #2c3e50;
-  --black-light: rgba(43, 61, 79, 0.5);
-  --black-very-light: rgba(43, 61, 79, 0.2);
+  --black-opaque: rgba(43, 61, 79, 0.5);
+  --black-very-opaque: rgba(43, 61, 79, 0.2);
+  --gray-very-light: #d3d3d3;
 
 
 
@@ -86,7 +93,7 @@
   --white: #ffffff;
   --white-soft: #f8f8f8;
 
-  --black: #000;
+  // --black: #000;
   --black-soft: #222222;
 
   --linear-background-light: linear-gradient(225deg, var(--sunglow) 0%, var(--parchment) 100%), var(--sunglow);
