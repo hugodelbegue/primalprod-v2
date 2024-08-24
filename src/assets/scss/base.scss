@@ -45,6 +45,7 @@
   // colors
   --background-main: var(--beige);
   --background-second: var(--orange);
+  --background-second-opaque: var(--orange-opaque);
 
   --background-overlay: var(--beige-opaque);
   --background-mentions: var(--color-separation-line);
@@ -53,9 +54,12 @@
   --color-text-hover: var(--black-opaque);
   --color-heading: var(--black);
 
+  --color-shadow: gray;
+
   --color-separation-line: var(--black-very-opaque);
 
   --orange: #f28f52;
+  --orange-opaque: rgba(242, 143, 82, 0.25);
   --red: #ff0000;
   --beige: #f5e9cd;
   --beige-opaque: rgba(245, 233, 205, 0.75);

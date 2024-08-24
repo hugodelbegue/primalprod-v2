@@ -1,4 +1,5 @@
 <template>
+  <div ref="top"></div>
   <div class="layout" :class="showPaint">
     <Header />
     <main class="wrapper-main">
@@ -8,13 +9,14 @@
     </main>
     <Footer />
   </div>
+  <ReturnTop title="Retour en haut de la page" @click="top" />
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router'
 import Header from '@/layouts/Header.vue'
 import Footer from '@/layouts/Footer.vue'
-// import ReturnTop from './components/items/ReturnTop.vue'
+import ReturnTop from './components/items/ReturnTop.vue'
 </script>
 
 <script>
@@ -22,8 +24,8 @@ export default {
   methods: {
     // Return to the top
     top() {
-      const { top } = this.$refs;
-      top.scrollIntoView({ behavior: 'smooth' });
+      const { top } = this.$refs
+      top.scrollIntoView({ behavior: 'smooth' })
     }
   },
   computed: {

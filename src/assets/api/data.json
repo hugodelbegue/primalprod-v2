@@ -1,0 +1,23 @@
+{
+    "projectList":
+    [
+        {
+            "id": 1,
+            "title": "Test",
+            "preview": "urlshorteningapi_1.png",
+            "tag": "Développement web"
+        },
+        {
+            "id": 2,
+            "title": "Test2",
+            "preview": "newshomepage_1.png",
+            "tag": "Titre du projet"
+        },
+        {
+            "id": 3,
+            "title": "Test3",
+            "preview": "interactivecarddetailsform_1.png",
+            "tag": "Titre du projet 2"
+        }
+    ]
+}

@@ -9,6 +9,8 @@
       <AboutMe />
     </div>
     <Test class="frameworkX" />
+    <Test2 class="frameworkX" />
+    <Test3 class="frameworkX" />
   </div>
 </template>
 
@@ -16,6 +18,8 @@
 import Logo from '@/components/items/Logo.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Test from '@/components/home-page/section-test/Test.vue'
+import Test2 from '@/components/home-page/section-test/Test2.vue'
+import Test3 from '@/components/home-page/section-test/Test3.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -26,7 +30,7 @@ import Test from '@/components/home-page/section-test/Test.vue'
 .layout-aboutme {
   --side-x: calc(50% - var(--tablet) / 2);
   flex-direction: column;
-  min-height: calc(100vh - calc(var(--side-y) * 1) - calc(var(--margin-block) * 4) - 48px);
+  min-height: calc(100vh - var(--side-y) - calc(var(--margin-block) * 4) - 48px);
   gap: 2.5rem;
   padding-bottom: calc(48px * 2);
 
