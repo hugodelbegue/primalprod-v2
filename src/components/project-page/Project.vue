@@ -15,10 +15,6 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-a {
-    color: inherit;
-}
-
 .project-url {
     display: flex;
     flex-direction: column;
