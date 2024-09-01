@@ -1,19 +1,19 @@
 <template>
-    <div class="container-project">
-        <div class="layout-project frameworkY">
-            <TransitionGroup name="transitionProjects" appear>
-                <article v-for="data in allData" :key="data" class="project">
-                    <Project :title="data.title" @click="onClick(data.title)">
+    <div class="container-gallery">
+        <div class="layout-gallery frameworkY">
+            <TransitionGroup name="transition-card" appear>
+                <article v-for="data in renderData" :key="data" class="card">
+                    <CardGallery :title="data.title" @click="openProject(cleanUrl(data.selection), data.id)">
                         <template #image>
-                            <RenderProjectImg :src="imgUrl(data.preview)" :alt="data.title" :title="data.title" />
+                            <RenderCardImg :src="imgUrl(data.preview)" :alt="data.title" :title="data.title" />
                         </template>
                         <template #title>
-                            <div v-if="data.title" class="layout-title-project">{{ data.title }}</div>
+                            <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
                         </template>
                         <template #text>
                             <p v-if="data.tag">{{ data.tag }}</p>
                         </template>
-                    </Project>
+                    </CardGallery>
                 </article>
             </TransitionGroup>
         </div>
@@ -28,10 +28,10 @@
 </template>
 
 <script setup>
-import Project from '@/components/project-page/Project.vue'
+import API from '@/assets/api/data.json'
+import CardGallery from './CardGallery.vue'
 // import Button from '@/components/items/Button.vue'
-import RenderProjectImg from '@/components/project-page/RenderProjectImg.vue'
-import JSONDATA from '@/assets/api/data.json'
+import RenderCardImg from './RenderCardImg.vue'
 </script>
 
 <script>
@@ -43,7 +43,7 @@ export default {
     },
     data() {
         return {
-            projects: JSONDATA,
+            projects: API,
             choice: "",
             render: " ",
             cleanString(name) {
@@ -58,28 +58,26 @@ export default {
         // Remove the 'hidden' class from body when going backwards
         window.addEventListener('popstate', () => {
             document.body.classList.remove('hidden')
-        });
+        })
     },
     computed: {
-        allData() {
+        renderData() {
             return this.projects.projectList.filter((items) => {
                 if (this.choice == "frontend") {
-                    return items.frontend;
+                    return items.frontend
                 }
                 if (this.choice == "backend") {
-                    return items.backend;
+                    return items.backend
                 } else {
-                    return items;
+                    return items
                 }
             })
-        },
-        classColor() {
-            return {
-                important__color: this.$route.name == "ProjectView"
-            }
         }
     },
     methods: {
+        openProject(selection, title) {
+            this.$router.push({ name: 'project', params: { selection: selection, id: title } })
+        },
         showAll() {
             return this.choice = "all"
         },
@@ -112,42 +110,42 @@ export default {
 
 <style lang="scss" scoped>
 article {
-    --size-project: calc(calc(100% / 3) - 20px);
-    --background-project: var(--background-second);
-    --background-project-back: var(--background-second-opaque);
-    --radius-project: calc(var(--radius-block) / 2);
+    --size-card: calc(calc(100% / 3) - 20px);
+    --background-card: var(--background-second);
+    --background-card-back: var(--background-second-opaque);
+    --radius-card: calc(var(--radius-block) / 2);
 }
 
-.container-project {
-    --space-between-project: 30px;
+.container-gallery {
+    --space-between-card: 30px;
 
-    .layout-project {
+    .layout-gallery {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: var(--space-between-project);
+        gap: var(--space-between-card);
     }
 
-    .project,
-    .project::before,
-    .project::after {
+    .card,
+    .card::before,
+    .card::after {
         width: 100%;
-        border-radius: var(--radius-project);
+        border-radius: var(--radius-card);
     }
 
-    .project {
+    .card {
         position: relative;
         display: flex;
-        background: var(--background-project);
-        max-width: var(--size-project);
-        max-height: var(--size-project);
+        background: var(--background-card);
+        max-width: var(--size-card);
+        max-height: var(--size-card);
         height: auto;
 
         &::before,
         &::after {
             content: "";
             position: absolute;
-            background: var(--background-project-back);
+            background: var(--background-card-back);
             height: 100%;
             transition: transform .2s, background .3s;
         }
@@ -174,7 +172,7 @@ article {
     }
 
     @media #{$desktopDownScreen} {
-        .project:hover {
+        .card:hover {
             cursor: pointer;
 
             &::before {
@@ -187,7 +185,7 @@ article {
         }
     }
 
-    .project:active {
+    .card:active {
         cursor: pointer;
 
         &::before {
@@ -200,7 +198,7 @@ article {
     }
 }
 
-.layout-title-project {
+.layout-title-card {
     padding: 1em;
     padding-bottom: .25em;
     font-size: 1.2em;
@@ -230,15 +228,21 @@ h2 {
 }
 
 // Transitions
-.transitionProjects-move,
-.transitionProjects-enter-active,
-.transitionProjects-leave-active {
-    transition: all 0.5s ease !important;
+.transition-card-move,
+.transition-card-leave-active {
+    transition: all var(--time-animation) ease;
 }
 
-.transitionProjects-enter-from,
-.transitionProjects-leave-to {
+.transition-card-enter-active {
+    transition: all var(--time-animation) ease 100ms;
+}
+
+.transition-card-enter-from,
+.transition-card-leave-to {
     opacity: 0;
-    transform: translateY(-30px);
+}
+
+.transition-card-leave-active {
+    position: absolute;
 }
 </style>

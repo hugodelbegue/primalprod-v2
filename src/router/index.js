@@ -13,11 +13,17 @@ const router = createRouter({
       path: '/prestations',
       name: 'services',
       component: () => import('../views/ServiceView.vue')
-    }, ,
+    },
     {
       path: '/realisations',
-      name: 'projects',
-      component: () => import('../views/ProjectView.vue')
+      name: 'gallery',
+      component: () => import('../views/GalleryView.vue')
+    },
+    {
+      path: '/realisations/:selection/:id',
+      name: 'project',
+      component: () => import('../views/ProjectView.vue'),
+      props: true
     },
     {
       path: '/a-propos',

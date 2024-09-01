@@ -8,7 +8,7 @@
                 <router-link :to="{ name: 'services' }">Mes prestations</router-link>
             </li>
             <li class="nav-link">
-                <router-link :to="{ name: 'projects' }">Réalisations</router-link>
+                <router-link :to="{ name: 'gallery' }">Réalisations</router-link>
             </li>
             <li class="nav-link">
                 <router-link :to="{ name: 'about' }">À propos</router-link>

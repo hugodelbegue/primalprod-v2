@@ -29,9 +29,9 @@ export default {
     width: 100%;
     aspect-ratio: 16 / 9;
     max-height: 220px;
+    border-top-left-radius: var(--radius-card);
+    border-top-right-radius: var(--radius-card);
     overflow: hidden;
-    border-top-left-radius: var(--radius-project);
-    border-top-right-radius: var(--radius-project);
 
     img {
         width: 100%;
@@ -39,7 +39,7 @@ export default {
 }
 
 .loading-img {
-    background: var(--background-project);
+    background: var(--background-card);
     position: relative;
     z-index: 0;
     width: 100%;

@@ -7,7 +7,7 @@
                     <router-link :to="{ name: 'services' }" @click="closeMenu">Mes prestations</router-link>
                 </li>
                 <li class="nav-link two-link">
-                    <router-link :to="{ name: 'projects' }" @click="closeMenu">Réalisations</router-link>
+                    <router-link :to="{ name: 'gallery' }" @click="closeMenu">Réalisations</router-link>
                 </li>
                 <li class="nav-link three-link">
                     <router-link :to="{ name: 'about' }" @click="closeMenu">À propos</router-link>
