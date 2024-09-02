@@ -3,7 +3,7 @@
         <div class="layout-gallery frameworkY">
             <TransitionGroup name="transition-card" appear>
                 <article v-for="data in renderData" :key="data" class="card">
-                    <CardGallery :title="data.title" @click="openProject(cleanUrl(data.selection), data.id)">
+                    <CardGallery :title="data.title" @click="openProject(cleanUrl(data.title))">
                         <template #image>
                             <RenderCardImg :src="imgUrl(data.preview)" :alt="data.title" :title="data.title" />
                         </template>
@@ -45,12 +45,15 @@ export default {
         return {
             projects: API,
             choice: "",
-            render: " ",
-            cleanString(name) {
-                return name.replace(/[./\/]/g, "")
-            },
             imgUrl(file) {
                 return new URL(`/src/assets/img/${file}`, import.meta.url).href
+            },
+            cleanUrl(sentence) {
+                return sentence
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
             }
         }
     },
@@ -75,34 +78,8 @@ export default {
         }
     },
     methods: {
-        openProject(selection, title) {
-            this.$router.push({ name: 'project', params: { selection: selection, id: title } })
-        },
-        showAll() {
-            return this.choice = "all"
-        },
-        showFrontend() {
-            return this.choice = "frontend"
-        },
-        showBackend() {
-            return this.choice = "backend"
-        },
-        onClick(render) {
-            this.openInfos();
-            this.setTitle(render)
-        },
-        setTitle(render) {
-            this.render = render
-        },
-        // Open infos projects
-        openInfos() {
-            const { infos } = this.$refs.description.$refs
-            infos.classList.add('open')
-            infos.classList.remove('close')
-            document.body.classList.add('hidden')
-        },
-        renderUpdated(newPage) {
-            this.render = newPage
+        openProject(project) {
+            this.$router.push({ name: 'project', params: { project: project } })
         }
     }
 }

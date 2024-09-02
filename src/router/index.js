@@ -20,7 +20,7 @@ const router = createRouter({
       component: () => import('../views/GalleryView.vue')
     },
     {
-      path: '/realisations/:selection/:id',
+      path: '/realisations/:project',
       name: 'project',
       component: () => import('../views/ProjectView.vue'),
       props: true
