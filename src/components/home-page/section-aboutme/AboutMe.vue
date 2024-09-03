@@ -1,6 +1,6 @@
 <template>
     <div class="aboutme">
-        <h1>Hello ! Phrase d'accroche</h1>
+        <h1 class="catchphrase">Hello ! Phrase d'accroche</h1>
         <br>
         <p>
             Développeur web junior curieux et impliqué, je souhaite mettre à profit mes compétences pour mener à bien

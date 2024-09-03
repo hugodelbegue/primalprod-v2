@@ -1,9 +1,9 @@
 <template>
     <a :href="url" class="project-url" target="_blank">
         <div class="content">
-            <slot name="image"></slot>
-            <slot name="title"></slot>
-            <slot name="text"></slot>
+            <slot name="preview-gallery"></slot>
+            <slot name="title-gallery"></slot>
+            <slot name="tag-gallery"></slot>
         </div>
     </a>
 </template>

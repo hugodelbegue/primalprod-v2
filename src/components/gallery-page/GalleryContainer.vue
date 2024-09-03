@@ -1,16 +1,16 @@
 <template>
-    <div class="container-gallery">
+    <div class="container-gallery frameworkX margin-x">
         <div class="layout-gallery frameworkY">
             <TransitionGroup name="transition-card" appear>
                 <article v-for="data in renderData" :key="data" class="card">
                     <CardGallery :title="data.title" @click="openProject(cleanUrl(data.title))">
-                        <template #image>
+                        <template #preview-gallery>
                             <RenderCardImg :src="imgUrl(data.preview)" :alt="data.title" :title="data.title" />
                         </template>
-                        <template #title>
+                        <template #title-gallery>
                             <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
                         </template>
-                        <template #text>
+                        <template #tag-gallery>
                             <p v-if="data.tag">{{ data.tag }}</p>
                         </template>
                     </CardGallery>
@@ -28,22 +28,15 @@
 </template>
 
 <script setup>
-import API from '@/assets/api/data.json'
 import CardGallery from './CardGallery.vue'
 // import Button from '@/components/items/Button.vue'
 import RenderCardImg from './RenderCardImg.vue'
 </script>
 
 <script>
-import { defineAsyncComponent } from 'vue';
-// const AsyncDescriptionProject = defineAsyncComponent(() => import('@/components/DescriptionProject.vue'));
 export default {
-    components: {
-        // AsyncDescriptionProject,
-    },
     data() {
         return {
-            projects: API,
             choice: "",
             imgUrl(file) {
                 return new URL(`/src/assets/img/${file}`, import.meta.url).href
@@ -57,15 +50,9 @@ export default {
             }
         }
     },
-    mounted() {
-        // Remove the 'hidden' class from body when going backwards
-        window.addEventListener('popstate', () => {
-            document.body.classList.remove('hidden')
-        })
-    },
     computed: {
         renderData() {
-            return this.projects.projectList.filter((items) => {
+            return this.$api.projectList.filter((items) => {
                 if (this.choice == "frontend") {
                     return items.frontend
                 }
@@ -90,7 +77,7 @@ article {
     --size-card: calc(calc(100% / 3) - 20px);
     --background-card: var(--background-second);
     --background-card-back: var(--background-second-opaque);
-    --radius-card: calc(var(--radius-block) / 2);
+    --radius-card: var(--radius-low);
 }
 
 .container-gallery {
@@ -211,7 +198,7 @@ h2 {
 }
 
 .transition-card-enter-active {
-    transition: all var(--time-animation) ease 100ms;
+    transition: all var(--time-animation) ease;
 }
 
 .transition-card-enter-from,

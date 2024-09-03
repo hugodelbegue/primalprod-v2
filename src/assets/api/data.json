@@ -4,20 +4,82 @@
         {
             "id": 1,
             "title": "Test",
+            "full-title": "Test titre complet",
             "preview": "urlshorteningapi_1.png",
-            "tag": "Développement web"
+            "tag": "Développement web",
+            "name": "Franky",
+            "full-name": "Franky Vincent - Chanteur de chanson",
+            "testimonial": "Témoignage de la personne, It has survived not only five centuries, but also the leap into electronic typesetting, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "description":[
+                { "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+                { "text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+                { "text": "Rénovation partielle du RDC d’une maison XIXème." }
+            ],
+            "all-pictures":[
+                { "img": "urlshorteningapi_1.png" },
+                { "img": "urlshorteningapi_1.png" },
+                { "img": "urlshorteningapi_1.png" }
+            ]
         },
         {
             "id": 2,
             "title": "Test2",
+            "full-title": "Test2 titre complet",
             "preview": "newshomepage_1.png",
-            "tag": "Titre du projet"
+            "tag": "Tag du site",
+            "name": "Franky",
+            "full-name": "Franky Vincent - Chanteur de chanson",
+            "testimonial": "Témoignage de la personne",
+            "description":[
+                { "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+                { "text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+                { "text": "Rénovation partielle du RDC d’une maison XIXème." }
+            ],
+            "all-pictures":[
+                { "img": "newshomepage_1.png" },
+                { "img": "newshomepage_1.png" },
+                { "img": "newshomepage_1.png" }
+            ]
         },
         {
             "id": 3,
             "title": "Test3",
+            "full-title": "Test3 titre complet",
             "preview": "interactivecarddetailsform_1.png",
-            "tag": "Titre du projet 2"
+            "tag": "Titre du projet 2",
+            "name": "Franky",
+            "full-name": "Franky Vincent - Chanteur de chanson",
+            "testimonial": "Témoignage de la personne",
+            "description":[
+                { "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+                { "text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+                { "text": "Rénovation partielle du RDC d’une maison XIXème." }
+            ],
+            "all-pictures":[
+                { "img": "interactivecarddetailsform_1.png" },
+                { "img": "interactivecarddetailsform_1.png" },
+                { "img": "interactivecarddetailsform_1.png" }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Test4",
+            "full-title": "Test4 titre complet",
+            "preview": "interactivecarddetailsform_1.png",
+            "tag": "Titre du projet 2",
+            "name": "Franky",
+            "full-name": "Franky Vincent - Chanteur de chanson",
+            "testimonial": "Témoignage de la personne",
+            "description":[
+                { "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." },
+                { "text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+                { "text": "Rénovation partielle du RDC d’une maison XIXème." }
+            ],
+            "all-pictures":[
+                { "img": "interactivecarddetailsform_1.png" },
+                { "img": "interactivecarddetailsform_1.png" },
+                { "img": "interactivecarddetailsform_1.png" }
+            ]
         }
     ]
 }

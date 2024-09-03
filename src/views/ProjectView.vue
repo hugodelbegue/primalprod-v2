@@ -1,36 +1,57 @@
 <template>
-    <section class="layout-project frameworkX frameworkY margin-around">
+    <section class="layout-project frameworkY">
         <div v-for="data in renderData">
-            <BodyProject v-if="cleanUrl(data.title) === title">
+            <HeaderProject class="frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #title-project>
-                    {{ data.title }}
+                    {{ data['full-title'] }}
                 </template>
-                <template #text-project>
+                <template #tag-project>
                     {{ data.tag }}
                 </template>
+            </HeaderProject>
+            <BodyProject class="frameworkX" v-if="cleanUrl(data.title) === title">
+                <template #mockup-project>
+                    <img class="img-mockup" :src="imgUrl(data.preview)" :alt="data.title">
+                </template>
+                <template #text-project>
+                    <p class="space-text" v-for="text in data.description">
+                        {{ text.text }}
+                    </p>
+                </template>
             </BodyProject>
-            <GalleryProject v-if="cleanUrl(data.title) === title">
+            <GalleryProject class="frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #img-project>
-                    <img :src="imgUrl(data.preview)" :alt="data.title">
-                    <img :src="imgUrl(data.preview)" :alt="data.title">
-                    <img :src="imgUrl(data.preview)" :alt="data.title">
+                    <div v-for="picture in data['all-pictures']" class="img-gallery">
+                        <img class="picture" :src="imgUrl(picture.img)" alt="Photo de projet">
+                    </div>
                 </template>
             </GalleryProject>
+            <TestimonialProject class="frameworkX" v-if="cleanUrl(data.title) === title">
+                <template #name-project>
+                    {{ data.name }}
+                </template>
+                <template #testimonial-project>
+                    {{ data.testimonial }}
+                </template>
+                <template #full-name-project>
+                    {{ data['full-name'] }}
+                </template>
+            </TestimonialProject>
         </div>
     </section>
 </template>
 
 <script setup>
-import API from '@/assets/api/data.json'
+import HeaderProject from '@/components/project-page/HeaderProject.vue'
 import BodyProject from "@/components/project-page/BodyProject.vue"
 import GalleryProject from "@/components/project-page/GalleryProject.vue"
+import TestimonialProject from '@/components/project-page/TestimonialProject.vue'
 </script>
 
 <script>
 export default {
     data() {
         return {
-            projects: API,
             title: this.$attrs.project,
             imgUrl(file) {
                 return new URL(`/src/assets/img/${file}`, import.meta.url).href
@@ -46,7 +67,7 @@ export default {
     },
     computed: {
         renderData() {
-            return this.projects.projectList.filter((items) => {
+            return this.$api.projectList.filter((items) => {
                 return items
             })
         }
@@ -55,7 +76,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
+.img-mockup {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-low);
+}
+
+.img-gallery {
     width: calc(calc(100% / 3) - 20px);
+
+    .picture {
+        width: 100%;
+    }
+}
+
+.space-text {
+    margin-bottom: var(--side);
+}
+
+.space-text:last-child {
+    margin-bottom: 0 !important;
 }
 </style>

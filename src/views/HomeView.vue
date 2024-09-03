@@ -2,7 +2,7 @@
   <div class="layout-home frameworkY middle">
     <div class="layout-aboutme frameworkX middle margin-around">
       <Logo class="avatar">
-        <template #picture>
+        <template #img>
           <img class="avatar-img" alt="Avatar" src="@/components/home-page/section-aboutme/avatar.svg" />
         </template>
       </Logo>

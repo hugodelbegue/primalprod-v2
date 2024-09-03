@@ -36,10 +36,12 @@
 
   // layout block
   --margin-block: 10px;
-  --radius-block: 5px;
+  --radius-low: 5px;
+  --radius-high: 15px;
 
   // animations
   --time-transition: 300ms;
+  --time-transition-work: 1000ms;
   --time-animation: 500ms;
 
   // colors
@@ -55,6 +57,7 @@
   --color-heading: var(--black);
 
   --color-shadow: gray;
+  --color-important: var(--orange);
 
   --color-separation-line: var(--black-very-opaque);
 

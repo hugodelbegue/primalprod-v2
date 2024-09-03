@@ -1,11 +1,11 @@
 <template>
-    <div class="logo">
-        <slot name="picture"></slot>
+    <div class="img">
+        <slot name="img"></slot>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.logo {
+.img {
     display: flex;
     place-items: center;
     height: auto;

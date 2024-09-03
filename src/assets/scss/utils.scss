@@ -28,7 +28,12 @@
 
 .margin-around {
     margin: var(--margin-block);
-    border-radius: var(--radius-block);
+    border-radius: var(--radius-low);
+}
+
+.margin-x {
+    margin-left: var(--margin-block);
+    margin-right: var(--margin-block);
 }
 
 .middle {
@@ -39,4 +44,25 @@
 
 .shadow {
     box-shadow: 0 1px 2px var(--color-shadow);
+}
+
+.layout-title {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    padding: var(--side) calc(var(--side) * 4);
+    margin-top: var(--side-y);
+    border-radius: var(--radius-low);
+    background-color: blueviolet;
+}
+
+// animation hover
+.animation-hover-active {
+    &:hover .animation-hover {
+        color: var(--color-important) !important;
+    }
+}
+
+.animation-hover {
+    transition: color var(--time-transition-work);
 }

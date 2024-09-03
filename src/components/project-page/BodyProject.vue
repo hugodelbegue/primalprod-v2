@@ -1,16 +1,29 @@
 <template>
-    <div class="layout-body-project">
-        <h1 class="title-show-project">
-            <slot name="title-project"></slot>
-        </h1>
-        <p class="text-body-project">
-            <slot name="text-project"></slot>
-        </p>
+    <div class="background-body-project">
+        <div class="layout-body-project frameworkY margin-x">
+            <div class="mockup-project">
+                <slot name="mockup-project"></slot>
+            </div>
+            <div class="text-project">
+                <slot name="text-project"></slot>
+            </div>
+        </div>
     </div>
 </template>
 
-<script setup>
+<style lang="scss" scoped>
+.background-body-project {
+    background: transparent;
+}
 
-</script>
+.layout-body-project {
+    display: flex;
+    gap: var(--side);
+}
 
-<style lang="scss" scoped></style>
+.mockup-project,
+.text-project {
+    flex: 1;
+    place-content: center;
+}
+</style>

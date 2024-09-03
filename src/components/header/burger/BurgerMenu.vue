@@ -54,15 +54,8 @@ input[type="checkbox"] {
     align-items: center;
     width: auto;
     height: var(--burger-size);
-    ;
     aspect-ratio: 3 / 2;
     transition: width var(--time-transition);
-
-    &:hover .burger-lines,
-    &:hover .burger-lines::before,
-    &:hover .burger-lines::after {
-        background: var(--color-text-hover);
-    }
 }
 
 .burger-lines,
@@ -76,7 +69,7 @@ input[type="checkbox"] {
     height: 3px;
     border-radius: 1px;
     animation: none;
-    transition: background var(--time-transition), transform var(--time-animation), top var(--time-animation), right var(--time-animation), bottom var(--time-animation), left var(--time-animation);
+    transition: transform var(--time-animation), top var(--time-animation), right var(--time-animation), bottom var(--time-animation), left var(--time-animation);
 }
 
 .burger-lines::before {

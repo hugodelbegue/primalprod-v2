@@ -2,8 +2,8 @@
     <header class="wrapper-header frameworkX" ref="header">
         <div class="layout-header">
             <Logo class="padding-x">
-                <template #picture>
-                    <a ref="logo" href="/" title="Accueil">
+                <template #img>
+                    <a class="link-logo" ref="logo" href="/" title="Accueil">
                         <img alt="PrimalProd logo" src="@/assets/img/logo-2.svg" width="48" height="48" />
                     </a>
                 </template>
