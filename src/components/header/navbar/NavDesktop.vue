@@ -1,9 +1,6 @@
 <template>
     <nav class="wrapper-nav-desktop">
         <ul class="menu-layout">
-            <!-- <li class="nav-link">
-                <router-link :to="{ name: 'home' }">Accueil</router-link>
-            </li> -->
             <li class="nav-link">
                 <router-link :to="{ name: 'services' }">Mes prestations</router-link>
             </li>

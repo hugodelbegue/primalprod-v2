@@ -1,7 +1,7 @@
 <template>
     <div class="readmore">
         <Logo class="footer-logo">
-            <template #picture>
+            <template #img>
                 <img class="logo-img" alt="Avatar" src="@/assets/img/logo-text.png" />
             </template>
         </Logo>

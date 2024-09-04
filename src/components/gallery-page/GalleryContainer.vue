@@ -17,19 +17,17 @@
                 </article>
             </TransitionGroup>
         </div>
-        <div>BUTTON</div>
-        <!-- <div class="selectors">
-            <Button type="button" padding=".5" msg="Tous" @click="showAll" />
-            <Button type="button" padding=".5" msg="Frontend" @click="showFrontend" />
-            <Button type="button" padding=".5" msg="Avec Backend" @click="showBackend" />
-        </div> -->
-        <!-- <AsyncDescriptionProject @renderUpdated="renderUpdated" ref="description" :renderTitle="render" /> -->
+        <div class="selectors">
+            <Button type="button" padding="1" msg="1" />
+            <Button type="button" padding="1" msg="2" />
+            <Button type="button" padding="1" msg="3" />
+        </div>
     </div>
 </template>
 
 <script setup>
 import CardGallery from './CardGallery.vue'
-// import Button from '@/components/items/Button.vue'
+import Button from '@/components/items/Button.vue'
 import RenderCardImg from './RenderCardImg.vue'
 </script>
 
@@ -74,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 article {
-    --size-card: calc(calc(100% / 3) - 20px);
+    --size-card: calc(calc(100% / 3) - calc(60px / 3));
     --background-card: var(--background-second);
     --background-card-back: var(--background-second-opaque);
     --radius-card: var(--radius-low);
@@ -85,7 +83,6 @@ article {
 
     .layout-gallery {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         gap: var(--space-between-card);
     }

@@ -8,7 +8,7 @@
                     </a>
                 </template>
             </Logo>
-            <div class="layout-nav frameworkY margin-around padding-x color-block">
+            <div class="layout-nav frameworkY margin-around padding-x">
                 <NavMobile />
                 <NavDesktop />
             </div>
@@ -23,7 +23,7 @@
                             height="30" />
                         </a>
                         <div class="layout__switch">
-                            <SwitchButton />
+                            <SwitchButton />r
                             <span ref="togg" class="indic">| Thème.</span>
                         </div>
                     </template>
@@ -119,6 +119,8 @@ header {
 }
 
 .layout-nav {
+    background: var(--background-navbar);
+
     @media #{$switch} {
         width: 60%;
     }

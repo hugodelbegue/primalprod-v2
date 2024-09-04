@@ -46,22 +46,32 @@
 
   // colors
   --background-main: var(--beige);
-  --background-second: var(--orange);
+  --background-second: var(--orange-1);
   --background-second-opaque: var(--orange-opaque);
 
-  --background-overlay: var(--beige-opaque);
+  // background color for section
+  --background-navbar: var(--orange-4);
+  --background-header-page: var(--orange-opaque);
+  --background-gallery-project: var(--orange-4);
   --background-mentions: var(--color-separation-line);
+
+  --background-overlay: var(--beige-opaque);
 
   --color-text: var(--black);
   --color-text-hover: var(--black-opaque);
   --color-heading: var(--black);
+  --color-button: var(--orange-4);
+  --color-button-hover: var(--orange-1);
 
-  --color-shadow: gray;
-  --color-important: var(--orange);
+  --color-shadow: var(--orange-1);
+  --color-important: var(--orange-1);
 
-  --color-separation-line: var(--black-very-opaque);
+  --color-separation-line: var(--orange-1);
 
-  --orange: #f28f52;
+  --orange-1: #f28f52;
+  --orange-2: #f3a672;
+  --orange-3: #f5bc91;
+  --orange-4: #f5d3b0;
   --orange-opaque: rgba(242, 143, 82, 0.25);
   --red: #ff0000;
   --beige: #f5e9cd;

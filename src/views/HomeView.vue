@@ -72,7 +72,7 @@ import Test3 from '@/components/home-page/section-test/Test3.vue'
     width: 20px;
     height: 17px;
     border-radius: 50%;
-    background: var(--orange);
+    background: var(--orange-1);
     border: 1px solid var(--black);
     position: absolute;
     visibility: hidden;
@@ -108,7 +108,7 @@ import Test3 from '@/components/home-page/section-test/Test3.vue'
   34% {
     filter: blur(15px);
     transform: translate(-180%, -20%) scale(1.3);
-    background: var(--orange);
+    background: var(--orange-1);
     border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
   }
 
@@ -142,7 +142,7 @@ import Test3 from '@/components/home-page/section-test/Test3.vue'
   }
 
   95% {
-    border: 36px solid var(--orange);
+    border: 36px solid var(--orange-1);
     background: var(--gray-very-light);
     filter: blur(0px);
     transform: translate(397%, -152%) scale(0.05);

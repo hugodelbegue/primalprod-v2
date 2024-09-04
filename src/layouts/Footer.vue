@@ -1,6 +1,6 @@
 <template>
-    <footer class="wrapper-footer frameworkX">
-        <div class="layout-footer frameworkY margin-around padding-x color-block">
+    <footer class="wrapper-footer">
+        <div class="layout-footer frameworkX frameworkY margin-around color-block">
             <ReadMore class="readmore" />
             <SocialLinks class="sociallinks" />
         </div>

@@ -47,13 +47,12 @@
 }
 
 .layout-title {
+    background: var(--background-main);
     width: fit-content;
     text-align: center;
     margin: auto;
     padding: var(--side) calc(var(--side) * 4);
     margin-top: var(--side-y);
-    border-radius: var(--radius-low);
-    background-color: blueviolet;
 }
 
 // animation hover

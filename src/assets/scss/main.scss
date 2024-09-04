@@ -33,7 +33,7 @@ a,
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  transition: opacity var(--time-transition);
+  transition: color var(--time-transition), opacity var(--time-transition);
 
   @media #{$mobileScreen} {
     &:not(.project-url, .link-logo):hover {
@@ -48,7 +48,7 @@ a,
 
 a.router-link-active {
   cursor: default;
-  color: var(--red);
+  color: var(--color-important);
   opacity: 1 !important;
 }
 

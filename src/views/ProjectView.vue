@@ -38,6 +38,7 @@
                 </template>
             </TestimonialProject>
         </div>
+        <SendInContactPage />
     </section>
 </template>
 
@@ -46,6 +47,7 @@ import HeaderProject from '@/components/project-page/HeaderProject.vue'
 import BodyProject from "@/components/project-page/BodyProject.vue"
 import GalleryProject from "@/components/project-page/GalleryProject.vue"
 import TestimonialProject from '@/components/project-page/TestimonialProject.vue'
+import SendInContactPage from '@/components/items/section/SendInContactPage.vue'
 </script>
 
 <script>

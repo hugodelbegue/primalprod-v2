@@ -11,7 +11,7 @@
 
 <style lang="scss" scoped>
 .background-gallery-project {
-    background: red;
+    background: var(--background-gallery-project);
 }
 
 .layout-picture-project {
