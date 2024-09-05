@@ -1,5 +1,5 @@
 <template>
-    <section class="layout-contact frameworkY">
+    <section class="layout-contact frameworkY padding-bottom-page">
         <div class="background-header-contact frameworkX frameworkY animation-hover-active">
             <div class="layout-header-contact margin-x">
                 <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>

@@ -3,18 +3,17 @@
         <div class="layout-partner-contact frameworkX margin-x">
             <h2>Ils m'ont fais&nbsp;<span class="animation-hover">confiance</span></h2>
             <div class="layout-partner">
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner" src="../../assets/img/logo-2.svg">
             </div>
         </div>
     </div>
@@ -36,7 +35,6 @@
 }
 
 .partner {
-    background: var(--orange-3);
     width: calc(calc(100% / 8) - calc(70px / 8));
     height: auto;
     aspect-ratio: 1 / 1;

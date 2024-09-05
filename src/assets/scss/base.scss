@@ -19,7 +19,7 @@
   --f-footer: 14px;
 
   --f-line-global: 1.6;
-  --f-space-global: .5px;
+  --f-space-global: .15px;
 
   // layout
   --max-desktop: 1920px;
@@ -29,6 +29,7 @@
   --index: calc(1vw + 1vh);
 
   --side: 2rem;
+  --side-up: calc(var(--side) * 2);
   --side-y: 5rem;
   --side-x: calc(50% - var(--mobile) / 2);
   // --side-x: max(var(--side), calc(50% - var(--mobile) / 2));
@@ -50,6 +51,8 @@
   --background-second-opaque: var(--orange-opaque);
 
   // background color for section
+  --background-footer: var(--background-second);
+  --background-copyright: var(--orange-3);
   --background-navbar: var(--orange-4);
   --background-header-page: var(--orange-opaque);
   --background-gallery-project: var(--orange-4);
@@ -59,7 +62,8 @@
 
   --color-text: var(--black);
   --color-text-hover: var(--black-opaque);
-  --color-heading: var(--black);
+  --color-heading-h1: var(--black);
+  --color-heading-h2: var(--black);
   --color-button: var(--orange-4);
   --color-button-hover: var(--orange-1);
 

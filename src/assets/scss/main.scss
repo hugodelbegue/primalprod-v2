@@ -70,7 +70,7 @@ h3 {
 h1 {
   font-size: 2.4em;
   font-weight: var(--f-bold);
-  color: var(--color-heading);
+  color: var(--color-heading-h1);
 }
 
 h1:not(.catchphrase) {
@@ -89,26 +89,19 @@ h1:not(.catchphrase) {
 h2 {
   font-size: 1.8em;
   font-weight: var(--f-bold);
-  color: var(--color-heading);
+  color: var(--color-heading-h2);
   margin-bottom: 1em;
-}
-
-.important {
-  color: var(--color-link);
-  font-weight: var(--weight-bold);
 }
 
 h3 {
   font-size: 1.1em;
-  font-weight: var(--weight-bold);
-  color: var(--color-heading);
-  transition: .4s;
+  font-weight: var(--f-bold);
+  color: var(--color-heading-h3);
 }
 
-h4 {
-  font-size: 1.4em;
-  font-variant-caps: all-small-caps;
-  margin-bottom: .5em;
+.important {
+  color: var(--color-link);
+  font-weight: var(--f-bold);
 }
 
 strong {

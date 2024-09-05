@@ -1,5 +1,5 @@
 <template>
-    <section class="layout-gallery frameworkY animation-hover-active">
+    <section class="layout-gallery frameworkY padding-bottom-page animation-hover-active">
         <div class="background-header-gallery frameworkX frameworkY">
             <div class="layout-header-gallery margin-x">
                 <h1>Découvre mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>

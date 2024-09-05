@@ -18,7 +18,7 @@
 
 .layout-body-project {
     display: flex;
-    gap: var(--side);
+    gap: var(--side-up);
 }
 
 .mockup-project,

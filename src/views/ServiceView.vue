@@ -1,5 +1,5 @@
 <template>
-    <section class="layout-service frameworkY">
+    <section class="layout-service frameworkY padding-bottom-page">
         <div class="background-header-service frameworkX frameworkY animation-hover-active">
             <div class="layout-header-service margin-x">
                 <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>

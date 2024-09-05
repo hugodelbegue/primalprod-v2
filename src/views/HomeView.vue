@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-home frameworkY middle">
+  <div class="layout-home frameworkY padding-bottom-page middle">
     <div class="layout-aboutme frameworkX middle margin-around">
       <Logo class="avatar">
         <template #img>

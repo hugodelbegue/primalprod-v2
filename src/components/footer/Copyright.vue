@@ -1,5 +1,5 @@
 <template>
-    <div class="copyright frameworkY margin-around padding-x color-block">
+    <div class="copyright frameworkY margin-y padding-x">
         <p>© Copyright {{ year }} - PrimalProd |
             <i>
                 <IconFingerprint />
@@ -24,6 +24,7 @@ export default {
 <style lang="scss" scoped>
 .copyright {
     --side-y: .25rem;
+    background: var(--background-copyright);
     text-align: center;
     font-size: .8em;
 }

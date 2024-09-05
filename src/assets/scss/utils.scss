@@ -22,13 +22,13 @@
     padding-right: var(--side);
 }
 
-.color-block {
-    background: var(--background-second);
+.padding-bottom-page {
+    padding-bottom: var(--margin-block);
 }
 
-.margin-around {
-    margin: var(--margin-block);
-    border-radius: var(--radius-low);
+.margin-y {
+    margin-top: var(--margin-block);
+    margin-bottom: var(--margin-block);
 }
 
 .margin-x {
@@ -49,10 +49,14 @@
 .layout-title {
     background: var(--background-main);
     width: fit-content;
-    text-align: center;
+    // text-align: center;
     margin: auto;
     padding: var(--side) calc(var(--side) * 4);
     margin-top: var(--side-y);
+}
+
+.space-bottom-p {
+    margin: 1em 0;
 }
 
 // animation hover

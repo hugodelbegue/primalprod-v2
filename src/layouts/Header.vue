@@ -1,6 +1,6 @@
 <template>
     <header class="wrapper-header frameworkX" ref="header">
-        <div class="layout-header">
+        <div class="layout-header margin-x">
             <Logo class="padding-x">
                 <template #img>
                     <a class="link-logo" ref="logo" href="/" title="Accueil">
@@ -8,7 +8,7 @@
                     </a>
                 </template>
             </Logo>
-            <div class="layout-nav frameworkY margin-around padding-x">
+            <div class="layout-nav frameworkY padding-x margin-y">
                 <NavMobile />
                 <NavDesktop />
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <section class="layout-project frameworkY">
+    <section class="layout-project frameworkY padding-bottom-page">
         <div v-for="data in renderData">
             <HeaderProject class="frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #title-project>
@@ -82,6 +82,7 @@ export default {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: var(--radius-low);
+    margin: auto;
 }
 
 .img-gallery {

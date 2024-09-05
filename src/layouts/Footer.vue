@@ -1,8 +1,10 @@
 <template>
     <footer class="wrapper-footer">
-        <div class="layout-footer frameworkX frameworkY margin-around color-block">
-            <ReadMore class="readmore" />
-            <SocialLinks class="sociallinks" />
+        <div class="background-footer">
+            <div class="layout-footer frameworkX frameworkY margin-x">
+                <ReadMore class="readmore" />
+                <SocialLinks class="sociallinks" />
+            </div>
         </div>
         <Copyright />
     </footer>
@@ -18,6 +20,10 @@ import Copyright from '@/components/footer/Copyright.vue'
 footer {
     --side-y: 2.5rem;
     font-size: var(--f-footer);
+}
+
+.background-footer {
+    background: var(--background-footer);
 }
 
 .layout-footer {

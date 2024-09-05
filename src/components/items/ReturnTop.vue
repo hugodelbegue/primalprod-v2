@@ -39,7 +39,7 @@ export default {
 .button_return {
     --color-button: var(--background-main);
     --size-button: 40px;
-    --corner-button: 15px;
+    --corner-button: var(--radius-high);
     --normal-color: rgba(0, 0, 0, .2);
     --move-color: rgba(0, 0, 0, .7);
     --active-color: rgba(0, 0, 0, .35);
