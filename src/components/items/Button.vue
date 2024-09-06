@@ -34,7 +34,7 @@ defineProps({
         border: none;
         border-radius: var(--radius-low);
         box-shadow: 3px 3px 0px var(--color-shadow);
-        transition: all var(--time-transition) ease;
+        transition: background var(--time-transition) ease, box-shadow var(--time-transition) ease, top var(--time-transition) ease, left var(--time-transition) ease;
 
         @media #{$desktopDownScreen} {
             &:hover {
@@ -49,6 +49,7 @@ defineProps({
             top: 4px;
             left: 3px;
             background: var(--color-button-active);
+            box-shadow: 0px 0px 4px var(--color-shadow);
         }
 
         @media #{$tabletScreen} {

@@ -9,10 +9,7 @@
                     {{ data.tag }}
                 </template>
             </HeaderProject>
-            <BodyProject class="frameworkX" v-if="cleanUrl(data.title) === title">
-                <template #mockup-project>
-                    <img class="img-mockup" :src="imgUrl(data.preview)" :alt="data.title">
-                </template>
+            <BodyProject class="frameworkX" :url="imgUrl(data.preview)" v-if="cleanUrl(data.title) === title">
                 <template #text-project>
                     <p class="space-text" v-for="text in data.description">
                         {{ text.text }}
@@ -78,13 +75,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.img-mockup {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--radius-low);
-    margin: auto;
-}
-
 .img-gallery {
     width: calc(calc(100% / 3) - 20px);
 

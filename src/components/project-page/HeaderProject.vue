@@ -15,4 +15,9 @@
 .background-header-project {
     background: var(--background-header-page);
 }
+
+.layout-title {
+    text-align: center;
+    margin: var(--side-y) auto 0;
+}
 </style>
