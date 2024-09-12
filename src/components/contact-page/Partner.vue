@@ -1,7 +1,7 @@
 <template>
     <div class="background-partner-contact frameworkY animation-hover-active">
         <div class="layout-partner-contact frameworkX margin-x">
-            <h2>Ils m'ont fais&nbsp;<span class="animation-hover">confiance</span></h2>
+            <h2>Ils m'ont fait&nbsp;<span class="animation-hover">confiance</span></h2>
             <div class="layout-partner">
                 <img class="partner" src="../../assets/img/logo-2.svg">
                 <img class="partner" src="../../assets/img/logo-2.svg">

@@ -3,6 +3,7 @@
         <div class="background-footer">
             <div class="layout-footer frameworkX frameworkY margin-x">
                 <ReadMore class="readmore" />
+                <ImportantLinks class="importantlinks" />
                 <SocialLinks class="sociallinks" />
             </div>
         </div>
@@ -14,6 +15,7 @@
 import SocialLinks from '@/components/footer/SocialLinks.vue'
 import ReadMore from '@/components/footer/ReadMore.vue'
 import Copyright from '@/components/footer/Copyright.vue'
+import ImportantLinks from '@/components/footer/ImportantLinks.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +39,7 @@ footer {
 }
 
 .readmore,
+.importantlinks,
 .sociallinks {
     flex: 1;
 }

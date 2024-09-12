@@ -1,10 +1,10 @@
 <template>
-    <section class="layout-contact frameworkY padding-bottom-page">
-        <div class="background-header-contact frameworkX frameworkY animation-hover-active">
-            <div class="layout-header-contact margin-x">
-                <div class="layout-description-header-contact">
-                    <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
-                    <div class="text-header-contact layout-title move-right">
+    <section class="layout-faq frameworkY padding-bottom-page">
+        <div class="background-header-faq frameworkX frameworkY animation-hover-active">
+            <div class="layout-header-faq margin-x">
+                <div class="layout-description-header-faq">
+                    <h1>FAQ</h1>
+                    <div class="text-header-faq layout-title move-right">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur.
@@ -17,27 +17,29 @@
                         </p>
                     </div>
                 </div>
-                <div class="layout-img-header-contact"></div>
+                <div class="layout-img-header-faq">
+                    jbkjbkjbkjbkjbkjb
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
-.background-header-contact {
+.background-header-faq {
     background: var(--background-header-page);
 }
 
-.layout-header-contact {
+.layout-header-faq {
     display: flex;
     gap: calc(var(--side-up) * 2);
 }
 
-.layout-description-header-contact {
+.layout-description-header-faq {
     flex: 60%;
 }
 
-.layout-img-header-contact {
+.layout-img-header-faq {
     flex: 40%;
     display: flex;
     place-content: flex-end;

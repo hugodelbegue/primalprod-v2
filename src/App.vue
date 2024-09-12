@@ -31,7 +31,8 @@ export default {
   computed: {
     showPaint() {
       return {
-        paint: this.$route.name == 'home' || this.$route.name == 'contact'
+        paint: this.$route.name == 'contact',
+        'background-move': this.$route.name == 'contact'
       }
     },
     bandLeft() {
@@ -62,5 +63,16 @@ export default {
   background-size: 25vh;
   background-position-x: right;
   background-position-y: top;
+}
+
+.background-move {
+  background-position-y: -7.5%;
+  animation: move-top var(--time-animation) both;
+
+  @keyframes move-top {
+    to {
+      background-position-y: 0%;
+    }
+  }
 }
 </style>

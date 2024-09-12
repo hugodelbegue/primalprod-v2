@@ -4,12 +4,21 @@
             <div class="layout-header-gallery margin-x">
                 <div class="layout-description-header-gallery">
                     <h1>Découvre mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>
-                    <div class="text-header-gallery layout-title">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                        1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It
-                        has
-                        survived not only five centuries.</div>
+                    <div class="text-header-gallery layout-title move-right">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the
+                            printing and
+                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It
+                            has
+                            survived not only five centuries.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, accusamus?
+                        </p>
+                    </div>
                 </div>
                 <div class="layout-img-header-gallery">
                     <img class="img-left" src="../assets/img/img-test-header-small.png" height="360" alt="">

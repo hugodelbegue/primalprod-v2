@@ -4,10 +4,14 @@
             <div class="layout-header-service margin-x">
                 <div class="layout-description-header-service">
                     <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
-                    <div class="text-header-service layout-title">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio ullam inventore
-                        suscipit nesciunt at possimus hic porro, sint molestias! Architecto odit ipsa corporis eum
-                        eveniet iusto maxime placeat quibusdam?</div>
+                    <div class="text-header-service layout-title move-right">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio ullam
+                            inventore
+                            suscipit nesciunt at possimus hic porro, sint molestias! Architecto odit ipsa corporis eum
+                            eveniet iusto maxime placeat quibusdam?
+                        </p>
+                    </div>
                 </div>
                 <div class="layout-video-header-service">
                     <video class="video-center" height="360" autoplay>
@@ -26,7 +30,7 @@
 
 .layout-header-service {
     display: flex;
-    gap: var(--side-up);
+    gap: calc(var(--side-up) * 2);
 }
 
 .layout-description-header-service {

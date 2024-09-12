@@ -4,12 +4,15 @@
       <div class="layout-header-about margin-x">
         <div class="layout-description-header-about">
           <h1>À&nbsp;<span class="animation-hover">propos</span>&nbsp;de moi</h1>
-          <div class="text-header-about layout-title">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque aperiam autem nulla voluptatibus
-            quae ex ipsum numquam facere consequatur, dignissimos optio libero tempora assumenda, vero quam neque
-            aliquam debitis! Nesciunt cumque dignissimos quos corporis esse eius, nemo est soluta!</div>
+          <div class="text-header-about layout-title move-right">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque aperiam autem nulla voluptatibus
+              quae ex ipsum numquam facere consequatur, dignissimos optio libero tempora assumenda, vero quam neque
+              aliquam debitis! Nesciunt cumque dignissimos quos corporis esse eius, nemo est soluta!
+            </p>
+          </div>
         </div>
-        <div class="layout-img-header-about">
+        <div class="layout-img-header-about move-left">
           <Avatar class="avatar" />
         </div>
       </div>
@@ -93,6 +96,11 @@ import Avatar from '@/components/items/avatar/Avatar.vue'
   display: flex;
   place-content: center;
   place-items: center;
+  background: var(--color-separation-line);
+  // background-image: url(../assets/img/img-test-header-2.png);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
 .img-paragraph {

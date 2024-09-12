@@ -4,16 +4,15 @@
     </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
 .avatar {
     display: flex;
     place-content: center;
     place-items: flex-start;
-    margin-left: 10rem;
+    padding-left: 8rem;
+    padding-right: 2rem;
+    border: 4px solid transparent;
+    background: #F4D4B1;
 
     &::before {
         content: "";
@@ -21,8 +20,7 @@
         height: 70px;
         background: var(--orange);
         position: absolute;
-        animation: opacity 4750ms ease;
-        animation-delay: 500ms;
+        animation: opacity 4750ms ease both;
         opacity: 0;
         display: flex;
         place-content: center;
@@ -43,8 +41,8 @@
         visibility: hidden;
         transform: translate(-333%, 110%);
         background: var(--gray-very-light);
-        animation: visibility 1625ms ease;
-        animation-delay: 2425ms;
+        animation: visibility 1625ms ease both;
+        animation-delay: 1750ms;
     }
 }
 
@@ -99,31 +97,16 @@
         height: 50px;
     }
 
-    80% {
+    100% {
         border: 1px solid var(--black);
-        transform: translate(-180%, -20%);
-        border-radius: 50%;
-        font-size: 14px;
-    }
-
-    95% {
-        border: 36px solid var(--orange-1);
-        background: var(--gray-very-light);
+        opacity: 1;
         filter: blur(0px);
-        transform: translate(397%, -152%) scale(0.05);
+        transform: translate(-180%, -20%);
+        background: var(--gray-very-light);
         border-radius: 50%;
         content: "Hey !";
-        font-size: 9px;
-        border-left: 0;
-        border-right: 0;
+        font-size: 14px;
         height: 50px;
-    }
-
-    100% {
-        opacity: 1;
-        border: 0px solid transparent;
-        filter: blur(100px);
-        transform: translate(397%, -152%);
     }
 }
 
@@ -132,12 +115,8 @@
         visibility: hidden;
     }
 
-    50% {
-        visibility: visible;
-    }
-
     100% {
-        visibility: hidden;
+        visibility: visible;
     }
 }
 </style>

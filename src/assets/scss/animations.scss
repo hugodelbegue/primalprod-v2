@@ -1,0 +1,51 @@
+h1:not(.catchphrase) {
+    transform: translateX(-.75%);
+    opacity: 0;
+    animation: appear-title var(--time-animation) both;
+
+    @keyframes appear-title {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.move-left {
+    transform: translateX(-.75%);
+    opacity: 0;
+    animation: move-left var(--time-animation) both;
+
+    @keyframes move-left {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.move-right {
+    transform: translateX(.75%);
+    opacity: 0;
+    animation: move-right var(--time-animation) both;
+
+    @keyframes move-right {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.move-top {
+    transform: translateY(-.75%);
+    opacity: 0;
+    animation: move-top var(--time-animation) both;
+
+    @keyframes move-top {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

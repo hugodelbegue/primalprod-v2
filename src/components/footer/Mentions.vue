@@ -281,11 +281,12 @@ export default {
 
 <style lang="scss" scoped>
 .official {
+    color: var(--text-light);
+    text-align: left;
     padding: 4em;
     padding-top: 0;
     max-height: 100%;
     width: 100%;
-    color: var(--text-light);
 
     @media #{$mobileUpScreen} {
         padding-bottom: 1em;
@@ -311,7 +312,7 @@ export default {
 
     .scroll {
         overflow-y: scroll;
-        height: 75vh;
+        height: calc(100vh - calc(4em + calc(40px + 2em)));
         padding-right: 2em;
         border-bottom: var(--size-line) solid var(--color-separation-line);
     }
