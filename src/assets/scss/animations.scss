@@ -1,4 +1,4 @@
-h1:not(.catchphrase) {
+h1:not(.catchphrase, .title-header-project) {
     transform: translateX(-.75%);
     opacity: 0;
     animation: appear-title var(--time-animation) both;
@@ -43,6 +43,19 @@ h1:not(.catchphrase) {
     animation: move-top var(--time-animation) both;
 
     @keyframes move-top {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.move-bottom {
+    transform: translateY(3.5%);
+    opacity: 0;
+    animation: move-bottom var(--time-animation) both;
+
+    @keyframes move-bottom {
         to {
             transform: translateY(0);
             opacity: 1;

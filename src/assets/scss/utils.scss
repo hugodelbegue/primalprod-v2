@@ -23,17 +23,17 @@
 }
 
 .padding-bottom-page {
-    padding-bottom: var(--margin-block);
+    padding-bottom: var(--margin-block-y);
 }
 
 .margin-y {
-    margin-top: var(--margin-block);
-    margin-bottom: var(--margin-block);
+    margin-top: var(--margin-block-y);
+    margin-bottom: var(--margin-block-y);
 }
 
 .margin-x {
-    margin-left: var(--margin-block);
-    margin-right: var(--margin-block);
+    margin-left: var(--margin-block-x);
+    margin-right: var(--margin-block-x);
 }
 
 .middle {

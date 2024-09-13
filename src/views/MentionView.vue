@@ -1,10 +1,10 @@
 <template>
-    <section class="layout-contact frameworkY padding-bottom-page">
-        <div class="background-header-contact frameworkX frameworkY animation-hover-active">
-            <div class="layout-header-contact margin-x">
-                <div class="layout-description-header-contact">
-                    <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
-                    <div class="text-header-contact layout-title move-right">
+    <section class="layout-mention frameworkY padding-bottom-page">
+        <div class="background-header-mention frameworkX frameworkY">
+            <div class="layout-header-mention margin-x">
+                <div class="layout-description-header-mention">
+                    <h1>Mentions légales</h1>
+                    <div class="text-header-mention layout-title move-bottom">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur.
@@ -17,35 +17,27 @@
                         </p>
                     </div>
                 </div>
-                <div class="layout-img-header-contact"></div>
             </div>
         </div>
-        <TallyForm />
+        <Mentions />
     </section>
 </template>
 
 <script setup>
-import TallyForm from '@/components/contact-page/TallyForm.vue'
+import Mentions from '@/components/mention-page/Mentions.vue'
 </script>
 
 <style lang="scss" scoped>
-.background-header-contact {
+.background-header-mention {
     background: var(--background-header-page);
 }
 
-.layout-header-contact {
+.layout-header-mention {
     display: flex;
     gap: calc(var(--side-up) * 2);
 }
 
-.layout-description-header-contact {
-    flex: 60%;
-}
-
-.layout-img-header-contact {
-    flex: 40%;
-    display: flex;
-    place-content: flex-end;
-    place-items: center;
+.text-header-mention {
+    text-align: center;
 }
 </style>

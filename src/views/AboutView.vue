@@ -17,6 +17,7 @@
         </div>
       </div>
     </div>
+    <Proverb />
     <FirstParagraph background="transparent">
       <template #img-paragraph>
         <img class="img-paragraph" src="../assets/img/label.svg">
@@ -69,11 +70,12 @@
 </template>
 
 <script setup>
-import Partner from '@/components/contact-page/Partner.vue'
-import FirstParagraph from '@/components/contact-page/FirstParagraph.vue'
-import SecondParagraph from '@/components/contact-page/SecondParagraph.vue'
-import ThirdParagraph from '@/components/contact-page/ThirdParagraph.vue'
+import Partner from '@/components/about-page/Partner.vue'
+import FirstParagraph from '@/components/about-page/FirstParagraph.vue'
+import SecondParagraph from '@/components/about-page/SecondParagraph.vue'
+import ThirdParagraph from '@/components/about-page/ThirdParagraph.vue'
 import Avatar from '@/components/items/avatar/Avatar.vue'
+import Proverb from '@/components/about-page/Proverb.vue'
 </script>
 
 <style lang="scss" scoped>

@@ -26,11 +26,5 @@ defineProps({
 .content {
     width: 100%;
     height: 100%;
-
-    @media #{$mobileDownScreen} {
-        display: flex;
-        flex-direction: column;
-        place-content: space-evenly;
-    }
 }
 </style>

@@ -4,7 +4,7 @@
             <h1 class="title-header-project">
                 <slot name="title-project"></slot>
             </h1>
-            <div class="link-header-project layout-title">
+            <div class="link-header-project layout-title move-bottom">
                 <slot name="tag-project"></slot>
             </div>
         </div>

@@ -36,7 +36,8 @@
   --size-line: 4px;
 
   // layout block
-  --margin-block: 10px;
+  --margin-block-x: 50px;
+  --margin-block-y: 10px;
   --radius-low: 5px;
   --radius-high: 15px;
 
@@ -64,6 +65,7 @@
   --color-text-hover: var(--black-opaque);
   --color-heading-h1: var(--black);
   --color-heading-h2: var(--black);
+  --color-heading-h3: var(--black);
   --color-button: var(--orange-4);
   --color-button-hover: var(--orange-1);
 

@@ -29,21 +29,20 @@ body {
   flex-direction: column;
 }
 
-a,
-.link-mentions {
+a {
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
   transition: color var(--time-transition), opacity var(--time-transition);
 
   @media #{$mobileScreen} {
     &:not(.project-url, .link-logo):hover {
-      opacity: .5;
+      opacity: .85;
     }
   }
 
   &:active {
-    opacity: .5;
+    opacity: .85;
   }
 }
 
@@ -53,8 +52,12 @@ a.router-link-active {
   opacity: 1 !important;
 }
 
-.nav-link {
-  // links menu
+.nav-link,
+.card,
+.copyright {
+  a {
+    text-decoration: none !important;
+  }
 }
 
 img,
@@ -73,19 +76,6 @@ h1 {
   font-size: 2.4em;
   font-weight: var(--f-bold);
   color: var(--color-heading-h1);
-}
-
-h1:not(.catchphrase) {
-  transform: translateX(-.75%);
-  opacity: 0;
-  animation: appear-title var(--time-animation) both;
-
-  @keyframes appear-title {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 }
 
 h2 {

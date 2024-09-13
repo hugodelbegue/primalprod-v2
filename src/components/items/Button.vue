@@ -1,6 +1,6 @@
 <template>
     <div class="button">
-        <input :type="type" :style="{ 'padding': padding + 'em', 'width': width + '%' }" :value="msg"
+        <input :type="type" :style="{ 'padding': padding + 'em', 'width': width, 'height': height }" :value="msg"
             :disabled="disabled">
     </div>
 </template>
@@ -11,6 +11,7 @@ defineProps({
     msg: String,
     padding: String,
     width: String,
+    height: String,
     disabled: {
         type: Boolean,
         default: false
@@ -25,31 +26,31 @@ defineProps({
     input[type="button"],
     input[type="submit"] {
         cursor: pointer;
+        background: var(--color-button);
+        color: var(--color-text);
+        font-weight: var(--f-bold);
+        border-radius: var(--radius-low);
+        border: none;
+        box-shadow: 3px 3px 0px var(--color-shadow);
         position: relative;
         top: 0;
         left: 0;
-        color: var(--color-text);
-        font-weight: var(--f-bold);
-        background: var(--color-button);
-        border: none;
-        border-radius: var(--radius-low);
-        box-shadow: 3px 3px 0px var(--color-shadow);
         transition: background var(--time-transition) ease, box-shadow var(--time-transition) ease, top var(--time-transition) ease, left var(--time-transition) ease;
 
-        @media #{$desktopDownScreen} {
+        @media #{$desktopScreen} {
             &:hover {
-                top: 4px;
-                left: 3px;
                 background: var(--color-button-hover);
                 box-shadow: 0px 0px 0px var(--color-shadow);
+                top: 4px;
+                left: 3px;
             }
         }
 
         &:active {
-            top: 4px;
-            left: 3px;
             background: var(--color-button-active);
             box-shadow: 0px 0px 4px var(--color-shadow);
+            top: 4px;
+            left: 3px;
         }
 
         @media #{$tabletScreen} {

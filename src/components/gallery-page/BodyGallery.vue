@@ -18,9 +18,9 @@
             </TransitionGroup>
         </div>
         <div class="selectors">
-            <Button type="button" padding="1" msg="1" />
-            <Button type="button" padding="1" msg="2" />
-            <Button type="button" padding="1" msg="3" />
+            <Button type="button" msg="1" width="50px" height="50px" />
+            <Button type="button" msg="2" width="50px" height="50px" />
+            <Button type="button" msg="3" width="50px" height="50px" />
         </div>
     </div>
 </template>
@@ -132,7 +132,7 @@ article {
         }
     }
 
-    @media #{$desktopDownScreen} {
+    @media #{$switch} {
         .card:hover {
             cursor: pointer;
 
@@ -162,30 +162,16 @@ article {
 .layout-title-card {
     padding: 1em;
     padding-bottom: .25em;
-    font-size: 1.2em;
-    font-weight: var(--weight-bold);
+    font-size: 1.15em;
+    font-weight: var(--f-bold);
     text-align: center;
-}
-
-h2 {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-
-    @media #{$mobileUpScreen} {
-        place-content: center;
-    }
 }
 
 .selectors {
     display: flex;
     place-content: flex-end;
     column-gap: 1em;
-    margin-bottom: 4.3em;
-
-    @media #{$mobileUpScreen} {
-        place-content: center;
-    }
+    margin-bottom: var(--side-y);
 }
 
 // Transitions

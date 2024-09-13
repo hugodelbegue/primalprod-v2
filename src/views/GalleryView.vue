@@ -27,11 +27,13 @@
             </div>
         </div>
         <BodyGallery />
+        <FooterGallery />
     </section>
 </template>
 
 <script setup>
 import BodyGallery from '@/components/gallery-page/BodyGallery.vue'
+import FooterGallery from '@/components/gallery-page/FooterGallery.vue'
 </script>
 
 <style lang="scss" scoped>
