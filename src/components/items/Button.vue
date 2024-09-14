@@ -1,6 +1,6 @@
 <template>
     <div class="button">
-        <input :type="type" :style="{ 'padding': padding + 'em', 'width': width, 'height': height }" :value="msg"
+        <input :type="type" :style="{ 'padding': '0 ' + padding + 'em', 'width': width, 'height': height }" :value="msg"
             :disabled="disabled">
     </div>
 </template>

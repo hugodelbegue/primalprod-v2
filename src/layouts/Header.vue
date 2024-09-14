@@ -1,10 +1,10 @@
 <template>
     <header class="wrapper-header frameworkX" ref="header">
-        <div class="layout-header margin-x">
-            <Logo class="padding-x">
+        <div class="layout-header">
+            <Logo>
                 <template #img>
                     <a class="link-logo" ref="logo" href="/" title="Accueil">
-                        <img alt="PrimalProd logo" src="@/assets/img/logo-2.svg" width="48" height="48" />
+                        <img alt="PrimalProd logo" src="@/assets/img/logo-2.svg" width="56" height="48" />
                     </a>
                 </template>
             </Logo>
@@ -111,11 +111,18 @@ export default {
 <style lang="scss" scoped>
 header {
     --side-y: 1rem;
+    --margin-header-x: 10px;
+
+    @media #{$switch} {
+        --margin-header-x: var(--margin-block-x);
+    }
 }
 
 .layout-header {
     display: flex;
     place-content: space-between;
+    margin-left: var(--margin-header-x);
+    margin-right: var(--margin-header-x);
 }
 
 .layout-nav {

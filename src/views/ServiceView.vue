@@ -1,9 +1,9 @@
 <template>
     <section class="layout-service frameworkY padding-bottom-page">
         <div class="background-header-service frameworkX frameworkY animation-hover-active">
-            <div class="layout-header-service margin-x">
+            <div class="layout-header-service margin-x switch-direction">
                 <div class="layout-description-header-service">
-                    <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
+                    <h1>Voilà mes&nbsp;<span class="animation-hover">prestations</span>&nbsp;bla bla</h1>
                     <div class="text-header-service layout-title move-right">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio ullam
@@ -15,7 +15,7 @@
                 </div>
                 <div class="layout-video-header-service">
                     <video class="video-center" height="360" autoplay>
-                        <source src="../assets/img/video-test-header.mp4" type="video/mp4">
+                        <source src="@/components/service-page/video-test-header.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -30,7 +30,11 @@
 
 .layout-header-service {
     display: flex;
-    gap: calc(var(--side-up) * 2);
+    gap: var(--side-up);
+
+    @media #{$switch} {
+        gap: var(--side-up);
+    }
 }
 
 .layout-description-header-service {

@@ -11,7 +11,6 @@
 
 <style lang="scss" scoped>
 .aboutme {
-    margin-right: 10rem;
 
     h1,
     p {

@@ -22,6 +22,13 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import globalVariable from '@/assets/js/global'
+</script>
+
+<script>
+export default {
+    mixins: [globalVariable]
+}
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +38,7 @@ import { RouterLink } from 'vue-router'
     place-content: center;
     padding: 0;
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         place-content: space-between;
         place-items: center;
     }
@@ -44,7 +51,7 @@ import { RouterLink } from 'vue-router'
             padding-bottom: 0;
         }
 
-        @media #{$mobileScreen} {
+        @media #{$switch} {
             padding: 0;
         }
     }

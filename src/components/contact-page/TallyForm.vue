@@ -1,6 +1,6 @@
 <template>
     <section class="background-form">
-        <div class="layout-form frameworkX frameworkY margin-x">
+        <div class="layout-form frameworkX frameworkY margin-x switch-direction">
             <div class="description-form">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium
                     illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum

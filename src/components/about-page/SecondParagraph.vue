@@ -1,6 +1,6 @@
 <template>
     <section class="background-paragraph animation-hover-active" :style="{ 'background': background }">
-        <div class="layout-paragraph frameworkX frameworkY margin-x">
+        <div class="layout-paragraph frameworkX frameworkY margin-x switch-direction">
             <div class="text-paragraph">
                 <slot name="title-paragraph"></slot>
                 <slot name="text-paragraph"></slot>

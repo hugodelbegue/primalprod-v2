@@ -1,7 +1,7 @@
 <template>
     <footer class="wrapper-footer">
         <div class="background-footer">
-            <div class="layout-footer frameworkX frameworkY margin-x">
+            <div class="layout-footer frameworkX frameworkY margin-x switch-direction">
                 <ReadMore class="readmore" />
                 <ImportantLinks class="importantlinks" />
                 <SocialLinks class="sociallinks" />
@@ -30,11 +30,10 @@ footer {
 
 .layout-footer {
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    gap: 2em;
 
-    @media #{$mobileScreen} {
-        flex-direction: row;
+    @media #{$switch} {
+        gap: 1em;
     }
 }
 

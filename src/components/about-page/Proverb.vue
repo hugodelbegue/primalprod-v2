@@ -1,15 +1,30 @@
 <template>
-    <section class="background-proverb frameworkY">
-        <div class="layout-proverb frameworkX margin-x">
+    <section class="background-proverb frameworkY middle">
+        <div class="layout-proverb margin-x">
             🐾
             <p>
-                N'importe quel idiot peut écrire du code qu'un ordinateur peut comprendre. Les bons programmeurs
-                écrivent du code que les humains peuvent comprendre. - Martin Fowler
+                {{ proverbRandom() }}
             </p>
             🐾
         </div>
     </section>
 </template>
+
+<script setup>
+import globalVariable from '@/assets/js/global'
+</script>
+
+<script>
+export default {
+    mixins: [globalVariable],
+    methods: {
+        proverbRandom() {
+            const randomIndex = Math.floor(Math.random() * this.proverb.length)
+            return this.proverb[randomIndex]
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 .background-proverb {
@@ -19,7 +34,7 @@
 .layout-proverb {
     max-width: var(--tablet);
     display: flex;
-    margin: auto;
+    gap: 1em;
     text-align: center;
 }
 </style>

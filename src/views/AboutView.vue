@@ -1,7 +1,7 @@
 <template>
   <section class="layout-about frameworkY padding-bottom-page">
     <div class="background-header-about frameworkX frameworkY animation-hover-active">
-      <div class="layout-header-about margin-x">
+      <div class="layout-header-about margin-x switch-direction">
         <div class="layout-description-header-about">
           <h1>À&nbsp;<span class="animation-hover">propos</span>&nbsp;de moi</h1>
           <div class="text-header-about layout-title move-right">

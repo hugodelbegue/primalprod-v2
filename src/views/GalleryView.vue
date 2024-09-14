@@ -1,7 +1,7 @@
 <template>
-    <section class="layout-gallery frameworkY padding-bottom-page animation-hover-active">
-        <div class="background-header-gallery frameworkX frameworkY">
-            <div class="layout-header-gallery margin-x">
+    <section class="layout-gallery frameworkY padding-bottom-page">
+        <div class="background-header-gallery frameworkX frameworkY animation-hover-active">
+            <div class="layout-header-gallery margin-x switch-direction">
                 <div class="layout-description-header-gallery">
                     <h1>Découvre mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>
                     <div class="text-header-gallery layout-title move-right">
@@ -21,19 +21,37 @@
                     </div>
                 </div>
                 <div class="layout-img-header-gallery">
-                    <img class="img-left" src="../assets/img/img-test-header-small.png" height="360" alt="">
-                    <img class="img-right" src="../assets/img/img-test-header-small.png" height="280" alt="">
+                    <img class="img-left" src="@/components/gallery-page/img-test-header-small.png" height="360" alt="">
+                    <img class="img-right" src="@/components/gallery-page/img-test-header-small.png" height="280"
+                        alt="">
                 </div>
             </div>
         </div>
         <BodyGallery />
-        <FooterGallery />
+        <ContactReminder background="var(--orange-4)" link="contact" linkText="Réservez votre rendez-vous !">
+            <template #sendcontact-title>
+                <h2>Rien de plus&nbsp;<span class="animation-hover">simple</span>&nbsp;!</h2>
+            </template>
+            <template #sendcontact-paragraph>
+                <p class="space-text low">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad delectus ducimus, fuga architecto eos
+                    quis
+                    commodi voluptate voluptatem nulla quod libero debitis ipsum sunt vero dolorum eligendi?
+                    Consequatur, ut
+                    fugit saepe nulla harum illum ad deserunt excepturi quia ipsa quaerat.
+                </p>
+                <p class="space-text low">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio repellat repellendus quas
+                    autem maxime ab voluptate voluptates eum maiores!
+                </p>
+            </template>
+        </ContactReminder>
     </section>
 </template>
 
 <script setup>
 import BodyGallery from '@/components/gallery-page/BodyGallery.vue'
-import FooterGallery from '@/components/gallery-page/FooterGallery.vue'
+import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -43,7 +61,11 @@ import FooterGallery from '@/components/gallery-page/FooterGallery.vue'
 
 .layout-header-gallery {
     display: flex;
-    gap: var(--margin-block);
+    gap: var(--side-up);
+
+    @media #{$switch} {
+        gap: var(--side);
+    }
 }
 
 .layout-description-header-gallery {
@@ -53,8 +75,12 @@ import FooterGallery from '@/components/gallery-page/FooterGallery.vue'
 .layout-img-header-gallery {
     flex: 40%;
     display: flex;
-    place-content: flex-end;
+    place-content: center;
     place-items: center;
+
+    @media #{$switch} {
+        place-content: flex-end;
+    }
 }
 
 .img-left,

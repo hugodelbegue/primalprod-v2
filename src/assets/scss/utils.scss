@@ -57,6 +57,28 @@
     margin: 1em 0;
 }
 
+.space-text {
+    --space-p: var(--side);
+    margin-bottom: var(--space-p);
+}
+
+.space-text.low {
+    --space-p: 1em;
+}
+
+.space-text:last-child {
+    margin-bottom: 0 !important;
+}
+
+// responsive
+.switch-direction {
+    flex-direction: column;
+
+    @media #{$switch} {
+        flex-direction: row;
+    }
+}
+
 // animation hover
 .animation-hover-active {
     &:hover .animation-hover {

@@ -1,7 +1,7 @@
 <template>
     <section class="layout-faq frameworkY padding-bottom-page">
         <div class="background-header-faq frameworkX frameworkY animation-hover-active">
-            <div class="layout-header-faq margin-x">
+            <div class="layout-header-faq margin-x switch-direction">
                 <div class="layout-description-header-faq">
                     <h1>FAQ</h1>
                     <div class="text-header-faq layout-title move-right">
@@ -32,7 +32,11 @@
 
 .layout-header-faq {
     display: flex;
-    gap: calc(var(--side-up) * 2);
+    gap: var(--side-up);
+
+    @media #{$switch} {
+        gap: calc(var(--side-up) * 2);
+    }
 }
 
 .layout-description-header-faq {

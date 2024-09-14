@@ -72,10 +72,20 @@ export default {
 
 <style lang="scss" scoped>
 article {
-    --size-card: calc(calc(100% / 3) - calc(60px / 3));
+    --number-card: 1;
+    --number-space-between-card: calc(var(--number-card) - 1);
+    --size-card: calc(calc(100% / var(--number-card)) - calc(calc(var(--space-between-card) * var(--number-space-between-card)) / var(--number-card)));
     --background-card: var(--background-second);
     --background-card-back: var(--background-second-opaque);
     --radius-card: var(--radius-low);
+
+    @media #{$mobileScreen} {
+        --number-card: 2;
+    }
+
+    @media #{$tabletScreen} {
+        --number-card: 3;
+    }
 }
 
 .container-gallery {

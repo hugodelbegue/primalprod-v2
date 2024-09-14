@@ -20,18 +20,35 @@
 </template>
 
 <style lang="scss" scoped>
-.background-partner {
+.background-partner-contact {
+    --number-partner: 2;
+    --space-between-partner: 10px;
+    --number-space-between-partner: calc(var(--number-partner) - 1);
+    --size-partner: calc(calc(100% / var(--number-partner)) - calc(calc(var(--space-between-partner) * var(--number-space-between-partner)) / var(--number-partner)));
     background: transparent;
+
+    @media #{$mobileScreen} {
+        --number-partner: 4;
+    }
+
+    @media #{$tabletScreen} {
+        --number-partner: 6;
+    }
+
+    @media #{$desktopScreen} {
+        --number-partner: 8;
+    }
 }
 
 .layout-partner {
     display: flex;
-    gap: 10px;
+    gap: var(--space-between-partner);
     flex-wrap: wrap;
 }
 
 .partner {
-    width: calc(calc(100% / 8) - calc(70px / 8));
+    // width: calc(calc(100% / 8) - calc(70px / 8));
+    width: var(--size-partner);
     height: auto;
     aspect-ratio: 1 / 1;
 }

@@ -1,7 +1,7 @@
 <template>
     <section class="layout-contact frameworkY padding-bottom-page">
         <div class="background-header-contact frameworkX frameworkY animation-hover-active">
-            <div class="layout-header-contact margin-x">
+            <div class="layout-header-contact margin-x switch-direction">
                 <div class="layout-description-header-contact">
                     <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
                     <div class="text-header-contact layout-title move-right">
@@ -39,13 +39,19 @@ import TallyForm from '@/components/contact-page/TallyForm.vue'
 }
 
 .layout-description-header-contact {
-    flex: 60%;
+    @media #{$switch} {
+        flex: 60%;
+    }
 }
 
 .layout-img-header-contact {
-    flex: 40%;
-    display: flex;
-    place-content: flex-end;
-    place-items: center;
+    display: none;
+
+    @media #{$switch} {
+        flex: 40%;
+        display: flex;
+        place-content: flex-end;
+        place-items: center;
+    }
 }
 </style>

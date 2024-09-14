@@ -1,6 +1,6 @@
 <template>
   <div class="layout-home frameworkY padding-bottom-page middle">
-    <div class="layout-aboutme frameworkX middle margin-around">
+    <div class="layout-aboutme frameworkX middle margin-x switch-direction">
       <Logo class="avatar">
         <template #img>
           <img class="avatar-img" alt="Avatar" src="@/components/home-page/section-aboutme/avatar.svg" />
@@ -33,7 +33,7 @@ import Test3 from '@/components/home-page/section-test/Test3.vue'
   gap: 2.5rem;
   padding-bottom: calc(48px * 2);
 
-  @media #{$tabletScreen} {
+  @media #{$switch} {
     gap: 5rem;
   }
 }
@@ -42,7 +42,6 @@ import Test3 from '@/components/home-page/section-test/Test3.vue'
   display: flex;
   place-content: center;
   place-items: flex-start;
-  margin-left: 10rem;
 }
 
 .avatar-img {

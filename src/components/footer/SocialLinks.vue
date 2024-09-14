@@ -21,7 +21,6 @@
 <script setup>
 import globalVariable from '@/assets/js/global'
 import IconLinkedin from '../icons/IconLinkedin.vue'
-import IconInstagram from '../icons/IconInstagram.vue'
 import IconGithub from '../icons/IconGithub.vue'
 </script>
 

@@ -14,6 +14,9 @@
   --f-bold: 600;
 
   --f-size-global: 16px;
+  --f-size-h1: 1.6em;
+  --f-size-h2: 1.2em;
+  --f-size-h3: 1em;
   --f-size-important: 1.9em;
   --f-menu: 1em;
   --f-footer: 14px;
@@ -28,18 +31,19 @@
   --mobile: 767px;
   --index: calc(1vw + 1vh);
 
-  --side: 2rem;
+  --side: 1rem;
   --side-up: calc(var(--side) * 2);
-  --side-y: 5rem;
+  --side-y: 2rem;
   --side-x: calc(50% - var(--mobile) / 2);
   // --side-x: max(var(--side), calc(50% - var(--mobile) / 2));
   --size-line: 4px;
 
   // layout block
-  --margin-block-x: 50px;
+  --margin-block-x: 20px;
   --margin-block-y: 10px;
   --radius-low: 5px;
   --radius-high: 15px;
+
 
   // animations
   --time-transition: 300ms;
@@ -88,6 +92,15 @@
   --gray-very-light: #d3d3d3;
 
 
+  @media #{$mobileScreen} {
+    --f-size-h1: 2.4em;
+    --f-size-h2: 1.8em;
+    --f-size-h3: 1.1em;
+
+    --side: 2rem;
+    --side-y: 5rem;
+    --margin-block-x: 50px;
+  }
 
 
 
@@ -119,8 +132,10 @@
   // --black: #000;
   --black-soft: #222222;
 
-  --linear-background-light: linear-gradient(225deg, var(--sunglow) 0%, var(--parchment) 100%), var(--sunglow);
-  --linear-background-dark: linear-gradient(25deg, var(--black-soft) 0%, var(--brown-orange) 100%), var(--black-soft);
+  --linear-background-light: linear-gradient(225deg, var(--sunglow) 0%, var(--parchment) 100%),
+  var(--sunglow);
+  --linear-background-dark: linear-gradient(25deg, var(--black-soft) 0%, var(--brown-orange) 100%),
+  var(--black-soft);
 
   --shadow-light: rgba(60, 60, 60, 0.29);
   --shadow-dark: rgba(84, 84, 84, 0.65);
@@ -165,7 +180,11 @@
   --line-height: 1.6;
   --spacing: 1.1px;
 
-  --family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --family: 'Inter',
+  'Helvetica Neue',
+  Helvetica,
+  Arial,
+  sans-serif;
   --weight-bold: 600;
   --weight-very-bold: 800;
 

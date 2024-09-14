@@ -3,7 +3,7 @@
         <div v-for="data in renderData">
             <HeaderProject class="frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #title-project>
-                    {{ data['full-title'] }}
+                    Site . {{ data['full-title'] }}
                 </template>
                 <template #tag-project>
                     {{ data.tag }}
@@ -35,7 +35,24 @@
                 </template>
             </TestimonialProject>
         </div>
-        <SendInContactPage />
+        <ContactReminder background="var(--orange-4)">
+            <template #sendcontact-title>
+                <h2>Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala bla</h2>
+            </template>
+            <template #sendcontact-paragraph>
+                <p class="space-text low">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
+                    exercitationem, unde alias
+                    perferendis voluptatibus autem harum earum laboriosam inventore.
+                </p>
+                <p class="space-text low">
+                    Perferendis voluptatibus autem harum earum laboriosam inventore.
+                </p>
+                <p class="space-text low">
+                    Merci
+                </p>
+            </template>
+        </ContactReminder>
     </section>
 </template>
 
@@ -43,8 +60,8 @@
 import HeaderProject from '@/components/project-page/HeaderProject.vue'
 import BodyProject from "@/components/project-page/BodyProject.vue"
 import GalleryProject from "@/components/project-page/GalleryProject.vue"
-import TestimonialProject from '@/components/project-page/TestimonialProject.vue'
-import SendInContactPage from '@/components/items/section/SendInContactPage.vue'
+import TestimonialProject from '@/components/items/section/Testimonial.vue'
+import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
 <script>
@@ -76,18 +93,10 @@ export default {
 
 <style lang="scss" scoped>
 .img-gallery {
-    width: calc(calc(100% / 3) - 20px);
+    width: var(--size-img-gallery);
 
     .picture {
         width: 100%;
     }
-}
-
-.space-text {
-    margin-bottom: var(--side);
-}
-
-.space-text:last-child {
-    margin-bottom: 0 !important;
 }
 </style>

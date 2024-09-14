@@ -6,7 +6,7 @@
                 <slot name="name-project"></slot>
             </h2>
             <div class="testimonial-project">
-                <slot name="testimonial-project"></slot>
+                ≪&nbsp;<slot name="testimonial-project"></slot>&nbsp;≫
                 <div class="full-name-project">
                     <slot name="full-name-project"></slot>
                 </div>
@@ -24,17 +24,28 @@
 .testimonial-project {
     position: relative;
     padding: var(--side);
-    padding-bottom: calc(var(--side) * 1.5);
+    padding-bottom: calc(var(--side) * 3.5);
     border: 2px solid var(--color-separation-line);
     border-radius: var(--radius-high);
+
+    @media #{$mobileScreen} {
+        padding-bottom: calc(var(--side) * 1.5);
+    }
 }
 
 .full-name-project {
     background: var(--background-testimonial);
     position: absolute;
     bottom: -12px;
-    right: 70px;
+    right: 50%;
+    transform: translateX(50%);
     padding-left: 1.5em;
     padding-right: 1.5em;
+    width: max-content;
+
+    @media #{$mobileScreen} {
+        right: 70px;
+        transform: none;
+    }
 }
 </style>

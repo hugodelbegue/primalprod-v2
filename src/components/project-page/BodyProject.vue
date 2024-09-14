@@ -1,6 +1,6 @@
 <template>
     <div class="background-body-project">
-        <div class="layout-body-project frameworkY margin-x">
+        <div class="layout-body-project frameworkY margin-x switch-direction">
             <div class="mockup-project" :style="{ 'background-image': `url(${url})` }"></div>
             <div class="text-project">
                 <slot name="text-project"></slot>
