@@ -1,7 +1,7 @@
 <template>
     <div class="background-testimonial-project animation-hover-active">
         <div class="layout-testimonial-project frameworkY margin-x">
-            <h2 class="name-project">
+            <h2 class="name-project space-text">
                 <span class="animation-hover">Témoignage</span>&nbsp;de
                 <slot name="name-project"></slot>
             </h2>

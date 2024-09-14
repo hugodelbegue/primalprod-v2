@@ -5,11 +5,11 @@
                 <div class="layout-description-header-mention">
                     <h1>Mentions légales</h1>
                     <div class="text-header-mention layout-title move-bottom">
-                        <p>
+                        <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur.
                         </p>
-                        <p>
+                        <p class="space-text">
                             Dolor. Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Voluptatibus modi voluptate ipsam accusantium doloribus quod omnis itaque, labore
                             quia,

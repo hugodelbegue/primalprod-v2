@@ -5,7 +5,7 @@
                 <div class="layout-description-header-gallery">
                     <h1>Découvre mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>
                     <div class="text-header-gallery layout-title move-right">
-                        <p>
+                        <p class="space-text">
                             Lorem Ipsum is simply dummy text of the
                             printing and
                             typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -15,7 +15,7 @@
                             has
                             survived not only five centuries.
                         </p>
-                        <p>
+                        <p class="space-text">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, accusamus?
                         </p>
                     </div>
@@ -30,17 +30,17 @@
         <BodyGallery />
         <ContactReminder background="var(--orange-4)" link="contact" linkText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
-                <h2>Rien de plus&nbsp;<span class="animation-hover">simple</span>&nbsp;!</h2>
+                <h2 class="space-text">Rien de plus&nbsp;<span class="animation-hover">simple</span>&nbsp;!</h2>
             </template>
             <template #sendcontact-paragraph>
-                <p class="space-text low">
+                <p class="space-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad delectus ducimus, fuga architecto eos
                     quis
                     commodi voluptate voluptatem nulla quod libero debitis ipsum sunt vero dolorum eligendi?
                     Consequatur, ut
                     fugit saepe nulla harum illum ad deserunt excepturi quia ipsa quaerat.
                 </p>
-                <p class="space-text low">
+                <p class="space-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio repellat repellendus quas
                     autem maxime ab voluptate voluptates eum maiores!
                 </p>

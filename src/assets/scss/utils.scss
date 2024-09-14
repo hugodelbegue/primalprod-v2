@@ -53,17 +53,9 @@
     margin-top: var(--side-y);
 }
 
-.space-bottom-p {
-    margin: 1em 0;
-}
-
 .space-text {
     --space-p: var(--side);
     margin-bottom: var(--space-p);
-}
-
-.space-text.low {
-    --space-p: 1em;
 }
 
 .space-text:last-child {

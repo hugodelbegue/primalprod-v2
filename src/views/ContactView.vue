@@ -5,11 +5,11 @@
                 <div class="layout-description-header-contact">
                     <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
                     <div class="text-header-contact layout-title move-right">
-                        <p>
+                        <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur.
                         </p>
-                        <p>
+                        <p class="space-text">
                             Dolor. Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Voluptatibus modi voluptate ipsam accusantium doloribus quod omnis itaque, labore
                             quia,

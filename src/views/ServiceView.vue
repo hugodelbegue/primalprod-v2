@@ -5,7 +5,7 @@
                 <div class="layout-description-header-service">
                     <h1>Voilà mes&nbsp;<span class="animation-hover">prestations</span>&nbsp;bla bla</h1>
                     <div class="text-header-service layout-title move-right">
-                        <p>
+                        <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio ullam
                             inventore
                             suscipit nesciunt at possimus hic porro, sint molestias! Architecto odit ipsa corporis eum

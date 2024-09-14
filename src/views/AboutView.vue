@@ -5,7 +5,7 @@
         <div class="layout-description-header-about">
           <h1>À&nbsp;<span class="animation-hover">propos</span>&nbsp;de moi</h1>
           <div class="text-header-about layout-title move-right">
-            <p>
+            <p class="space-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque aperiam autem nulla voluptatibus
               quae ex ipsum numquam facere consequatur, dignissimos optio libero tempora assumenda, vero quam neque
               aliquam debitis! Nesciunt cumque dignissimos quos corporis esse eius, nemo est soluta!
@@ -23,14 +23,14 @@
         <img class="img-paragraph" src="../assets/img/label.svg">
       </template>
       <template #title-paragraph>
-        <h2>Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
-        <p>
+        <p class="space-text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
           accusamus, soluta rerum laboriosam aspernatur ratione.
         </p>
-        <p>
+        <p class="space-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam unde, asperiores voluptas saepe provident
           inventore vero, illo facere aspernatur soluta modi molestias consectetur molestiae hic, nemo nam aliquid
           doloribus nobis.
@@ -42,10 +42,10 @@
         <img class="img-paragraph" src="../assets/img/label.svg">
       </template>
       <template #title-paragraph>
-        <h2>Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
-        <p>
+        <p class="space-text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
           accusamus, soluta rerum laboriosam aspernatur ratione.
         </p>
@@ -56,10 +56,10 @@
         <img class="img-paragraph" src="../assets/img/label.svg">
       </template>
       <template #title-paragraph>
-        <h2>Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
-        <p>
+        <p class="space-text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
           accusamus, soluta rerum laboriosam aspernatur ratione.
         </p>

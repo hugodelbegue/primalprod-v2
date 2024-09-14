@@ -35,21 +35,19 @@
                 </template>
             </TestimonialProject>
         </div>
-        <ContactReminder background="var(--orange-4)">
+        <ContactReminder background="var(--orange-4)" link="contact" linkText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
-                <h2>Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala bla</h2>
+                <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
+                    bla</h2>
             </template>
             <template #sendcontact-paragraph>
-                <p class="space-text low">
+                <p class="space-text">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
                     exercitationem, unde alias
                     perferendis voluptatibus autem harum earum laboriosam inventore.
                 </p>
-                <p class="space-text low">
+                <p class="space-text">
                     Perferendis voluptatibus autem harum earum laboriosam inventore.
-                </p>
-                <p class="space-text low">
-                    Merci
                 </p>
             </template>
         </ContactReminder>
