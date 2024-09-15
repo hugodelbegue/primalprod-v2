@@ -12,7 +12,7 @@
     padding-left: 8rem;
     padding-right: 2rem;
     border: 4px solid transparent;
-    background: #F4D4B1;
+    background: var(--background-header-page);
 
     &::before {
         content: "";

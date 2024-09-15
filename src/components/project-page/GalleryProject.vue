@@ -3,6 +3,7 @@
         <div class="layout-gallery-project margin-x">
             <h2 class="space-text">En&nbsp;<span class="animation-hover">image</span></h2>
             <div class="layout-picture-project middle">
+                <div id="overlay-img" class="overlay-loading"></div>
                 <slot name="img-project"></slot>
             </div>
         </div>
@@ -23,8 +24,13 @@
 }
 
 .layout-picture-project {
+    position: relative;
     place-content: space-between;
     flex-wrap: wrap;
     gap: var(--space-between-img-gallery);
+}
+
+.overlay-loading {
+    background: var(--background-gallery-project);
 }
 </style>

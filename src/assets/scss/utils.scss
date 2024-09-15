@@ -70,14 +70,3 @@
         flex-direction: row;
     }
 }
-
-// animation hover
-.animation-hover-active {
-    &:hover .animation-hover {
-        color: var(--color-important) !important;
-    }
-}
-
-.animation-hover {
-    transition: color var(--time-transition-work);
-}

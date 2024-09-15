@@ -18,9 +18,9 @@
       </div>
     </div>
     <Proverb />
-    <FirstParagraph background="transparent">
+    <Paragraph background="transparent">
       <template #img-paragraph>
-        <img class="img-paragraph" src="../assets/img/label.svg">
+        <img class="img-paragraph" src="../assets/img/label.svg" @load="loading('overlay-img')">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -36,10 +36,10 @@
           doloribus nobis.
         </p>
       </template>
-    </FirstParagraph>
-    <SecondParagraph background="var(--orange-3)">
+    </Paragraph>
+    <Paragraph background="var(--orange-3)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-paragraph" src="../assets/img/label.svg">
+        <img class="img-paragraph" src="../assets/img/label.svg" @load="loading('overlay-img')">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -50,10 +50,10 @@
           accusamus, soluta rerum laboriosam aspernatur ratione.
         </p>
       </template>
-    </SecondParagraph>
-    <ThirdParagraph background="transparent">
+    </Paragraph>
+    <Paragraph background="transparent">
       <template #img-paragraph>
-        <img class="img-paragraph" src="../assets/img/label.svg">
+        <img class="img-paragraph" src="../assets/img/label.svg" @load="loading('overlay-img')">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -64,16 +64,15 @@
           accusamus, soluta rerum laboriosam aspernatur ratione.
         </p>
       </template>
-    </ThirdParagraph>
+    </Paragraph>
     <Partner />
   </section>
 </template>
 
 <script setup>
+import { loading } from '@/assets/js/utils'
 import Partner from '@/components/about-page/Partner.vue'
-import FirstParagraph from '@/components/about-page/FirstParagraph.vue'
-import SecondParagraph from '@/components/about-page/SecondParagraph.vue'
-import ThirdParagraph from '@/components/about-page/ThirdParagraph.vue'
+import Paragraph from '@/components/about-page/Paragraph.vue'
 import Avatar from '@/components/items/avatar/Avatar.vue'
 import Proverb from '@/components/about-page/Proverb.vue'
 </script>

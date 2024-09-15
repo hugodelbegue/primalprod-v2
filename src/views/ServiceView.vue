@@ -14,7 +14,11 @@
                     </div>
                 </div>
                 <div class="layout-video-header-service">
-                    <video class="video-center" height="360" autoplay>
+                    <div id="overlay-media" class="overlay-loading"></div>
+                    <img v-if="isMobileDevice()" class="img-center"
+                        src="@/components/service-page/img-test-header-2.png" alt="" height="360"
+                        @load="loading('overlay-media')">
+                    <video v-else class="video-center" height="360" @loadeddata="loading('overlay-media')" autoplay>
                         <source src="@/components/service-page/video-test-header.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -22,6 +26,10 @@
         </div>
     </section>
 </template>
+
+<script setup>
+import { loading, isMobileDevice } from '@/assets/js/utils'
+</script>
 
 <style lang="scss" scoped>
 .background-header-service {
@@ -42,22 +50,20 @@
 }
 
 .layout-video-header-service {
+    position: relative;
     flex: 40%;
     display: flex;
     place-content: flex-end;
     place-items: center;
 }
 
-.video-center {
+.video-center,
+.img-center {
     filter: grayscale(1);
     width: 100%;
-    opacity: 0;
-    animation: appear-center var(--time-animation) both;
 }
 
-@keyframes appear-center {
-    to {
-        opacity: 1;
-    }
+.overlay-loading {
+    background: var(--background-header-page);
 }
 </style>

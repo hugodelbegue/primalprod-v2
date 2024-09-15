@@ -19,11 +19,12 @@
             <GalleryProject class="frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #img-project>
                     <div v-for="picture in data['all-pictures']" class="img-gallery">
-                        <img class="picture" :src="imgUrl(picture.img)" alt="Photo de projet">
+                        <img class="picture" :src="imgUrl(picture.img)" alt="Photo de projet"
+                            @load="loading('overlay-img')">
                     </div>
                 </template>
             </GalleryProject>
-            <TestimonialProject class="frameworkX" v-if="cleanUrl(data.title) === title">
+            <TestimonialProject class=" frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #name-project>
                     {{ data.name }}
                 </template>
@@ -35,7 +36,7 @@
                 </template>
             </TestimonialProject>
         </div>
-        <ContactReminder background="var(--orange-4)" link="contact" linkText="Réservez votre rendez-vous !">
+        <ContactReminder background="var(--orange-4)" route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
                 <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
                     bla</h2>
@@ -55,6 +56,7 @@
 </template>
 
 <script setup>
+import { loading } from '@/assets/js/utils'
 import HeaderProject from '@/components/project-page/HeaderProject.vue'
 import BodyProject from "@/components/project-page/BodyProject.vue"
 import GalleryProject from "@/components/project-page/GalleryProject.vue"

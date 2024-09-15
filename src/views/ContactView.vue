@@ -30,7 +30,7 @@ import TallyForm from '@/components/contact-page/TallyForm.vue'
 
 <style lang="scss" scoped>
 .background-header-contact {
-    background: var(--background-header-page);
+    background: var(--background-second-opaque);
 }
 
 .layout-header-contact {

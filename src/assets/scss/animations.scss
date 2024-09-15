@@ -1,3 +1,4 @@
+// animations appear
 h1:not(.catchphrase, .title-header-project) {
     transform: translateX(-.75%);
     opacity: 0;
@@ -61,4 +62,35 @@ h1:not(.catchphrase, .title-header-project) {
             opacity: 1;
         }
     }
+}
+
+.appear-center {
+    opacity: 0;
+    animation: appear-center var(--time-animation) both;
+
+    @keyframes appear-center {
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+// animation loading
+.overlay-loading {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity var(--time-animation);
+}
+
+// animation hover
+.animation-hover-active {
+    &:hover .animation-hover {
+        color: var(--color-important) !important;
+    }
+}
+
+.animation-hover {
+    transition: color var(--time-transition-work);
 }

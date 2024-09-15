@@ -7,27 +7,50 @@
                     impedit veniam iure sed. Laborum?</p>
             </div>
             <div class="form">
+                <div id="overlay-form" class="overlay-loading middle"></div>
                 <iframe
                     src="https://tally.so/embed/wod0dN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    loading="lazy" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0"
-                    title="null">
+                    loading="lazy" width="100%" height="250" frameborder="0" marginheight="0" marginwidth="0"
+                    title="null" @load="loading('overlay-form', true)">
                 </iframe>
             </div>
         </div>
     </section>
 </template>
 
+<script setup>
+import { loading } from '@/assets/js/utils'
+</script>
+
 <style lang="scss" scoped>
+.background-form {
+    background: var(--background-form);
+}
+
 .layout-form {
     display: flex;
     gap: var(--side-up);
 }
 
 .form {
-    flex: 35%
+    position: relative;
+    flex: 35%;
+
+    iframe {
+        display: flex;
+    }
 }
 
 .description-form {
     flex: 65%;
+}
+
+.overlay-loading {
+    background: var(--background-form);
+}
+
+.overlay-loading::after {
+    content: '🐾';
+    font-size: 8em;
 }
 </style>
