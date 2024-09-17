@@ -10,6 +10,11 @@
                 </a>
             </li>
             <li>
+                <a :href="instagram" target="_blank">
+                    <IconInstagram />
+                </a>
+            </li>
+            <li>
                 <a :href="github" target="_blank">
                     <IconGithub />
                 </a>
@@ -22,6 +27,7 @@
 import globalVariable from '@/assets/js/global'
 import IconLinkedin from '../icons/IconLinkedin.vue'
 import IconGithub from '../icons/IconGithub.vue'
+import IconInstagram from '../icons/IconInstagram.vue'
 </script>
 
 <script>

@@ -1,27 +1,27 @@
 <template>
-    <div class="background-testimonial-project animation-hover-active">
-        <div class="layout-testimonial-project frameworkY margin-x">
-            <h2 class="name-project space-text">
-                <span class="animation-hover">Témoignage</span>&nbsp;de
-                <slot name="name-project"></slot>
+    <div class="background-testimonial frameworkX animation-hover-active" :style="{ 'background': background }">
+        <div class="layout-testimonial frameworkY margin-x">
+            <h2 class="header-testimonial space-text">
+                <slot name="title-testimonial"></slot>
             </h2>
-            <div class="testimonial-project">
-                ≪&nbsp;<slot name="testimonial-project"></slot>&nbsp;≫
-                <div class="full-name-project">
-                    <slot name="full-name-project"></slot>
+            <div class="body-testimonial">
+                ≪&nbsp;<slot name="text-testimonial"></slot>&nbsp;≫
+                <div class="footer-testimonial" :style="{ 'background': background }">
+                    <slot name="full-name-testimonial"></slot>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
-.background-testimonial-project {
-    --background-testimonial: var(--background-main);
-    background: var(--background-testimonial);
-}
+<script setup>
+defineProps({
+    background: String
+})
+</script>
 
-.testimonial-project {
+<style lang="scss" scoped>
+.body-testimonial {
     position: relative;
     padding: var(--side);
     padding-bottom: calc(var(--side) * 3.5);
@@ -33,8 +33,7 @@
     }
 }
 
-.full-name-project {
-    background: var(--background-testimonial);
+.footer-testimonial {
     position: absolute;
     bottom: -12px;
     right: 50%;

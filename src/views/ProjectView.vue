@@ -24,7 +24,7 @@
                     </div>
                 </template>
             </GalleryProject>
-            <TestimonialProject class=" frameworkX" v-if="cleanUrl(data.title) === title">
+            <TestimonialProject class="frameworkX" v-if="cleanUrl(data.title) === title">
                 <template #name-project>
                     {{ data.name }}
                 </template>

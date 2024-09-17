@@ -24,16 +24,19 @@
                 </div>
             </div>
         </div>
+        <Test2 />
+        <Test2 />
     </section>
 </template>
 
 <script setup>
 import { loading, isMobileDevice } from '@/assets/js/utils'
+import Test2 from '@/components/home-page/section-test/Test2.vue'
 </script>
 
 <style lang="scss" scoped>
 .background-header-service {
-    background: var(--background-header-page);
+    background: var(--background-second-opaque);
 }
 
 .layout-header-service {

@@ -26,7 +26,7 @@
 
   // layout
   --max-desktop: 1920px;
-  --desktop: 1440px;
+  --desktop: 1330px;
   --tablet: 1024px;
   --mobile: 767px;
   --index: calc(1vw + 1vh);
@@ -52,6 +52,7 @@
 
   // colors
   --background-main: var(--beige);
+  --background-main-opaque: rgba(245, 233, 205, 0.95);
   --background-second: var(--orange-1);
   --background-second-opaque: var(--orange-opaque);
 

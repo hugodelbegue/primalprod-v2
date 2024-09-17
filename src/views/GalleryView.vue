@@ -13,7 +13,7 @@
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                             It
                             has
-                            survived not only five centuries.
+                            survived not only five centuries. 🎸
                         </p>
                         <p class="space-text">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, accusamus?

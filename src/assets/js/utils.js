@@ -14,10 +14,10 @@ export function loading(element, remove) {
     const overlay = document.querySelectorAll(`#${element}`)
     overlay.forEach(overlay => {
         overlay.style.opacity = '0'
+        if (remove === true) {
+            setTimeout(() => {
+                overlay.remove()
+            }, 500)
+        }
     })
-    if (remove === true) {
-        setTimeout(() => {
-            overlay.remove()
-        }, 500)
-    }
 }

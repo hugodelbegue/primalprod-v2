@@ -1,5 +1,5 @@
 <template>
-    <div class="background-body-project">
+    <div class="background-body-project" :style="{ 'background-image': `url(${url})` }">
         <div class="layout-body-project frameworkY margin-x switch-direction">
             <div class="mockup-project" :style="{ 'background-image': `url(${url})` }"></div>
             <div class="text-project">
@@ -17,10 +17,27 @@ defineProps({
 
 <style lang="scss" scoped>
 .background-body-project {
-    background: transparent;
+    position: relative;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    &::before {
+        content: "";
+        background: var(--background-main-opaque);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
 }
 
 .layout-body-project {
+    position: relative;
+    z-index: 2;
     display: flex;
     gap: var(--side-up);
 }
@@ -39,5 +56,10 @@ defineProps({
     height: auto;
     aspect-ratio: 16 / 9;
     margin: auto;
+}
+
+.text-project {
+    backdrop-filter: blur(5px);
+    border-radius: var(--radius-high);
 }
 </style>

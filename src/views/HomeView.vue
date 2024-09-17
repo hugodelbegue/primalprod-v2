@@ -29,7 +29,7 @@ import Test3 from '@/components/home-page/section-test/Test3.vue'
 
 .layout-aboutme {
   --side-x: calc(50% - var(--tablet) / 2);
-  min-height: calc(100vh - var(--side-y) - calc(var(--margin-block-y) * 4) - 48px);
+  min-height: calc(100vh - var(--side-y) - calc(var(--margin-block-y) * 2) - 48px);
   gap: 2.5rem;
   padding-bottom: calc(48px * 2);
 

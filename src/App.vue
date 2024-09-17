@@ -21,6 +21,14 @@ import ReturnTop from './components/items/ReturnTop.vue'
 
 <script>
 export default {
+  data() {
+    return {
+      currentRoute: null
+    }
+  },
+  created() {
+    this.currentRoute = this.$route.name
+  },
   methods: {
     // Return to the top
     top() {
@@ -31,47 +39,50 @@ export default {
   computed: {
     showPaint() {
       return {
-        paint: this.$route.name == 'contact',
-        'background-move': this.$route.name == 'contact'
+        'paint-contact': this.currentRoute == 'contact',
+        'background-contact-move': this.currentRoute == 'contact',
+        'paint-service': this.currentRoute == 'services',
+        'background-service-move': this.currentRoute == 'services'
       }
-    },
-    bandLeft() {
-      return {
-        band__left: this.$route.name == 'projects'
-      }
-    },
-    bandRight() {
-      return {
-        band__right: this.$route.name == 'projects'
-      }
-    },
-    lineHeader() {
-      return {
-        line__hidden: this.$route.name !== 'home'
-      }
+    }
+  },
+  watch: {
+    '$route'(to, from) {
+      this.currentRoute = to.name
     }
   }
 }
 </script>
 
-
 <style lang="scss" scoped>
 // Label background
-.paint {
-  background-image: url(@/assets/img/label.svg);
-  background-repeat: no-repeat;
-  background-size: 25vh;
-  background-position-x: right;
-  background-position-y: top;
+.paint-contact {
+  background: url(@/assets/img/label.svg) right / 25vh no-repeat;
 }
 
-.background-move {
-  background-position-y: -7.5%;
-  animation: move-top var(--time-animation) both;
+.paint-service {
+  background: url(@/assets/img/logo-background.svg) top / 50vh no-repeat;
+  background-position-y: -10%;
+}
 
-  @keyframes move-top {
+.background-contact-move {
+  background-position-y: -1.5%;
+  animation: background-contact-move var(--time-animation) both;
+
+  @keyframes background-contact-move {
     to {
       background-position-y: 0%;
+    }
+  }
+}
+
+.background-service-move {
+  background-position-x: -11.5%;
+  animation: background-service-move var(--time-animation) both;
+
+  @keyframes background-service-move {
+    to {
+      background-position-x: -10%;
     }
   }
 }

@@ -2,15 +2,24 @@
     <section class="background-form">
         <div class="layout-form frameworkX frameworkY margin-x switch-direction">
             <div class="description-form">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium
+                <p class="space-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium
                     illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum
-                    impedit veniam iure sed. Laborum?</p>
+                    impedit veniam iure sed. Laborum?
+                </p>
+                <p class="space-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione temporibus a tempore praesentium
+                    autem sapiente optio facere iusto nulla. Commodi.
+                </p>
+                <p class="space-text">
+                    Lorem ipsum dolor sit amet. 😄
+                </p>
             </div>
             <div class="form">
                 <div id="overlay-form" class="overlay-loading middle"></div>
                 <iframe
                     src="https://tally.so/embed/wod0dN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    loading="lazy" width="100%" height="250" frameborder="0" marginheight="0" marginwidth="0"
+                    loading="lazy" width="500" height="250" frameborder="0" marginheight="0" marginwidth="0"
                     title="null" @load="loading('overlay-form', true)">
                 </iframe>
             </div>
@@ -34,7 +43,6 @@ import { loading } from '@/assets/js/utils'
 
 .form {
     position: relative;
-    flex: 35%;
 
     iframe {
         display: flex;
@@ -42,7 +50,7 @@ import { loading } from '@/assets/js/utils'
 }
 
 .description-form {
-    flex: 65%;
+    flex: 100%;
 }
 
 .overlay-loading {

@@ -7,7 +7,7 @@
                     <div class="text-header-contact layout-title move-right">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
-                            Earum ullam nulla facere consectetur.
+                            Earum ullam nulla facere consectetur. 🎨
                         </p>
                         <p class="space-text">
                             Dolor. Lorem ipsum dolor sit amet consectetur adipisicing
@@ -21,11 +21,26 @@
             </div>
         </div>
         <TallyForm />
+        <Testimonial background="var(--orange-3)">
+            <template #title-testimonial>
+                <span class="animation-hover">Travailler</span>&nbsp;avec moi
+            </template>
+            <template #text-testimonial>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
+                consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
+                inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
+                nesciunt, tempore ratione voluptate, suscipit velit.
+            </template>
+            <template #full-name-testimonial>
+                Jean Dupont, Directeur de je ne sais pas quoi
+            </template>
+        </Testimonial>
     </section>
 </template>
 
 <script setup>
 import TallyForm from '@/components/contact-page/TallyForm.vue'
+import Testimonial from '@/components/items/section/Testimonial.vue'
 </script>
 
 <style lang="scss" scoped>

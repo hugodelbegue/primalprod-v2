@@ -1,11 +1,9 @@
 <template>
     <section class="background-proverb frameworkY middle">
         <div class="layout-proverb margin-x">
-            🐾
             <p>
-                {{ proverbRandom() }}
+                🐾&nbsp;≪&nbsp;{{ proverbRandom() }}&nbsp;≫&nbsp;🐾
             </p>
-            🐾
         </div>
     </section>
 </template>

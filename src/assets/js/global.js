@@ -5,6 +5,7 @@ export default {
             email: 'hugodelbegue@gmail.com?subject=PrimalProd - Question ou demande.',
             linkedin: 'https://fr.linkedin.com/in/hugo-delbegue/',
             github: 'https://github.com/hugodelbegue',
+            instagram: '/',
 
             // copyright
             year: '2024',
