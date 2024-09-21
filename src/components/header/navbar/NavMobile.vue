@@ -4,16 +4,16 @@
         <div class="nav-burger-links" ref="menu">
             <ul class="wrapper-burger-links">
                 <li class="nav-link one-link">
-                    <router-link :to="{ name: 'services' }" @click="closeMenu">Mes prestations</router-link>
+                    <router-link :to="{ name: 'services' }">Mes prestations</router-link>
                 </li>
                 <li class="nav-link two-link">
-                    <router-link :to="{ name: 'gallery' }" @click="closeMenu">Réalisations</router-link>
+                    <router-link :to="{ name: 'gallery' }">Réalisations</router-link>
                 </li>
                 <li class="nav-link three-link">
-                    <router-link :to="{ name: 'about' }" @click="closeMenu">À propos</router-link>
+                    <router-link :to="{ name: 'about' }">À propos</router-link>
                 </li>
                 <li class="nav-link four-link">
-                    <router-link :to="{ name: 'contact' }" @click="closeMenu">Contact</router-link>
+                    <router-link :to="{ name: 'contact' }">Contact</router-link>
                 </li>
             </ul>
         </div>
@@ -28,64 +28,59 @@ import BurgerMenu from '@/components/header/burger/BurgerMenu.vue'
 
 <script>
 export default {
-    mounted() {
-        const { overlay } = this.$refs;
-        const burger = this.$refs.burgerMenu.$refs.burger;
-        document.addEventListener("click", (event) => {
-            if (event.target == overlay && overlay.contains(event.target)) {
-                if (event.target !== burger && !burger.contains(event.target)) {
-                    this.closeMenu()
-                }
-            }
-        });
-    },
     data() {
         return {
             text: 'menu',
             textKey: 0,
+            menu: null,
+            overlay: null,
+            lines: null,
+            burger: null
         }
+    },
+    mounted() {
+        this.lines = this.$refs.burgerMenu?.$refs.lines
+        this.menu = this.$refs.menu
+        this.overlay = this.$refs.overlay
+        this.burger = this.$refs.burgerMenu?.$refs.burger
+        this.$router.afterEach((to, from) => {
+            this.closeMenu()
+        })
+        document.addEventListener("click", (event) => {
+            if (event.target == this.overlay && this.overlay.contains(event.target)) {
+                if (event.target !== this.burger && !this.burger.contains(event.target)) {
+                    this.closeMenu()
+                }
+            }
+        })
     },
     methods: {
         openMenu() {
-            const lines = this.$refs.burgerMenu.$refs.lines
-            const { menu, overlay } = this.$refs
-            if (menu.classList.contains('hide') || !menu.classList.contains('show')) {
-                menu.classList.remove('hide');
-                menu.classList.add('show')
-                menu.style.display = "flex"
-                lines.classList.remove('crossDeforms')
-                lines.classList.add('crossForms')
-                overlay.classList.add('overlay')
+            if (this.menu.classList.contains('hide') || !this.menu.classList.contains('show')) {
+                this.menu.classList.remove('hide')
+                this.menu.classList.add('show')
+                this.menu.style.display = "flex"
+                this.lines.classList.remove('crossDeforms')
+                this.lines.classList.add('crossForms')
+                this.overlay.classList.add('overlay')
                 document.body.classList.add('hidden')
                 this.text = 'close'
                 this.textKey += 1
             } else {
-                menu.classList.remove('show')
-                lines.classList.remove('crossForms')
-                lines.classList.add('crossDeforms')
-                overlay.classList.remove('overlay')
-                document.body.classList.remove('hidden')
-                menu.classList.add('hide')
-                this.text = 'menu'
-                this.textKey += 1
-                setTimeout(() => {
-                    menu.style.display = ""
-                }, 250);
+                this.closeMenu()
             }
         },
         closeMenu() {
-            const lines = this.$refs.burgerMenu.$refs.lines
-            const { menu, overlay } = this.$refs
-            menu.classList.remove('show')
-            lines.classList.remove('crossForms')
-            lines.classList.add('crossDeforms')
-            overlay.classList.remove('overlay')
+            this.menu.classList.remove('show')
+            this.lines.classList.remove('crossForms')
+            this.lines.classList.add('crossDeforms')
+            this.overlay.classList.remove('overlay')
             document.body.classList.remove('hidden')
-            menu.classList.add('hide')
+            this.menu.classList.add('hide')
             this.text = 'menu'
             this.textKey += 1
             setTimeout(() => {
-                menu.style.display = ""
+                this.menu.style.display = ""
             }, 250)
         }
     }

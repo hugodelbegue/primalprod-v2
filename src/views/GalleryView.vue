@@ -4,7 +4,7 @@
             <div class="layout-header-gallery margin-x switch-direction">
                 <div class="layout-description-header-gallery">
                     <h1>Découvre mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>
-                    <div class="text-header-gallery layout-title move-right">
+                    <div class="text-header-gallery layout-title right">
                         <p class="space-text">
                             Lorem Ipsum is simply dummy text of the
                             printing and
@@ -21,9 +21,11 @@
                     </div>
                 </div>
                 <div class="layout-img-header-gallery">
-                    <img class="img-left" src="@/components/gallery-page/img-test-header-small.png" height="360" alt="">
-                    <img class="img-right" src="@/components/gallery-page/img-test-header-small.png" height="280"
-                        alt="">
+                    <div id="overlay-media" class="overlay-loading"></div>
+                    <img class="img-left" src="@/components/gallery-page/img-test-header-small.png" height="360" alt=""
+                        @load="loading('overlay-media')">
+                    <img class="img-right" src="@/components/gallery-page/img-test-header-small.png" height="280" alt=""
+                        @load="loading('overlay-media')">
                 </div>
             </div>
         </div>
@@ -50,6 +52,7 @@
 </template>
 
 <script setup>
+import { loading } from '@/assets/js/utils'
 import BodyGallery from '@/components/gallery-page/BodyGallery.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
@@ -73,6 +76,7 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 }
 
 .layout-img-header-gallery {
+    position: relative;
     flex: 40%;
     display: flex;
     place-content: center;
@@ -86,31 +90,35 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 .img-left,
 .img-right {
     filter: grayscale(1);
+    opacity: var(--opacity-animation);
 }
 
-.img-left {
-    opacity: 0;
-    transform: translateY(-3.5%);
-    animation: appear-top var(--time-animation) both;
+.overlay-loading {
+    background: var(--background-header-page);
 }
 
-.img-right {
-    opacity: 0;
-    transform: translateY(3.5%);
-    animation: appear-bottom var(--time-animation) both;
-}
+// .img-left-move {
+//     opacity: 0;
+//     transform: translateY(-3.5%);
+//     animation: appear-top var(--time-animation) both;
+// }
 
-@keyframes appear-top {
-    to {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
+// .img-right-move {
+//     opacity: 0;
+//     transform: translateY(3.5%);
+//     animation: appear-bottom var(--time-animation) both;
+// }
 
-@keyframes appear-bottom {
-    to {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-</style>
+// @keyframes appear-top {
+//     to {
+//         opacity: 1;
+//         transform: translateY(0%);
+//     }
+// }
+
+// @keyframes appear-bottom {
+//     to {
+//         opacity: 1;
+//         transform: translateY(0%);
+//     }
+// }</style>

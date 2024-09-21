@@ -1,5 +1,5 @@
 <template>
-    <div class="background-body-project" :style="{ 'background-image': `url(${url})` }">
+    <div class="background-body-project frameworkX" :style="{ 'background-image': `url(${url})` }">
         <div class="layout-body-project frameworkY margin-x switch-direction">
             <div class="mockup-project" :style="{ 'background-image': `url(${url})` }"></div>
             <div class="text-project">

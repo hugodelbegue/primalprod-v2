@@ -4,7 +4,7 @@
             <div class="layout-header-contact margin-x switch-direction">
                 <div class="layout-description-header-contact">
                     <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
-                    <div class="text-header-contact layout-title move-right">
+                    <div class="text-header-contact layout-title right">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur. 🎨

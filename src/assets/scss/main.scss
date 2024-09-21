@@ -35,7 +35,7 @@ a {
   transition: color var(--time-transition), opacity var(--time-transition);
 
   @media #{$mobileScreen} {
-    &:not(.project-url, .link-logo):hover {
+    &:not(.project-url, .link-logo, .button-tag):hover {
       opacity: .85;
     }
   }
@@ -75,6 +75,10 @@ h1 {
   font-size: var(--f-size-h1);
   font-weight: var(--f-bold);
   color: var(--color-heading-h1);
+}
+
+h1:not(.catchphrase, .title-header-project) {
+  opacity: var(--opacity-animation);
 }
 
 h2 {

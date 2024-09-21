@@ -4,7 +4,7 @@
             <div class="layout-header-faq margin-x switch-direction">
                 <div class="layout-description-header-faq">
                     <h1>FAQ</h1>
-                    <div class="text-header-faq layout-title move-right">
+                    <div class="text-header-faq layout-title right">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur.

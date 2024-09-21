@@ -4,7 +4,7 @@
             <div class="layout-header-service margin-x switch-direction">
                 <div class="layout-description-header-service">
                     <h1>Voilà mes&nbsp;<span class="animation-hover">prestations</span>&nbsp;bla bla</h1>
-                    <div class="text-header-service layout-title move-right">
+                    <div class="text-header-service layout-title right">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio ullam
                             inventore
@@ -13,12 +13,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="layout-video-header-service">
+                <div class="layout-media-header-service">
                     <div id="overlay-media" class="overlay-loading"></div>
-                    <img v-if="isMobileDevice()" class="img-center"
+                    <img v-if="isMobileDevice()" class="media-center"
                         src="@/components/service-page/img-test-header-2.png" alt="" height="360"
                         @load="loading('overlay-media')">
-                    <video v-else class="video-center" height="360" @loadeddata="loading('overlay-media')" autoplay>
+                    <video v-else class="media-center" height="360" @loadeddata="loading('overlay-media')" autoplay>
                         <source src="@/components/service-page/video-test-header.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -52,7 +52,7 @@ import Test2 from '@/components/home-page/section-test/Test2.vue'
     flex: 60%;
 }
 
-.layout-video-header-service {
+.layout-media-header-service {
     position: relative;
     flex: 40%;
     display: flex;
@@ -60,10 +60,10 @@ import Test2 from '@/components/home-page/section-test/Test2.vue'
     place-items: center;
 }
 
-.video-center,
-.img-center {
+.media-center {
     filter: grayscale(1);
     width: 100%;
+    opacity: var(--opacity-animation);
 }
 
 .overlay-loading {

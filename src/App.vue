@@ -4,7 +4,13 @@
     <Header />
     <main class="wrapper-main">
       <div class="layout-main">
-        <RouterView />
+        <router-view v-if="isMobileDevice()"></router-view>
+        <router-view v-else v-slot="{ Component }">
+          <transition name="transition-view" @after-enter="startAnimation()" @before-leave="endAnimation()"
+            mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
       </div>
     </main>
     <Footer />
@@ -14,6 +20,8 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
+import { isMobileDevice } from './assets/js/utils'
+import { startAnimation, endAnimation } from './assets/js/animations'
 import Header from '@/layouts/Header.vue'
 import Footer from '@/layouts/Footer.vue'
 import ReturnTop from './components/items/ReturnTop.vue'
@@ -29,6 +37,19 @@ export default {
   created() {
     this.currentRoute = this.$route.name
   },
+  beforeRouteUpdate(to, from, next) {
+    if (isMobileDevice()) {
+      endAnimation()
+      next()
+    }
+  },
+  mounted() {
+    if (isMobileDevice()) {
+      this.$nextTick(() => {
+        startAnimation()
+      })
+    }
+  },
   methods: {
     // Return to the top
     top() {
@@ -38,18 +59,24 @@ export default {
   },
   computed: {
     showPaint() {
-      return {
-        'paint-contact': this.currentRoute == 'contact',
-        'background-contact-move': this.currentRoute == 'contact',
-        'paint-service': this.currentRoute == 'services',
-        'background-service-move': this.currentRoute == 'services'
+      if (!isMobileDevice()) {
+        return {
+          'paint-contact': this.currentRoute == 'contact',
+          'background-contact-move': this.currentRoute == 'contact',
+          // 'paint-service': this.currentRoute == 'services'
+        }
       }
     }
   },
   watch: {
     '$route'(to, from) {
       this.currentRoute = to.name
-    }
+      if (isMobileDevice()) {
+        this.$nextTick(() => {
+          startAnimation()
+        })
+      }
+    },
   }
 }
 </script>
@@ -57,33 +84,34 @@ export default {
 <style lang="scss" scoped>
 // Label background
 .paint-contact {
-  background: url(@/assets/img/label.svg) right / 25vh no-repeat;
+  background: url(@/assets/img/label.svg) top right / 25vh no-repeat;
 }
 
 .paint-service {
-  background: url(@/assets/img/logo-background.svg) top / 50vh no-repeat;
-  background-position-y: -10%;
+  background: url(@/assets/img/logo-background.svg) -5% 0% / 30vh no-repeat;
 }
 
 .background-contact-move {
-  background-position-y: -1.5%;
+  background-position: 100.5% -0.5%;
   animation: background-contact-move var(--time-animation) both;
 
   @keyframes background-contact-move {
     to {
-      background-position-y: 0%;
+      background-position: 100% 0%;
     }
   }
 }
 
-.background-service-move {
-  background-position-x: -11.5%;
-  animation: background-service-move var(--time-animation) both;
+.transition-view-enter-active {
+  transition: opacity calc(var(--time-transition-view) / 2) ease;
+}
 
-  @keyframes background-service-move {
-    to {
-      background-position-x: -10%;
-    }
-  }
+.transition-view-leave-active {
+  transition: opacity var(--time-transition-view) ease;
+}
+
+.transition-view-enter-from,
+.transition-view-leave-to {
+  opacity: .25;
 }
 </style>

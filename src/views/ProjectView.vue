@@ -1,7 +1,7 @@
 <template>
     <section class="layout-project frameworkY padding-bottom-page">
         <div v-for="data in renderData">
-            <HeaderProject class="frameworkX" v-if="cleanUrl(data.title) === title">
+            <HeaderProject :tagUrl="data['tag-url']" v-if="cleanUrl(data.title) === title">
                 <template #title-project>
                     Site . {{ data['full-title'] }}
                 </template>
@@ -9,14 +9,14 @@
                     {{ data.tag }}
                 </template>
             </HeaderProject>
-            <BodyProject class="frameworkX" :url="imgUrl(data.preview)" v-if="cleanUrl(data.title) === title">
+            <BodyProject :url="imgUrl(data.preview)" v-if="cleanUrl(data.title) === title">
                 <template #text-project>
                     <p class="space-text" v-for="text in data.description">
                         {{ text.text }}
                     </p>
                 </template>
             </BodyProject>
-            <GalleryProject class="frameworkX" v-if="cleanUrl(data.title) === title">
+            <GalleryProject v-if="cleanUrl(data.title) === title">
                 <template #img-project>
                     <div v-for="picture in data['all-pictures']" class="img-gallery">
                         <img class="picture" :src="imgUrl(picture.img)" alt="Photo de projet"
@@ -24,17 +24,18 @@
                     </div>
                 </template>
             </GalleryProject>
-            <TestimonialProject class="frameworkX" v-if="cleanUrl(data.title) === title">
-                <template #name-project>
+            <Testimonial background="var(--background-main)" v-if="cleanUrl(data.title) === title">
+                <template #title-testimonial>
+                    <span class="animation-hover">Témoignage</span>&nbsp;de
                     {{ data.name }}
                 </template>
-                <template #testimonial-project>
+                <template #text-testimonial>
                     {{ data.testimonial }}
                 </template>
-                <template #full-name-project>
+                <template #full-name-testimonial>
                     {{ data['full-name'] }}
                 </template>
-            </TestimonialProject>
+            </Testimonial>
         </div>
         <ContactReminder background="var(--orange-4)" route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
@@ -60,7 +61,7 @@ import { loading } from '@/assets/js/utils'
 import HeaderProject from '@/components/project-page/HeaderProject.vue'
 import BodyProject from "@/components/project-page/BodyProject.vue"
 import GalleryProject from "@/components/project-page/GalleryProject.vue"
-import TestimonialProject from '@/components/items/section/Testimonial.vue'
+import Testimonial from '@/components/items/section/Testimonial.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 

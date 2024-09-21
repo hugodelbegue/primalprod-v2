@@ -46,9 +46,12 @@
 
 
   // animations
-  --time-transition: 300ms;
+  --time-transition: 250ms;
   --time-transition-work: 750ms;
+  --time-transition-view: 150ms;
   --time-animation: 500ms;
+
+  --opacity-animation: 0;
 
   // colors
   --background-main: var(--beige);

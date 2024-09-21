@@ -44,7 +44,11 @@ export default {
 }
 
 .sociallinks {
-    gap: var(--side);
+    gap: var(--side-up);
+
+    @media #{$mobileScreen} {
+        gap: var(--side);
+    }
 }
 
 svg {

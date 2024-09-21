@@ -19,7 +19,7 @@
                 <div id="overlay-form" class="overlay-loading middle"></div>
                 <iframe
                     src="https://tally.so/embed/wod0dN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    loading="lazy" width="500" height="250" frameborder="0" marginheight="0" marginwidth="0"
+                    loading="lazy" width="100%" height="250" frameborder="0" marginheight="0" marginwidth="0"
                     title="null" @load="loading('overlay-form', true)">
                 </iframe>
             </div>
@@ -46,6 +46,10 @@ import { loading } from '@/assets/js/utils'
 
     iframe {
         display: flex;
+
+        @media #{$switch} {
+            width: 500px;
+        }
     }
 }
 

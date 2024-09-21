@@ -4,7 +4,7 @@
             <div class="layout-header-mention margin-x">
                 <div class="layout-description-header-mention">
                     <h1>Mentions légales</h1>
-                    <div class="text-header-mention layout-title move-bottom">
+                    <div class="text-header-mention layout-title bottom">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
                             Earum ullam nulla facere consectetur.

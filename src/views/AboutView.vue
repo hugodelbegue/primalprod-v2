@@ -4,7 +4,7 @@
       <div class="layout-header-about margin-x switch-direction">
         <div class="layout-description-header-about">
           <h1>À&nbsp;<span class="animation-hover">propos</span>&nbsp;de moi</h1>
-          <div class="text-header-about layout-title move-right">
+          <div class="text-header-about layout-title right">
             <p class="space-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque aperiam autem nulla voluptatibus
               quae ex ipsum numquam facere consequatur, dignissimos optio libero tempora assumenda, vero quam neque

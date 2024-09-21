@@ -1,20 +1,6 @@
 // animations appear
-h1:not(.catchphrase, .title-header-project) {
-    transform: translateX(-.75%);
-    opacity: 0;
-    animation: appear-title var(--time-animation) both;
-
-    @keyframes appear-title {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-}
-
 .move-left {
     transform: translateX(-.75%);
-    opacity: 0;
     animation: move-left var(--time-animation) both;
 
     @keyframes move-left {
@@ -27,7 +13,6 @@ h1:not(.catchphrase, .title-header-project) {
 
 .move-right {
     transform: translateX(.75%);
-    opacity: 0;
     animation: move-right var(--time-animation) both;
 
     @keyframes move-right {
@@ -40,7 +25,6 @@ h1:not(.catchphrase, .title-header-project) {
 
 .move-top {
     transform: translateY(-.75%);
-    opacity: 0;
     animation: move-top var(--time-animation) both;
 
     @keyframes move-top {
@@ -53,7 +37,6 @@ h1:not(.catchphrase, .title-header-project) {
 
 .move-bottom {
     transform: translateY(3.5%);
-    opacity: 0;
     animation: move-bottom var(--time-animation) both;
 
     @keyframes move-bottom {
@@ -65,13 +48,37 @@ h1:not(.catchphrase, .title-header-project) {
 }
 
 .appear-center {
-    opacity: 0;
     animation: appear-center var(--time-animation) both;
 
     @keyframes appear-center {
         to {
             opacity: 1;
         }
+    }
+}
+
+// animations img
+.img-left-move {
+    transform: translateY(-3.5%);
+    animation: appear-top var(--time-animation) both;
+}
+
+.img-right-move {
+    transform: translateY(3.5%);
+    animation: appear-bottom var(--time-animation) both;
+}
+
+@keyframes appear-top {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes appear-bottom {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
 

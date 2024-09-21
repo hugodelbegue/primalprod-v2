@@ -38,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 .button_return {
     --color-button: var(--background-main);
-    --size-button: 40px;
+    --size-button: 50px;
     --corner-button: var(--radius-high);
     --normal-color: rgba(0, 0, 0, .2);
     --move-color: rgba(0, 0, 0, .7);
@@ -65,6 +65,10 @@ export default {
 
     &:active {
         background: var(--active-color) !important;
+    }
+
+    @media #{$switch} {
+        --size-button: 40px;
     }
 
     .icon-top {
