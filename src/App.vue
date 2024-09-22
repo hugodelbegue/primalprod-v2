@@ -7,7 +7,7 @@
         <router-view v-if="isMobileDevice()"></router-view>
         <router-view v-else v-slot="{ Component }">
           <transition name="transition-view" @after-enter="startAnimation()" @before-leave="endAnimation()"
-            mode="out-in">
+            @after-leave="test()" mode="out-in">
             <component :is="Component" />
           </transition>
         </router-view>
@@ -55,6 +55,9 @@ export default {
     top() {
       const { top } = this.$refs
       top.scrollIntoView({ behavior: 'smooth' })
+    },
+    test() {
+      window.scrollTo(0, 0)
     }
   },
   computed: {
@@ -76,7 +79,7 @@ export default {
           startAnimation()
         })
       }
-    },
+    }
   }
 }
 </script>

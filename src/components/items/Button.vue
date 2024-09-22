@@ -28,8 +28,9 @@ defineProps({
         cursor: pointer;
         background: var(--color-button);
         color: var(--color-text);
+        font-size: var(--f-button);
         font-weight: var(--f-bold);
-        border-radius: var(--radius-low);
+        border-radius: var(--radius-high);
         border: none;
         box-shadow: 3px 3px 0px var(--color-shadow);
         position: relative;
@@ -51,10 +52,6 @@ defineProps({
             box-shadow: 0px 0px 4px var(--color-shadow);
             top: 4px;
             left: 3px;
-        }
-
-        @media #{$tabletScreen} {
-            font-size: 1em;
         }
     }
 

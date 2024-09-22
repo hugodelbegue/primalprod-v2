@@ -30,7 +30,7 @@
             </div>
         </div>
         <BodyGallery />
-        <ContactReminder background="var(--orange-4)" link="contact" linkText="Réservez votre rendez-vous !">
+        <ContactReminder background="var(--orange-4)" route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
                 <h2 class="space-text">Rien de plus&nbsp;<span class="animation-hover">simple</span>&nbsp;!</h2>
             </template>

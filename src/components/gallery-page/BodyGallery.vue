@@ -1,31 +1,35 @@
 <template>
     <div class="container-gallery frameworkX margin-x">
         <div class="layout-gallery frameworkY">
-            <TransitionGroup name="transition-card" appear>
-                <article v-for="data in renderData" :key="data" class="card">
-                    <CardGallery :title="data.title" @click="openProject(cleanUrl(data.title))">
-                        <template #preview-gallery>
-                            <RenderCardImg :src="imgUrl(data.preview)" :alt="data.title" :title="data.title" />
-                        </template>
-                        <template #title-gallery>
-                            <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
-                        </template>
-                        <template #tag-gallery>
-                            <p v-if="data.tag">{{ data.tag }}</p>
-                        </template>
-                    </CardGallery>
-                </article>
-            </TransitionGroup>
+            <!-- <TransitionGroup name="transition-card" appear> -->
+            <article v-for="data in renderData" :key="data" class="card appear-center">
+                <CardGallery :title="data.title" @click="openProject(cleanUrl(data.title))">
+                    <template #preview-gallery>
+                        <RenderCardImg v-if="path('', data.preview)" :src="path('', data.preview)" :alt="data.title"
+                            :title="data.title" />
+                    </template>
+                    <template #title-gallery>
+                        <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
+                    </template>
+                    <template #tag-gallery>
+                        <p v-if="data.tag">{{ data.tag }}</p>
+                    </template>
+                </CardGallery>
+            </article>
+            <!-- </TransitionGroup> -->
         </div>
-        <div class="selectors">
-            <Button type="button" msg="1" width="50px" height="50px" />
-            <Button type="button" msg="2" width="50px" height="50px" />
-            <Button type="button" msg="3" width="50px" height="50px" />
+        <div class="pagination middle">
+            <Button @click="previousPage" :disabled="currentPage === 1" type="button" msg="<" width="50px"
+                height="50px" />
+            <span>{{ currentPage }}&nbsp;/&nbsp;{{ totalPages }}</span>
+            <Button @click="nextPage" :disabled="currentPage === totalPages" type="button" msg=">" width="50px"
+                height="50px" />
         </div>
     </div>
 </template>
 
 <script setup>
+import { path, cleanUrl } from '@/assets/js/utils'
 import CardGallery from './CardGallery.vue'
 import Button from '@/components/items/Button.vue'
 import RenderCardImg from './RenderCardImg.vue'
@@ -36,35 +40,36 @@ export default {
     data() {
         return {
             choice: "",
-            imgUrl(file) {
-                return new URL(`/src/assets/img/${file}`, import.meta.url).href
-            },
-            cleanUrl(sentence) {
-                return sentence
-                    .replace(/\s+/g, "-")
-                    .toLowerCase()
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "")
-            }
+            currentPage: 1,
+            itemsPerPage: 6
         }
     },
     computed: {
+        totalPages() {
+            return Math.ceil(this.$api.projectList.length / this.itemsPerPage)
+        },
         renderData() {
-            return this.$api.projectList.filter((items) => {
-                if (this.choice == "frontend") {
-                    return items.frontend
-                }
-                if (this.choice == "backend") {
-                    return items.backend
-                } else {
-                    return items
-                }
-            })
+            const start = (this.currentPage - 1) * this.itemsPerPage
+            const end = start + this.itemsPerPage
+            return this.$api.projectList.slice(start, end)
+            // return this.$api.projectList.filter((items) => {
+            //     return items
+            // })
         }
     },
     methods: {
         openProject(project) {
             this.$router.push({ name: 'project', params: { project: project } })
+        },
+        nextPage() {
+            if (this.currentPage < this.totalPages) {
+                this.currentPage++
+            }
+        },
+        previousPage() {
+            if (this.currentPage > 1) {
+                this.currentPage--
+            }
         }
     }
 }
@@ -91,6 +96,14 @@ article {
 .container-gallery {
     --space-between-card: 30px;
 
+    @media #{$mobileScreen} {
+        --space-between-card: 40px;
+    }
+
+    @media #{$tabletScreen} {
+        --space-between-card: 50px;
+    }
+
     .layout-gallery {
         display: flex;
         flex-wrap: wrap;
@@ -105,6 +118,7 @@ article {
     }
 
     .card {
+        opacity: 0;
         position: relative;
         display: flex;
         background: var(--background-card);
@@ -177,21 +191,23 @@ article {
     text-align: center;
 }
 
-.selectors {
-    display: flex;
-    place-content: flex-end;
+.pagination {
     column-gap: 1em;
     margin-bottom: var(--side-y);
+
+    @media #{$mobileScreen} {
+        place-content: flex-end;
+    }
 }
 
 // Transitions
 .transition-card-move,
 .transition-card-leave-active {
-    transition: all var(--time-animation) ease;
+    transition: opacity var(--time-animation) ease;
 }
 
 .transition-card-enter-active {
-    transition: all var(--time-animation) ease;
+    transition: opacity var(--time-animation) ease;
 }
 
 .transition-card-enter-from,
