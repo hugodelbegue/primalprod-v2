@@ -62,7 +62,6 @@ input[type="checkbox"] {
 .burger-lines::before,
 .burger-lines::after {
     content: "";
-    background: var(--color-text);
     position: relative;
     display: flex;
     width: 100%;
@@ -72,13 +71,19 @@ input[type="checkbox"] {
     transition: transform var(--time-animation), top var(--time-animation), right var(--time-animation), bottom var(--time-animation), left var(--time-animation);
 }
 
+.burger-lines {
+    background: var(--color-text);
+}
+
 .burger-lines::before {
+    background: inherit;
     position: absolute;
     right: 0;
     top: var(--space-lines);
 }
 
 .burger-lines::after {
+    background: inherit;
     position: absolute;
     bottom: var(--space-lines);
 }
@@ -88,12 +93,14 @@ input[type="checkbox"] {
     background: transparent !important;
 
     &:before {
+        background: var(--color-text);
         top: 0;
         right: 0;
         transform: rotate(-225deg);
     }
 
     &:after {
+        background: var(--color-text);
         bottom: 0;
         left: 0;
         transform: rotate(225deg);

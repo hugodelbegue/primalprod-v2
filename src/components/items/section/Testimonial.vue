@@ -4,10 +4,12 @@
             <h2 class="header-testimonial space-text">
                 <slot name="title-testimonial"></slot>
             </h2>
-            <div class="body-testimonial">
-                ≪&nbsp;<slot name="text-testimonial"></slot>&nbsp;≫
-                <div class="footer-testimonial" :style="{ 'background': background }">
-                    <slot name="full-name-testimonial"></slot>
+            <div class="layout-body-testimonial">
+                <div class="body-testimonial">
+                    ≪&nbsp;<slot name="text-testimonial"></slot>&nbsp;≫
+                    <div class="footer-testimonial" :style="{ 'background': background }">
+                        <slot name="full-name-testimonial"></slot>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,6 +23,33 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.layout-body-testimonial {
+    --size-layout-illustration: 20%;
+    --size-illustration: 100px;
+
+    @media #{$mobileScreen} {
+        display: flex;
+        gap: var(--side);
+
+        &::before,
+        &::after {
+            background: url(../avatar/avatar.svg) center / var(--size-illustration) no-repeat;
+        }
+
+        &::before {
+            content: "";
+            width: var(--size-layout-illustration);
+            background-position-y: bottom;
+        }
+
+        &::after {
+            content: "";
+            width: var(--size-layout-illustration);
+            background-position-y: top;
+        }
+    }
+}
+
 .body-testimonial {
     position: relative;
     padding: var(--side);
@@ -30,6 +59,7 @@ defineProps({
 
     @media #{$mobileScreen} {
         padding-bottom: calc(var(--side) * 1.5);
+        width: calc(100% - calc(var(--size-layout-illustration) * 2));
     }
 }
 
@@ -42,7 +72,7 @@ defineProps({
     padding-right: 1.5em;
     width: max-content;
 
-    @media #{$mobileScreen} {
+    @media #{$tabletScreen} {
         right: 70px;
         transform: none;
     }

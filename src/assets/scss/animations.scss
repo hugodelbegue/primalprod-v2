@@ -101,3 +101,14 @@
 .animation-hover {
     transition: color var(--time-transition-work);
 }
+
+// animations button
+.shadow-appear {
+    animation: shadow-appear var(--time-animation) both;
+
+    @keyframes shadow-appear {
+        to {
+            box-shadow: var(--base-shadow) var(--black);
+        }
+    }
+}

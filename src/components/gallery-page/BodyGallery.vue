@@ -1,8 +1,7 @@
 <template>
     <div class="container-gallery frameworkX margin-x">
         <div class="layout-gallery frameworkY">
-            <!-- <TransitionGroup name="transition-card" appear> -->
-            <article v-for="data in renderData" :key="data" class="card appear-center">
+            <article v-for="data in renderData" :key="data.title" class="card appear-center">
                 <CardGallery :title="data.title" @click="openProject(cleanUrl(data.title))">
                     <template #preview-gallery>
                         <RenderCardImg v-if="path('', data.preview)" :src="path('', data.preview)" :alt="data.title"
@@ -16,7 +15,6 @@
                     </template>
                 </CardGallery>
             </article>
-            <!-- </TransitionGroup> -->
         </div>
         <div class="pagination middle">
             <Button @click="previousPage" :disabled="currentPage === 1" type="button" msg="<" width="50px"
@@ -41,7 +39,7 @@ export default {
         return {
             choice: "",
             currentPage: 1,
-            itemsPerPage: 6
+            itemsPerPage: 9
         }
     },
     computed: {
@@ -51,10 +49,10 @@ export default {
         renderData() {
             const start = (this.currentPage - 1) * this.itemsPerPage
             const end = start + this.itemsPerPage
-            return this.$api.projectList.slice(start, end)
-            // return this.$api.projectList.filter((items) => {
-            //     return items
-            // })
+            const sortedList = this.$api.projectList.sort((a, b) => {
+                return b.date - a.date
+            })
+            return sortedList.slice(start, end)
         }
     },
     methods: {
@@ -198,24 +196,5 @@ article {
     @media #{$mobileScreen} {
         place-content: flex-end;
     }
-}
-
-// Transitions
-.transition-card-move,
-.transition-card-leave-active {
-    transition: opacity var(--time-animation) ease;
-}
-
-.transition-card-enter-active {
-    transition: opacity var(--time-animation) ease;
-}
-
-.transition-card-enter-from,
-.transition-card-leave-to {
-    opacity: 0;
-}
-
-.transition-card-leave-active {
-    position: absolute;
 }
 </style>

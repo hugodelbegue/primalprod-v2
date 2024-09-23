@@ -8,37 +8,23 @@
                     </a>
                 </template>
             </Logo>
-            <div class="layout-nav frameworkY padding-x margin-y">
+            <div ref="nav" class="layout-nav frameworkY padding-x margin-y">
                 <NavMobile />
                 <NavDesktop />
+                <div ref="anchor"></div>
             </div>
         </div>
-        <!-- Section navigation -->
-        <!-- <div ref="nav__content" class="nav__part" :class="setColorNavigation">
-            <div ref="navigation" class="layout__navbar">
-                <Logo>
-                    <template #picture>
-                        <a ref="logo" href="/" title="Accueil">
-                            <img :class="classShadow" alt="PrimalProd logo" src="@/assets/img/logo.svg" width="30"
-                            height="30" />
-                        </a>
-                        <div class="layout__switch">
-                            <SwitchButton />r
-                            <span ref="togg" class="indic">| Thème.</span>
-                        </div>
-                    </template>
-</Logo> -->
-        <!-- Menu desktop -->
-        <!-- <NavBar ref="navbar" /> -->
-        <!-- Menu mobile -->
-        <!-- <NavMobile ref="navmobile" /> -->
-        <!-- </div>
-            <div ref="anchor"></div>
+
+        <!-- <div class="layout__switch">
+            <SwitchButton />r
+            <span ref="togg" class="indic">| Thème.</span>
         </div> -->
+
     </header>
 </template>
 
 <script setup>
+import { isMobileDevice } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
 import NavDesktop from '@/components/header/navbar/NavDesktop.vue'
 import NavMobile from '@/components/header/navbar/NavMobile.vue'
@@ -47,63 +33,41 @@ import NavMobile from '@/components/header/navbar/NavMobile.vue'
 <script>
 export default {
     beforeMount() {
-        window.addEventListener('scroll', this.setOfNavigation);
+        if (isMobileDevice()) {
+            window.addEventListener('scroll', this.setOfNavigation)
+        }
     },
     data() {
         return {
             lastScrollPosition: 0,
-        }
-    },
-    computed: {
-        classShadow() {
-            return {
-                important__shadow: this.$route.name == 'ProjectView',
-            }
-        },
-        setColorNavigation() {
-            return {
-                background__navigation: this.$route.name == 'ProjectView',
-            }
+            gapScroll: 10
         }
     },
     methods: {
-        // setOfNavigation() {
-        //     const { nav__content, aboutme, navigation, togg, logo, anchor } = this.$refs
-        //     const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        //     const homePage = this.$route.name == 'HomeView';
-        //     const otherPages = this.$route.name == 'ProjectView' || this.$route.name == 'ContactView';
-        //     const addPadding = (homePage, otherPages) => {
-        //         return homePage ? aboutme.classList.add("add__padding") :
-        //             otherPages ? this.$root.$refs.padding.classList.add('add__padding') : null;
-        //     }
-        //     const removePadding = (homePage, otherPages) => {
-        //         return homePage ? aboutme.classList.remove("add__padding") :
-        //             otherPages ? this.$root.$refs.padding.classList.remove('add__padding') : null;
-        //     }
-        //     let scrollDirection = currentScrollPosition > this.lastScrollPosition ? "down" : "up";
-        //     this.lastScrollPosition = currentScrollPosition;
-        //     if (this.lastScrollPosition) {
-        //         if (scrollDirection === "up") {
-        //             togg.style.display = 'none';
-        //             logo.style.display = 'none';
-        //             navigation.classList.add('line__hidden');
-        //             nav__content.classList.remove("hidden__nav");
-        //             addPadding(homePage, otherPages);
-        //             nav__content.classList.add("fixe__nav");
-        //         } else {
-        //             if (currentScrollPosition > anchor.offsetTop) {
-        //                 nav__content.classList.add("hidden__nav");
-        //             }
-        //         }
-        //     }
-        //     if (window.scrollY < anchor.offsetTop) {
-        //         togg.style.display = 'flex';
-        //         logo.style.display = 'flex';
-        //         navigation.classList.remove('line__hidden');
-        //         nav__content.classList.remove("fixe__nav");
-        //         removePadding(homePage, otherPages);
-        //     }
-        // }
+        setOfNavigation() {
+            const { nav, anchor } = this.$refs
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+            let scrollDirection = currentScrollPosition > this.lastScrollPosition ? "down" : "up"
+            if (this.lastScrollPosition) {
+                if (scrollDirection === "up") {
+                    if (Math.abs(currentScrollPosition - this.lastScrollPosition) > this.gapScroll) {
+                        nav.classList.remove('hidden-nav')
+                        nav.classList.add('fix-nav')
+                        // nav.classList.contain()
+                    }
+                } else {
+                    nav.classList.add('hidden-nav')
+                    setTimeout(() => {
+                        nav.classList.remove('fix-nav')
+                    }, 250)
+                }
+            }
+            this.lastScrollPosition = currentScrollPosition
+            if (window.scrollY < anchor.offsetTop) {
+                nav.classList.remove('fix-nav')
+                nav.classList.remove('hidden-nav')
+            }
+        }
     }
 }
 </script>
@@ -123,13 +87,47 @@ header {
     place-content: space-between;
     margin-left: var(--margin-header-x);
     margin-right: var(--margin-header-x);
+    height: calc(1em + calc(var(--side-y) * 2) + calc(var(--margin-block-y) * 2));
 }
 
 .layout-nav {
     background: var(--background-navbar);
+    transition: background var(--time-transition);
 
     @media #{$switch} {
         width: 60%;
+    }
+}
+
+.fix-nav {
+    z-index: 5;
+    position: fixed;
+    right: var(--margin-header-x);
+    background: rgba(0, 0, 0, .7);
+    animation: appear-nav var(--time-transition);
+
+    &:deep(.burger-lines) {
+        background: var(--background-main);
+    }
+
+    @keyframes appear-nav {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.hidden-nav {
+    animation: hidden-nav var(--time-transition) both;
+
+    @keyframes hidden-nav {
+        to {
+            opacity: 0;
+        }
     }
 }
 </style>

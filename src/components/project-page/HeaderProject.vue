@@ -4,7 +4,7 @@
             <h1 class="title-header-project">
                 <slot name="title-project"></slot>
             </h1>
-            <div class="link-header-project layout-title bottom">
+            <div class="link-header-project layout-title button-shadow">
                 <Button2 :route="tagUrl">
                     <template #text-button>
                         <slot name="tag-project"></slot>
@@ -36,7 +36,6 @@ defineProps({
 .link-header-project {
     background: none;
     padding: 0;
-    transform: translateY(10%);
 }
 
 // button {

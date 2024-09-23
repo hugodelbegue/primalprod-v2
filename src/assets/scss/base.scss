@@ -54,6 +54,9 @@
 
   --opacity-animation: 0;
 
+  // shadow
+  --base-shadow: 3px 3px 0px;
+
   // colors
   --background-main: var(--beige);
   --background-main-opaque: rgba(245, 233, 205, 0.95);
@@ -77,9 +80,9 @@
   --color-heading-h2: var(--black);
   --color-heading-h3: var(--black);
   --color-button: var(--orange-4);
-  --color-button-hover: var(--orange-1);
+  --color-button-hover: var(--orange-3);
 
-  --color-shadow: var(--orange-1);
+  --color-shadow: var(--black);
   --color-important: var(--orange-1);
 
   --color-separation-line: var(--black-very-opaque);

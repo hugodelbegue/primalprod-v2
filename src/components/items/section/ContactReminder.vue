@@ -25,3 +25,11 @@ defineProps({
     // linkText: String
 })
 </script>
+
+<style lang="scss" scoped>
+.layout-sendcontact:deep(.button-base) {
+    @media #{$mobileScreen} {
+        width: fit-content
+    }
+}
+</style>

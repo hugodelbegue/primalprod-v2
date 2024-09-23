@@ -1,6 +1,7 @@
 export function startAnimation() {
     const textTitleRight = document.querySelectorAll('.layout-title.right')
     const textTitleBottom = document.querySelectorAll('.layout-title.bottom')
+    const buttonShadow = document.querySelectorAll('.button-base')
     const imgLeft = document.querySelector('.img-left')
     const imgRight = document.querySelector('.img-right')
     const mediaCenter = document.querySelector('.media-center')
@@ -8,6 +9,7 @@ export function startAnimation() {
     pageTitle ? pageTitle.forEach(element => element.classList.add('move-left')) : null
     textTitleRight ? textTitleRight.forEach(element => element.classList.add('move-right')) : null
     textTitleBottom ? textTitleBottom.forEach(element => element.classList.add('move-bottom')) : null
+    buttonShadow ? buttonShadow.forEach(element => element.classList.add('shadow-appear')) : null
     imgLeft ? imgLeft.classList.add('img-left-move') : null
     imgRight ? imgRight.classList.add('img-right-move') : null
     mediaCenter ? mediaCenter.classList.add('appear-center') : null
@@ -16,6 +18,7 @@ export function startAnimation() {
 export function endAnimation() {
     const textTitleRight = document.querySelectorAll('.layout-title.right')
     const textTitleBottom = document.querySelectorAll('.layout-title.bottom')
+    const buttonShadow = document.querySelectorAll('.button-base')
     const imgLeft = document.querySelector('.img-left')
     const imgRight = document.querySelector('.img-right')
     const mediaCenter = document.querySelector('.media-center')
@@ -23,6 +26,7 @@ export function endAnimation() {
     pageTitle ? pageTitle.forEach(element => element.classList.remove('move-left')) : null
     textTitleRight ? textTitleRight.forEach(element => element.classList.remove('move-right')) : null
     textTitleBottom ? textTitleBottom.forEach(element => element.classList.remove('move-bottom')) : null
+    buttonShadow ? buttonShadow.forEach(element => element.classList.add('shadow-appear')) : null
     imgLeft ? imgLeft.classList.remove('img-left-move') : null
     imgRight ? imgRight.classList.remove('img-right-move') : null
     mediaCenter ? mediaCenter.classList.remove('appear-center') : null

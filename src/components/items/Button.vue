@@ -32,7 +32,7 @@ defineProps({
         font-weight: var(--f-bold);
         border-radius: var(--radius-high);
         border: none;
-        box-shadow: 3px 3px 0px var(--color-shadow);
+        box-shadow: var(--base-shadow) var(--color-shadow);
         position: relative;
         top: 0;
         left: 0;
@@ -45,13 +45,6 @@ defineProps({
                 top: 4px;
                 left: 3px;
             }
-        }
-
-        &:active {
-            background: var(--color-button-active);
-            box-shadow: 0px 0px 4px var(--color-shadow);
-            top: 4px;
-            left: 3px;
         }
     }
 

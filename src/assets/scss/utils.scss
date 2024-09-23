@@ -51,7 +51,10 @@
     width: fit-content;
     padding: var(--side) var(--side-up);
     margin-top: var(--side-y);
-    opacity: var(--opacity-animation);
+
+    &:not(.button-shadow) {
+        opacity: var(--opacity-animation);
+    }
 }
 
 .space-text {

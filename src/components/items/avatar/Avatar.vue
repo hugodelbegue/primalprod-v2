@@ -25,7 +25,7 @@
         display: flex;
         place-content: center;
         place-items: center;
-        font-weight: var(--weight-bold);
+        font-weight: var(--f-bold);
         color: var(--black);
         font-family: var(--f-rock);
     }
