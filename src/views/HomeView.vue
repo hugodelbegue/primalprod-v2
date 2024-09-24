@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-home frameworkY padding-bottom-page middle">
+  <div class="layout-home frameworkY padding-bottom-page">
     <div class="layout-aboutme frameworkX middle margin-x switch-direction">
       <Logo class="avatar">
         <template #img>
@@ -8,6 +8,22 @@
       </Logo>
       <AboutMe />
     </div>
+    <Paragraph background="var(--orange-3)" :img-right="true">
+      <template #img-paragraph>
+        <img class="img-paragraph" src="@/assets/img/img-section/collab-bro.svg" height="360"
+          @load="loading('overlay-img')">
+      </template>
+      <template #title-paragraph>
+        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
+      </template>
+      <template #text-paragraph>
+        <p class="space-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
+          accusamus, soluta rerum laboriosam aspernatur ratione.
+        </p>
+      </template>
+    </Paragraph>
+    <OffersSection />
     <Test class="frameworkX" />
     <Test2 class="frameworkX" />
     <Test3 class="frameworkX" />
@@ -15,8 +31,11 @@
 </template>
 
 <script setup>
+import { loading } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
+import Paragraph from '@/components/items/section/Paragraph.vue'
+import OffersSection from '@/components/service-page/OffersSection.vue'
 import Test from '@/components/home-page/section-test/Test.vue'
 import Test2 from '@/components/home-page/section-test/Test2.vue'
 import Test3 from '@/components/home-page/section-test/Test3.vue'

@@ -96,29 +96,4 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 .overlay-loading {
     background: var(--background-header-page);
 }
-
-// .img-left-move {
-//     opacity: 0;
-//     transform: translateY(-3.5%);
-//     animation: appear-top var(--time-animation) both;
-// }
-
-// .img-right-move {
-//     opacity: 0;
-//     transform: translateY(3.5%);
-//     animation: appear-bottom var(--time-animation) both;
-// }
-
-// @keyframes appear-top {
-//     to {
-//         opacity: 1;
-//         transform: translateY(0%);
-//     }
-// }
-
-// @keyframes appear-bottom {
-//     to {
-//         opacity: 1;
-//         transform: translateY(0%);
-//     }
-// }</style>
+</style>

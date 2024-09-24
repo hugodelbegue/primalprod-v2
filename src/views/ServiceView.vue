@@ -24,14 +24,30 @@
                 </div>
             </div>
         </div>
-        <Test2 />
-        <Test2 />
+        <OffersSection />
+        <ContactReminder background="var(--orange-3)" route="contact" routeText="Réservez votre rendez-vous !">
+            <template #sendcontact-title>
+                <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
+                    bla</h2>
+            </template>
+            <template #sendcontact-paragraph>
+                <p class="space-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
+                    exercitationem, unde alias
+                    perferendis voluptatibus autem harum earum laboriosam inventore.
+                </p>
+                <p class="space-text">
+                    Perferendis voluptatibus autem harum earum laboriosam inventore.
+                </p>
+            </template>
+        </ContactReminder>
     </section>
 </template>
 
 <script setup>
 import { loading, isMobileDevice } from '@/assets/js/utils'
-import Test2 from '@/components/home-page/section-test/Test2.vue'
+import OffersSection from '@/components/service-page/OffersSection.vue'
+import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
 <style lang="scss" scoped>

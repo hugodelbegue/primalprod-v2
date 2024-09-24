@@ -11,7 +11,6 @@
                     </template>
                 </Button2>
             </div>
-            <!-- <button class="offset">Offset</button> -->
         </div>
     </div>
 </template>
@@ -37,40 +36,4 @@ defineProps({
     background: none;
     padding: 0;
 }
-
-// button {
-//     cursor: pointer;
-//     background: none;
-//     border: 2px solid;
-//     font: inherit;
-//     line-height: 1;
-//     margin: 0.5em;
-//     padding: 1em 2em;
-// }
-
-// button {
-//     --color: red;
-//     --hover: blueviolet;
-
-//     color: var(--color);
-//     transition: 0.25s;
-
-//     &:hover,
-//     &:focus {
-//         border-color: var(--hover);
-//         color: #fff;
-//     }
-// }
-
-// .offset {
-//     box-shadow:
-//         0.3em 0.3em 0 0 var(--color),
-//         inset 0.3em 0.3em 0 0 var(--color);
-
-//     &:hover,
-//     &:focus {
-//         box-shadow:
-//             0 0 0 0 var(--hover),
-//             inset 6em 3.5em 0 0 var(--hover);
-//     }
-// }</style>
+</style>

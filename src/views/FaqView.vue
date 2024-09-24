@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="layout-img-header-faq">
-                    jbkjbkjbkjbkjbkjb
+                    <img class="media-center" src="@/assets/img/img-header/questions-bro.svg" alt="" height="360">
                 </div>
             </div>
         </div>

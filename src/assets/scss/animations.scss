@@ -91,6 +91,10 @@
     transition: opacity var(--time-animation);
 }
 
+.visible-illustration {
+    visibility: visible !important;
+}
+
 // animation hover
 .animation-hover-active {
     &:hover .animation-hover {
@@ -109,6 +113,111 @@
     @keyframes shadow-appear {
         to {
             box-shadow: var(--base-shadow) var(--black);
+        }
+    }
+}
+
+// animations parts
+.animation-part-one {
+    .layout-offer::before {
+        animation: part-one-before-animation var(--time-animation) both 0ms;
+
+        @keyframes part-one-before-animation {
+            to {
+                background: var(--color-before);
+                top: 5px;
+                left: 5px;
+            }
+        }
+    }
+
+    .layout-offer::after {
+        animation: part-one-after-animation var(--time-animation) both 0ms;
+
+        @keyframes part-one-after-animation {
+            to {
+                background: var(--color-after);
+                top: 10px;
+                left: 10px;
+            }
+        }
+    }
+}
+
+.animation-part-two {
+    .layout-offer::before {
+        animation: part-two-before-animation var(--time-animation) both 100ms;
+
+        @keyframes part-two-before-animation {
+            to {
+                background: var(--color-before);
+                top: 5px;
+                left: -5px;
+            }
+        }
+    }
+
+    .layout-offer::after {
+        animation: part-two-after-animation var(--time-animation) both 100ms;
+
+        @keyframes part-two-after-animation {
+            to {
+                background: var(--color-after);
+                top: 10px;
+                left: -10px;
+            }
+        }
+    }
+}
+
+.animation-part-three {
+    .layout-offer::before {
+        animation: part-three-before-animation var(--time-animation) both 200ms;
+
+        @keyframes part-three-before-animation {
+            to {
+                background: var(--color-before);
+                top: -5px;
+                left: 5px;
+            }
+        }
+    }
+
+    .layout-offer::after {
+        animation: part-three-after-animation var(--time-animation) both 200ms;
+
+        @keyframes part-three-after-animation {
+            to {
+                background: var(--color-after);
+                top: -10px;
+                left: 10px;
+            }
+        }
+    }
+}
+
+.animation-part-four {
+    .layout-offer::before {
+        animation: part-four-before-animation var(--time-animation) both 300ms;
+
+        @keyframes part-four-before-animation {
+            to {
+                background: var(--color-before);
+                top: -5px;
+                left: -5px;
+            }
+        }
+    }
+
+    .layout-offer::after {
+        animation: part-four-after-animation var(--time-animation) both 300ms;
+
+        @keyframes part-four-after-animation {
+            to {
+                background: var(--color-after);
+                top: -10px;
+                left: -10px;
+            }
         }
     }
 }

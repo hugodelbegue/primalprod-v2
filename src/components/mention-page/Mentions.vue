@@ -2,9 +2,7 @@
     <div class="text-mentions frameworkX margin-x">
         <h3 style="border-top: none; padding-top: 0;">Crédits.</h3>
         <p>
-            Créateur : {{ designer }} - <a href="https://hugodelbegue.fr/">www.hugodelbegue.fr</a>
-            <br><br>
-            Responsable publication : {{ publication }}
+            Illustrations : <a :href="illustration" target="_blank">{{ illustration }}</a>
         </p>
 
         <h3>1. Présentation du site.</h3>

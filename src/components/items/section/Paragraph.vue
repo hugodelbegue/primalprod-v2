@@ -45,5 +45,12 @@ defineProps({
 
 .img-paragraph {
     position: relative;
+    display: flex;
+    width: 100%;
+    margin: auto;
+
+    @media #{$mobileScreen} {
+        width: 80%;
+    }
 }
 </style>

@@ -25,7 +25,7 @@
     --space-between-partner: 10px;
     --number-space-between-partner: calc(var(--number-partner) - 1);
     --size-partner: calc(calc(100% / var(--number-partner)) - calc(calc(var(--space-between-partner) * var(--number-space-between-partner)) / var(--number-partner)));
-    background: transparent;
+    background: var(--background-partner);
 
     @media #{$mobileScreen} {
         --number-partner: 4;

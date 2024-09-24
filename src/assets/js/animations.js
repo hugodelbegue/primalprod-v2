@@ -5,6 +5,7 @@ export function startAnimation() {
     const imgLeft = document.querySelector('.img-left')
     const imgRight = document.querySelector('.img-right')
     const mediaCenter = document.querySelector('.media-center')
+    const mediaIllustration = document.querySelector('.media-illustration')
     const pageTitle = document.querySelectorAll('h1:not(.catchphrase, .title-header-project)')
     pageTitle ? pageTitle.forEach(element => element.classList.add('move-left')) : null
     textTitleRight ? textTitleRight.forEach(element => element.classList.add('move-right')) : null
@@ -13,6 +14,7 @@ export function startAnimation() {
     imgLeft ? imgLeft.classList.add('img-left-move') : null
     imgRight ? imgRight.classList.add('img-right-move') : null
     mediaCenter ? mediaCenter.classList.add('appear-center') : null
+    mediaIllustration ? mediaIllustration.classList.add('visible-illustration') : null
 }
 
 export function endAnimation() {
@@ -22,6 +24,7 @@ export function endAnimation() {
     const imgLeft = document.querySelector('.img-left')
     const imgRight = document.querySelector('.img-right')
     const mediaCenter = document.querySelector('.media-center')
+    const mediaIllustration = document.querySelector('.media-illustration')
     const pageTitle = document.querySelectorAll('h1:not(.catchphrase, .title-header-project)')
     pageTitle ? pageTitle.forEach(element => element.classList.remove('move-left')) : null
     textTitleRight ? textTitleRight.forEach(element => element.classList.remove('move-right')) : null
@@ -30,6 +33,7 @@ export function endAnimation() {
     imgLeft ? imgLeft.classList.remove('img-left-move') : null
     imgRight ? imgRight.classList.remove('img-right-move') : null
     mediaCenter ? mediaCenter.classList.remove('appear-center') : null
+    mediaIllustration ? mediaIllustration.classList.add('visible-illustration') : null
 }
 
 // const elements = {

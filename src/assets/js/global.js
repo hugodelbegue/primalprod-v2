@@ -17,6 +17,7 @@ export default {
             host: 'INFOMANIAK – Rue Eugène-Marziano 25 - 1227 Genève - Suisse',
             designer: 'Hugo DELBEGUE',
             publication: 'Hugo DELBEGUE',
+            illustration: 'https://storyset.com/',
 
             // proverbs
             proverb: [
