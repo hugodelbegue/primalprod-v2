@@ -4,7 +4,8 @@
             <h2 class="header-testimonial space-text">
                 <slot name="title-testimonial"></slot>
             </h2>
-            <div class="layout-body-testimonial">
+            <div class="layout-body-testimonial middle">
+                <img class="img-testimonial" src="@/assets/img/img-section/new-message.svg">
                 <div class="body-testimonial">
                     ≪&nbsp;<slot name="text-testimonial"></slot>&nbsp;≫
                     <div class="footer-testimonial" :style="{ 'background': background }">
@@ -25,29 +26,17 @@ defineProps({
 <style lang="scss" scoped>
 .layout-body-testimonial {
     --size-layout-illustration: 20%;
-    --size-illustration: 100px;
+    gap: var(--side);
 
-    @media #{$mobileScreen} {
-        display: flex;
-        gap: var(--side);
+    .img-testimonial {
+        width: var(--size-layout-illustration);
+        display: none;
 
-        &::before,
-        &::after {
-            background: url(../avatar/avatar.svg) center / var(--size-illustration) no-repeat;
-        }
-
-        &::before {
-            content: "";
-            width: var(--size-layout-illustration);
-            background-position-y: bottom;
-        }
-
-        &::after {
-            content: "";
-            width: var(--size-layout-illustration);
-            background-position-y: top;
+        @media #{$mobileScreen} {
+            display: flex;
         }
     }
+
 }
 
 .body-testimonial {
@@ -59,17 +48,19 @@ defineProps({
 
     @media #{$mobileScreen} {
         padding-bottom: calc(var(--side) * 1.5);
-        width: calc(100% - calc(var(--size-layout-illustration) * 2));
+        width: calc(100% - var(--size-layout-illustration));
     }
 }
 
 .footer-testimonial {
+    box-shadow: var(--base-shadow) #D1C9B6;
+    border-radius: var(--radius-high);
+    border: 2px solid var(--color-separation-line);
     position: absolute;
-    bottom: -12px;
+    bottom: -15px;
     right: 50%;
     transform: translateX(50%);
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding: .35em 1.25em;
     width: max-content;
 
     @media #{$tabletScreen} {

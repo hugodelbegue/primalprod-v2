@@ -1,5 +1,6 @@
 <template>
     <div class="background-offers frameworkX frameworkY animation-hover-active">
+        <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
             <Offer1 class="part-one animation-part-one" />
             <Offer1 class="part-two animation-part-two" />

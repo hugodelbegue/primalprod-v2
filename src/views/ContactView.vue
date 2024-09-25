@@ -23,7 +23,7 @@
         <TallyForm />
         <Testimonial background="var(--orange-3)">
             <template #title-testimonial>
-                <span class="animation-hover">Travailler</span>&nbsp;avec moi
+                <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
             <template #text-testimonial>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
@@ -32,7 +32,7 @@
                 nesciunt, tempore ratione voluptate, suscipit velit.
             </template>
             <template #full-name-testimonial>
-                Jean Dupont, Directeur de je ne sais pas quoi
+                Jean Dupont, Directeur Général
             </template>
         </Testimonial>
     </section>

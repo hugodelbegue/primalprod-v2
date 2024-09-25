@@ -32,11 +32,6 @@ import Mentions from '@/components/mention-page/Mentions.vue'
     background: var(--background-header-page);
 }
 
-.layout-header-mention {
-    display: flex;
-    gap: calc(var(--side-up) * 2);
-}
-
 .text-header-mention {
     text-align: center;
 }

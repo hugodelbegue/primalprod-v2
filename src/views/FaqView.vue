@@ -17,13 +17,19 @@
                         </p>
                     </div>
                 </div>
-                <div class="layout-img-header-faq">
-                    <img class="media-center" src="@/assets/img/img-header/questions-bro.svg" alt="" height="360">
+                <div class="layout-img-header-faq middle">
+                    <div id="overlay-media" class="overlay-loading"></div>
+                    <img class="media-center" src="@/assets/img/img-header/questions.svg"
+                        alt="homme sur un point d'interrogation" height="360" @load="loading('overlay-media')">
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import { loading } from '@/assets/js/utils'
+</script>
 
 <style lang="scss" scoped>
 .background-header-faq {
@@ -44,9 +50,15 @@
 }
 
 .layout-img-header-faq {
+    position: relative;
     flex: 40%;
-    display: flex;
-    place-content: flex-end;
-    place-items: center;
+}
+
+.media-center {
+    opacity: var(--opacity-animation);
+}
+
+.overlay-loading {
+    background: var(--background-header-page);
 }
 </style>

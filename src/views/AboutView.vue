@@ -12,15 +12,16 @@
             </p>
           </div>
         </div>
-        <div class="layout-img-header-about">
-          <img class="media-illustration" src="@/assets/img/img-header/man-yoga-fly-bro.svg" alt="" height="360">
+        <div class="layout-img-header-about middle">
+          <img class="media-illustration" src="@/assets/img/img-header/man-yoga-fly.svg" alt="homme qui fait du yoga"
+            height="360">
         </div>
       </div>
     </div>
     <Proverb />
     <Paragraph background="transparent">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/web-devices-bro.svg" @load="loading('overlay-img')">
+        <img class="img-paragraph" src="@/assets/img/img-section/devices.svg" @load="loading('overlay-img')">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -39,7 +40,7 @@
     </Paragraph>
     <Paragraph background="var(--orange-3)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/working-bro.svg" @load="loading('overlay-img')">
+        <img class="img-paragraph" src="@/assets/img/img-section/typing.svg" @load="loading('overlay-img')">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -53,7 +54,7 @@
     </Paragraph>
     <Paragraph background="transparent">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/man-thinking-bro.svg" @load="loading('overlay-img')">
+        <img class="img-paragraph" src="@/assets/img/img-section/man-thinking.svg" @load="loading('overlay-img')">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -98,7 +99,11 @@ export default {
 
 .layout-header-about {
   display: flex;
-  gap: var(--side-up);
+  gap: var(--side);
+
+  @media #{$switch} {
+    gap: var(--side-up);
+  }
 }
 
 .layout-description-header-about {
@@ -109,9 +114,6 @@ export default {
   position: relative;
   height: 360px;
   flex: 40%;
-  display: flex;
-  place-content: center;
-  place-items: center;
 }
 
 .media-illustration {
