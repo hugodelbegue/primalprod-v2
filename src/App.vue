@@ -65,8 +65,7 @@ export default {
       if (!isMobileDevice()) {
         return {
           'paint-contact': this.currentRoute == 'contact',
-          'background-contact-move': this.currentRoute == 'contact',
-          // 'paint-service': this.currentRoute == 'services'
+          'background-contact-move': this.currentRoute == 'contact'
         }
       }
     }
@@ -88,10 +87,6 @@ export default {
 // Label background
 .paint-contact {
   background: url(@/assets/img/label.svg) top right / 25vh no-repeat;
-}
-
-.paint-service {
-  background: url(@/assets/img/logo-background.svg) -5% 0% / 30vh no-repeat;
 }
 
 .background-contact-move {

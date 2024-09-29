@@ -3,6 +3,8 @@
         <h3 style="border-top: none; padding-top: 0;">Crédits.</h3>
         <p>
             Illustrations : <a :href="illustration" target="_blank">{{ illustration }}</a>
+            <br><br>
+            Icons : <a :href="icons" target="_blank">{{ icons }}</a>
         </p>
 
         <h3>1. Présentation du site.</h3>

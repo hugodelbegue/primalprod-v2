@@ -5,8 +5,12 @@
                 <slot name="title-testimonial"></slot>
             </h2>
             <div class="layout-body-testimonial middle">
-                <img class="img-testimonial" src="@/assets/img/img-section/new-message.svg">
                 <div class="body-testimonial">
+                    <lord-icon class="icon-testimonial" src="https://cdn.lordicon.com/kiynvdns.json" trigger="hover"
+                        target=".background-testimonial"
+                        colors="primary:#121331,secondary:#f28f52,tertiary:#ffc738,quaternary:#ebe6ef,quinary:#ebe6ef"
+                        :style="{ 'background': background }">
+                    </lord-icon>
                     ≪&nbsp;<slot name="text-testimonial"></slot>&nbsp;≫
                     <div class="footer-testimonial" :style="{ 'background': background }">
                         <slot name="full-name-testimonial"></slot>
@@ -25,24 +29,35 @@ defineProps({
 
 <style lang="scss" scoped>
 .layout-body-testimonial {
-    --size-layout-illustration: 20%;
-    gap: var(--side);
+    --size-layout-illustration: 70px;
+    flex-direction: column;
 
-    .img-testimonial {
+    .icon-testimonial {
         width: var(--size-layout-illustration);
-        display: none;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        top: -60px;
+        right: 40px;
 
         @media #{$mobileScreen} {
-            display: flex;
+            --size-layout-illustration: 100px;
+            top: -85px;
+            flex-direction: row;
+            gap: var(--side);
         }
     }
 
+    @media #{$mobileScreen} {
+        flex-direction: row;
+        gap: var(--side);
+    }
 }
 
 .body-testimonial {
     position: relative;
     padding: var(--side);
-    padding-bottom: calc(var(--side) * 3.5);
+    padding-bottom: calc(var(--side) * 2.5);
     border: 2px solid var(--color-separation-line);
     border-radius: var(--radius-high);
 
@@ -53,14 +68,11 @@ defineProps({
 }
 
 .footer-testimonial {
-    box-shadow: var(--base-shadow) #D1C9B6;
-    border-radius: var(--radius-high);
-    border: 2px solid var(--color-separation-line);
     position: absolute;
-    bottom: -15px;
+    bottom: -10px;
     right: 50%;
     transform: translateX(50%);
-    padding: .35em 1.25em;
+    padding: 0 1.25em;
     width: max-content;
 
     @media #{$tabletScreen} {

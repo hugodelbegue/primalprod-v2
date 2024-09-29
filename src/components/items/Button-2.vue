@@ -20,7 +20,7 @@ a.button-base {
     background: var(--background-main);
     border-radius: var(--radius-high);
     text-decoration: none;
-    padding: 1em 2em;
+    padding: .75em 2em;
     font-size: var(--f-button);
     transition: color var(--time-transition), border var(--time-transition), box-shadow var(--time-transition);
 

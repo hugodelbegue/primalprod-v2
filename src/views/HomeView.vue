@@ -8,6 +8,7 @@
       </Logo>
       <AboutMe />
     </div>
+    <Banner />
     <Paragraph background="var(--orange-3)" :img-right="true">
       <template #img-paragraph>
         <img class="img-paragraph" src="@/assets/img/img-section/collab.svg" height="360"
@@ -49,6 +50,7 @@
 <script setup>
 import { loading } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
+import Banner from '@/components/items/Banner.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import OffersSection from '@/components/service-page/OffersSection.vue'

@@ -4,7 +4,8 @@
             <Logo>
                 <template #img>
                     <a class="link-logo" ref="logo" href="/" title="Accueil">
-                        <img alt="PrimalProd logo" src="@/assets/img/logo-2.svg" width="56" height="48" />
+                        <img class="logo-img" alt="PrimalProd logo" src="@/assets/img/logo.svg" />
+                        <img class="logo-text" alt="PrimalProd logo" src="@/assets/img/logo-text.svg" height="25" />
                     </a>
                 </template>
             </Logo>
@@ -53,7 +54,6 @@ export default {
                     if (Math.abs(currentScrollPosition - this.lastScrollPosition) > this.gapScroll) {
                         nav.classList.remove('hidden-nav')
                         nav.classList.add('fix-nav')
-                        // nav.classList.contain()
                     }
                 } else {
                     nav.classList.add('hidden-nav')
@@ -88,6 +88,36 @@ header {
     margin-left: var(--margin-header-x);
     margin-right: var(--margin-header-x);
     height: calc(1em + calc(var(--side-y) * 2) + calc(var(--margin-block-y) * 2));
+}
+
+.link-logo {
+    position: relative;
+    display: flex;
+    place-items: center;
+    gap: 10px;
+
+    img {
+        transition: all var(--time-animation);
+    }
+
+    .logo-img {
+        position: absolute;
+        height: 48px;
+
+        @media #{$switch} {
+            opacity: .3;
+            height: 96px;
+        }
+    }
+
+    .logo-text {
+        z-index: 1;
+        display: none;
+
+        @media #{$switch} {
+            display: block;
+        }
+    }
 }
 
 .layout-nav {

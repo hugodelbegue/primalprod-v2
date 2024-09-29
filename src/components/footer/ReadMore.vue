@@ -2,7 +2,7 @@
     <div class="readmore">
         <Logo class="footer-logo">
             <template #img>
-                <img class="logo-img" alt="logo texte PrimalProd" src="@/assets/img/logo-text.svg" />
+                <img class="logo-img" alt="logo texte PrimalProd" src="@/assets/img/logo-text-black.svg" />
             </template>
         </Logo>
         <p>Développeur web passionné de front-end, je cherche continuellement à m'améliorer et reste ouvert à tout
@@ -21,10 +21,10 @@ import Logo from '../items/Logo.vue'
 }
 
 .logo-img {
-    width: 100%;
+    // width: 100%;
 
     @media #{$mobileScreen} {
-        width: auto;
+        // width: auto;
     }
 }
 </style>

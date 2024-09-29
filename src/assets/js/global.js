@@ -18,6 +18,7 @@ export default {
             designer: 'Hugo DELBEGUE',
             publication: 'Hugo DELBEGUE',
             illustration: 'https://storyset.com/',
+            icons: 'https://lordicon.com/',
 
             // proverbs
             proverb: [
