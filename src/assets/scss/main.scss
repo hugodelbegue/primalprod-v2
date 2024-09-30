@@ -14,6 +14,8 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 
+  transition: background var(--time-transition);
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,10 +34,10 @@ a {
   cursor: pointer;
   text-decoration: underline;
   color: inherit;
-  transition: color var(--time-transition), opacity var(--time-transition);
+  transition: opacity var(--time-transition);
 
   @media #{$mobileScreen} {
-    &:not(.project-url, .link-logo, .button-base):hover {
+    &:not(.project-url, .link-logo, .button-base, .link-host):hover {
       opacity: .85;
     }
   }
@@ -49,6 +51,7 @@ a.router-link-active {
   cursor: default;
   color: var(--color-important);
   opacity: 1 !important;
+  transition: color var(--time-transition);
 }
 
 .nav-link,

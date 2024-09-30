@@ -61,6 +61,7 @@ a,
 a.router-link-active {
     cursor: pointer;
     color: var(--color-text);
+    transition: none !important;
 
     &:hover {
         opacity: 1 !important;

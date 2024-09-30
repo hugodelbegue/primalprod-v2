@@ -1,37 +1,51 @@
 <template>
-    <router-link class="button-base middle black" :to="{ name: route }">
+    <div class="button-base middle black" @click="pushRoute">
         <slot v-if="!text" name="text-button"></slot>
         {{ text }}
-    </router-link>
+    </div>
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
 defineProps({
     route: String,
     text: String
 })
 </script>
 
+<script>
+export default {
+    data() {
+        return {
+            redirect: this.route
+        }
+    },
+    methods: {
+        pushRoute() {
+            this.$router.push({ name: this.redirect })
+        }
+    }
+}
+</script>
+
+
 <style lang="scss" scoped>
-a.button-base {
+.button-base {
     --base-color: 44, 62, 80;
-    --border-color: rgba(var(--base-color), 1);
+    --border-color: var(--color-shadow);
+    cursor: pointer;
     background: var(--background-main);
     border-radius: var(--radius-high);
     text-decoration: none;
     padding: .75em 2em;
     font-size: var(--f-button);
-    transition: color var(--time-transition), border var(--time-transition), box-shadow var(--time-transition);
+    transition: color var(--time-transition);
 
     &.black {
-        box-shadow: 0px 0px 0px var(--black);
+        box-shadow: 0px 0px 0px var(--border-color);
         border: var(--border-color) solid 1px;
     }
 
     &.black:hover {
-        --border-color: rgba(var(--base-color), .5);
-        box-shadow: 0px 0px 0px var(--border-color);
         color: var(--orange-1);
     }
 }

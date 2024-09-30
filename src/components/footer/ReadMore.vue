@@ -1,10 +1,8 @@
 <template>
     <div class="readmore">
-        <Logo class="footer-logo">
-            <template #img>
-                <img class="logo-img" alt="logo texte PrimalProd" src="@/assets/img/logo-text-black.svg" />
-            </template>
-        </Logo>
+        <div class="footer-logo">
+            <PrimalProd width="280" height="34" class="logo-color" />
+        </div>
         <p>Développeur web passionné de front-end, je cherche continuellement à m'améliorer et reste ouvert à tout
             type
             d'opportunités. Situé dans la ville de Grenoble, une collaboration dans toute la France est possible</p>
@@ -12,7 +10,7 @@
 </template>
 
 <script setup>
-import Logo from '../items/Logo.vue'
+import PrimalProd from '../icons/PrimalprodLogo.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -20,11 +18,13 @@ import Logo from '../items/Logo.vue'
     margin-bottom: 3em;
 }
 
-.logo-img {
-    // width: 100%;
+.logo-color {
+    &:deep(.s0) {
+        fill: var(--color-text);
+    }
 
-    @media #{$mobileScreen} {
-        // width: auto;
+    &:deep(.s1) {
+        fill: var(--color-text);
     }
 }
 </style>

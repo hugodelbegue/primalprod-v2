@@ -52,7 +52,7 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 
 <style lang="scss" scoped>
 .background-header-service {
-    background: var(--background-second-opaque);
+    background: var(--background-header-page);
 }
 
 .layout-header-service {

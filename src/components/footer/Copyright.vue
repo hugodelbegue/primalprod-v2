@@ -1,21 +1,31 @@
 <template>
     <div class="copyright frameworkY margin-y padding-x">
         <p>© Copyright {{ year }} - PrimalProd&nbsp;&nbsp;🐾
-            <a href="https://www.infomaniak.com/fr/ecologie" target="_blank">&nbsp;Site hébergé de manière
+            <a class="link-host" href="https://www.infomaniak.com/fr/ecologie" target="_blank">&nbsp;Site hébergé de
+                manière
                 responsable</a>&nbsp;&nbsp;|
-            <router-link class="link-mentions" :to="{ name: 'mention' }">&nbsp;Mentions Légales</router-link>
+            <span class="link-mentions" @click="pushRoute">&nbsp;Mentions Légales</span>
         </p>
     </div>
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
 import globalVariable from '@/assets/js/global'
 </script>
 
 <script>
 export default {
-    mixins: [globalVariable]
+    mixins: [globalVariable],
+    data() {
+        return {
+            redirect: 'mention'
+        }
+    },
+    methods: {
+        pushRoute() {
+            this.$router.push({ name: this.redirect })
+        }
+    }
 }
 </script>
 
@@ -28,9 +38,7 @@ export default {
 }
 
 .link-mentions {
-    &.router-link-active {
-        color: var(--color-text);
-    }
+    cursor: pointer;
 }
 
 .close-mentions {

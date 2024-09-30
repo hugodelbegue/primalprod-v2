@@ -58,11 +58,13 @@ defineProps({
     position: relative;
     padding: var(--side);
     padding-bottom: calc(var(--side) * 2.5);
+    margin-top: var(--side);
     border: 2px solid var(--color-separation-line);
     border-radius: var(--radius-high);
 
     @media #{$mobileScreen} {
         padding-bottom: calc(var(--side) * 1.5);
+        margin-top: 0;
         width: calc(100% - var(--size-layout-illustration));
     }
 }

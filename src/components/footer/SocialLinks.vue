@@ -20,6 +20,7 @@
                 </a>
             </li>
         </ul>
+        <ButtonDarkMode />
     </div>
 </template>
 
@@ -28,6 +29,7 @@ import globalVariable from '@/assets/js/global'
 import IconLinkedin from '../icons/IconLinkedin.vue'
 import IconGithub from '../icons/IconGithub.vue'
 import IconInstagram from '../icons/IconInstagram.vue'
+import ButtonDarkMode from '../items/theme-mode/ButtonDarkMode.vue'
 </script>
 
 <script>

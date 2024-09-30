@@ -21,7 +21,7 @@
             </div>
         </div>
         <TallyForm />
-        <Testimonial background="var(--orange-3)">
+        <Testimonial background="var(--background-main)">
             <template #title-testimonial>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
@@ -35,17 +35,38 @@
                 Jean Dupont, Directeur Général
             </template>
         </Testimonial>
+        <ContactReminder background="var(--orange-4)" route="contact" routeText="Réservez votre rendez-vous !">
+            <template #sendcontact-title>
+                <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
+                    bla</h2>
+            </template>
+            <template #sendcontact-paragraph>
+                <p class="space-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
+                    exercitationem, unde alias
+                    perferendis voluptatibus autem harum earum laboriosam inventore.
+                </p>
+                <p class="space-text">
+                    Perferendis voluptatibus autem harum earum laboriosam inventore.
+                </p>
+            </template>
+        </ContactReminder>
     </section>
 </template>
 
 <script setup>
 import TallyForm from '@/components/contact-page/TallyForm.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
+import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
 <style lang="scss" scoped>
 .background-header-contact {
-    background: var(--background-second-opaque);
+    // background: var(--background-second-opaque);
+}
+
+.layout-title {
+    background: var(--background-header-page);
 }
 
 .layout-header-contact {

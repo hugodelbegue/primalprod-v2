@@ -5,7 +5,7 @@
                 <template #img>
                     <a class="link-logo" ref="logo" href="/" title="Accueil">
                         <img class="logo-img" alt="PrimalProd logo" src="@/assets/img/logo.svg" />
-                        <img class="logo-text" alt="PrimalProd logo" src="@/assets/img/logo-text.svg" height="25" />
+                        <PrimalprodLogo height="25" class="logo-text" />
                     </a>
                 </template>
             </Logo>
@@ -15,18 +15,13 @@
                 <div ref="anchor"></div>
             </div>
         </div>
-
-        <!-- <div class="layout__switch">
-            <SwitchButton />r
-            <span ref="togg" class="indic">| Thème.</span>
-        </div> -->
-
     </header>
 </template>
 
 <script setup>
 import { isMobileDevice } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
+import PrimalprodLogo from '@/components/icons/PrimalprodLogo.vue'
 import NavDesktop from '@/components/header/navbar/NavDesktop.vue'
 import NavMobile from '@/components/header/navbar/NavMobile.vue'
 </script>
@@ -105,7 +100,7 @@ header {
         height: 48px;
 
         @media #{$switch} {
-            opacity: .3;
+            opacity: .25;
             height: 96px;
         }
     }
@@ -113,6 +108,14 @@ header {
     .logo-text {
         z-index: 1;
         display: none;
+
+        &:deep(.s0) {
+            fill: var(--color-text);
+        }
+
+        &:deep(.s1) {
+            fill: var(--orange-1);
+        }
 
         @media #{$switch} {
             display: block;

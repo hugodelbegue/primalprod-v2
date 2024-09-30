@@ -56,6 +56,7 @@
 
   // shadow
   --base-shadow: 3px 3px 0px;
+  --color-shadow: var(--black);
 
   // colors
   --background-main: var(--beige);
@@ -70,7 +71,7 @@
   --background-header-page: var(--orange-4);
   --background-gallery-project: var(--orange-4);
   --background-partner: var(--orange-3);
-  --background-form: var(--background-main);
+  --background-form: var(--orange-3);
   --background-mentions: var(--color-separation-line);
 
   --background-overlay: var(--beige-opaque);
@@ -113,6 +114,37 @@
   }
 }
 
+/* semantic color variables for this project */
+.theme-light {
+  --color-ball: var(--beige);
+
+  --shadow-theme: 0px 0px 3px var(--color-text);
+
+  --opacity-sun: 1;
+  --opacity-moon: 0;
+}
+
+.theme-dark {
+  --background-main: var(--black);
+  --color-ball: var(--black);
+  --color-text: var(--beige);
+  --color-shadow: var(--beige);
+
+  --color-separation-line: var(--beige-opaque);
+
+  --shadow-theme: 0px 0px 4px var(--color-text) inset;
+
+  --opacity-moon: 1;
+  --opacity-sun: 0;
+
+  & h1,
+  h2,
+  h3 {
+    color: var(--color-text) !important;
+  }
+}
+
+
 *,
 *::before,
 *::after {
@@ -127,6 +159,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 
 
 

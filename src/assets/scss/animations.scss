@@ -112,7 +112,7 @@
 
     @keyframes shadow-appear {
         to {
-            box-shadow: var(--base-shadow) var(--black);
+            box-shadow: var(--base-shadow) var(--color-shadow);
         }
     }
 }

@@ -1,6 +1,7 @@
 <template>
   <div ref="top"></div>
-  <div class="layout" :class="showPaint">
+  <div :class="showPaint"></div>
+  <div class="layout">
     <Header />
     <main class="wrapper-main">
       <div class="layout-main">
@@ -87,15 +88,21 @@ export default {
 // Label background
 .paint-contact {
   background: url(@/assets/img/label.svg) top right / 25vh no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
 }
 
 .background-contact-move {
-  background-position: 100.5% -0.5%;
+  background-position: 101% -1%;
   animation: background-contact-move var(--time-animation) both;
 
   @keyframes background-contact-move {
     to {
       background-position: 100% 0%;
+      opacity: 1;
     }
   }
 }
