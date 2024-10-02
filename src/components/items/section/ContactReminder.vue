@@ -5,18 +5,18 @@
             <slot name="sendcontact-paragraph"></slot>
             <!-- <a v-if="link" :href="link">{{ linkText }}</a> -->
             <!-- <router-link v-if="route" :to="{ name: 'contact' }">{{ routeText }}</router-link> -->
-            <Button2 :route="route">
+            <ButtonReminder :route="route">
                 <template #text-button>
                     {{ routeText }}
                 </template>
-            </Button2>
+            </ButtonReminder>
         </div>
     </div>
 </template>
 
 <script setup>
 import { RouterLink } from 'vue-router'
-import Button2 from '../Button-2.vue'
+import ButtonReminder from '../button/ButtonSecond.vue'
 defineProps({
     background: String,
     route: String,
@@ -27,6 +27,10 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.background-sendcontact {
+    background: var(--background-reminder);
+}
+
 .layout-sendcontact:deep(.button-base) {
     @media #{$mobileScreen} {
         width: fit-content

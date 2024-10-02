@@ -136,11 +136,11 @@ header {
     z-index: 5;
     position: fixed;
     right: var(--margin-header-x);
-    background: rgba(0, 0, 0, .7);
+    background: var(--background-navbar-fix);
     animation: appear-nav var(--time-transition);
 
     &:deep(.burger-lines) {
-        background: var(--background-main);
+        background: var(--color-burger-lines-fix);
     }
 
     @keyframes appear-nav {

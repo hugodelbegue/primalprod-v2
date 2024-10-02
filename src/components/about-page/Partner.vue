@@ -21,7 +21,7 @@
 
 <style lang="scss" scoped>
 .background-partner-contact {
-    --number-partner: 2;
+    --number-partner: 3;
     --space-between-partner: 10px;
     --number-space-between-partner: calc(var(--number-partner) - 1);
     --size-partner: calc(calc(100% / var(--number-partner)) - calc(calc(var(--space-between-partner) * var(--number-space-between-partner)) / var(--number-partner)));
@@ -47,7 +47,6 @@
 }
 
 .partner {
-    // width: calc(calc(100% / 8) - calc(70px / 8));
     width: var(--size-partner);
     height: auto;
     aspect-ratio: 1 / 1;

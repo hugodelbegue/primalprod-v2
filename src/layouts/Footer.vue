@@ -30,7 +30,7 @@ footer {
 
 .layout-footer {
     display: flex;
-    gap: 2em;
+    gap: var(--side);
 
     @media #{$switch} {
         gap: 1em;

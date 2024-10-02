@@ -22,11 +22,11 @@ export default {
 
             // proverbs
             proverb: [
-                "N'importe quel idiot peut écrire du code qu'un ordinateur peut comprendre. Les bons programmeurs écrivent du code que les humains peuvent comprendre. - Martin Fowler",
-                "phrase 2",
-                "phrase 3",
-                "phrase 4",
-                "phrase 5"
+                "Chaque idée mérite un espace digital pour exister et grandir.",
+                "Le web est une toile infinie, et chaque site une œuvre unique qui façonne l'avenir.",
+                "Construire un site, c'est donner vie à une vision et la partager.",
+                "Un site web bien conçu n'est pas seulement une vitrine, c'est une connexion entre vous et le monde.",
+                "Votre présence en ligne est plus qu'un site, c'est l'empreinte de votre identité dans l'univers numérique."
             ]
         }
     }

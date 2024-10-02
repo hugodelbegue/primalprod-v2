@@ -25,7 +25,7 @@ import { isMobileDevice } from './assets/js/utils'
 import { startAnimation, endAnimation } from './assets/js/animations'
 import Header from '@/layouts/Header.vue'
 import Footer from '@/layouts/Footer.vue'
-import ReturnTop from './components/items/ReturnTop.vue'
+import ReturnTop from './components/items/button/ReturnTop.vue'
 </script>
 
 <script>

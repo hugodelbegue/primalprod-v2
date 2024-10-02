@@ -5,18 +5,18 @@
                 <slot name="title-project"></slot>
             </h1>
             <div class="link-header-project layout-title button-shadow">
-                <Button2 :route="tagUrl">
+                <ButtonTagUrl :route="tagUrl">
                     <template #text-button>
                         <slot name="tag-project"></slot>
                     </template>
-                </Button2>
+                </ButtonTagUrl>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import Button2 from '../items/Button-2.vue'
+import ButtonTagUrl from '../items/button/ButtonSecond.vue'
 defineProps({
     tagUrl: String
 })

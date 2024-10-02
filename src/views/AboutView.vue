@@ -38,7 +38,7 @@
         </p>
       </template>
     </Paragraph>
-    <Paragraph background="var(--orange-3)" :img-right="true">
+    <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
         <img class="img-paragraph" src="@/assets/img/img-section/typing.svg" @load="loading('overlay-img')">
       </template>

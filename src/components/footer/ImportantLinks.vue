@@ -47,10 +47,6 @@ export default {
         padding: 1em 0em;
         text-decoration: underline;
 
-        &:last-of-type {
-            padding-bottom: 0;
-        }
-
         @media #{$switch} {
             padding: 0;
         }

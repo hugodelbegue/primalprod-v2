@@ -2,7 +2,7 @@
     <section class="background-proverb frameworkY middle">
         <div class="layout-proverb margin-x">
             <p>
-                🐾&nbsp;≪&nbsp;{{ proverbRandom() }}&nbsp;≫&nbsp;🐾
+                🪶&nbsp;≪&thinsp;{{ proverbRandom() }}&thinsp;≫&nbsp;🪶
             </p>
         </div>
     </section>

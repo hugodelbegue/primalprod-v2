@@ -38,7 +38,7 @@ export default {
     text-decoration: none;
     padding: .75em 2em;
     font-size: var(--f-button);
-    transition: color var(--time-transition);
+    transition: background var(--time-transition), color var(--time-transition);
 
     &.black {
         box-shadow: 0px 0px 0px var(--border-color);

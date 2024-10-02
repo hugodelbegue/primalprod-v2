@@ -72,99 +72,40 @@ h1,
 h2,
 h3 {
   font-family: var(--f-family-title);
-  line-height: 1.3;
+  line-height: var(--f-line-title);
+  font-weight: var(--f-bold);
 }
 
 h1 {
   font-size: var(--f-size-h1);
-  font-weight: var(--f-bold);
   color: var(--color-heading-h1);
 }
 
-h1:not(.catchphrase, .title-header-project) {
+h1:not(.catchphrase) {
   opacity: var(--opacity-animation);
 }
 
 h2 {
   font-size: var(--f-size-h2);
-  font-weight: var(--f-bold);
   color: var(--color-heading-h2);
 }
 
 h3 {
   font-size: var(--f-size-h3);
-  font-weight: var(--f-bold);
   color: var(--color-heading-h3);
-}
-
-.important {
-  color: var(--color-link);
-  font-weight: var(--f-bold);
 }
 
 strong {
   font-weight: bold;
 }
 
-svg {
-  background-color: transparent;
-}
-
-.button {
-  svg {
-    transition: .3s;
-  }
-}
-
-input,
-textarea {
-  font-size: .89em;
-}
-
 // Scrollbar
 ::-webkit-scrollbar-track {
-  background: var(--parchment);
-  padding: 1px;
+  // background: var(--parchment);
+  // padding: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border-1);
-  border-radius: 3px;
-}
-
-
-// Vue-writer
-.is-typed {
-  color: var(--color-link);
-}
-
-.is-typed span.typed {
-  font-weight: var(--weight-very-bold);
-}
-
-.is-typed span.cursor {
-  display: inline-flex;
-  place-items: center;
-  width: 3px;
-  height: 1.5em;
-  background-color: var(--color-heading);
-  animation: blink 1s infinite;
-}
-
-.is-typed span.cursor.typing {
-  animation: none;
-}
-
-@keyframes blink {
-  49% {
-    background-color: var(--color-heading);
-  }
-
-  50% {
-    background-color: transparent;
-  }
-
-  99% {
-    background-color: transparent;
-  }
+  // background: var(--color-border-1);
+  // border-radius: 3px;
 }

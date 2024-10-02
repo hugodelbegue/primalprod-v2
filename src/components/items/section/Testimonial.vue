@@ -6,12 +6,12 @@
             </h2>
             <div class="layout-body-testimonial middle">
                 <div class="body-testimonial">
-                    <lord-icon class="icon-testimonial" src="https://cdn.lordicon.com/kiynvdns.json" trigger="hover"
-                        target=".background-testimonial"
-                        colors="primary:#121331,secondary:#f28f52,tertiary:#ffc738,quaternary:#ebe6ef,quinary:#ebe6ef"
+                    <lord-icon class="icon-testimonial" src="https://cdn.lordicon.com/egmlnyku.json" trigger="in"
+                        delay="500" state="in-reveal"
+                        colors="primary:#f28f52,secondary:#ffc738,tertiary:#ebe6ef,quaternary:#ebe6ef"
                         :style="{ 'background': background }">
                     </lord-icon>
-                    ≪&nbsp;<slot name="text-testimonial"></slot>&nbsp;≫
+                    ≪&thinsp;<slot name="text-testimonial"></slot>&thinsp;≫
                     <div class="footer-testimonial" :style="{ 'background': background }">
                         <slot name="full-name-testimonial"></slot>
                     </div>
@@ -28,9 +28,18 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.background-testimonial,
+.icon-testimonial,
+.footer-testimonial {
+    transition: background var(--time-transition);
+}
+
+.header-testimonial {
+    padding-right: 7rem;
+}
+
 .layout-body-testimonial {
     --size-layout-illustration: 70px;
-    flex-direction: column;
 
     .icon-testimonial {
         width: var(--size-layout-illustration);
@@ -38,13 +47,12 @@ defineProps({
         aspect-ratio: 1 / 1;
         position: absolute;
         top: -60px;
-        right: 40px;
+        right: 20px;
 
         @media #{$mobileScreen} {
             --size-layout-illustration: 100px;
             top: -85px;
-            flex-direction: row;
-            gap: var(--side);
+            right: 40px;
         }
     }
 
@@ -58,7 +66,6 @@ defineProps({
     position: relative;
     padding: var(--side);
     padding-bottom: calc(var(--side) * 2.5);
-    margin-top: var(--side);
     border: 2px solid var(--color-separation-line);
     border-radius: var(--radius-high);
 

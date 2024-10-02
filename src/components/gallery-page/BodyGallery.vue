@@ -29,7 +29,7 @@
 <script setup>
 import { path, cleanUrl } from '@/assets/js/utils'
 import CardGallery from './CardGallery.vue'
-import Button from '@/components/items/Button.vue'
+import Button from '@/components/items/button/Button.vue'
 import RenderCardImg from './RenderCardImg.vue'
 </script>
 
@@ -92,20 +92,27 @@ article {
 }
 
 .container-gallery {
-    --space-between-card: 30px;
+    --space-between-card: var(--space-grid);
+    --margin-block-x: var(--space-grid);
+    --space-grid: 15px;
 
     @media #{$mobileScreen} {
-        --space-between-card: 40px;
+        --space-grid: 30px;
     }
 
-    @media #{$tabletScreen} {
-        --space-between-card: 50px;
+    @media #{$switch} {
+        --margin-block-x: 50px;
     }
 
     .layout-gallery {
         display: flex;
         flex-wrap: wrap;
         gap: var(--space-between-card);
+        padding-top: var(--space-grid);
+
+        @media #{$switch} {
+            padding-top: var(--side-y);
+        }
     }
 
     .card,

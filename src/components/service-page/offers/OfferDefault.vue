@@ -7,17 +7,17 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro ipsam reprehenderit id nostrum
                 assumenda facilis repellat sint modi, excepturi quas aliquam libero officia quaerat!
             </p>
-            <Button2 route="contact">
+            <ButtonOffer route="contact">
                 <template #text-button>
                     Texte du bouton
                 </template>
-            </Button2>
+            </ButtonOffer>
         </div>
     </section>
 </template>
 
 <script setup>
-import Button2 from '@/components/items/Button-2.vue'
+import ButtonOffer from '@/components/items/button/ButtonSecond.vue'
 defineProps({
     background: String,
     route: String,
@@ -32,6 +32,7 @@ defineProps({
     // border: var(--black) solid 1px;
     border-radius: var(--radius-low);
     padding: var(--side-up);
+    transition: background var(--time-transition);
 
     &::before,
     &::after {

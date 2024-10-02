@@ -15,7 +15,7 @@ import PrimalProd from '../icons/PrimalprodLogo.vue'
 
 <style lang="scss" scoped>
 .footer-logo {
-    margin-bottom: 3em;
+    margin-bottom: var(--side);
 }
 
 .logo-color {

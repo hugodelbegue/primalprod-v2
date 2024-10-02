@@ -72,7 +72,7 @@ input[type="checkbox"] {
 }
 
 .burger-lines {
-    background: var(--color-text);
+    background: var(--color-burger-lines);
 }
 
 .burger-lines::before {

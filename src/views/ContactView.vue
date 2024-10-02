@@ -35,19 +35,16 @@
                 Jean Dupont, Directeur Général
             </template>
         </Testimonial>
-        <ContactReminder background="var(--orange-4)" route="contact" routeText="Réservez votre rendez-vous !">
+        <ContactReminder route="services" routeText="Consulter mes prestations !">
             <template #sendcontact-title>
-                <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
-                    bla</h2>
+                <h2 class="space-text">Un petit doute ! Besoin de consulter mes&nbsp;<span
+                        class="animation-hover">prestations</span>&nbsp;!</h2>
             </template>
             <template #sendcontact-paragraph>
                 <p class="space-text">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
                     exercitationem, unde alias
                     perferendis voluptatibus autem harum earum laboriosam inventore.
-                </p>
-                <p class="space-text">
-                    Perferendis voluptatibus autem harum earum laboriosam inventore.
                 </p>
             </template>
         </ContactReminder>

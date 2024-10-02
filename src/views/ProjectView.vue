@@ -37,7 +37,7 @@
                 </template>
             </Testimonial>
         </div>
-        <ContactReminder background="var(--orange-4)" route="contact" routeText="Réservez votre rendez-vous !">
+        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
                 <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
                     bla</h2>

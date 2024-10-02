@@ -2,10 +2,10 @@
     <div class="background-offers frameworkX frameworkY animation-hover-active">
         <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
-            <Offer1 class="part-one animation-part-one" />
-            <Offer1 class="part-two animation-part-two" />
-            <Offer1 class="part-three animation-part-three" />
-            <Offer1 class="part-four animation-part-four" />
+            <OfferDefault class="part-one animation-part-one" />
+            <OfferDefault class="part-two animation-part-two" />
+            <OfferDefault class="part-three animation-part-three" />
+            <OfferDefault class="part-four animation-part-four" />
         </div>
         <br>
         <br>
@@ -20,13 +20,11 @@
 </template>
 
 <script setup>
-import Offer1 from './offers/Offer-1.vue'
+import OfferDefault from './offers/OfferDefault.vue'
 </script>
 
 <style lang="scss" scoped>
 .layout-offers {
-    --color-before: var(--orange-3);
-    --color-after: var(--orange-4);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -72,6 +70,4 @@ import Offer1 from './offers/Offer-1.vue'
         grid-row: 2;
     }
 }
-
-.offers-add {}
 </style>

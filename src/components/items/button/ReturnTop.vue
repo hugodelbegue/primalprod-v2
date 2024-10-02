@@ -40,9 +40,9 @@ export default {
     --color-button: var(--background-main);
     --size-button: 50px;
     --corner-button: var(--radius-high);
-    --normal-color: rgba(0, 0, 0, .2);
-    --move-color: rgba(0, 0, 0, .7);
-    --active-color: rgba(0, 0, 0, .35);
+    --normal-color: rgba(var(--base-color-return-button), .2);
+    --move-color: rgba(var(--base-color-return-button), .7);
+    --active-color: rgba(var(--base-color-return-button), .35);
     cursor: pointer;
     z-index: 3;
     background: var(--normal-color);
