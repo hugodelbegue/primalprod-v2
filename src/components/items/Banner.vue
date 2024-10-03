@@ -7,10 +7,11 @@
 
 <style lang="scss" scoped>
 .background-banner {
-    background: var(--orange-1);
+    background: var(--orange);
     padding: var(--size-line) 0;
     transition: background var(--time-transition);
-    &:hover{
+
+    &:hover {
         background: var(--black);
     }
 }

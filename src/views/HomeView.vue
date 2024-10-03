@@ -9,7 +9,7 @@
       <AboutMe />
     </div>
     <Banner />
-    <Paragraph background="var(--orange-3)" :img-right="true">
+    <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
         <img class="img-paragraph" src="@/assets/img/img-section/collab.svg" height="360"
           @load="loading('overlay-img')">

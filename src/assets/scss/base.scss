@@ -58,39 +58,46 @@
   --base-shadow: 3px 3px 0px;
 
   // color for elements
-  --color-important: var(--orange-1);
+  --color-important: var(--orange);
 
 
   // base colors
-  --base-orange-1: 242, 143, 82;
-  --base-orange-2: 243, 166, 114;
-  --base-orange-3: 245, 188, 145;
-  --base-orange-4: 245, 211, 176;
-  --base-orange-1-dark: 97, 0, 0;
-  --base-orange-2-dark: 125, 33, 19;
-  --base-orange-3-dark: 155, 60, 33;
-  --base-orange-4-dark: 184, 87, 49;
+  // --base-color-1: 242, 143, 82;
+  // --base-color-2: 243, 166, 114;
+  // --base-color-3: 245, 188, 145;
+  // --base-color-4: 245, 211, 176;
+  --base-color-1: 246, 236, 211;
+  --base-color-2: 249, 241, 224;
+  --base-color-3: 252, 247, 236;
+  --base-color-4: 254, 252, 249;
+  --base-color-1-dark: 27, 37, 47;
+  --base-color-2-dark: 40, 57, 75;
+  --base-color-3-dark: 60, 82, 103;
+  --base-color-4-dark: 52, 69, 88;
+  --base-orange: 242, 143, 82;
   --base-black: 44, 62, 80;
   --base-beige: 245, 233, 205;
   // colors
-  --orange-1: rgb(var(--base-orange-1));
-  --orange-2: rgb(var(--base-orange-2));
-  --orange-3: rgb(var(--base-orange-3));
-  --orange-4: rgb(var(--base-orange-4));
-  --orange-1-dark: rgb(var(--base-orange-1-dark));
-  --orange-2-dark: rgb(var(--base-orange-2-dark));
-  --orange-3-dark: rgb(var(--base-orange-3-dark));
-  --orange-4-dark: rgb(var(--base-orange-4-dark));
+  --color-1: rgb(var(--base-color-1));
+  --color-2: rgb(var(--base-color-2));
+  --color-3: rgb(var(--base-color-3));
+  --color-4: rgb(var(--base-color-4));
+  --color-1-dark: rgb(var(--base-color-1-dark));
+  --color-2-dark: rgb(var(--base-color-2-dark));
+  --color-3-dark: rgb(var(--base-color-3-dark));
+  --color-4-dark: rgb(var(--base-color-4-dark));
+  --orange: rgb(var(--base-orange));
   --beige: rgb(var(--base-beige));
   --black: rgb(var(--base-black));
   // opaque colors
-  --orange-opaque: rgba(var(--base-orange-1), 0.25);
-  --orange-opaque-dark: rgba(var(--base-orange-1-dark), 0.25);
+  --orange-opaque: rgba(var(--base-orange), 0.25);
   --beige-opaque: rgba(var(--base-beige), 0.75);
   --beige-little-opaque: rgba(var(--base-beige), 0.95);
+  --beige-very-opaque: rgba(var(--base-beige), 0.2);
   --black-opaque: rgba(var(--base-black), 0.75);
   --black-little-opaque: rgba(var(--base-black), 0.95);
   --black-very-opaque: rgba(var(--base-black), 0.2);
+  --color-1-opaque-dark: rgba(var(--base-color-1-dark), 0.25);
 
 
   @media #{$mobileScreen} {
@@ -119,40 +126,43 @@
 /* semantic color variables for this project */
 .theme-light {
   // main colors light
-  --background-main: var(--beige);
+  --background-main: #fff;
+  // --background-main: var(--beige);
   --background-main-opaque: var(--beige-little-opaque);
-  --background-second: var(--orange-1);
+  --background-second: var(--orange);
   --background-second-opaque: var(--orange-opaque);
   // background color light for sections
-  --background-navbar: var(--orange-4);
+  --background-navbar: var(--color-4);
   --background-navbar-fix: var(--black-opaque);
-  --background-header-page: var(--orange-4);
-  --background-footer: var(--orange-1);
-  --background-copyright: var(--orange-3);
-  --background-gallery-project: var(--orange-4);
-  --background-partner: var(--orange-3);
-  --background-form: var(--orange-3);
-  --background-paragraph: var(--orange-3);
-  --background-reminder: var(--orange-2);
+  --background-header-page: var(--color-4);
+  --background-footer: var(--orange);
+  --background-copyright: var(--color-3);
+  --background-gallery-project: var(--color-3);
+  --background-offer: var(--color-2);
+  --background-partner: var(--color-4);
+  --background-form: var(--color-3);
+  --background-paragraph: var(--color-3);
+  --background-reminder: var(--color-4);
+  --background-proverb: var(--color-3);
   --background-overlay: var(--beige-opaque);
   // color for elements light
   --color-text: var(--black);
   --color-heading-h1: var(--black);
   --color-heading-h2: var(--black);
   --color-heading-h3: var(--black);
-  --color-button: var(--orange-4);
-  --color-button-hover: var(--orange-3);
+  --color-button: var(--color-4);
+  --color-button-hover: var(--color-3);
   --color-burger-lines: var(--color-text);
   --color-burger-lines-fix: var(--beige);
   --base-color-return-button: var(--base-black);
   --color-separation-line: var(--black-very-opaque);
-  --color-ball: var(--beige);
+  --color-ball: var(--background-main);
   // shadow light
   --color-shadow: var(--black);
   --shadow-theme: 0px 0px 2px var(--color-text);
 
-  --color-before: var(--orange-3);
-  --color-after: var(--orange-4);
+  --color-before: var(--color-4);
+  --color-after: var(--color-3);
 
   --opacity-sun: 1;
   --opacity-moon: 0;
@@ -160,40 +170,43 @@
 
 .theme-dark {
   // main colors dark
-  --background-main: var(--black);
+  --background-main: #333;
+  // --background-main: var(--black);
   --background-main-opaque: var(--black-little-opaque);
-  --background-second: var(--orange-1-dark);
-  --background-second-opaque: var(--orange-opaque-dark);
+  --background-second: var(--color-1-dark);
+  --background-second-opaque: var(--color-1-opaque-dark);
   // background color dark for sections
-  --background-navbar: var(--orange-4-dark);
+  --background-navbar: var(--color-4-dark);
   --background-navbar-fix: var(--beige-opaque);
-  --background-header-page: var(--orange-4-dark);
-  --background-footer: var(--orange-1-dark);
-  --background-copyright: var(--orange-3-dark);
-  --background-gallery-project: var(--orange-4-dark);
-  --background-partner: var(--orange-3-dark);
-  --background-form: var(--orange-3-dark);
-  --background-paragraph: var(--orange-3-dark);
-  --background-reminder: var(--orange-2-dark);
+  --background-header-page: var(--color-4-dark);
+  --background-footer: var(--color-1-dark);
+  --background-copyright: var(--color-3-dark);
+  --background-gallery-project: var(--color-3-dark);
+  --background-offer: var(--color-2-dark);
+  --background-partner: var(--color-4-dark);
+  --background-form: var(--color-3-dark);
+  --background-paragraph: var(--color-3-dark);
+  --background-reminder: var(--color-4-dark);
+  --background-proverb: var(--color-3-dark);
   --background-overlay: var(--black-opaque);
   // color for elements dark
   --color-text: var(--beige);
   --color-heading-h1: var(--beige);
   --color-heading-h2: var(--beige);
   --color-heading-h3: var(--beige);
-  --color-button: var(--orange-4-dark);
-  --color-button-hover: var(--orange-3-dark);
+  --color-button: var(--color-4-dark);
+  --color-button-hover: var(--color-3-dark);
   --color-burger-lines: var(--color-text);
   --color-burger-lines-fix: var(--black);
   --base-color-return-button: var(--base-beige);
-  --color-separation-line: var(--beige-opaque);
-  --color-ball: var(--black-opaque);
+  --color-separation-line: var(--beige-very-opaque);
+  --color-ball: var(--background-main-opaque);
   // shadow dark
   --color-shadow: var(--beige);
   --shadow-theme: 0px 0px 4px var(--color-text) inset;
 
-  --color-before: var(--orange-3-dark);
-  --color-after: var(--orange-4-dark);
+  --color-before: var(--color-3-dark);
+  --color-after: var(--color-4-dark);
 
   --opacity-moon: 1;
   --opacity-sun: 0;

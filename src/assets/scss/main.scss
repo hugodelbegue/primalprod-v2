@@ -14,8 +14,6 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 
-  transition: background var(--time-transition);
-
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,10 +38,6 @@ a {
     &:not(.project-url, .link-logo, .button-base, .link-host):hover {
       opacity: .85;
     }
-  }
-
-  &:active {
-    opacity: .85;
   }
 }
 

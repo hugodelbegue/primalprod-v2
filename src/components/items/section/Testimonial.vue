@@ -28,12 +28,6 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-.background-testimonial,
-.icon-testimonial,
-.footer-testimonial {
-    transition: background var(--time-transition);
-}
-
 .header-testimonial {
     padding-right: 7rem;
 }

@@ -137,7 +137,7 @@ article {
             position: absolute;
             background: var(--background-card-back);
             height: 100%;
-            transition: transform .2s, background .3s;
+            transition: transform var(--time-transition-view);
         }
 
         &::before {
@@ -172,18 +172,6 @@ article {
             &::after {
                 transform: rotate(0deg) translate(9px, 9px);
             }
-        }
-    }
-
-    .card:active {
-        cursor: pointer;
-
-        &::before {
-            transform: rotate(-4deg) translate(-9px, -9px);
-        }
-
-        &::after {
-            transform: rotate(4deg) translate(6px, 3px);
         }
     }
 }

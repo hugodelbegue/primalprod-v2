@@ -30,7 +30,6 @@ export default {
 
 <style lang="scss" scoped>
 .button-base {
-    --base-color: 44, 62, 80;
     --border-color: var(--color-shadow);
     cursor: pointer;
     background: var(--background-main);
@@ -38,7 +37,7 @@ export default {
     text-decoration: none;
     padding: .75em 2em;
     font-size: var(--f-button);
-    transition: background var(--time-transition), color var(--time-transition);
+    transition: color var(--time-transition);
 
     &.black {
         box-shadow: 0px 0px 0px var(--border-color);
@@ -46,7 +45,7 @@ export default {
     }
 
     &.black:hover {
-        color: var(--orange-1);
+        color: var(--color-important);
     }
 }
 </style>

@@ -28,11 +28,10 @@ defineProps({
 <style lang="scss" scoped>
 .layout-offer {
     position: relative;
-    background: var(--background-main);
+    background: var(--background-offer);
     // border: var(--black) solid 1px;
     border-radius: var(--radius-low);
     padding: var(--side-up);
-    transition: background var(--time-transition);
 
     &::before,
     &::after {

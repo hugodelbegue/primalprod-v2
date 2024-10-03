@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 .background-proverb {
-    background: var(--orange-3);
+    background: var(--background-proverb);
 }
 
 .layout-proverb {

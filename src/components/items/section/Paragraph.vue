@@ -61,7 +61,6 @@ export default {
 
 .text-paragraph {
     padding: var(--side) var(--side-up);
-    transition: background var(--time-transition);
 
     &.transparent {
         background: var(--background-main);

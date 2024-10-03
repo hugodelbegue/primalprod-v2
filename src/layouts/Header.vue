@@ -39,6 +39,14 @@ export default {
             gapScroll: 10
         }
     },
+    mounted() {
+        const letter = document.querySelectorAll('.s1')
+        window.addEventListener("load", () => {
+            letter.forEach(letters => {
+                letters.classList.add('anim-letter')
+            })
+        })
+    },
     methods: {
         setOfNavigation() {
             const { nav, anchor } = this.$refs
@@ -71,6 +79,8 @@ export default {
 header {
     --side-y: 1rem;
     --margin-header-x: 10px;
+    --delay-start: 250ms;
+    --delay: 100ms;
 
     @media #{$switch} {
         --margin-header-x: var(--margin-block-x);
@@ -114,11 +124,27 @@ header {
         }
 
         &:deep(.s1) {
-            fill: var(--orange-1);
+            fill: var(--background-main);
         }
 
         @media #{$switch} {
             display: block;
+        }
+
+        &:deep(.letter-p) {
+            animation-delay: calc(var(--delay-start) + calc(var(--delay) * 1));
+        }
+
+        &:deep(.letter-r) {
+            animation-delay: calc(var(--delay-start) + calc(var(--delay) * 2));
+        }
+
+        &:deep(.letter-o) {
+            animation-delay: calc(var(--delay-start) + calc(var(--delay) * 3));
+        }
+
+        &:deep(.letter-d) {
+            animation-delay: calc(var(--delay-start) + calc(var(--delay) * 4));
         }
     }
 }

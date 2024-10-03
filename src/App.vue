@@ -66,7 +66,8 @@ export default {
       if (!isMobileDevice()) {
         return {
           'paint-contact': this.currentRoute == 'contact',
-          'background-contact-move': this.currentRoute == 'contact'
+          'background-contact-move': this.currentRoute == 'contact',
+          // 'paint-dark-theme': this.currentRoute !== 'contact'
         }
       }
     }
@@ -107,6 +108,15 @@ export default {
   }
 }
 
+.paint-dark-theme {
+  background: url(./assets/img/1594531_223895-P1X9AS-499.jpg) center / 100% fixed;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+// animation pages
 .transition-view-enter-active {
   transition: opacity calc(var(--time-transition-view) / 2) ease;
 }
