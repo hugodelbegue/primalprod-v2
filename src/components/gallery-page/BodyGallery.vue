@@ -78,9 +78,9 @@ article {
     --number-card: 1;
     --number-space-between-card: calc(var(--number-card) - 1);
     --size-card: calc(calc(100% / var(--number-card)) - calc(calc(var(--space-between-card) * var(--number-space-between-card)) / var(--number-card)));
+    --radius-card: var(--radius-low);
     --background-card: var(--background-second);
     --background-card-back: var(--background-second-opaque);
-    --radius-card: var(--radius-low);
 
     @media #{$mobileScreen} {
         --number-card: 2;
@@ -137,7 +137,7 @@ article {
             position: absolute;
             background: var(--background-card-back);
             height: 100%;
-            transition: transform var(--time-transition-view);
+            transition: transform var(--time-transition);
         }
 
         &::before {
@@ -157,7 +157,7 @@ article {
         p {
             margin: auto;
             width: fit-content;
-            padding: 0 2em 1em;
+            padding: .25em 2em 1em;
         }
     }
 
@@ -177,8 +177,7 @@ article {
 }
 
 .layout-title-card {
-    padding: 1em;
-    padding-bottom: .25em;
+    padding: 1em 1em .25em;
     font-size: 1.15em;
     font-weight: var(--f-bold);
     text-align: center;

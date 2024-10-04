@@ -24,7 +24,7 @@ import PrimalProd from '../icons/PrimalprodLogo.vue'
     }
 
     &:deep(.s1) {
-        fill: var(--color-text);
+        fill: var(--color-text) !important;
     }
 }
 </style>

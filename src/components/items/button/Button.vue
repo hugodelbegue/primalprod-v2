@@ -38,7 +38,7 @@ defineProps({
         left: 0;
         transition: background var(--time-transition) ease, box-shadow var(--time-transition) ease, top var(--time-transition) ease, left var(--time-transition) ease;
 
-        @media #{$desktopScreen} {
+        @media #{$switch} {
             &:hover {
                 background: var(--color-button-hover);
                 box-shadow: 0px 0px 0px var(--color-shadow);

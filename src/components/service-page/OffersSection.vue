@@ -29,7 +29,11 @@ import OfferDefault from './offers/OfferDefault.vue'
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: var(--side);
-    grid-row-gap: var(--side);
+    grid-row-gap: var(--side-y);
+
+    @media #{$mobileScreen} {
+        grid-row-gap: var(--side);
+    }
 }
 
 .part-one {

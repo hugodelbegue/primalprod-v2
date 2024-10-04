@@ -52,14 +52,14 @@
 </template>
 
 <script setup>
-import TallyForm from '@/components/contact-page/TallyForm.vue'
+import TallyForm from '@/components/contact-page/Form.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
 <style lang="scss" scoped>
 .background-header-contact {
-    // background: var(--background-second-opaque);
+    background: transparent;
 }
 
 .layout-title {
