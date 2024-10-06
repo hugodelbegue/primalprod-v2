@@ -15,12 +15,13 @@
                             quia,
                             ullam totam nisi doloremque laboriosam ratione molestiae nostrum enim sunt suscipit.
                         </p>
+                        <icon-contact />
                     </div>
                 </div>
                 <div class="layout-img-header-contact"></div>
             </div>
         </div>
-        <TallyForm />
+        <Form />
         <Testimonial background="var(--background-main)">
             <template #title-testimonial>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
@@ -52,9 +53,10 @@
 </template>
 
 <script setup>
-import TallyForm from '@/components/contact-page/Form.vue'
+import Form from '@/components/contact-page/Form.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
+import IconContact from '@/components/icons/IconEmail.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -69,6 +71,23 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 .layout-header-contact {
     display: flex;
     gap: calc(var(--side-up) * 2);
+
+    .icon-contact {
+        --size-contact-icon: 50px;
+        width: var(--size-contact-icon);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        bottom: calc(var(--size-contact-icon) / -2);
+        right: 50%;
+        transform: translateX(50%);
+
+        @media #{$switch} {
+            --size-contact-icon: 70px;
+            transform: none;
+            right: calc(var(--size-contact-icon) / -2);
+        }
+    }
 }
 
 .layout-description-header-contact {

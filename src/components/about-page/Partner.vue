@@ -32,12 +32,12 @@
     }
 
     @media #{$tabletScreen} {
-        --number-partner: 6;
-    }
-
-    @media #{$desktopScreen} {
         --number-partner: 8;
     }
+
+    // @media #{$desktopScreen} {
+    //     --number-partner: 8;
+    // }
 }
 
 .layout-partner {

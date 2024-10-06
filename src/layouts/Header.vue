@@ -1,7 +1,7 @@
 <template>
     <header class="wrapper-header frameworkX" ref="header">
         <div class="layout-header">
-            <Logo>
+            <Logo class="layout-logo">
                 <template #img>
                     <a class="link-logo" ref="logo" href="/" title="Accueil">
                         <img class="logo-img" alt="PrimalProd logo" src="@/assets/img/logo.svg" />
@@ -40,9 +40,13 @@ export default {
         }
     },
     mounted() {
-        const letter = document.querySelectorAll('.s1')
+        const primal = document.querySelector('.logo-img')
+        const prod = document.querySelectorAll('.s1')
         window.addEventListener("load", () => {
-            letter.forEach(letters => {
+            if (!isMobileDevice()) {
+                primal.classList.add('appear-logo')
+            }
+            prod.forEach(letters => {
                 letters.classList.add('anim-letter')
             })
         })
@@ -60,9 +64,7 @@ export default {
                     }
                 } else {
                     nav.classList.add('hidden-nav')
-                    setTimeout(() => {
-                        nav.classList.remove('fix-nav')
-                    }, 250)
+                    nav.classList.remove('fix-nav')
                 }
             }
             this.lastScrollPosition = currentScrollPosition
@@ -77,22 +79,36 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    --side-y: 1rem;
+    --side-y: 9px;
     --margin-header-x: 10px;
+    --size-content: 32px;
     --delay-start: 250ms;
     --delay: 100ms;
 
     @media #{$switch} {
+        --side-y: 1rem;
         --margin-header-x: var(--margin-block-x);
+        --size-content: 1em;
     }
 }
 
 .layout-header {
     display: flex;
-    place-content: space-between;
     margin-left: var(--margin-header-x);
     margin-right: var(--margin-header-x);
-    height: calc(1em + calc(var(--side-y) * 2) + calc(var(--margin-block-y) * 2));
+    height: calc(var(--size-content) + calc(var(--side-y) * 2) + calc(var(--margin-block-y) * 2));
+
+    @media #{$switch} {
+        place-content: space-between;
+    }
+}
+
+.layout-logo {
+    display: none;
+
+    @media #{$switch} {
+        display: flex;
+    }
 }
 
 .link-logo {
@@ -107,12 +123,9 @@ header {
 
     .logo-img {
         position: absolute;
-        height: 48px;
-
-        @media #{$switch} {
-            opacity: .25;
-            height: 96px;
-        }
+        transform: translateX(-10%);
+        opacity: 0;
+        height: 96px;
     }
 
     .logo-text {
@@ -151,9 +164,11 @@ header {
 
 .layout-nav {
     background: var(--background-navbar);
-    transition: background var(--time-transition);
+    border-radius: var(--radius-high);
+    width: 100%;
 
     @media #{$switch} {
+        border-radius: 0;
         width: 60%;
     }
 }
@@ -161,31 +176,34 @@ header {
 .fix-nav {
     z-index: 5;
     position: fixed;
+    top: 0;
+    left: var(--margin-header-x);
     right: var(--margin-header-x);
-    background: var(--background-navbar-fix);
-    animation: appear-nav var(--time-transition);
-
-    &:deep(.burger-lines) {
-        background: var(--color-burger-lines-fix);
-    }
+    width: auto;
+    opacity: 0;
+    transform: translateY(-20%);
+    animation: appear-nav var(--time-animation) both;
 
     @keyframes appear-nav {
-        from {
-            opacity: 0;
-        }
-
         to {
-            opacity: 1;
+            transform: translateY(0%);
+            opacity: .75;
         }
     }
 }
 
 .hidden-nav {
-    animation: hidden-nav var(--time-transition) both;
+    z-index: -1;
+    opacity: 0;
+}
 
-    @keyframes hidden-nav {
+.appear-logo {
+    animation: appear-logo 1500ms calc(var(--delay-start) + calc(var(--delay) * 4)) both;
+
+    @keyframes appear-logo {
         to {
-            opacity: 0;
+            transform: translateX(0%);
+            opacity: .25;
         }
     }
 }

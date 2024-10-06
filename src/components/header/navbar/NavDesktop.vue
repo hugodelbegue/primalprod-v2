@@ -50,7 +50,6 @@ nav {
 }
 
 .wrapper-nav-desktop {
-    width: 100%;
     display: none;
 
     @media #{$switch} {

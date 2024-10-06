@@ -9,22 +9,22 @@
                 </p>
                 <p class="space-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione temporibus a tempore praesentium
-                    autem sapiente optio facere iusto nulla. Commodi.
+                    autem sapiente optio facere iusto nulla. Commodi. 😄
                 </p>
                 <p class="space-text">
-                    Lorem ipsum dolor sit amet. 😄
+                    Si tu as un problème avec le formulaire, clique sur <a class="important-text"
+                        href="https://tally.so/r/wod0dN">ce lien</a>.
                 </p>
             </div>
             <div class="form">
                 <div id="overlay-form" class="overlay-loading middle"></div>
-                <TallyForm @load="loading('overlay-form', true)" />
+                <TallyForm />
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-import { loading } from '@/assets/js/utils'
 import TallyForm from './TallyForm.vue'
 </script>
 
@@ -46,6 +46,7 @@ import TallyForm from './TallyForm.vue'
 
     iframe {
         display: flex;
+        min-height: 223px;
 
         @media #{$switch} {
             width: 500px;

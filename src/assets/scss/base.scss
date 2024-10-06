@@ -131,7 +131,6 @@
   --background-second-opaque: var(--orange-opaque);
   // background color light for sections
   --background-navbar: var(--white);
-  --background-navbar-fix: var(--black-opaque);
   --background-header-page: url(../img/logo-opaque.svg) center / 15px;
   --background-footer: var(--orange);
   --background-copyright: var(--color-3);
@@ -156,7 +155,10 @@
   --color-button-second: var(--beige);
   --color-button-second-hover: var(--background-main);
   --color-burger-lines: var(--color-text);
+
+  --background-navbar-fix: var(--black-opaque);
   --color-burger-lines-fix: var(--beige);
+
   --base-color-return-button: var(--base-black);
   --color-separation-line: var(--black-very-opaque);
   --color-ball: var(--background-main);
@@ -179,7 +181,6 @@
   --background-second-opaque: var(--blue-dark-opaque);
   // background color dark for sections
   --background-navbar: var(--blue-dark);
-  --background-navbar-fix: var(--beige-opaque);
   --background-header-page: url(../img/logo-opaque.svg) center / 15px;
   --background-footer: var(--blue-dark);
   --background-copyright: var(--color-3-dark);
@@ -202,7 +203,10 @@
   --color-button-second: var(--blue-dark);
   --color-button-second-hover: var(--background-main);
   --color-burger-lines: var(--color-text);
+
+  --background-navbar-fix: var(--beige-opaque);
   --color-burger-lines-fix: var(--black);
+
   --base-color-return-button: var(--base-beige);
   --color-separation-line: var(--beige-very-opaque);
   --color-ball: var(--background-main-opaque);

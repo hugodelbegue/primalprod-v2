@@ -42,6 +42,7 @@ a {
 }
 
 a.router-link-active {
+  --lord-icon-primary: var(--color-important);
   cursor: default;
   color: var(--color-important);
   opacity: 1 !important;
@@ -91,6 +92,10 @@ h3 {
 
 strong {
   font-weight: bold;
+}
+
+.important-text {
+  color: var(--color-important);
 }
 
 // Scrollbar
