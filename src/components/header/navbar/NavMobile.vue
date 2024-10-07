@@ -1,6 +1,11 @@
 <template>
     <nav class="wrapper-nav-mobile middle">
         <ul class="menu-layout">
+            <!-- <li class="nav-link one-link">
+                <router-link :to="{ name: 'home' }">
+                    <icon-home />
+                </router-link>
+            </li> -->
             <li class="nav-link one-link">
                 <router-link :to="{ name: 'services' }">
                     <icon-service />
@@ -27,9 +32,10 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import IconHome from '@/components/icons/IconHome.vue'
 import IconProject from '@/components/icons/IconArticle.vue'
 import IconProfil from '@/components/icons/IconAvatar.vue'
-import IconContact from '@/components/icons/IconPhone.vue'
+import IconContact from '@/components/icons/IconContact.vue'
 import IconService from '@/components/icons/IconSearch.vue'
 </script>
 

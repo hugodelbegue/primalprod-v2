@@ -24,11 +24,37 @@
                 </div>
             </div>
         </div>
+        <Questions :question-list="questionList">
+            <template #questions-title>
+                <h2 class="space-text">Besoins de plus <span class="animation-hover">d'informations</span></h2>
+            </template>
+            <template v-slot:question="{ item }">
+                {{ item.question }}
+            </template>
+            <template v-slot:response="{ item }">
+                {{ item.response }}
+            </template>
+        </Questions>
     </section>
 </template>
 
 <script setup>
 import { loading } from '@/assets/js/utils'
+import Questions from '@/components/items/section/Questions.vue'
+</script>
+
+<script>
+export default {
+    data() {
+        return {
+            questionList: [
+                { question: "Question 1 ?", response: "Something small enough to escape casual notice." },
+                { question: "Question 2 ?", response: "Something small enough to escape casual notice." },
+                { question: "Question 3 ?", response: "Something small enough to escape casual notice." }
+            ]
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>

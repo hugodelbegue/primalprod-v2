@@ -67,6 +67,22 @@
       </template>
     </Paragraph>
     <Partner />
+    <ContactReminder>
+      <template #sendcontact-title>
+        <h2 class="space-text">Comment faire pour travailler <span class="animation-hover">ensemble</span>&nbsp;?
+        </h2>
+      </template>
+      <template #sendcontact-paragraph>
+        <p class="space-text">
+          Lorem, ipsum dolor sit amet <a class="important-text" href="/">consectetur</a> adipisicing elit. Ad delectus
+          ducimus, fuga architecto eos
+          quis
+          commodi voluptate voluptatem <a class="important-text" href="/">nulla</a> quod libero debitis ipsum sunt vero
+          dolorum
+          eligendi?
+        </p>
+      </template>
+    </ContactReminder>
   </section>
 </template>
 
@@ -75,6 +91,7 @@ import { loading } from '@/assets/js/utils'
 import Partner from '@/components/about-page/Partner.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import Proverb from '@/components/about-page/Proverb.vue'
+import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
 <script>

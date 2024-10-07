@@ -36,7 +36,8 @@ export default {
     computed: {
         backgroundText() {
             return {
-                'transparent': this.background == 'transparent'
+                'padding-left': this.imgRight,
+                'padding-right': !this.imgRight
             }
         }
     }
@@ -60,10 +61,18 @@ export default {
 }
 
 .text-paragraph {
-    padding: var(--side) var(--side-up);
+    padding: var(--side) 0;
 
-    &.transparent {
-        background: var(--background-main);
+    @media #{$switch} {
+        padding: var(--side) var(--side-up);
+
+        &.padding-left {
+            padding-left: 0;
+        }
+
+        &.padding-right {
+            padding-right: 0;
+        }
     }
 }
 

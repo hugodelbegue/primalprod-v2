@@ -29,9 +29,16 @@ defineProps({
 .layout-offer {
     position: relative;
     background: var(--background-offer);
-    // border: var(--black) solid 1px;
     border-radius: var(--radius-low);
-    padding: var(--side-up);
+    padding: var(--side);
+
+    @media #{$mobileScreen} {
+        padding: var(--side-up) var(--side);
+    }
+
+    @media #{$switch} {
+        padding: var(--side-up);
+    }
 
     &::before,
     &::after {
