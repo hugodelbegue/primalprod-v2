@@ -2,10 +2,10 @@
     <div class="background-offers frameworkX frameworkY animation-hover-active">
         <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
-            <OfferDefault class="part-one animation-part-one" />
-            <OfferDefault class="part-two animation-part-two" />
-            <OfferDefault class="part-three animation-part-three" />
-            <OfferDefault class="part-four animation-part-four" />
+            <OfferDefault class="part-one animation-part-one" route="offer" route-text="Texte du bouton" />
+            <OfferDefault class="part-two animation-part-two" route="offer" route-text="Texte du bouton" />
+            <OfferDefault class="part-three animation-part-three" route="offer" route-text="Texte du bouton" />
+            <OfferDefault class="part-four animation-part-four" route="offer" route-text="Texte du bouton" />
         </div>
         <br>
         <br>

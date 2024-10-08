@@ -7,9 +7,9 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro ipsam reprehenderit id nostrum
                 assumenda facilis repellat sint modi, excepturi quas aliquam libero officia quaerat!
             </p>
-            <ButtonOffer route="contact">
+            <ButtonOffer :route="route">
                 <template #text-button>
-                    Texte du bouton
+                    {{ routeText }}
                 </template>
             </ButtonOffer>
         </div>

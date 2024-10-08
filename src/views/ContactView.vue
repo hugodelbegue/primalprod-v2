@@ -102,8 +102,6 @@ import IconContact from '@/components/icons/IconEmail.vue'
     @media #{$switch} {
         flex: 40%;
         display: flex;
-        place-content: flex-end;
-        place-items: center;
     }
 }
 </style>

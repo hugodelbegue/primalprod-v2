@@ -67,7 +67,7 @@
       </template>
     </Paragraph>
     <Partner />
-    <ContactReminder>
+    <ContactReminder background="var(--background-main)">
       <template #sendcontact-title>
         <h2 class="space-text">Comment faire pour travailler <span class="animation-hover">ensemble</span>&nbsp;?
         </h2>

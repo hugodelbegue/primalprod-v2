@@ -26,6 +26,12 @@ const router = createRouter({
       component: () => import('../views/ServiceView.vue')
     },
     {
+      path: '/prestations/offre-default',
+      name: 'offer',
+      component: () => import('../views/OfferView.vue'),
+      props: true
+    },
+    {
       path: '/realisations',
       name: 'gallery',
       component: () => import('../views/GalleryView.vue')
