@@ -37,12 +37,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.switch {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: .5rem;
-}
-
 .checkbox {
     display: none;
 }

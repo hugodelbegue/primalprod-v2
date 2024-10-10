@@ -127,8 +127,8 @@
         @keyframes part-one-before-animation {
             to {
                 background: var(--color-before);
-                top: 5px;
-                left: 5px;
+                top: -5px;
+                left: -5px;
             }
         }
     }
@@ -139,8 +139,8 @@
         @keyframes part-one-after-animation {
             to {
                 background: var(--color-after);
-                top: 10px;
-                left: 10px;
+                top: -10px;
+                left: -10px;
             }
         }
     }
@@ -153,8 +153,8 @@
         @keyframes part-two-before-animation {
             to {
                 background: var(--color-before);
-                top: 5px;
-                left: -5px;
+                top: -5px;
+                left: 0px;
             }
         }
     }
@@ -165,8 +165,8 @@
         @keyframes part-two-after-animation {
             to {
                 background: var(--color-after);
-                top: 10px;
-                left: -10px;
+                top: -10px;
+                left: 0px;
             }
         }
     }
@@ -205,8 +205,8 @@
         @keyframes part-four-before-animation {
             to {
                 background: var(--color-before);
-                top: -5px;
-                left: -5px;
+                top: 5px;
+                left: 0px;
             }
         }
     }
@@ -217,8 +217,8 @@
         @keyframes part-four-after-animation {
             to {
                 background: var(--color-after);
-                top: -10px;
-                left: -10px;
+                top: 10px;
+                left: 0px;
             }
         }
     }

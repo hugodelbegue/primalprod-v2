@@ -1,5 +1,6 @@
 <template>
     <div class="layout-sociallinks">
+        <ButtonDarkMode />
         <div>
             <p>Retrouvre moi également ici :</p>
         </div>
@@ -20,7 +21,6 @@
                 </a>
             </li>
         </ul>
-        <ButtonDarkMode />
     </div>
 </template>
 
@@ -50,6 +50,7 @@ export default {
 
     @media #{$mobileScreen} {
         gap: var(--side);
+        place-content: space-between;
     }
 }
 

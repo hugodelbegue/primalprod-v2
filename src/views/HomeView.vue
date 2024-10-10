@@ -52,9 +52,6 @@
         {{ item.response }}
       </template>
     </Questions>
-    <Test class="frameworkX" />
-    <Test2 class="frameworkX" />
-    <Test3 class="frameworkX" />
   </div>
 </template>
 
@@ -65,9 +62,6 @@ import Banner from '@/components/items/Banner.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import OffersSection from '@/components/service-page/OffersSection.vue'
-import Test from '@/components/home-page/section-test/Test.vue'
-import Test2 from '@/components/home-page/section-test/Test2.vue'
-import Test3 from '@/components/home-page/section-test/Test3.vue'
 import Questions from '@/components/items/section/Questions.vue'
 </script>
 

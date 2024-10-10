@@ -6,7 +6,13 @@ import { isMobileDevice } from '@/assets/js/utils'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 0,
+        behavior: 'smooth'
+      }
+    } else if (savedPosition) {
       return savedPosition
     } else {
       if (isMobileDevice()) {
@@ -61,6 +67,10 @@ const router = createRouter({
       path: '/mentions',
       name: 'mention',
       component: () => import('../views/MentionView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)',
+      redirect: '/'
     }
   ]
 })

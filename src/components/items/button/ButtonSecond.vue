@@ -8,6 +8,7 @@
 <script setup>
 defineProps({
     route: String,
+    hash: String,
     text: String
 })
 </script>
@@ -21,7 +22,7 @@ export default {
     },
     methods: {
         pushRoute() {
-            this.$router.push({ name: this.redirect })
+            this.$router.push({ name: this.redirect, hash: this.hash })
         }
     }
 }
@@ -35,6 +36,7 @@ export default {
     border-radius: var(--radius-high);
     text-decoration: none;
     padding: .5em 2em;
+    margin-top: 2em;
     font-size: var(--f-button);
     transition: background var(--time-transition), color var(--time-transition);
 

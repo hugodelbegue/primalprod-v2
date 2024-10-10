@@ -11,7 +11,7 @@
                         <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
                     </template>
                     <template #tag-gallery>
-                        <p v-if="data.tag">{{ data.tag }}</p>
+                        <p v-if="data.tag" class="tag-card">{{ data.tag }}</p>
                     </template>
                 </CardGallery>
             </article>
@@ -178,9 +178,12 @@ article {
 
 .layout-title-card {
     padding: 1em 1em .25em;
-    font-size: 1.15em;
     font-weight: var(--f-bold);
     text-align: center;
+}
+
+.tag-card {
+    font-size: var(--f-size-small);
 }
 
 .pagination {
@@ -189,6 +192,10 @@ article {
 
     @media #{$mobileScreen} {
         place-content: flex-end;
+    }
+
+    span {
+        font-size: var(--f-size-small);
     }
 }
 </style>

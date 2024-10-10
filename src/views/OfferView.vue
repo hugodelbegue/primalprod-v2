@@ -17,28 +17,31 @@
                         quia,
                         ullam totam nisi doloremque laboriosam ratione molestiae nostrum enim sunt suscipit.
                     </p>
+                    <ButtonPrice class="button-price" route="offer" hash="#price" text="Tarif" />
                 </div>
             </div>
         </div>
         <StepsSection />
-        <!-- <Questions :question-list="questionList">
+        <Questions :question-list="questionList">
             <template #questions-title>
                 <h2 class="space-text">Besoins de plus <span class="animation-hover">d'informations</span></h2>
             </template>
-<template v-slot:question="{ item }">
+            <template v-slot:question="{ item }">
                 {{ item.question }}
             </template>
-<template v-slot:response="{ item }">
+            <template v-slot:response="{ item }">
                 {{ item.response }}
-            </template>
-</Questions> -->
+            </template>``
+        </Questions>
+        <PriceSection id="price" />
     </section>
 </template>
 
 <script setup>
-import { loading } from '@/assets/js/utils'
 import StepsSection from '@/components/service-page/StepsSection.vue'
-// import Questions from '@/components/items/section/Questions.vue'
+import PriceSection from '@/components/service-page/PriceSection.vue'
+import Questions from '@/components/items/section/Questions.vue'
+import ButtonPrice from '@/components/items/button/ButtonSecond.vue'
 </script>
 
 <script>
@@ -78,6 +81,13 @@ export default {
     @media #{$switch} {
         flex: 40%;
         display: flex;
+    }
+}
+
+.button-price {
+    @media #{$mobileScreen} {
+        width: fit-content;
+        margin-left: auto;
     }
 }
 </style>
