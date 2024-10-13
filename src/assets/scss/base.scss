@@ -21,7 +21,7 @@
   --f-line-title: 1.3;
   --f-size-important: 1.9em;
   --f-button: .85em;
-  --f-menu: 1em;
+  // --f-menu: 1em;
   --f-footer: 14px;
 
   --f-line-global: 1.6;
@@ -34,11 +34,11 @@
   --mobile: 767px;
   --index: calc(1vw + 1vh);
 
+  --side-between: 10px;
   --side: 1rem;
   --side-up: calc(var(--side) * 2);
   --side-y: 2rem;
   --side-x: calc(50% - var(--mobile) / 2);
-  // --side-x: max(var(--side), calc(50% - var(--mobile) / 2));
   --size-line: 4px;
 
   // layout block
@@ -73,8 +73,8 @@
   --base-beige: 245, 233, 205;
   --base-blue-dark: 27, 37, 47;
   --base-black: 0, 0, 0;
-  // --base-black: 44, 62, 80;
   --base-white: 255, 255, 255;
+  --base-gray: 247, 250, 253;
   // colors
   --color-1: rgb(var(--base-color-1));
   --color-2: rgb(var(--base-color-2));
@@ -87,6 +87,7 @@
   --blue-dark: rgb(var(--base-blue-dark));
   --black: rgb(var(--base-black));
   --white: rgb(var(--base-white));
+  --gray: rgb(var(--base-gray));
   // opaque colors
   --orange-opaque: rgba(var(--base-orange), 0.25);
   --beige-opaque: rgba(var(--base-beige), 0.75);
@@ -136,9 +137,9 @@
   --background-footer: var(--orange);
   --background-copyright: var(--color-3);
   --background-gallery-project: var(--color-3);
-  --background-card: var(--background-second);
-  --background-card-back: var(--background-second-opaque);
+  --background-card: var(--white);
   --background-offer: var(--white);
+  --background-offer-banner: var(--color-3);
   --background-steps-left: var(--color-3);
   --background-partner: var(--white);
   --background-form: var(--color-3);
@@ -165,6 +166,7 @@
 
   --base-color-return-button: var(--base-black);
   --color-separation-line: var(--black-very-opaque);
+  --color-line-box: var(--black-very-opaque);
   --color-ball: var(--background-main);
   // shadow light
   --color-shadow: var(--black);
@@ -172,6 +174,7 @@
 
   --color-before: var(--background-main);
   --color-after: var(--color-3);
+  --color-arrow: invert(0);
 
   --opacity-sun: 1;
   --opacity-moon: 0;
@@ -189,7 +192,9 @@
   --background-footer: var(--blue-dark);
   --background-copyright: var(--color-3-dark);
   --background-gallery-project: var(--color-3-dark);
+  --background-card: var(--black);
   --background-offer: var(--black);
+  --background-offer-banner: var(--color-3-dark);
   --background-steps-left: var(--color-3-dark);
   --background-partner: var(--black);
   --background-form: var(--color-3-dark);
@@ -216,13 +221,16 @@
 
   --base-color-return-button: var(--base-beige);
   --color-separation-line: var(--beige-very-opaque);
+  --color-line-box: var(--beige-very-opaque);
   --color-ball: var(--background-main-opaque);
   // shadow dark
   --color-shadow: var(--beige);
   --shadow-theme: 0px 0px 4px var(--color-text) inset;
 
+
   --color-before: var(--background-main);
   --color-after: var(--color-3-dark);
+  --color-arrow: invert(1);
 
   --opacity-moon: 1;
   --opacity-sun: 0;

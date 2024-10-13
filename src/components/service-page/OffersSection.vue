@@ -8,16 +8,18 @@
                 route-text="Voir l'offre" />
             <div class="plus middle">
                 <icon-plus />
-                Option supplémentaire
+                <span>Option supplémentaire</span>
             </div>
-            <OfferDefault class="part-four animation-part-four" offer="Maintenance" route="offer"
+            <div class="banner-left"></div>
+            <OfferDefault class="offer part-four animation-part-four" offer="Maintenance" route="offer"
                 route-text="En savoir plus" />
+            <div class="banner-right"></div>
         </div>
         <br>
         <br>
         <br>
         <div class="offers-add margin-x">
-            <p>
+            <p class="others-offer">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia id sapiente iure assumenda error
                 soluta, at quae odio placeat?
             </p>
@@ -26,7 +28,7 @@
 </template>
 
 <script setup>
-import IconPlus from '../icons/IconPlus.vue';
+import IconPlus from '../icons/IconPlus.vue'
 import OfferDefault from './offers/OfferDefault.vue'
 </script>
 
@@ -34,11 +36,11 @@ import OfferDefault from './offers/OfferDefault.vue'
 .layout-offers {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: var(--side-between);
     grid-row-gap: var(--side-y);
 
     @media #{$mobileScreen} {
-        grid-row-gap: var(--side-up);
+        grid-row-gap: 1rem;
     }
 }
 
@@ -74,8 +76,7 @@ import OfferDefault from './offers/OfferDefault.vue'
 .plus {
     grid-column: 1 / 7;
     grid-row: 4;
-    flex-direction: column;
-    gap: 1em;
+    gap: var(--side-between);
 
     @media #{$mobileScreen} {
         grid-column: 3 / 5;
@@ -87,16 +88,36 @@ import OfferDefault from './offers/OfferDefault.vue'
         width: var(--size-plus-icon);
         height: auto;
         aspect-ratio: 1 / 1;
-        // position: absolute;
-        // bottom: calc(var(--size-plus-icon) / -2);
-        // right: 50%;
-        // transform: translateX(50%);
 
         @media #{$switch} {
-            --size-plus-icon: 70px;
-            // transform: none;
-            // right: calc(var(--size-plus-icon) / -2);
+            --size-plus-icon: 60px;
         }
+    }
+}
+
+.banner-left,
+.banner-right {
+    display: none;
+
+    @media #{$mobileScreen} {
+        display: flex;
+        border-radius: var(--radius-low);
+    }
+}
+
+.banner-left {
+    @media #{$mobileScreen} {
+        background: var(--background-offer-banner);
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+.banner-right {
+    @media #{$mobileScreen} {
+        background: var(--background-offer-banner);
+        grid-column: 6;
+        grid-row: 3;
     }
 }
 
@@ -108,5 +129,20 @@ import OfferDefault from './offers/OfferDefault.vue'
         grid-column: 2 / 6;
         grid-row: 3;
     }
+}
+
+.offer {
+    & :deep(.button-base) {
+        @media #{$switch} {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    }
+}
+
+.others-offer,
+.plus {
+    font-size: var(--f-size-small);
 }
 </style>

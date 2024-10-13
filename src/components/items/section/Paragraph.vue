@@ -47,11 +47,11 @@ export default {
 <style lang="scss" scoped>
 .layout-paragraph {
     display: flex;
-    gap: var(--side-up);
+    // gap: var(--side-up);
 
-    @media #{$switch} {
-        gap: 0;
-    }
+    // @media #{$switch} {
+    //     gap: 0;
+    // }
 }
 
 .img-paragraph,

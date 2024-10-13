@@ -69,7 +69,7 @@ const router = createRouter({
       component: () => import('../views/MentionView.vue')
     },
     {
-      path: '/:pathMatch(.*)',
+      path: '/:pathMatch(.*)*',
       redirect: '/'
     }
   ]

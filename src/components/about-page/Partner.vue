@@ -22,7 +22,7 @@
 <style lang="scss" scoped>
 .background-partner-contact {
     --number-partner: 3;
-    --space-between-partner: 10px;
+    --space-between-partner: var(--side-between);
     --number-space-between-partner: calc(var(--number-partner) - 1);
     --size-partner: calc(calc(100% / var(--number-partner)) - calc(calc(var(--space-between-partner) * var(--number-space-between-partner)) / var(--number-partner)));
     background: var(--background-partner);
@@ -34,10 +34,6 @@
     @media #{$tabletScreen} {
         --number-partner: 8;
     }
-
-    // @media #{$desktopScreen} {
-    //     --number-partner: 8;
-    // }
 }
 
 .layout-partner {

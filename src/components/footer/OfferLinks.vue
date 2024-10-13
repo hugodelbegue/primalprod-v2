@@ -1,21 +1,17 @@
 <template>
-    <ul class="importantlinks">
+    <ul class="offerslinks">
+        <h4>OFFRES</h4>
         <li>
-            <router-link :to="{ name: 'faq' }">FAQ</router-link>
+            <router-link :to="{ name: 'offer' }">Basic</router-link>
         </li>
         <li>
-            <a :href="'mailto:' + email" target="_blank">
-                Email
-            </a>
+            <router-link :to="{ name: 'offer' }">Smart</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'contact' }">Formulaire de contact</router-link>
+            <router-link :to="{ name: 'offer' }">Medium</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'home' }">Autre</router-link>
-        </li>
-        <li>
-            <router-link :to="{ name: 'home' }">Autre</router-link>
+            <router-link :to="{ name: 'offer' }">Maintenance</router-link>
         </li>
     </ul>
 </template>
@@ -31,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.importantlinks {
+.offerslinks {
     display: flex;
     flex-direction: column;
     place-content: center;
@@ -46,10 +42,6 @@ export default {
         padding: 1em 0em;
         text-decoration: underline;
 
-        &:first-child {
-            // padding-top: 0;
-        }
-
         &:last-child {
             padding-bottom: 0;
         }
@@ -57,17 +49,6 @@ export default {
         @media #{$switch} {
             padding: 0;
         }
-    }
-}
-
-a,
-a.router-link-active {
-    cursor: pointer;
-    color: var(--color-text);
-    transition: none !important;
-
-    &:hover {
-        opacity: 1 !important;
     }
 }
 </style>

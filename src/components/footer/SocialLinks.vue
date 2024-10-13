@@ -1,26 +1,28 @@
 <template>
     <div class="layout-sociallinks">
         <ButtonDarkMode />
-        <div>
-            <p>Retrouvre moi également ici :</p>
+        <div class="layout-networks">
+            <div>
+                <p>Retrouvre moi également sur</p>
+            </div>
+            <ul class="networks">
+                <li>
+                    <a :href="linkedin" target="_blank">
+                        <IconLinkedin />
+                    </a>
+                </li>
+                <li>
+                    <a :href="instagram" target="_blank">
+                        <IconInstagram />
+                    </a>
+                </li>
+                <li>
+                    <a :href="github" target="_blank">
+                        <IconGithub />
+                    </a>
+                </li>
+            </ul>
         </div>
-        <ul class="sociallinks middle">
-            <li>
-                <a :href="linkedin" target="_blank">
-                    <IconLinkedin />
-                </a>
-            </li>
-            <li>
-                <a :href="instagram" target="_blank">
-                    <IconInstagram />
-                </a>
-            </li>
-            <li>
-                <a :href="github" target="_blank">
-                    <IconGithub />
-                </a>
-            </li>
-        </ul>
     </div>
 </template>
 
@@ -43,15 +45,20 @@ export default {
     display: flex;
     flex-direction: column;
     place-items: center;
-}
 
-.sociallinks {
-    gap: var(--side-up);
-
-    @media #{$mobileScreen} {
-        gap: var(--side);
+    @media #{$switch} {
         place-content: space-between;
     }
+}
+
+.layout-networks {
+    margin-top: 2em;
+}
+
+.networks {
+    display: flex;
+    place-content: space-around;
+    margin-top: 2em;
 }
 
 svg {

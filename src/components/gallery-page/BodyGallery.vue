@@ -79,8 +79,6 @@ article {
     --number-space-between-card: calc(var(--number-card) - 1);
     --size-card: calc(calc(100% / var(--number-card)) - calc(calc(var(--space-between-card) * var(--number-space-between-card)) / var(--number-card)));
     --radius-card: var(--radius-low);
-    --background-card: var(--background-second);
-    --background-card-back: var(--background-second-opaque);
 
     @media #{$mobileScreen} {
         --number-card: 2;
@@ -93,65 +91,32 @@ article {
 
 .container-gallery {
     --space-between-card: var(--space-grid);
-    --margin-block-x: var(--space-grid);
-    --space-grid: 15px;
-
-    @media #{$mobileScreen} {
-        --space-grid: 30px;
-    }
-
-    @media #{$switch} {
-        --margin-block-x: 50px;
-    }
+    --space-grid: var(--side-between);
 
     .layout-gallery {
         display: flex;
         flex-wrap: wrap;
         gap: var(--space-between-card);
-        padding-top: var(--space-grid);
-
-        @media #{$switch} {
-            padding-top: var(--side-y);
-        }
-    }
-
-    .card,
-    .card::before,
-    .card::after {
-        width: 100%;
-        border-radius: var(--radius-card);
     }
 
     .card {
+        cursor: pointer;
         opacity: 0;
         position: relative;
         display: flex;
         background: var(--background-card);
+        border-radius: var(--radius-card);
         max-width: var(--size-card);
         max-height: var(--size-card);
+        width: 100%;
         height: auto;
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            background: var(--background-card-back);
-            height: 100%;
-            transition: transform var(--time-transition);
-        }
+        & :deep(.image) {
+            transition: filter var(--time-animation);
 
-        &::before {
-            z-index: -1;
-            top: 2px;
-            left: 2px;
-            transform: rotate(-2.5deg);
-        }
-
-        &::after {
-            z-index: -2;
-            top: 3px;
-            left: 2px;
-            transform: rotate(.5deg);
+            @media #{$switch} {
+                filter: grayscale(1);
+            }
         }
 
         p {
@@ -161,17 +126,13 @@ article {
         }
     }
 
-    @media #{$switch} {
-        .card:hover {
-            cursor: pointer;
+    .card:hover {
+        & :deep(.image) {
+            filter: grayscale(0);
+        }
 
-            &::before {
-                transform: rotate(0deg) translate(-13px, -13px);
-            }
-
-            &::after {
-                transform: rotate(0deg) translate(9px, 9px);
-            }
+        & .layout-title-card {
+            color: var(--color-important);
         }
     }
 }
@@ -180,14 +141,17 @@ article {
     padding: 1em 1em .25em;
     font-weight: var(--f-bold);
     text-align: center;
+    border-top: 1px solid var(--color-line-box);
+    transition: color var(--time-animation);
 }
 
 .tag-card {
+    opacity: .5;
     font-size: var(--f-size-small);
 }
 
 .pagination {
-    column-gap: 1em;
+    column-gap: var(--side-between);
     margin-bottom: var(--side-y);
 
     @media #{$mobileScreen} {

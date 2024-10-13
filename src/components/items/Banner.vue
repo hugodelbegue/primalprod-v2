@@ -5,15 +5,25 @@
     </div>
 </template>
 
+<script>
+export default {
+    mounted() {
+        const banner = document.querySelector('.background-banner')
+        setInterval(() => {
+            banner.style.background = 'var(--black)'
+        }, 7500)
+        setInterval(() => {
+            banner.style.background = 'var(--orange)'
+        }, 15000)
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 .background-banner {
-    background: var(--orange);
     padding: var(--size-line) 0;
-    transition: background var(--time-transition);
-
-    &:hover {
-        background: var(--black);
-    }
+    background: var(--orange);
+    transition: background 1000ms;
 }
 
 .background-band-1 {

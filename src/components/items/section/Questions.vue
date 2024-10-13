@@ -40,10 +40,9 @@ defineProps({
 
 details {
     background: var(--background-details);
-    border: 1px solid #aaa;
+    border: 1px solid transparent;
     border-radius: var(--radius-low);
     padding-top: 0.5em;
-    transition: border-color var(--time-transition);
 }
 
 summary {
@@ -53,7 +52,7 @@ summary {
     padding: 0.5em var(--side);
 
     &::marker {
-        color: var(--color-important);
+        color: var(--orange-opaque);
     }
 }
 
@@ -63,7 +62,11 @@ details[open] {
 
 details[open] summary {
     list-style: inside disclosure-open;
-    border-bottom: 1px solid var(--color-important);
+    border-bottom: 1px solid var(--color-line-box);
+
+    &::marker {
+        color: var(--orange);
+    }
 }
 
 .summary-response {

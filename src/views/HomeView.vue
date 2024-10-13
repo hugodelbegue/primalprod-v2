@@ -24,23 +24,7 @@
         </p>
       </template>
     </Paragraph>
-    <OffersSection>
-      <template #header-offers>
-        <div class="margin-x">
-          <h2 class="space-text">Ici vous trouverez mes&nbsp;<span class="animation-hover">prestations</span>&nbsp;bala
-            bla</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla accusantium molestiae temporibus, inventore
-            eum, eaque debitis perspiciatis similique minus tenetur qui exercitationem doloribus corporis totam aut
-            culpa praesentium quod, architecto cum aliquam iste necessitatibus vel consectetur! Molestiae omnis
-            consequuntur quia!
-          </p>
-          <br>
-          <br>
-          <br>
-        </div>
-      </template>
-    </OffersSection>
+    <ServicesPreview />
     <Questions :question-list="questionList">
       <template #questions-title>
         <h2 class="space-text">Besoins de plus <span class="animation-hover">d'informations</span></h2>
@@ -61,7 +45,7 @@ import Logo from '@/components/items/Logo.vue'
 import Banner from '@/components/items/Banner.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
-import OffersSection from '@/components/service-page/OffersSection.vue'
+import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
 import Questions from '@/components/items/section/Questions.vue'
 </script>
 

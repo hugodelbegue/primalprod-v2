@@ -3,6 +3,7 @@
         <div class="background-footer">
             <div class="layout-footer frameworkX frameworkY margin-x switch-direction">
                 <ReadMore class="readmore" />
+                <!-- <OfferLinks class="offerlinks" /> -->
                 <ImportantLinks class="importantlinks" />
                 <SocialLinks class="sociallinks" />
             </div>
@@ -16,6 +17,7 @@ import SocialLinks from '@/components/footer/SocialLinks.vue'
 import ReadMore from '@/components/footer/ReadMore.vue'
 import Copyright from '@/components/footer/Copyright.vue'
 import ImportantLinks from '@/components/footer/ImportantLinks.vue'
+// import OfferLinks from '@/components/footer/OfferLinks.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -38,6 +40,7 @@ footer {
 }
 
 .readmore,
+// .offerlinks,
 .importantlinks,
 .sociallinks {
     flex: 1;

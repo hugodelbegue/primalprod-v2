@@ -20,6 +20,10 @@ export default {
             redirect: this.route
         }
     },
+    mounted() {
+        const buttonShadow = document.querySelectorAll('.button-base')
+        buttonShadow ? buttonShadow.forEach(element => element.classList.add('shadow-appear')) : null
+    },
     methods: {
         pushRoute() {
             this.$router.push({ name: this.redirect, hash: this.hash })

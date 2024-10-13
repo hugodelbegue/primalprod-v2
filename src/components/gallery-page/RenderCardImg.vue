@@ -29,8 +29,6 @@ export default {
     width: 100%;
     aspect-ratio: 16 / 9;
     max-height: 220px;
-    border-top-left-radius: var(--radius-card);
-    border-top-right-radius: var(--radius-card);
     overflow: hidden;
 
     img {

@@ -22,7 +22,6 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
 import BurgerMenu from '@/components/header/burger/BurgerMenu.vue'
 </script>
 

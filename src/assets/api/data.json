@@ -3,7 +3,7 @@
     [
         {
             "id": 1,
-            "title": "Test",
+            "title": "Test titre",
             "full-title": "Test titre complet",
             "date": "2022",
             "preview": "urlshorteningapi_1.png",
@@ -25,7 +25,7 @@
         },
         {
             "id": 2,
-            "title": "Test2",
+            "title": "Titre du projet",
             "full-title": "Test2 titre complet",
             "date": "2021",
             "preview": "newshomepage_1.png",
@@ -47,7 +47,7 @@
         },
         {
             "id": 3,
-            "title": "Test3",
+            "title": "Test projet 3",
             "full-title": "Test3 titre complet",
             "date": "2020",
             "preview": "interactivecarddetailsform_1.png",
@@ -69,7 +69,7 @@
         },
         {
             "id": 4,
-            "title": "Test4",
+            "title": "Test projet 4",
             "full-title": "Test4 titre complet",
             "date": "2024",
             "preview": "interactivecarddetailsform_1.png",

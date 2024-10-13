@@ -20,7 +20,6 @@
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
 import { isMobileDevice } from './assets/js/utils'
 import { startAnimation, endAnimation } from './assets/js/animations'
 import Header from '@/layouts/Header.vue'

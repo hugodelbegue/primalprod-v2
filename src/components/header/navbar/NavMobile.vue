@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
 import IconHome from '@/components/icons/IconHome.vue'
 import IconProject from '@/components/icons/IconArticle.vue'
 import IconProfil from '@/components/icons/IconAvatar.vue'

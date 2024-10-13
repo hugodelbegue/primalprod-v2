@@ -49,6 +49,7 @@ defineProps({
 
     @media #{$mobileScreen} {
         flex-direction: row;
+        place-content: end;
         gap: var(--side);
     }
 }
@@ -57,7 +58,7 @@ defineProps({
     position: relative;
     padding: var(--side);
     padding-bottom: calc(var(--side) * 2.5);
-    border: 2px solid var(--color-separation-line);
+    border: 2px solid var(--color-line-box);
     border-radius: var(--radius-high);
 
     @media #{$mobileScreen} {

@@ -1,30 +1,18 @@
 <template>
-    <a :href="url" class="project-url" target="_blank">
-        <div class="content">
-            <slot name="preview-gallery"></slot>
+    <div class="layout-card">
+        <slot name="preview-gallery"></slot>
+        <div class="layout-card-text">
             <slot name="title-gallery"></slot>
             <slot name="tag-gallery"></slot>
         </div>
-    </a>
+    </div>
 </template>
 
-<script setup>
-defineProps({
-    url: String
-})
-</script>
-
 <style lang="scss" scoped>
-.project-url {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    place-content: space-between;
-    width: 100%;
-}
-
-.content {
+.layout-card {
     width: 100%;
     height: 100%;
+    border-radius: var(--radius-card);
+    overflow: hidden;
 }
 </style>
