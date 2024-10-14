@@ -1,14 +1,12 @@
 <template>
     <iframe ref="tallyIframe"
         data-tally-src="https://tally.so/embed/wod0dN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        loading="lazy" width="100%" height="223" frameborder="0" marginheight="0" marginwidth="0"
-        @load="loading('overlay-form', true)">
+        loading="lazy" width="100%" height="223" frameborder="0" marginheight="0" marginwidth="0">
     </iframe>
 </template>
 
 <script setup>
 import { onMounted } from 'vue'
-import { loading } from '@/assets/js/utils'
 onMounted(() => {
     const d = document
     const w = "https://tally.so/widgets/embed.js"

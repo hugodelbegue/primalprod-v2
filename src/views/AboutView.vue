@@ -13,15 +13,15 @@
           </div>
         </div>
         <div class="layout-img-header-about middle">
-          <img class="media-illustration" src="@/assets/img/img-header/man-yoga-fly.svg" alt="homme qui fait du yoga"
-            height="360">
+          <img class="media-illustration load" src="@/assets/img/media-header/man-yoga-fly.svg"
+            alt="homme qui fait du yoga" height="360" @load="loading">
         </div>
       </div>
     </div>
     <Proverb />
     <Paragraph background="transparent">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/devices.svg" @load="loading('overlay-img')">
+        <img class="img-paragraph load" src="@/assets/img/media-section/devices.svg" @load="loading">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -40,7 +40,7 @@
     </Paragraph>
     <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/typing.svg" @load="loading('overlay-img')">
+        <img class="img-paragraph load" src="@/assets/img/media-section/typing.svg" @load="loading">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -54,7 +54,7 @@
     </Paragraph>
     <Paragraph background="transparent">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/man-thinking.svg" @load="loading('overlay-img')">
+        <img class="img-paragraph load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>

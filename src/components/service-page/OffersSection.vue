@@ -141,8 +141,7 @@ import OfferDefault from './offers/OfferDefault.vue'
     }
 }
 
-.others-offer,
 .plus {
-    font-size: var(--f-size-small);
+    font-size: var(--f-button);
 }
 </style>

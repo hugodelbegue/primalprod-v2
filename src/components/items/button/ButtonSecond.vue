@@ -39,9 +39,11 @@ export default {
     background: var(--color-button-second);
     border-radius: var(--radius-high);
     text-decoration: none;
-    padding: .5em 2em;
-    margin-top: 2em;
+    padding: .7em 2em;
+    margin-top: var(--space-button-bottom);
+    font-family: var(--f-family-button);
     font-size: var(--f-button);
+    line-height: normal;
     transition: background var(--time-transition), color var(--time-transition);
 
     &.color {

@@ -184,7 +184,7 @@ export default {
 
     & :deep(.layout-offer) {
         @media only screen and (min-width: 550px) {
-            width: 80%;
+            width: 70%;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
@@ -194,7 +194,7 @@ export default {
         margin-left: auto;
         margin-right: auto;
 
-        @media only screen and (min-width: 550px) {
+        @media #{$mobileScreen} {
             width: 50%;
         }
 
@@ -232,7 +232,7 @@ export default {
 .anim-offer {
     opacity: 0;
     transform: translateY(1.5%);
-    animation: anim-offer calc(var(--time-animation) * 2) both;
+    animation: anim-offer var(--time-animation) both;
 
     @keyframes anim-offer {
         to {

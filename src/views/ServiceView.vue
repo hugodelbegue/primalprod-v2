@@ -13,18 +13,32 @@
                         </p>
                     </div>
                 </div>
-                <div class="layout-media-header-service">
-                    <div id="overlay-media" class="overlay-loading"></div>
-                    <img v-if="isMobileDevice()" class="media-center"
-                        src="@/components/service-page/img-test-header-2.png" alt="" height="360"
-                        @load="loading('overlay-media')">
-                    <video v-else class="media-center" height="360" @loadeddata="loading('overlay-media')" autoplay>
-                        <source src="@/components/service-page/video-test-header.mp4" type="video/mp4">
+                <div class="layout-media-header-service middle">
+                    <img v-if="isMobileDevice()" class="media-center load"
+                        src="@/assets/img/media-header/laptop-coffee.jpg" alt="Photo face à un ordinateur portable"
+                        height="360" @load="loadingHead('.media-center', 'move-left')">
+                    <video v-else class="media-center load" height="360"
+                        @loadeddata="loadingHead('.media-center', 'move-left')" autoplay>
+                        <source src="@/assets/img/media-header/tap-video.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
         </div>
         <OffersSection />
+        <Testimonial background="var(--background-testimonial)">
+            <template #title-testimonial>
+                <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
+            </template>
+            <template #text-testimonial>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
+                consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
+                inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
+                nesciunt, tempore ratione voluptate, suscipit velit.
+            </template>
+            <template #full-name-testimonial>
+                Jean Dupont, Directeur Général
+            </template>
+        </Testimonial>
         <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
                 <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
@@ -45,9 +59,10 @@
 </template>
 
 <script setup>
-import { loading, isMobileDevice } from '@/assets/js/utils'
+import { isMobileDevice, loadingHead } from '@/assets/js/utils'
 import OffersSection from '@/components/service-page/OffersSection.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
+import Testimonial from '@/components/items/section/Testimonial.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -71,18 +86,18 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 .layout-media-header-service {
     position: relative;
     flex: 40%;
-    display: flex;
-    place-content: flex-end;
-    place-items: center;
+}
+
+video.media-center {
+    width: 100%;
+}
+
+img.media-center {
+    width: auto;
 }
 
 .media-center {
     filter: grayscale(1);
-    width: 100%;
     opacity: var(--opacity-animation);
-}
-
-.overlay-loading {
-    background: var(--background-header-page);
 }
 </style>

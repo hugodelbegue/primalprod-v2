@@ -11,8 +11,8 @@
     <Banner />
     <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-paragraph" src="@/assets/img/img-section/collab.svg" height="360"
-          @load="loading('overlay-img')">
+        <img class="img-paragraph load" src="@/assets/img/media-section/collab.svg" alt="Illustration ampoule"
+          height="360" @load="loading">
       </template>
       <template #title-paragraph>
         <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -25,17 +25,36 @@
       </template>
     </Paragraph>
     <ServicesPreview />
-    <Questions :question-list="questionList">
-      <template #questions-title>
-        <h2 class="space-text">Besoins de plus <span class="animation-hover">d'informations</span></h2>
+    <Testimonial background="var(--background-testimonial)">
+      <template #title-testimonial>
+        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
       </template>
-      <template v-slot:question="{ item }">
-        {{ item.question }}
+      <template #text-testimonial>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
+        consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
+        inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
+        nesciunt, tempore ratione voluptate, suscipit velit.
       </template>
-      <template v-slot:response="{ item }">
-        {{ item.response }}
+      <template #full-name-testimonial>
+        Jean Dupont, Directeur Général
       </template>
-    </Questions>
+    </Testimonial>
+    <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
+      <template #sendcontact-title>
+        <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
+          bla</h2>
+      </template>
+      <template #sendcontact-paragraph>
+        <p class="space-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
+          exercitationem, unde alias
+          perferendis voluptatibus autem harum earum laboriosam inventore.
+        </p>
+        <p class="space-text">
+          Perferendis voluptatibus autem harum earum laboriosam inventore.
+        </p>
+      </template>
+    </ContactReminder>
   </div>
 </template>
 
@@ -46,21 +65,8 @@ import Banner from '@/components/items/Banner.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
-import Questions from '@/components/items/section/Questions.vue'
-</script>
-
-<script>
-export default {
-  data() {
-    return {
-      questionList: [
-        { question: "Question 1 ?", response: "Something small enough to escape casual notice." },
-        { question: "Question 2 ?", response: "Something small enough to escape casual notice." },
-        { question: "Question 3 ?", response: "Something small enough to escape casual notice." }
-      ]
-    }
-  }
-}
+import ContactReminder from '@/components/items/section/ContactReminder.vue'
+import Testimonial from '@/components/items/section/Testimonial.vue'
 </script>
 
 <style lang="scss" scoped>

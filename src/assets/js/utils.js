@@ -23,14 +23,27 @@ export function cleanUrl(sentence) {
 }
 
 // animation loading media
-export function loading(element, remove) {
-    const overlay = document.querySelectorAll(`#${element}`)
-    overlay.forEach(overlay => {
-        overlay.style.opacity = '0'
-        if (remove === true) {
-            setTimeout(() => {
-                overlay.remove()
-            }, 500)
-        }
+export function loading() {
+    const media = document.querySelectorAll('.load')
+    media.forEach(media => {
+        media.style.transition = 'opacity var(--time-animation)'
+        media.style.opacity = '1'
     })
+}
+
+// animation loading header media
+export function loadingHead(element, anim) {
+    const media = document.querySelector(`${element}`)
+    media.classList.add(anim)
+}
+
+// animation loading form
+export function loadingOverlay(element, remove) {
+    const overlay = document.querySelector(`#${element}`)
+    overlay.style.opacity = '0'
+    if (remove === true) {
+        setTimeout(() => {
+            overlay.remove()
+        }, 500)
+    }
 }

@@ -46,6 +46,10 @@
     box-shadow: 0 1px 2px var(--color-shadow);
 }
 
+.load {
+    opacity: 0;
+}
+
 .layout-title {
     background: var(--background-main);
     width: fit-content;
@@ -58,7 +62,6 @@
 }
 
 .space-text {
-    --space-p: var(--side);
     margin-bottom: var(--space-p);
 }
 

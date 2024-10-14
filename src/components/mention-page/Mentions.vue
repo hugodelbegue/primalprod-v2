@@ -2,6 +2,8 @@
     <div class="text-mentions frameworkX margin-x">
         <h3 style="border-top: none; padding-top: 0;">Crédits.</h3>
         <p>
+            Images : <a :href="pictures" target="_blank">{{ pictures }}</a>
+            <br><br>
             Illustrations : <a :href="illustration" target="_blank">{{ illustration }}</a>
             <br><br>
             Icons : <a :href="icons" target="_blank">{{ icons }}</a>

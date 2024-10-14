@@ -18,9 +18,9 @@
                     </div>
                 </div>
                 <div class="layout-img-header-faq middle">
-                    <div id="overlay-media" class="overlay-loading"></div>
-                    <img class="media-center" src="@/assets/img/img-header/questions.svg"
-                        alt="homme sur un point d'interrogation" height="360" @load="loading('overlay-media')">
+                    <img class="illustration-center load" src="@/assets/img/media-header/questions.svg"
+                        alt="homme sur un point d'interrogation" height="360"
+                        @load="loadingHead('.illustration-center', 'appear-center')">
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { loading } from '@/assets/js/utils'
+import { loadingHead } from '@/assets/js/utils'
 import Questions from '@/components/items/section/Questions.vue'
 </script>
 
@@ -78,13 +78,5 @@ export default {
 .layout-img-header-faq {
     position: relative;
     flex: 40%;
-}
-
-.media-center {
-    opacity: var(--opacity-animation);
-}
-
-.overlay-loading {
-    background: var(--background-header-page);
 }
 </style>

@@ -29,14 +29,14 @@ defineProps({
         background: var(--color-button);
         color: var(--color-text);
         font-size: var(--f-button);
-        font-weight: var(--f-bold);
+        font-family: var(--f-family-button);
         border-radius: var(--radius-high);
         border: none;
         box-shadow: var(--base-shadow) var(--color-shadow);
         position: relative;
         top: 0;
         left: 0;
-        transition: background var(--time-transition) ease, box-shadow var(--time-transition) ease, top var(--time-transition) ease, left var(--time-transition) ease;
+        transition: all var(--time-transition);
 
         @media #{$switch} {
             &:hover {

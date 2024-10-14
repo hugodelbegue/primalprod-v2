@@ -18,9 +18,9 @@ function toggleClasses(action) {
     elements.pageTitle?.forEach(element => element.classList[action]('move-left'))
     elements.textTitleRight?.forEach(element => element.classList[action]('move-right'))
     elements.textTitleBottom?.forEach(element => element.classList[action]('move-bottom'))
-    elements.imgLeft?.classList[action]('img-left-move')
-    elements.imgRight?.classList[action]('img-right-move')
-    elements.mediaCenter?.classList[action]('appear-center')
+    // elements.imgLeft?.classList[action]('img-left-move')
+    // elements.imgRight?.classList[action]('img-right-move')
+    // elements.mediaCenter?.classList[action]('appear-center')
     elements.mediaIllustration?.classList[action]('visible-illustration')
 }
 

@@ -3,21 +3,25 @@
         <div class="layout-partner-contact frameworkX margin-x">
             <h2 class="space-text">Ils m'ont fait&nbsp;<span class="animation-hover">confiance</span></h2>
             <div class="layout-partner">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
-                <img class="partner" src="../../assets/img/logo-2.svg">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
+                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import { loading } from '@/assets/js/utils'
+</script>
 
 <style lang="scss" scoped>
 .background-partner-contact {

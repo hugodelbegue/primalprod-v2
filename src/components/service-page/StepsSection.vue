@@ -13,8 +13,7 @@
                 </p>
             </div>
             <div class="img-steps">
-                <!-- <div id="overlay-img" class="overlay-loading"></div> -->
-                <img src="../../assets/img/newshomepage_1.png" alt="Image étape 1">
+                <img class="load" src="@/assets/img/newshomepage_1.png" alt="Image étape 1" @load="loading">
             </div>
         </div>
     </section>
@@ -29,8 +28,7 @@
                 </p>
             </div>
             <div class="img-steps">
-                <!-- <div id="overlay-img" class="overlay-loading"></div> -->
-                <img src="../../assets/img/newshomepage_1.png" alt="Image étape 2">
+                <img class="load" src="@/assets/img/newshomepage_1.png" alt="Image étape 2" @load="loading">
             </div>
         </div>
     </section>
@@ -48,8 +46,7 @@
                 </p>
             </div>
             <div class="img-steps">
-                <!-- <div id="overlay-img" class="overlay-loading"></div> -->
-                <img src="../../assets/img/newshomepage_1.png" alt="Image étape 3">
+                <img class="load" src="@/assets/img/newshomepage_1.png" alt="Image étape 3" @load="loading">
             </div>
         </div>
     </section>
@@ -64,8 +61,7 @@
                 </p>
             </div>
             <div class="img-steps">
-                <!-- <div id="overlay-img" class="overlay-loading"></div> -->
-                <img src="../../assets/img/newshomepage_1.png" alt="Image étape 4">
+                <img class="load" src="@/assets/img/newshomepage_1.png" alt="Image étape 4" @load="loading">
             </div>
         </div>
     </section>

@@ -14,8 +14,7 @@
                 </ul>
             </div>
             <div class="img-price">
-                <!-- <div id="overlay-img" class="overlay-loading"></div> -->
-                <img src="../../assets/img/newshomepage_1.png" alt="Image étape 1">
+                <img class="load" src="@/assets/img/newshomepage_1.png" alt="Image étape 1" @load="loading">
             </div>
         </div>
     </section>

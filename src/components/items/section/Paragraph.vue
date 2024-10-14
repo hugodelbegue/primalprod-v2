@@ -6,11 +6,9 @@
                 <slot name="text-paragraph"></slot>
             </div>
             <div v-else class="img-paragraph">
-                <div id="overlay-img" class="overlay-loading" :style="{ 'background': background }"></div>
                 <slot name="img-paragraph"></slot>
             </div>
             <div v-if="imgRight" class="img-paragraph">
-                <div id="overlay-img" class="overlay-loading" :style="{ 'background': background }"></div>
                 <slot name="img-paragraph"></slot>
             </div>
             <div v-else class="text-paragraph" :class="backgroundText">
@@ -47,11 +45,6 @@ export default {
 <style lang="scss" scoped>
 .layout-paragraph {
     display: flex;
-    // gap: var(--side-up);
-
-    // @media #{$switch} {
-    //     gap: 0;
-    // }
 }
 
 .img-paragraph,

@@ -18,13 +18,14 @@
             </div>
             <div class="form">
                 <div id="overlay-form" class="overlay-loading middle"></div>
-                <TallyForm />
+                <TallyForm @load="loadingOverlay('overlay-form', true)" />
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
+import { loadingOverlay } from '@/assets/js/utils'
 import TallyForm from './TallyForm.vue'
 </script>
 

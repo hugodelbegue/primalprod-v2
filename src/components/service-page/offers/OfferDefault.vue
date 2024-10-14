@@ -1,9 +1,8 @@
 <template>
     <section class="background-offer" :style="{ 'background': background }">
-        <!-- <slot name="img-offer-preview"></slot> -->
         <div v-if="preview" class="layout-image-offer">
-            <div class="image-offer-overlay"></div>
-            <div class="image-offer"></div>
+            <!-- <div class="image-offer-overlay"></div> -->
+            <div class="image-offer" :class="paintOffers"></div>
         </div>
         <div class="layout-offer">
             <h3 class="space-text">{{ offer }}</h3>
@@ -49,6 +48,21 @@ defineProps({
     routeText: String,
     preview: Boolean
 })
+</script>
+
+<script>
+export default {
+    computed: {
+        paintOffers() {
+            return {
+                'basic': this.offer == 'Basic',
+                'smart': this.offer == 'Smart',
+                'prenium': this.offer == 'Prenium',
+                'maintenance': this.offer == 'Maintenance'
+            }
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -107,23 +121,37 @@ defineProps({
         border-top-left-radius: var(--radius-low);
         border-bottom-left-radius: var(--radius-low);
         overflow: hidden;
-        width: 20%;
+        width: 50%;
     }
 }
 
 .image-offer {
-    background: url(@/assets/img/urlshorteningapi_1.png) center / cover no-repeat;
     filter: grayscale(1);
     width: 100%;
     height: 100%;
 }
 
-.image-offer-overlay {
-    z-index: 1;
-    position: absolute;
-    background: var(--orange-opaque);
-    display: flex;
-    width: 100%;
-    height: 100%;
+.basic {
+    background: url(../img/pen.jpg) center / cover no-repeat;
 }
-</style>
+
+.smart {
+    background: url(../img/brush.jpg) center / cover no-repeat;
+}
+
+.prenium {
+    background: url(../img/office.jpg) center / cover no-repeat;
+}
+
+.maintenance {
+    background: url(../img/desk.jpg) center / cover no-repeat;
+}
+
+// .image-offer-overlay {
+//     z-index: 1;
+//     position: absolute;
+//     background: var(--orange-opaque);
+//     display: flex;
+//     width: 100%;
+//     height: 100%;
+// }</style>

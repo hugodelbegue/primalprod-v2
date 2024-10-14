@@ -19,8 +19,7 @@
             <GalleryProject v-if="cleanUrl(data.title) === title">
                 <template #img-project>
                     <div v-for="picture in data['all-pictures']" class="img-gallery">
-                        <img class="picture" :src="imgUrl(picture.img)" alt="Photo de projet"
-                            @load="loading('overlay-img')">
+                        <img class="picture load" :src="imgUrl(picture.img)" alt="Photo de projet" @load="loading">
                     </div>
                 </template>
             </GalleryProject>
