@@ -43,6 +43,8 @@ export default {
     margin-top: var(--space-button-bottom);
     font-family: var(--f-family-button);
     font-size: var(--f-button);
+    font-weight: var(--f-bold);
+    text-transform: uppercase;
     line-height: normal;
     transition: background var(--time-transition), color var(--time-transition);
 

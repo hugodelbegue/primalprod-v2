@@ -34,12 +34,14 @@
             </template>``
         </Questions>
         <PriceSection id="price" />
+        <ConditionsSection />
     </section>
 </template>
 
 <script setup>
 import StepsSection from '@/components/service-page/StepsSection.vue'
 import PriceSection from '@/components/service-page/PriceSection.vue'
+import ConditionsSection from '@/components/service-page/ConditionsSection.vue'
 import Questions from '@/components/items/section/Questions.vue'
 import ButtonPrice from '@/components/items/button/ButtonSecond.vue'
 </script>
