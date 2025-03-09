@@ -15,9 +15,6 @@
                 route-text="En savoir plus" />
             <div class="banner-right"></div>
         </div>
-        <br>
-        <br>
-        <br>
         <div class="offers-add margin-x">
             <p class="others-offer">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia id sapiente iure assumenda error
@@ -143,5 +140,9 @@ import OfferDefault from './offers/OfferDefault.vue'
 
 .plus {
     font-size: var(--f-button);
+}
+
+.offers-add {
+    margin-top: var(--side-y);
 }
 </style>

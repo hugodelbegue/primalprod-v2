@@ -168,7 +168,7 @@ header {
     width: 100%;
 
     @media #{$switch} {
-        border-radius: 0;
+        border-radius: var(--radius-low);
         width: 60%;
     }
 }

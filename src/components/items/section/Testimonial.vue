@@ -60,11 +60,12 @@ defineProps({
     padding-bottom: calc(var(--side) * 2.5);
     border: 2px solid var(--color-line-box);
     border-radius: var(--radius-high);
+    width: 100%;
 
     @media #{$mobileScreen} {
         padding-bottom: calc(var(--side) * 1.5);
         margin-top: 0;
-        width: calc(100% - var(--size-layout-illustration));
+        // width: calc(100% - var(--size-layout-illustration));
     }
 }
 

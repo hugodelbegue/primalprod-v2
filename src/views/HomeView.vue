@@ -8,7 +8,8 @@
       </Logo>
       <AboutMe />
     </div>
-    <Banner />
+    <!-- <Banner /> -->
+    <Video />
     <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
         <img class="img-paragraph load" src="@/assets/img/media-section/collab.svg" alt="Illustration ampoule"
@@ -67,6 +68,7 @@ import Paragraph from '@/components/items/section/Paragraph.vue'
 import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
+import Video from '@/components/items/Video.vue'
 </script>
 
 <style lang="scss" scoped>

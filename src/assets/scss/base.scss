@@ -172,7 +172,8 @@
   --color-ball: var(--background-main);
   // shadow light
   --color-shadow: var(--black);
-  --shadow-theme: 0px 0px 2px var(--color-text);
+  --shadow-theme: 0 1px 11px -5px rgba(0, 0, 0, .75);
+  // --shadow-theme: 0px 0px 2px var(--color-text);
 
   --color-before: var(--background-main);
   --color-after: var(--color-3);
