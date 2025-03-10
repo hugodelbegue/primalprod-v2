@@ -9,7 +9,7 @@
                     </a>
                 </template>
             </Logo>
-            <div ref="nav" class="layout-nav frameworkY padding-x margin-y">
+            <div ref="nav" class="layout-nav frameworkY padding-x margin-y shadow-low">
                 <NavMobile />
                 <NavDesktop />
                 <div ref="anchor"></div>
@@ -168,7 +168,6 @@ header {
     width: 100%;
 
     @media #{$switch} {
-        border-radius: var(--radius-low);
         width: 60%;
     }
 }

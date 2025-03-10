@@ -1,8 +1,8 @@
 <template>
-    <section class="background-proverb frameworkY middle">
+    <section class="background-proverb middle">
         <div class="layout-proverb margin-x">
             <p>
-                🪶&nbsp;≪&thinsp;{{ proverbRandom() }}&thinsp;≫&nbsp;🪶
+                "&thinsp;{{ proverbRandom() }}&thinsp;"
             </p>
         </div>
     </section>
@@ -27,6 +27,7 @@ export default {
 <style lang="scss" scoped>
 .background-proverb {
     background: var(--background-proverb);
+    padding: calc(var(--side-y) / 2) 0;
 }
 
 .layout-proverb {

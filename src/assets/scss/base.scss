@@ -172,8 +172,8 @@
   --color-ball: var(--background-main);
   // shadow light
   --color-shadow: var(--black);
-  --shadow-theme: 0 1px 11px -5px rgba(0, 0, 0, .75);
-  // --shadow-theme: 0px 0px 2px var(--color-text);
+  --shadow-high: 0 1px 11px -5px rgba(var(--base-black), .75);
+  --shadow-low: 0 1px 6px -5px rgba(var(--base-black), .75);
 
   --color-before: var(--background-main);
   --color-after: var(--color-3);
@@ -229,8 +229,8 @@
   --color-ball: var(--background-main-opaque);
   // shadow dark
   --color-shadow: var(--beige);
-  --shadow-theme: 0px 0px 4px var(--color-text) inset;
-
+  --shadow-high: 0 1px 11px -5px rgba(var(--base-beige), .75) inset;
+  --shadow-low: 0 1px 6px -5px rgba(var(--base-beige), .75) inset;
 
   --color-before: var(--background-main);
   --color-after: var(--color-3-dark);

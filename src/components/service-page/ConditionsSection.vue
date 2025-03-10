@@ -20,16 +20,6 @@
     </section>
 </template>
 
-<script>
-export default {
-    setup() {
-
-
-        return {}
-    }
-}
-</script>
-
 <style lang="scss" scoped>
 .background-conditions {
     background: var(--background-price);

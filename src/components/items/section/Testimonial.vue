@@ -65,7 +65,6 @@ defineProps({
     @media #{$mobileScreen} {
         padding-bottom: calc(var(--side) * 1.5);
         margin-top: 0;
-        // width: calc(100% - var(--size-layout-illustration));
     }
 }
 

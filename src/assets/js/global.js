@@ -2,13 +2,13 @@ export default {
     data() {
         return {
             // link address
-            email: 'hugodelbegue@gmail.com?subject=PrimalProd - Question ou demande.',
+            email: 'contact@primalprod.fr?subject=PrimalProd - Indiquez votre question ou demande ci-dessous.',
             linkedin: 'https://fr.linkedin.com/in/hugo-delbegue/',
             github: 'https://github.com/hugodelbegue',
             instagram: '/',
 
             // copyright
-            year: '2024',
+            year: '2025',
 
             // legal informations
             website: 'primalprod.fr',

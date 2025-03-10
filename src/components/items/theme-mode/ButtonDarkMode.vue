@@ -1,7 +1,7 @@
 <template>
     <div class="switch middle">
         <input ref="switchInput" @change="swicthButton" type="checkbox" class="checkbox" id="toggle" :checked="checked">
-        <label for="toggle" class="label middle"></label>
+        <label for="toggle" class="label middle shadow-high"></label>
     </div>
 </template>
 
@@ -45,7 +45,6 @@ export default {
     cursor: pointer;
     background: var(--color-ball);
     border-radius: var(--radius-high);
-    box-shadow: var(--shadow-theme);
     position: relative;
     height: auto;
     width: 40px;

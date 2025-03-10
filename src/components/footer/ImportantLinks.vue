@@ -5,7 +5,7 @@
         </li>
         <li>
             <a :href="'mailto:' + email" target="_blank">
-                Email
+                Une question ?
             </a>
         </li>
         <li>
