@@ -5,7 +5,7 @@
             <div class="image-offer" :class="paintOffers"></div>
         </div>
         <div class="layout-offer">
-            <h3 class="space-text">{{ offer }}</h3>
+            <h3 class="space-title">{{ offer }}</h3>
             <p v-if="preview" class="space-text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum et reiciendis illo repellat veniam
                 mollitia minus voluptatem numquam dolorum enim ut ab corrupti eaque impedit, exercitationem culpa

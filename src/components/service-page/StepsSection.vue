@@ -2,7 +2,7 @@
     <section class="background-steps-left">
         <div class="layout-steps-left frameworkX frameworkY margin-x switch-direction animation-hover-active">
             <div class="text-steps">
-                <h2 class="space-text">1.&nbsp;<span class="animation-hover">Étape une</span></h2>
+                <h2 class="space-title">1.&nbsp;<span class="animation-hover">Étape une</span></h2>
                 <p class="space-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, ipsum.
                 </p>
@@ -20,7 +20,7 @@
     <section class="background-steps-right">
         <div class="layout-steps-right frameworkX frameworkY margin-x switch-direction animation-hover-active">
             <div class="text-steps">
-                <h2 class="space-text">2.&nbsp;<span class="animation-hover">Étape deux</span></h2>
+                <h2 class="space-title">2.&nbsp;<span class="animation-hover">Étape deux</span></h2>
                 <p class="space-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, ad. Cumque perferendis nam,
                     assumenda fugit id, iusto quos aliquam velit illo cum numquam in explicabo? Nam odio corrupti illum
@@ -35,7 +35,7 @@
     <section class="background-steps-left">
         <div class="layout-steps-left frameworkX frameworkY margin-x switch-direction animation-hover-active">
             <div class="text-steps">
-                <h2 class="space-text">3.&nbsp;<span class="animation-hover">Étape trois</span></h2>
+                <h2 class="space-title">3.&nbsp;<span class="animation-hover">Étape trois</span></h2>
                 <p class="space-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, ipsum.
                 </p>
@@ -53,7 +53,7 @@
     <section class="background-steps-right">
         <div class="layout-steps-right frameworkX frameworkY margin-x switch-direction animation-hover-active">
             <div class="text-steps">
-                <h2 class="space-text">4.&nbsp;<span class="animation-hover">Étape quatre</span></h2>
+                <h2 class="space-title">4.&nbsp;<span class="animation-hover">Étape quatre</span></h2>
                 <p class="space-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, ad. Cumque perferendis nam,
                     assumenda fugit id, iusto quos aliquam velit illo cum numquam in explicabo? Nam odio corrupti illum

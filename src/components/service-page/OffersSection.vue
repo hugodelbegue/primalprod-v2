@@ -4,7 +4,7 @@
         <div class="layout-offers margin-x">
             <OfferDefault class="part-one animation-part-one" offer="Basic" route="offer" route-text="Voir l'offre" />
             <OfferDefault class="part-two animation-part-two" offer="Smart" route="offer" route-text="Voir l'offre" />
-            <OfferDefault class="part-three animation-part-three" offer="Prenium" route="offer"
+            <OfferDefault class="part-three animation-part-three" offer="Sur mesure" route="offer"
                 route-text="Voir l'offre" />
             <div class="plus middle">
                 <icon-plus />

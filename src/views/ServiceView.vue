@@ -41,7 +41,7 @@
         </Testimonial>
         <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
-                <h2 class="space-text">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
+                <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
                     bla</h2>
             </template>
             <template #sendcontact-paragraph>

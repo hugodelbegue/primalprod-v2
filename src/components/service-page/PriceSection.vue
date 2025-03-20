@@ -2,7 +2,7 @@
     <section class="background-price">
         <div class="layout-price frameworkX frameworkY margin-x switch-direction animation-hover-active">
             <div class="text-price">
-                <h2 class="space-text">Les&nbsp;<span class="animation-hover">tarifs</span></h2>
+                <h2 class="space-title">Les&nbsp;<span class="animation-hover">tarifs</span></h2>
                 <ul class="list-price">
                     <li class="space-text">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Voluptatem quibusdam repudiandae earum numquam quas architecto.</li>

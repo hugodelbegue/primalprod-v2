@@ -1,7 +1,7 @@
 <template>
     <section class="background-offers-preview frameworkX frameworkY animation-hover-active">
         <div class="margin-x">
-            <h2 class="space-text">Ici vous trouverez mes&nbsp;<span
+            <h2 class="space-title">Ici vous trouverez mes&nbsp;<span
                     class="animation-hover">prestations</span>&nbsp;bala
                 bla</h2>
             <p>

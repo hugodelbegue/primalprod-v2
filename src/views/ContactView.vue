@@ -38,7 +38,7 @@
         </Testimonial>
         <ContactReminder route="services" routeText="Consulter mes prestations !">
             <template #sendcontact-title>
-                <h2 class="space-text">Un petit doute ! Besoin de consulter mes <span
+                <h2 class="space-title">Un petit doute ! Besoin de consulter mes <span
                         class="animation-hover">prestations</span>&nbsp;!</h2>
             </template>
             <template #sendcontact-paragraph>

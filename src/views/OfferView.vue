@@ -24,7 +24,7 @@
         <StepsSection />
         <Questions :question-list="questionList">
             <template #questions-title>
-                <h2 class="space-text">Besoins de plus <span class="animation-hover">d'informations</span></h2>
+                <h2 class="space-title">Besoins de plus <span class="animation-hover">d'informations</span></h2>
             </template>
             <template v-slot:question="{ item }">
                 {{ item.question }}

@@ -1,7 +1,7 @@
 <template>
     <section class="background-proverb middle">
         <div class="layout-proverb margin-x">
-            <p>
+            <p class="proverb anim-proverb">
                 "&thinsp;{{ proverbRandom() }}&thinsp;"
             </p>
         </div>
@@ -35,5 +35,23 @@ export default {
     display: flex;
     gap: 1em;
     text-align: center;
+    overflow: hidden;
+}
+
+.proverb {
+    font-size: 1.2em;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.anim-proverb {
+    animation: show-text calc(var(--time-animation) * 2) both;
+
+    @keyframes show-text {
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
 }
 </style>

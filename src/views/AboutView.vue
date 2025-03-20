@@ -24,7 +24,7 @@
         <img class="img-paragraph load" src="@/assets/img/media-section/devices.svg" @load="loading">
       </template>
       <template #title-paragraph>
-        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
@@ -43,7 +43,7 @@
         <img class="img-paragraph load" src="@/assets/img/media-section/typing.svg" @load="loading">
       </template>
       <template #title-paragraph>
-        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
@@ -57,7 +57,7 @@
         <img class="img-paragraph load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
       </template>
       <template #title-paragraph>
-        <h2 class="space-text">Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
@@ -69,7 +69,7 @@
     <Partner />
     <ContactReminder background="var(--background-main)">
       <template #sendcontact-title>
-        <h2 class="space-text">Comment faire pour travailler <span class="animation-hover">ensemble</span>&nbsp;?
+        <h2 class="space-title">Comment faire pour travailler <span class="animation-hover">ensemble</span>&nbsp;?
         </h2>
       </template>
       <template #sendcontact-paragraph>

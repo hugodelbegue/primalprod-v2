@@ -1,7 +1,7 @@
 <template>
     <div class="background-testimonial frameworkX animation-hover-active" :style="{ 'background': background }">
         <div class="layout-testimonial frameworkY margin-x">
-            <h2 class="header-testimonial space-text">
+            <h2 class="header-testimonial space-title">
                 <slot name="title-testimonial"></slot>
             </h2>
             <div class="layout-body-testimonial middle">

@@ -1,7 +1,7 @@
 <template>
     <div class="background-partner-contact frameworkY animation-hover-active">
         <div class="layout-partner-contact frameworkX margin-x">
-            <h2 class="space-text">Ils m'ont fait&nbsp;<span class="animation-hover">confiance</span></h2>
+            <!-- <h2 class="space-title">Ils m'ont fait&nbsp;<span class="animation-hover">confiance</span></h2> -->
             <div class="layout-partner">
                 <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
                 <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
@@ -42,6 +42,7 @@ import { loading } from '@/assets/js/utils'
 
 .layout-partner {
     display: flex;
+    place-content: center;
     gap: var(--space-between-partner);
     flex-wrap: wrap;
 }

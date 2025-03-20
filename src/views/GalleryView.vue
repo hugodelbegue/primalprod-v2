@@ -32,7 +32,7 @@
         <BodyGallery />
         <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
             <template #sendcontact-title>
-                <h2 class="space-text">Rien de plus <span class="animation-hover">simple</span>&nbsp;!</h2>
+                <h2 class="space-title">Rien de plus <span class="animation-hover">simple</span>&nbsp;!</h2>
             </template>
             <template #sendcontact-paragraph>
                 <p class="space-text">
