@@ -1,6 +1,6 @@
 <template>
     <section class="background-offers-preview frameworkX frameworkY animation-hover-active">
-        <div class="margin-x">
+        <div class="text-offers-preview margin-x">
             <h2 class="space-title">Ici vous trouverez mes&nbsp;<span
                     class="animation-hover">prestations</span>&nbsp;bala
                 bla</h2>
@@ -11,16 +11,13 @@
                 culpa praesentium quod, architecto cum aliquam iste necessitatibus vel consectetur! Molestiae omnis
                 consequuntur quia!
             </p>
-            <br>
-            <br>
-            <br>
         </div>
         <div class="layout-offers-preview margin-x">
             <div class="menu-offers-preview">
                 <ul class="list-offers-preview">
                     <li :class="{ 'anim-list-offers': basic }" @click="basic = true">Basic</li>
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">Smart</li>
-                    <li :class="{ 'anim-list-offers': prenium }" @click="prenium = true">Prenium</li>
+                    <li :class="{ 'anim-list-offers': request }" @click="request = true">Sur devis</li>
                     <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">Maintenance</li>
                 </ul>
             </div>
@@ -37,7 +34,7 @@
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="prenium" class="offer anim-offer" offer="Prenium" route="offer"
+                <OfferDefault v-if="request" class="offer anim-offer" offer="Sur devis" route="offer"
                     route-text="Voir l'offre" :preview="true">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
@@ -64,13 +61,13 @@ export default {
         return {
             basic: true,
             smart: false,
-            prenium: false,
+            request: false,
             maintenance: false
         }
     },
     methods: {
         resetValues(activeOption) {
-            const options = ['basic', 'smart', 'prenium', 'maintenance']
+            const options = ['basic', 'smart', 'request', 'maintenance']
             options.forEach(option => {
                 if (option !== activeOption) {
                     this[option] = false
@@ -89,9 +86,9 @@ export default {
                 this.resetValues('smart')
             }
         },
-        prenium(newValue) {
+        request(newValue) {
             if (newValue) {
-                this.resetValues('prenium')
+                this.resetValues('request')
             }
         },
         maintenance(newValue) {
@@ -104,6 +101,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.text-offers-preview {
+    margin-bottom: var(--side-y);
+}
+
 .layout-offers-preview {
     display: flex;
     flex-direction: column;
@@ -146,7 +147,7 @@ export default {
         cursor: pointer;
         display: flex;
         place-content: center;
-        place-items: start;
+        place-items: center;
         position: relative;
         padding-top: .5em;
         padding-bottom: .5em;
@@ -160,6 +161,7 @@ export default {
 
         @media #{$switch} {
             place-content: space-between;
+            place-items: start;
 
             &::before {
                 content: '';
@@ -171,9 +173,14 @@ export default {
             }
 
             &::after {
-                content: url(./arrow.svg);
-                padding-right: 4px;
-                filter: var(--color-arrow)
+                content: "";
+                mask-image: url('./arrow.svg');
+                -webkit-mask-image: url('./arrow.svg');
+                background: var(--color-text);
+                place-self: center;
+                width: 16px;
+                height: 16px;
+                transition: background var(--time-animation);
             }
         }
     }
@@ -225,6 +232,10 @@ export default {
 
         &::before {
             width: calc(100% - 2em) !important;
+        }
+
+        &::after {
+            background: var(--color-important) !important;
         }
     }
 }

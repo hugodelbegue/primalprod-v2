@@ -57,7 +57,7 @@ export default {
             return {
                 'basic': this.offer == 'Basic',
                 'smart': this.offer == 'Smart',
-                'prenium': this.offer == 'Prenium',
+                'request': this.offer == 'Sur devis',
                 'maintenance': this.offer == 'Maintenance'
             }
         }
@@ -139,7 +139,7 @@ export default {
     background: url(../img/brush.jpg) center / cover no-repeat;
 }
 
-.prenium {
+.request {
     background: url(../img/office.jpg) center / cover no-repeat;
 }
 

@@ -4,10 +4,10 @@
         <div class="layout-offers margin-x">
             <OfferDefault class="part-one animation-part-one" offer="Basic" route="offer" route-text="Voir l'offre" />
             <OfferDefault class="part-two animation-part-two" offer="Smart" route="offer" route-text="Voir l'offre" />
-            <OfferDefault class="part-three animation-part-three" offer="Sur mesure" route="offer"
+            <OfferDefault class="part-three animation-part-three" offer="Sur devis" route="offer"
                 route-text="Voir l'offre" />
             <div class="plus middle">
-                <icon-plus />
+                <icon-spin />
                 <span>Option supplémentaire</span>
             </div>
             <div class="banner-left"></div>
@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import IconPlus from '../icons/IconPlus.vue'
+import IconSpin from '../icons/IconSpin.vue'
 import OfferDefault from './offers/OfferDefault.vue'
 </script>
 
