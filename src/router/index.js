@@ -38,6 +38,12 @@ const router = createRouter({
       props: true
     },
     {
+      path: '/prestations/offre-basic',
+      name: 'offer',
+      component: () => import('../views/BasicView.vue'),
+      props: true
+    },
+    {
       path: '/realisations',
       name: 'gallery',
       component: () => import('../views/GalleryView.vue')
