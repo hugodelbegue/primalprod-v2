@@ -1,7 +1,7 @@
 <template>
     <div class="background-video">
         <video class="video-primalprod" autoplay muted>
-            <source src="./video/video-presentation-logo.mp4" type="video/mp4">
+            <source src="@/assets/video/video-presentation-logo-test.mp4" type="video/mp4">
             <!-- <source src="./video/video-presentation-logo.mov" type="video/quicktime"> -->
             Votre navigateur ne supporte pas la lecture de vidéos.
         </video>

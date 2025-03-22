@@ -19,7 +19,7 @@
                         height="360" @load="loadingHead('.media-center', 'move-left')">
                     <video v-else class="media-center load" height="360"
                         @loadeddata="loadingHead('.media-center', 'move-left')" autoplay>
-                        <source src="@/assets/img/media-header/tap-video.mp4" type="video/mp4">
+                        <source src="@/assets/video/video-service-version-desktop.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>

@@ -15,33 +15,39 @@
         <div class="layout-offers-preview margin-x">
             <div class="menu-offers-preview">
                 <ul class="list-offers-preview">
-                    <li :class="{ 'anim-list-offers': basic }" @click="basic = true">Basic</li>
-                    <li :class="{ 'anim-list-offers': smart }" @click="smart = true">Smart</li>
-                    <li :class="{ 'anim-list-offers': request }" @click="request = true">Sur devis</li>
-                    <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">Maintenance</li>
+                    <li :class="{ 'anim-list-offers': basic }" @click="basic = true">{{ offerOne.titleMenu }}</li>
+                    <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
+                    <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
+                    <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
+                        }}
+                    </li>
                 </ul>
             </div>
             <div class="view-offers-preview">
-                <OfferDefault v-if="basic" class="offer anim-offer" offer="Basic" route="offer"
-                    route-text="Voir l'offre" :preview="true">
+                <OfferDefault v-if="basic" class="offer anim-offer" :offer="offerOne.number" :title="offerOne.title"
+                    :route="offerOne.route" :button-text="offerOne.button" :preview="true"
+                    :preview-text="offerOne.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="smart" class="offer anim-offer" offer="Smart" route="offer"
-                    route-text="Voir l'offre" :preview="true">
+                <OfferDefault v-if="smart" class="offer anim-offer" :offer="offerTwo.number" :title="offerTwo.title"
+                    :route="offerTwo.route" :button-text="offerTwo.button" :preview="true"
+                    :preview-text="offerTwo.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="request" class="offer anim-offer" offer="Sur devis" route="offer"
-                    route-text="Voir l'offre" :preview="true">
+                <OfferDefault v-if="request" class="offer anim-offer" :offer="offerThree.number"
+                    :title="offerThree.title" :route="offerThree.route" :button-text="offerThree.button" :preview="true"
+                    :preview-text="offerThree.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="maintenance" class="offer anim-offer" offer="Maintenance" route="offer"
-                    route-text="En savoir plus" :preview="true">
+                <OfferDefault v-if="maintenance" class="offer anim-offer" :offer="offerFour.number"
+                    :title="offerFour.title" :route="offerFour.route" :button-text="offerFour.button" :preview="true"
+                    :preview-text="offerFour.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>

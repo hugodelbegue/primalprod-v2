@@ -47,3 +47,23 @@ export function loadingOverlay(element, remove) {
         }, 500)
     }
 }
+
+// switch proverbs
+export function animationDisplaySentences(element, sentences, delay, delayOut) {
+    function displaySentence(i) {
+        if (i < sentences.length) {
+            element.classList.remove('anim-proverb-out')
+            element.classList.add('anim-proverb-in')
+            element.textContent = ''
+            element.textContent += sentences[i]
+            setTimeout(() => {
+                element.classList.remove('anim-proverb-in')
+                element.classList.add('anim-proverb-out')
+                setTimeout(() => {
+                    displaySentence((i + 1) % sentences.length)
+                }, delayOut)
+            }, delay)
+        }
+    }
+    displaySentence(0)
+}

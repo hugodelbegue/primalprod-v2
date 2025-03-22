@@ -1,6 +1,7 @@
 <template>
     <div class="aboutme">
-        <h1 class="catchphrase">Hello ! Phrase d'accroche</h1>
+        <h1 class="desktop-catchphrase">Hello ! Phrase d'accroche desktop</h1>
+        <h1 class="mobile-catchphrase">Créateur de sites & applications web</h1>
         <br>
         <p class="space-text">
             Développeur web junior curieux et impliqué, je souhaite mettre à profit mes compétences pour mener à bien
@@ -18,6 +19,23 @@
 
         @media #{$tabletScreen} {
             text-align: left;
+        }
+    }
+
+    p,
+    .desktop-catchphrase {
+        display: none;
+
+        @media #{$switch} {
+            display: block;
+        }
+    }
+
+    .mobile-catchphrase {
+        font-variant-caps: small-caps;
+
+        @media #{$switch} {
+            display: none;
         }
     }
 }

@@ -77,7 +77,7 @@ import { loading } from '@/assets/js/utils'
 }
 
 .background-steps-right {
-    background: var(--background-setps-right);
+    background: var(--background-steps-right);
 }
 
 .layout-steps-left,

@@ -22,6 +22,8 @@
             </div>
         </div>
         <StepsSection />
+        <PriceSection id="price" />
+        <ConditionsSection />
         <Questions :question-list="questionList">
             <template #questions-title>
                 <h2 class="space-title">Besoins de plus <span class="animation-hover">d'informations</span></h2>
@@ -33,8 +35,6 @@
                 {{ item.response }}
             </template>``
         </Questions>
-        <PriceSection id="price" />
-        <ConditionsSection />
     </section>
 </template>
 

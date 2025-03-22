@@ -1,15 +1,16 @@
 <template>
   <div class="layout-home frameworkY padding-bottom-page">
-    <div class="layout-aboutme frameworkX middle margin-x switch-direction">
-      <Logo class="avatar">
+    <div class="layout-first-view frameworkX middle switch-direction">
+      <Logo class="logo margin-x">
         <template #img>
-          <img class="avatar-img" alt="Avatar" src="@/components/home-page/section-aboutme/avatar.svg" />
+          <img class="logo-img" alt="Logo" :src="LogoMain" />
+          <img class="logo-avatar" alt="Logo" :src="Avatar" />
         </template>
       </Logo>
-      <AboutMe />
+      <!-- <AboutMe class="margin-x" /> -->
+      <Video class="logo-video" />
     </div>
-    <!-- <Banner /> -->
-    <Video />
+    <Video class="logo-video" />
     <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
         <img class="img-paragraph load" src="@/assets/img/media-section/collab.svg" alt="Illustration ampoule"
@@ -62,13 +63,14 @@
 <script setup>
 import { loading } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
-import Banner from '@/components/items/Banner.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
 import Video from '@/components/items/Video.vue'
+import Avatar from '@/components/home-page/section-aboutme/avatar.svg'
+import LogoMain from '@/assets/img/logo-primalprod.svg'
 </script>
 
 <style lang="scss" scoped>
@@ -76,10 +78,10 @@ import Video from '@/components/items/Video.vue'
   flex-direction: column;
 }
 
-.layout-aboutme {
+.layout-first-view {
   --side-x: calc(50% - var(--tablet) / 2);
   min-height: calc(100vh - var(--side-y) - calc(var(--margin-block-y) * 2) - 48px);
-  gap: 2.5rem;
+  gap: 1.5rem;
   padding-bottom: calc(48px * 2);
 
   @media #{$switch} {
@@ -87,15 +89,35 @@ import Video from '@/components/items/Video.vue'
   }
 }
 
-.avatar {
+.logo {
   display: flex;
   place-content: center;
   place-items: flex-start;
 }
 
-.avatar-img {
-  width: 125px;
-  height: auto;
-  aspect-ratio: calc(264 / 447) / 1;
+.logo-img,
+.logo-avatar {
+  width: 100%;
+
+  @media #{$switch} {
+    width: 125px;
+    height: auto;
+    aspect-ratio: calc(264 / 447) / 1;
+  }
+}
+
+.logo-img {
+  @media #{$switch} {
+    display: none;
+  }
+}
+
+.logo-video,
+.logo-avatar {
+  display: none;
+
+  @media #{$switch} {
+    display: block;
+  }
 }
 </style>

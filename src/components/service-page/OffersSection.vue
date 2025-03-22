@@ -2,23 +2,30 @@
     <div class="background-offers frameworkX frameworkY animation-hover-active">
         <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
-            <OfferDefault class="part-one animation-part-one" offer="Basic" route="offer" route-text="Voir l'offre" />
-            <OfferDefault class="part-two animation-part-two" offer="Smart" route="offer" route-text="Voir l'offre" />
-            <OfferDefault class="part-three animation-part-three" offer="Sur devis" route="offer"
-                route-text="Voir l'offre" />
+            <OfferDefault class="part-one animation-part-one" :offer="offerOne.number" :title="offerOne.title"
+                :route="offerOne.route" :button-text="offerOne.button" :points="offerOne.points"
+                :text="offerOne.text" />
+            <OfferDefault class="part-two animation-part-two" :offer="offerTwo.number" :title="offerTwo.title"
+                :route="offerTwo.route" :button-text="offerTwo.button" :points="offerTwo.points"
+                :text="offerTwo.text" />
+            <OfferDefault class="part-three animation-part-three" :offer="offerThree.number" :title="offerThree.title"
+                :route="offerThree.route" :button-text="offerThree.button" :points="offerThree.points"
+                :text="offerThree.text" />
             <div class="plus middle">
                 <icon-spin />
                 <span>Option supplémentaire</span>
             </div>
             <div class="banner-left"></div>
-            <OfferDefault class="offer part-four animation-part-four" offer="Maintenance" route="offer"
-                route-text="En savoir plus" />
+            <OfferDefault class="offer part-four animation-part-four" :offer="offerFour.number" :title="offerFour.title"
+                :route="offerFour.route" :button-text="offerFour.button" :points="offerFour.points"
+                :text="offerFour.text" />
             <div class="banner-right"></div>
         </div>
         <div class="offers-add margin-x">
             <p class="others-offer">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia id sapiente iure assumenda error
-                soluta, at quae odio placeat?
+                Si aucune des offres proposées ne répond à tes attentes, n’hésitez pas à me contacter via le formulaire
+                en cliquant sur ce <router-link :to="{ name: 'contact' }" class="important-text">lien</router-link>, et
+                en précisant ta demande. Je reviendrai vers toi rapidement pour en discuter ensemble.
             </p>
         </div>
     </div>

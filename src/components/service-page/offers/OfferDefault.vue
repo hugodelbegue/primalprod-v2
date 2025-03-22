@@ -5,34 +5,23 @@
             <div class="image-offer" :class="paintOffers"></div>
         </div>
         <div class="layout-offer">
-            <h3 class="space-title">{{ offer }}</h3>
+            <h3 class="space-title">{{ title }}</h3>
             <p v-if="preview" class="space-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum et reiciendis illo repellat veniam
-                mollitia minus voluptatem numquam dolorum enim ut ab corrupti eaque impedit, exercitationem culpa
-                assumenda qui dignissimos.
-                <br>
-                <br>
-                Nostrum ullam dicta dolore earum laboriosam incidunt facilis eos architecto
-                pariatur numquam, doloremque odio voluptas repellat.
-                <br>
-                <br>
-                Asperiores minus doloremque commodi!
+                {{ previewText }}
             </p>
             <h4 v-if="!preview" class="space-text">Text description offre</h4>
             <ul v-if="!preview" class="list-offer-points space-text">
-                <li>Lorem, ipsum dolor.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit.</li>
+                <li v-for="(point, index) in points" :key="index">
+                    {{ point }}
+                </li>
             </ul>
             <h4 v-if="!preview" class="space-text">Text description offre</h4>
             <p v-if="!preview" class="space-text">
-                Lorem ipsum dolor sit amet, <u>consectetur adipisicing</u> elit. Vero porro ipsam reprehenderit id
-                nostrum
-                assumenda facilis repellat sint modi, excepturi quas aliquam libero officia quaerat!
+                {{ text }}
             </p>
             <ButtonOffer :route="route">
                 <template #text-button>
-                    {{ routeText }}
+                    {{ buttonText }}
                 </template>
             </ButtonOffer>
         </div>
@@ -43,10 +32,14 @@
 import ButtonOffer from '@/components/items/button/ButtonSecond.vue'
 defineProps({
     background: String,
-    offer: String,
+    offer: Number,
+    title: String,
     route: String,
-    routeText: String,
-    preview: Boolean
+    buttonText: String,
+    preview: Boolean,
+    previewText: String,
+    points: String,
+    text: String
 })
 </script>
 
@@ -55,10 +48,10 @@ export default {
     computed: {
         paintOffers() {
             return {
-                'basic': this.offer == 'Basic',
-                'smart': this.offer == 'Smart',
-                'request': this.offer == 'Sur devis',
-                'maintenance': this.offer == 'Maintenance'
+                'basic': this.offer == 1,
+                'smart': this.offer == 2,
+                'request': this.offer == 3,
+                'maintenance': this.offer == 4
             }
         }
     }
