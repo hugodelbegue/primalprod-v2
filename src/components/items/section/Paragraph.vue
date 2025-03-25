@@ -45,6 +45,11 @@ export default {
 <style lang="scss" scoped>
 .layout-paragraph {
     display: flex;
+    gap: 10px;
+
+    @media #{$switch} {
+        gap: 0;
+    }
 }
 
 .img-paragraph,
@@ -72,11 +77,7 @@ export default {
 .img-paragraph {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 80%;
     margin: auto;
-
-    @media #{$mobileScreen} {
-        width: 80%;
-    }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <section class="background-form">
         <div class="layout-form frameworkX frameworkY margin-x switch-direction">
-            <div class="description-form">
+            <div class="description-form shadow-low">
                 <p class="space-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium
                     illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum
@@ -16,7 +16,7 @@
                         href="https://tally.so/r/wod0dN">ce lien</a>.
                 </p>
             </div>
-            <div class="form">
+            <div class="form middle shadow-low">
                 <div id="overlay-form" class="overlay-loading middle"></div>
                 <TallyForm @load="loadingOverlay('overlay-form', true)" />
             </div>
@@ -36,7 +36,14 @@ import TallyForm from './TallyForm.vue'
 
 .layout-form {
     display: flex;
-    gap: var(--side-up);
+    gap: 10px;
+}
+
+.description-form {
+    background: var(--background-tally-form);
+    padding: var(--side);
+    border-radius: var(--radius-high);
+    flex: 100%;
 }
 
 .form {
@@ -55,9 +62,6 @@ import TallyForm from './TallyForm.vue'
     }
 }
 
-.description-form {
-    flex: 100%;
-}
 
 .overlay-loading {
     background: var(--background-form);

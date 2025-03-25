@@ -39,7 +39,7 @@ export default {
 
     @media #{$switch} {
         place-content: space-between;
-        place-items: center;
+        place-items: end;
     }
 
     li {
@@ -56,6 +56,7 @@ export default {
 
         @media #{$switch} {
             padding: 0;
+            line-height: normal;
         }
     }
 }

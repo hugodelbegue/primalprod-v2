@@ -6,7 +6,7 @@ export default {
                 number: 1,
                 title: 'Basic',
                 titleMenu: 'Basic',
-                route: "offer",
+                route: "basic",
                 button: "Offre basic",
                 preview: "L’offre Basic est conçue pour offrir aux clients une présence en ligne efficace et accessible, mettant en avant leurs services et actualités. Elle permet une communication simplifiée et rapide avec les visiteurs grâce aux moyens de contact intégrés.",
                 points: [

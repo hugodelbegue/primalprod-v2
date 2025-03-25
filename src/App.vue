@@ -14,9 +14,11 @@
         </router-view>
       </div>
     </main>
+    <div ref="bottom"></div>
     <Footer />
   </div>
-  <ReturnTop title="Retour en haut de la page" @click="top" />
+  <ReturnTop v-if="!isMobileDevice()" title="Retour en haut de la page" @click="top" />
+  <FastFooter :bottomRef="bottom" />
 </template>
 
 <script setup>
@@ -25,13 +27,15 @@ import { startAnimation, endAnimation } from './assets/js/animations'
 import Header from '@/layouts/Header.vue'
 import Footer from '@/layouts/Footer.vue'
 import ReturnTop from './components/items/button/ReturnTop.vue'
+import FastFooter from './components/items/button/FastFooter.vue'
 </script>
 
 <script>
 export default {
   data() {
     return {
-      currentRoute: null
+      currentRoute: null,
+      bottom: null
     }
   },
   created() {
@@ -49,6 +53,7 @@ export default {
         startAnimation()
       })
     }
+    this.bottom = this.$refs.bottom
   },
   methods: {
     // Return to the top

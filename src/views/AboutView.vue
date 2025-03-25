@@ -19,7 +19,7 @@
       </div>
     </div>
     <Proverb />
-    <Paragraph background="transparent">
+    <Paragraph background="transparent" class="switch-reverse">
       <template #img-paragraph>
         <img class="img-paragraph load" src="@/assets/img/media-section/devices.svg" @load="loading">
       </template>
@@ -52,7 +52,7 @@
         </p>
       </template>
     </Paragraph>
-    <Paragraph background="transparent">
+    <Paragraph background="transparent" class="switch-reverse">
       <template #img-paragraph>
         <img class="img-paragraph load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
       </template>
@@ -94,7 +94,7 @@ import Proverb from '@/components/about-page/Proverb.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
 
-<script>
+<!-- <script>
 export default {
   data() {
     return {
@@ -107,7 +107,7 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 <style lang="scss" scoped>
 .background-header-about {
@@ -135,5 +135,13 @@ export default {
 
 .media-illustration {
   visibility: hidden;
+}
+
+.switch-reverse :deep(.switch-direction) {
+  flex-direction: column-reverse;
+
+  @media #{$switch} {
+    flex-direction: inherit;
+  }
 }
 </style>

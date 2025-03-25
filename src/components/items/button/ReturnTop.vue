@@ -1,5 +1,5 @@
 <template>
-    <div ref="button" class="button_return hide">
+    <div ref="button" class="button-return hide">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-top"
             viewBox="0 0 16 16">
             <path
@@ -11,7 +11,7 @@
 <script>
 export default {
     mounted() {
-        const { button } = this.$refs;
+        const { button } = this.$refs
         window.addEventListener("scroll", () => {
             if (window.scrollY < 20) {
                 button.classList.add("hide")
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button_return {
+.button-return {
     --color-button: var(--background-main);
     --size-button: 50px;
     --corner-button: var(--radius-high);

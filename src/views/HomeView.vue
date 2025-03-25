@@ -7,8 +7,8 @@
           <img class="logo-avatar" alt="Logo" :src="Avatar" />
         </template>
       </Logo>
-      <!-- <AboutMe class="margin-x" /> -->
-      <Video class="logo-video" />
+      <AboutMe class="margin-x" />
+      <!-- <Video class="logo-video" /> -->
     </div>
     <Video class="logo-video" />
     <Paragraph background="var(--background-paragraph)" :img-right="true">
@@ -27,20 +27,6 @@
       </template>
     </Paragraph>
     <ServicesPreview />
-    <Testimonial background="var(--background-testimonial)">
-      <template #title-testimonial>
-        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
-      </template>
-      <template #text-testimonial>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
-        consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
-        inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
-        nesciunt, tempore ratione voluptate, suscipit velit.
-      </template>
-      <template #full-name-testimonial>
-        Jean Dupont, Directeur Général
-      </template>
-    </Testimonial>
     <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
       <template #sendcontact-title>
         <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
@@ -57,6 +43,20 @@
         </p>
       </template>
     </ContactReminder>
+    <Testimonial background="var(--background-testimonial)" class="small-margin-top">
+      <template #title-testimonial>
+        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
+      </template>
+      <template #text-testimonial>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
+        consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
+        inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
+        nesciunt, tempore ratione voluptate, suscipit velit.
+      </template>
+      <template #full-name-testimonial>
+        Jean Dupont, Directeur Général
+      </template>
+    </Testimonial>
   </div>
 </template>
 

@@ -39,7 +39,7 @@
                 Jean Dupont, Directeur Général
             </template>
         </Testimonial>
-        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
+        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !" class="small-margin-top">
             <template #sendcontact-title>
                 <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
                     bla</h2>

@@ -79,4 +79,8 @@ export default {
     position: relative;
     flex: 40%;
 }
+
+h2 {
+    display: none;
+}
 </style>

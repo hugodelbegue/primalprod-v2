@@ -22,7 +22,6 @@ import ImportantLinks from '@/components/footer/ImportantLinks.vue'
 
 <style lang="scss" scoped>
 footer {
-    --side-y: 2.5rem;
     font-size: var(--f-footer);
 }
 

@@ -1,6 +1,6 @@
 <template>
-    <section class="background-offers-preview frameworkX frameworkY animation-hover-active">
-        <div class="text-offers-preview margin-x">
+    <section class="background-offers-preview frameworkX animation-hover-active">
+        <div class="layout-offers-preview-text margin-x shadow-low">
             <h2 class="space-title">Ici vous trouverez mes&nbsp;<span
                     class="animation-hover">prestations</span>&nbsp;bala
                 bla</h2>
@@ -19,33 +19,33 @@
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
-                        }}
+                    }}
                     </li>
                 </ul>
             </div>
             <div class="view-offers-preview">
-                <OfferDefault v-if="basic" class="offer anim-offer" :offer="offerOne.number" :title="offerOne.title"
-                    :route="offerOne.route" :button-text="offerOne.button" :preview="true"
+                <OfferDefault v-if="basic" class="offer anim-offer shadow-low" :offer="offerOne.number"
+                    :title="offerOne.title" :route="offerOne.route" :button-text="offerOne.button" :preview="true"
                     :preview-text="offerOne.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="smart" class="offer anim-offer" :offer="offerTwo.number" :title="offerTwo.title"
-                    :route="offerTwo.route" :button-text="offerTwo.button" :preview="true"
+                <OfferDefault v-if="smart" class="offer anim-offer shadow-low" :offer="offerTwo.number"
+                    :title="offerTwo.title" :route="offerTwo.route" :button-text="offerTwo.button" :preview="true"
                     :preview-text="offerTwo.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="request" class="offer anim-offer" :offer="offerThree.number"
+                <OfferDefault v-if="request" class="offer anim-offer shadow-low" :offer="offerThree.number"
                     :title="offerThree.title" :route="offerThree.route" :button-text="offerThree.button" :preview="true"
                     :preview-text="offerThree.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferDefault>
-                <OfferDefault v-if="maintenance" class="offer anim-offer" :offer="offerFour.number"
+                <OfferDefault v-if="maintenance" class="offer anim-offer shadow-low" :offer="offerFour.number"
                     :title="offerFour.title" :route="offerFour.route" :button-text="offerFour.button" :preview="true"
                     :preview-text="offerFour.preview">
                     <template #img-offer-preview>
@@ -107,18 +107,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.text-offers-preview {
-    margin-bottom: var(--side-y);
+.background-offers-preview {
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+    @media #{$switch} {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+}
+
+.layout-offers-preview-text {
+    background: var(--background-offer);
+    border-radius: var(--radius-low);
+    padding: var(--side);
+    margin-bottom: 10px;
 }
 
 .layout-offers-preview {
     display: flex;
     flex-direction: column;
-    gap: var(--side);
+    gap: 10px;
 
     @media #{$switch} {
         flex-direction: row;
-        place-items: end;
+        place-items: start;
         gap: 0;
     }
 }

@@ -24,7 +24,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      props: true
     },
     {
       path: '/prestations',
@@ -39,7 +40,7 @@ const router = createRouter({
     },
     {
       path: '/prestations/offre-basic',
-      name: 'offer',
+      name: 'basic',
       component: () => import('../views/BasicView.vue'),
       props: true
     },
