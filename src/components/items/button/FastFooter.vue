@@ -1,5 +1,5 @@
 <template>
-    <div ref="button" class="button-return shadow-high show">
+    <div ref="button" class="button-return shadow-high" :class="classStart">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-question"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -11,6 +11,7 @@
 <script setup>
 import { isMobileDevice } from '@/assets/js/utils'
 defineProps({
+    currentRoute: String,
     bottomRef: Object
 })
 </script>
@@ -22,16 +23,32 @@ export default {
         window.addEventListener("scroll", () => {
             const bottomPage = this.bottomRef.getBoundingClientRect().top
             const windowHeight = window.innerHeight
-            if (isMobileDevice()) {
-                if (window.scrollY > 20 && bottomPage > windowHeight) {
-                    button.classList.remove("hide")
-                    button.classList.add("show")
-                } else {
-                    button.classList.remove("show")
-                    button.classList.add("hide")
-                }
+            if (isMobileDevice() && this.currentRoute == 'home') {
+                this.hideButton(window.scrollY > 20 && bottomPage > windowHeight, button)
+            } else {
+                this.hideButton(bottomPage > windowHeight, button)
             }
         })
+    },
+    methods: {
+        hideButton(condition, button) {
+            if (condition) {
+                button.classList.remove("hide")
+                button.classList.add("show")
+            } else {
+                button.classList.remove("show")
+                button.classList.add("hide")
+            }
+        }
+    },
+    computed: {
+        classStart() {
+            return {
+                'show': isMobileDevice() && this.currentRoute !== 'home' || !isMobileDevice(),
+                'hide': isMobileDevice() && this.currentRoute == 'home'
+
+            }
+        }
     }
 }
 </script>
@@ -39,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 .button-return {
     --color-button: var(--color-text);
-    --size-button: 50px;
+    --size-button: 48px;
     --corner-button: var(--radius-high);
     cursor: pointer;
     z-index: 3;
@@ -57,8 +74,15 @@ export default {
     border-radius: var(--corner-button);
     transition: all 150ms linear;
 
+    &:hover {
+        @media #{$switch} {
+            transform: scale(1.1);
+        }
+    }
+
     @media #{$switch} {
-        --size-button: 40px;
+        bottom: 2rem;
+        right: 2rem;
     }
 
     .icon-question {
@@ -68,9 +92,12 @@ export default {
 
 .show {
     opacity: 1 !important;
+    pointer-events: all;
 }
 
 .hide {
+    --size-button: 30px;
     opacity: 0 !important;
+    pointer-events: none;
 }
 </style>

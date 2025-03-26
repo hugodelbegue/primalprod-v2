@@ -17,8 +17,7 @@
     <div ref="bottom"></div>
     <Footer />
   </div>
-  <ReturnTop v-if="!isMobileDevice()" title="Retour en haut de la page" @click="top" />
-  <FastFooter :bottomRef="bottom" />
+  <FastFooter :current-route="currentRoute" :bottomRef="bottom" title="Centre d'aides" />
 </template>
 
 <script setup>
@@ -26,7 +25,6 @@ import { isMobileDevice } from './assets/js/utils'
 import { startAnimation, endAnimation } from './assets/js/animations'
 import Header from '@/layouts/Header.vue'
 import Footer from '@/layouts/Footer.vue'
-import ReturnTop from './components/items/button/ReturnTop.vue'
 import FastFooter from './components/items/button/FastFooter.vue'
 </script>
 
