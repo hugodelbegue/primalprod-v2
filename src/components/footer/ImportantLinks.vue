@@ -1,5 +1,6 @@
 <template>
     <ul class="importantlinks">
+        <h3 class="title-importantlinks">Ressources</h3>
         <li>
             <router-link :to="{ name: 'faq' }">FAQ</router-link>
         </li>
@@ -11,11 +12,18 @@
         <li>
             <router-link :to="{ name: 'contact' }">Formulaire de contact</router-link>
         </li>
+        <h3 class="title-importantlinks">Offres</h3>
         <li>
-            <router-link :to="{ name: 'home' }">Autre</router-link>
+            <router-link :to="{ name: 'basic' }">Basic</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'home' }">Autre</router-link>
+            <router-link :to="{ name: 'offer' }">Smart</router-link>
+        </li>
+        <li>
+            <router-link :to="{ name: 'offer' }">Sur devis</router-link>
+        </li>
+        <li>
+            <router-link :to="{ name: 'offer' }">Maintenance</router-link>
         </li>
     </ul>
 </template>
@@ -42,6 +50,18 @@ export default {
         place-items: end;
     }
 
+    .title-importantlinks {
+        margin: 2em 0 1em;
+
+        &:first-child {
+            margin-top: 1em;
+
+            @media #{$switch} {
+                margin-top: 0;
+            }
+        }
+    }
+
     li {
         padding: 1em 0em;
         text-decoration: underline;
@@ -55,7 +75,7 @@ export default {
         }
 
         @media #{$switch} {
-            padding: 0;
+            // padding: 0;
             line-height: normal;
         }
     }

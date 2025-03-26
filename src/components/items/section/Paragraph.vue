@@ -79,5 +79,9 @@ export default {
     display: flex;
     width: 80%;
     margin: auto;
+
+    @media #{$mobileScreen} {
+        width: 70%;
+    }
 }
 </style>

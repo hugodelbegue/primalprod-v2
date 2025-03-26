@@ -176,6 +176,10 @@ export default {
 
         &:hover {
             color: var(--color-important);
+
+            @media #{$switch} {
+                transform: translateX(2em);
+            }
         }
 
         @media #{$switch} {

@@ -36,16 +36,15 @@
                 Jean Dupont, Directeur Général
             </template>
         </Testimonial>
-        <ContactReminder route="services" routeText="Consulter mes prestations !">
+        <ContactReminder class="servives-reminder" route="services" routeText="Consulter mes prestations !">
             <template #sendcontact-title>
-                <h2 class="space-title">Un petit doute ! Besoin de consulter mes <span
-                        class="animation-hover">prestations</span>&nbsp;!</h2>
+                <h2 class="space-title">Encore un&nbsp;<span class="animation-hover">doute</span>&nbsp;? Prends 5
+                    minutes pour être sûr.</h2>
             </template>
             <template #sendcontact-paragraph>
                 <p class="space-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
-                    exercitationem, unde alias
-                    perferendis voluptatibus autem harum earum laboriosam inventore.
+                    Tu te questionnes et hésites toujours, n'hésite pas à consulter mes prestations. tu y trouveras
+                    sûrement les réponses que tu recherches.
                 </p>
             </template>
         </ContactReminder>
@@ -103,5 +102,10 @@ import IconContact from '@/components/icons/IconEmail.vue'
         flex: 40%;
         display: flex;
     }
+}
+
+.servives-reminder :deep(.layout-sendcontact) {
+    place-items: center;
+    text-align: center;
 }
 </style>

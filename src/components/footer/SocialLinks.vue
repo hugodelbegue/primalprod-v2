@@ -1,6 +1,5 @@
 <template>
     <div class="layout-sociallinks">
-        <ButtonDarkMode />
         <div class="layout-networks">
             <div>
                 <p>Retrouvre moi également sur</p>
@@ -23,6 +22,7 @@
                 </li>
             </ul>
         </div>
+        <ButtonDarkMode />
     </div>
 </template>
 
@@ -53,6 +53,11 @@ export default {
 
 .layout-networks {
     margin-top: 2em;
+    margin-bottom: 5em;
+
+    @media #{$switch} {
+        margin-top: 0;
+    }
 }
 
 .networks {

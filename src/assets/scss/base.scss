@@ -34,7 +34,7 @@
 
   --space-h: 1rem;
   --space-p: 1rem;
-  --space-button-bottom: 2em;
+  --space-button-bottom: 3em;
 
   --side-between: 10px;
   --side: 1rem;
@@ -105,11 +105,11 @@
 
   @media #{$mobileScreen} {
     --f-size-h1: 2em;
-    --f-size-h2: 1.6em;
+    --f-size-h2: 1.35em;
     --f-size-h3: 1.05em;
     --f-line-title: 1.15;
 
-    --space-h: 1.5rem;
+    --space-h: 2rem;
 
     --side: 1.5rem;
     --side-y: 3.5rem;
@@ -118,7 +118,7 @@
 
   @media #{$tabletScreen} {
     --f-size-h1: 2.4em;
-    --f-size-h2: 1.8em;
+    --f-size-h2: 1.5em;
     --f-size-h3: 1.1em;
     --f-line-title: 1;
 

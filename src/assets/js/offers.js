@@ -8,7 +8,7 @@ export default {
                 titleMenu: 'Basic',
                 route: "basic",
                 button: "Offre basic",
-                preview: "L’offre Basic est conçue pour offrir aux clients une présence en ligne efficace et accessible, mettant en avant leurs services et actualités. Elle permet une communication simplifiée et rapide avec les visiteurs grâce aux moyens de contact intégrés.",
+                preview: "L’offre Basic est conçue pour assurer aux clients une présence en ligne efficace et accessible. Elle met en avant leurs services et actualités, tout en facilitant la communication avec les visiteurs grâce à des moyens de contact intégrés, garantissant ainsi une interaction fluide et simplifiée.",
                 points: [
                     "Création d'une page web simple",
                     "Formulaire de contact",
@@ -30,7 +30,7 @@ export default {
                 titleMenu: 'Smart',
                 route: "offer",
                 button: "Offre smart",
-                preview: "L’offre Smart est conçue pour offrir aux clients une présence en ligne efficace et accessible, mettant en avant leurs services et actualités. Elle permet une communication simplifiée et rapide avec les visiteurs grâce aux moyens de contact intégrés.",
+                preview: "L’offre Smart permet aux clients de bénéficier d’une présence en ligne optimisée et interactive. Elle inclut des fonctionnalités avancées pour valoriser leurs services, attirer plus de visiteurs et améliorer l’engagement grâce à des outils performants, assurant ainsi une communication fluide et efficace.",
                 points: [
                     "Création d'une page web simple",
                     "Formulaire de contact",
@@ -52,7 +52,7 @@ export default {
                 titleMenu: 'Devis',
                 route: "offer",
                 button: "Offre sur devis",
-                preview: "L’offre Sur devis est conçue pour offrir aux clients une présence en ligne efficace et accessible, mettant en avant leurs services et actualités. Elle permet une communication simplifiée et rapide avec les visiteurs grâce aux moyens de contact intégrés.",
+                preview: "L’offre Sur Devis est pensée pour répondre aux besoins spécifiques des clients. Entièrement personnalisable, elle propose des solutions sur mesure afin d’optimiser leur présence en ligne, en intégrant des fonctionnalités adaptées, garantissant ainsi une communication efficace et un engagement renforcé.",
                 points: [
                     "Création d'une page web simple",
                     "Formulaire de contact",
@@ -74,7 +74,7 @@ export default {
                 titleMenu: 'Maintenance',
                 route: "offer",
                 button: "En savoir plus",
-                preview: "L’offre de Maintenance est conçue pour offrir aux clients une présence en ligne efficace et accessible, mettant en avant leurs services et actualités. Elle permet une communication simplifiée et rapide avec les visiteurs grâce aux moyens de contact intégrés.",
+                preview: "L’offre Maintenance assure la pérennité et la performance des services en ligne des clients. Elle inclut des mises à jour régulières, une surveillance proactive et un support technique réactif, garantissant ainsi une sécurité optimale, une disponibilité constante et une expérience utilisateur sans interruption.",
                 points: [
                     "Reprise de l’ancien site",
                     "Mise à jour du site et des plugins",

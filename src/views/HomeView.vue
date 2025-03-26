@@ -3,8 +3,8 @@
     <div class="layout-first-view frameworkX middle switch-direction">
       <Logo class="logo margin-x">
         <template #img>
-          <img class="logo-img" alt="Logo" :src="LogoMain" />
-          <img class="logo-avatar" alt="Logo" :src="Avatar" />
+          <img class="logo-mobile" alt="Logo" :src="LogoMain" />
+          <img class="logo-desktop" alt="Logo" :src="Avatar" />
         </template>
       </Logo>
       <AboutMe class="margin-x" />
@@ -13,21 +13,25 @@
     <Video class="logo-video" />
     <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-paragraph load" src="@/assets/img/media-section/collab.svg" alt="Illustration ampoule"
-          height="360" @load="loading">
+        <img class="img-profil img-paragraph load" alt="Logo" :src="Avatar" height="290" @load="loading" />
       </template>
       <template #title-paragraph>
         <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
-          accusamus, soluta rerum laboriosam aspernatur ratione.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam inventore sint quam error quis corrupti aperiam
+          modi iste totam fugiat delectus similique et sapiente fugit, accusamus dolorum autem numquam, molestiae ut.
+          Dicta asperiores blanditiis quia ea, nisi, incidunt sunt sapiente soluta molestias ad labore itaque quam earum
+          illo voluptate adipisci? Quisquam dolor, repellat quidem ea obcaecati nam odio rerum dignissimos natus dolore
+          quae accusamus maiores ipsum aliquam sint inventore sed placeat dicta, qui impedit accusantium perferendis!
+          Cupiditate, eum ratione. Officiis voluptates sint fuga nulla commodi assumenda perspiciatis molestias, ab
+          veritatis adipisci qui incidunt molestiae laudantium! Placeat enim neque corporis adipisci.
         </p>
       </template>
     </Paragraph>
     <ServicesPreview />
-    <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
+    <ContactReminder class="contact-home" route="contact" routeText="Réservez votre rendez-vous !">
       <template #sendcontact-title>
         <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
           bla</h2>
@@ -69,7 +73,7 @@ import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
 import Video from '@/components/items/Video.vue'
-import Avatar from '@/components/home-page/section-aboutme/avatar.svg'
+import Avatar from '@/assets/img/media-section/avatar.svg'
 import LogoMain from '@/assets/img/logo-primalprod.svg'
 </script>
 
@@ -89,14 +93,22 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
   }
 }
 
+.contact-home {
+  padding-top: 3rem;
+
+  @media #{$switch} {
+    padding-top: inherit;
+  }
+}
+
 .logo {
   display: flex;
   place-content: center;
   place-items: flex-start;
 }
 
-.logo-img,
-.logo-avatar {
+.logo-mobile,
+.logo-desktop {
   width: 100%;
 
   @media #{$switch} {
@@ -106,18 +118,22 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
   }
 }
 
-.logo-img {
+.logo-mobile {
   @media #{$switch} {
     display: none;
   }
 }
 
 .logo-video,
-.logo-avatar {
+.logo-desktop {
   display: none;
 
   @media #{$switch} {
     display: block;
   }
+}
+
+.img-profil {
+  margin: 1rem auto;
 }
 </style>

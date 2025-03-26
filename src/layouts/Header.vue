@@ -86,6 +86,7 @@ header {
     --delay: 100ms;
 
     @media #{$switch} {
+        --side-x: calc(50% - var(--max-desktop) / 2);
         --side-y: 1rem;
         --margin-header-x: var(--margin-block-x);
         --size-content: 1em;

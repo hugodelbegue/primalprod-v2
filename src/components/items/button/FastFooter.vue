@@ -1,15 +1,17 @@
 <template>
     <div ref="button" class="button-return shadow-high" :class="classStart">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-question"
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-info"
             viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14" />
+            <path
+                d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
         </svg>
     </div>
+    <Info ref="info" :class="classStart" />
 </template>
 
 <script setup>
 import { isMobileDevice } from '@/assets/js/utils'
+import Info from '../Info.vue'
 defineProps({
     currentRoute: String,
     bottomRef: Object
@@ -20,13 +22,16 @@ defineProps({
 export default {
     mounted() {
         const { button } = this.$refs
+        const info = this.$refs.info.$el
         window.addEventListener("scroll", () => {
             const bottomPage = this.bottomRef.getBoundingClientRect().top
             const windowHeight = window.innerHeight
             if (isMobileDevice() && this.currentRoute == 'home') {
                 this.hideButton(window.scrollY > 20 && bottomPage > windowHeight, button)
+                this.hideButton(window.scrollY > 20 && bottomPage > windowHeight, info)
             } else {
                 this.hideButton(bottomPage > windowHeight, button)
+                this.hideButton(bottomPage > windowHeight, info)
             }
         })
     },
@@ -46,7 +51,6 @@ export default {
             return {
                 'show': isMobileDevice() && this.currentRoute !== 'home' || !isMobileDevice(),
                 'hide': isMobileDevice() && this.currentRoute == 'home'
-
             }
         }
     }
