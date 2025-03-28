@@ -17,7 +17,7 @@
                         quia,
                         ullam totam nisi doloremque laboriosam ratione molestiae nostrum enim sunt suscipit.
                     </p>
-                    <ButtonPrice class="button-price" route="basic" hash="#price" text="Tarif" />
+                    <ButtonPrice class="button-price" :route="offerOne.basic" hash="#price" text="Tarif" />
                 </div>
             </div>
         </div>

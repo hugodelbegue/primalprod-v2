@@ -17,7 +17,7 @@
     <div ref="bottom"></div>
     <Footer />
   </div>
-  <FastFooter :current-route="currentRoute" :bottomRef="bottom" title="Centre d'aides" />
+  <FastFooter :current-route="currentRoute" :bottomRef="bottom" title="Support" />
 </template>
 
 <script setup>

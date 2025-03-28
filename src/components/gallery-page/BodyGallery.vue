@@ -17,11 +17,11 @@
             </article>
         </div>
         <div class="pagination middle">
-            <Button @click="previousPage" :disabled="currentPage === 1" type="button" msg="<" width="50px"
-                height="50px" />
+            <Button @click="previousPage" :disabled="currentPage === 1" type="button" msg="<" width="48px"
+                height="48px" />
             <span>{{ currentPage }}&nbsp;/&nbsp;{{ totalPages }}</span>
-            <Button @click="nextPage" :disabled="currentPage === totalPages" type="button" msg=">" width="50px"
-                height="50px" />
+            <Button @click="nextPage" :disabled="currentPage === totalPages" type="button" msg=">" width="48px"
+                height="48px" />
         </div>
     </div>
 </template>

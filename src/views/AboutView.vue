@@ -43,12 +43,18 @@
         <img class="img-paragraph load" src="@/assets/img/media-section/typing.svg" @load="loading">
       </template>
       <template #title-paragraph>
-        <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-title">Travailler&nbsp;<span class="animation-hover">ensemble</span>&nbsp;, c'est comment ?
+        </h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
-          accusamus, soluta rerum laboriosam aspernatur ratione.
+          Travailler ensemble efficacement repose sur plusieurs éléments clés : une communication claire, une
+          répartition des tâches équilibrée et une bonne gestion des attentes. Il est essentiel d’établir des objectifs
+          communs et de favoriser un climat de confiance et de respect mutuel. <br><br> L’écoute active et la prise en
+          compte des
+          idées de chacun permettent d’améliorer la collaboration. Enfin, l’utilisation d’outils adaptés et de méthodes
+          de travail agiles facilite la coordination et la productivité. En mettant en place ces bonnes pratiques, il
+          devient plus simple de créer une dynamique de groupe harmonieuse et efficace.
         </p>
       </template>
     </Paragraph>
@@ -93,21 +99,6 @@ import Paragraph from '@/components/items/section/Paragraph.vue'
 import Proverb from '@/components/about-page/Proverb.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 </script>
-
-<!-- <script>
-export default {
-  data() {
-    return {
-      appear: false
-    }
-  },
-  methods: {
-    test() {
-      this.appear = true
-    }
-  }
-}
-</script> -->
 
 <style lang="scss" scoped>
 .background-header-about {

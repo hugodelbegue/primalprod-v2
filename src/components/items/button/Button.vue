@@ -30,7 +30,7 @@ defineProps({
         color: var(--color-text);
         font-size: var(--f-button);
         font-family: var(--f-family-button);
-        border-radius: var(--radius-high);
+        border-radius: var(--corner-button);
         border: none;
         box-shadow: var(--base-shadow) var(--color-shadow);
         position: relative;

@@ -36,7 +36,7 @@ a {
   transition: opacity var(--time-transition);
 
   @media #{$mobileScreen} {
-    &:not(.project-url, .link-logo, .button-base, .link-host):hover {
+    &:not(.project-url, .link-logo, .button-base, .link-host, .button-info):hover {
       opacity: .85;
     }
   }
@@ -52,7 +52,8 @@ a.router-link-active {
 
 .nav-link,
 .card,
-.copyright {
+.copyright,
+.button-info {
   a {
     text-decoration: none !important;
   }
