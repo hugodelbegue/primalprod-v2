@@ -36,7 +36,7 @@
   --space-p: 1rem;
 
   // button
-  --size-button-high: 48px;
+  --size-button-high: 59px;
   --size-button-low: 30px;
   --corner-button: var(--radius-high);
   --margin-top-button: 3em;
@@ -130,6 +130,8 @@
     --side: 2rem;
     --side-y: 5rem;
     --margin-block-x: 50px;
+
+    --size-button-high: 48px;
   }
 }
 

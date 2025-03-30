@@ -6,6 +6,9 @@
         <p>Développeur web passionné de front-end, je cherche continuellement à m'améliorer et reste ouvert à tout
             type
             d'opportunités. Situé dans la ville de Grenoble, une collaboration dans toute la France est possible</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit repellendus inventore doloremque
+            tenetur error.</p>
     </div>
 </template>
 

@@ -63,7 +63,7 @@ a {
 }
 
 .anim-open-list {
-    --animation: 125ms;
+    --animation: 250ms;
     animation: rollOut var(--animation) cubic-bezier(.28, .76, .82, .96) both;
     opacity: 0;
 }

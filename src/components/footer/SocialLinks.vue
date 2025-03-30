@@ -22,7 +22,7 @@
                 </li>
             </ul>
         </div>
-        <ButtonDarkMode />
+        <ButtonDarkMode class="dark-button" />
     </div>
 </template>
 
@@ -57,6 +57,7 @@ export default {
 
     @media #{$switch} {
         margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -84,5 +85,9 @@ a.router-link-active {
     &:hover {
         opacity: 1 !important;
     }
+}
+
+.dark-button {
+    height: 100%;
 }
 </style>

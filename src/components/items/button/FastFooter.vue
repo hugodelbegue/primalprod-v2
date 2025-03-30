@@ -1,8 +1,13 @@
 <template>
     <div ref="button" class="layout-list-info" :class="classStart">
         <Info v-if="list" />
-        <div class="button-return middle shadow-high" @click="openList">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-info"
+        <div class="button-return middle shadow-high" :class="addArrow" @click="openList">
+            <svg v-if="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="icon-chevron" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+            </svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-info"
                 viewBox="0 0 16 16">
                 <path
                     d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
@@ -24,7 +29,8 @@ defineProps({
 export default {
     data() {
         return {
-            list: false
+            list: false,
+            arrow: false
         }
     },
     mounted() {
@@ -51,6 +57,11 @@ export default {
         },
         openList() {
             this.list = !this.list
+            if (this.list) {
+                this.arrow = true
+            } else {
+                this.arrow = false
+            }
         }
     },
     computed: {
@@ -59,6 +70,19 @@ export default {
                 'show': isMobileDevice() && this.currentRoute !== 'home' || !isMobileDevice(),
                 'hide': isMobileDevice() && this.currentRoute == 'home'
             }
+        },
+        addArrow() {
+            return {
+                'arrow': this.arrow == true
+            }
+        }
+    },
+    watch: {
+        '$route'(to, from) {
+            this.$nextTick(() => {
+                this.arrow = false
+                this.list = false
+            })
         }
     }
 }
@@ -69,7 +93,7 @@ export default {
     z-index: 3;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
@@ -111,5 +135,9 @@ export default {
 .hide {
     opacity: 0 !important;
     pointer-events: none;
+}
+
+.arrow {
+    transform: scale(1) !important;
 }
 </style>
