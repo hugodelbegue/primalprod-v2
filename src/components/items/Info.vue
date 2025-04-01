@@ -1,6 +1,6 @@
 <template>
     <div class="layout-infos anim-open-list">
-        <div class="button-info middle shadow-high">
+        <div class="button-info middle shadow-high" @click="returnTop(), openList()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-top"
                 viewBox="0 0 16 16">
                 <path
@@ -24,11 +24,22 @@
     </div>
 </template>
 
+<script setup>
+import { inject } from "vue"
+const top = inject("top")
+const returnTop = () => {
+    if (top) {
+        top()
+    }
+}
+defineProps(['openList'])
+</script>
+
 <style lang="scss" scoped>
 .layout-infos {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--side-between);
     transition: all 150ms linear;
 }
 

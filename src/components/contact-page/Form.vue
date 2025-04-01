@@ -36,7 +36,7 @@ import TallyForm from './TallyForm.vue'
 
 .layout-form {
     display: flex;
-    gap: 10px;
+    gap: var(--side-between);
 }
 
 .description-form {

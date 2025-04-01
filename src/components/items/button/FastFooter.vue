@@ -1,17 +1,19 @@
 <template>
     <div ref="button" class="layout-list-info" :class="classStart">
-        <Info v-if="list" />
+        <Info v-if="list" :open-list="openList" />
         <div class="button-return middle shadow-high" :class="addArrow" @click="openList">
-            <svg v-if="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="icon-chevron" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-            </svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-info"
-                viewBox="0 0 16 16">
-                <path
-                    d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0" />
-            </svg>
+            <Transition name="anim-arrow" mode="out-in">
+                <svg v-if="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--beige)"
+                    class="icon-chevron" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                </svg>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--beige)"
+                    class="icon-bubble" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                </svg>
+            </Transition>
         </div>
     </div>
 </template>
@@ -90,16 +92,18 @@ export default {
 
 <style lang="scss" scoped>
 .layout-list-info {
+    --size-button-high: 59px;
     z-index: 3;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: calc(var(--side-between) * 2);
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     transition: opacity 150ms linear, bottom 500ms linear, right 500ms linear;
 
     @media #{$switch} {
+        --size-button-high: 48px;
         bottom: 2rem;
         right: 2rem;
     }
@@ -139,5 +143,33 @@ export default {
 
 .arrow {
     transform: scale(1) !important;
+}
+
+.anim-arrow-enter-active {
+    animation: rotate-out 150ms ease;
+}
+
+.anim-arrow-leave-active {
+    animation: rotate-in 150ms ease;
+}
+
+@keyframes rotate-in {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(90deg) scale(0);
+    }
+}
+
+@keyframes rotate-out {
+    0% {
+        transform: rotate(-90deg) scale(0);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
 }
 </style>

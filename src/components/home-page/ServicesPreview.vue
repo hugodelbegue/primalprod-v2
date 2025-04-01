@@ -19,7 +19,7 @@
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
-                    }}
+                        }}
                     </li>
                 </ul>
             </div>
@@ -108,12 +108,12 @@ export default {
 
 <style lang="scss" scoped>
 .background-offers-preview {
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-top: calc(var(--side-between) * -1);
+    margin-bottom: calc(var(--side-between) * -1);
 
     @media #{$switch} {
-        margin-top: -20px;
-        margin-bottom: -20px;
+        margin-top: calc(var(--side-between) * -2);
+        margin-bottom: calc(var(--side-between) * -2);
     }
 }
 
@@ -121,13 +121,13 @@ export default {
     background: var(--background-offer);
     border-radius: var(--radius-low);
     padding: var(--side);
-    margin-bottom: 10px;
+    margin-bottom: var(--side-between);
 }
 
 .layout-offers-preview {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--side-between);
 
     @media #{$switch} {
         flex-direction: row;

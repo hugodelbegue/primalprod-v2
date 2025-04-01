@@ -151,14 +151,15 @@ article {
 }
 
 .pagination {
-    column-gap: var(--side-between);
+    // column-gap: var(--side-between);
     margin-bottom: var(--side-y);
 
-    @media #{$mobileScreen} {
-        place-content: flex-end;
-    }
+    // @media #{$mobileScreen} {
+    //     place-content: flex-end;
+    // }
 
     span {
+        margin: auto;
         font-size: var(--f-size-small);
     }
 }

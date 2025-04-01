@@ -45,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 .layout-paragraph {
     display: flex;
-    gap: 10px;
+    gap: var(--side-between);
 
     @media #{$switch} {
         gap: 0;

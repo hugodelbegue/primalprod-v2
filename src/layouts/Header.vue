@@ -116,7 +116,6 @@ header {
     position: relative;
     display: flex;
     place-items: center;
-    gap: 10px;
 
     img {
         transition: all var(--time-animation);

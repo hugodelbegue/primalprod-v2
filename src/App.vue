@@ -1,5 +1,5 @@
 <template>
-  <div ref="top"></div>
+  <div ref="topRef"></div>
   <div :class="showPaint"></div>
   <div class="layout">
     <Header />
@@ -23,9 +23,18 @@
 <script setup>
 import { isMobileDevice } from './assets/js/utils'
 import { startAnimation, endAnimation } from './assets/js/animations'
+import { ref, provide } from "vue"
 import Header from '@/layouts/Header.vue'
 import Footer from '@/layouts/Footer.vue'
 import FastFooter from './components/items/button/FastFooter.vue'
+const topRef = ref(null)
+const top = () => {
+  // Return to the top
+  if (topRef.value) {
+    topRef.value.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+provide("top", top)
 </script>
 
 <script>
@@ -54,11 +63,6 @@ export default {
     this.bottom = this.$refs.bottom
   },
   methods: {
-    // Return to the top
-    top() {
-      const { top } = this.$refs
-      top.scrollIntoView({ behavior: 'smooth' })
-    },
     topReturn() {
       window.scrollTo(0, 0)
     }
