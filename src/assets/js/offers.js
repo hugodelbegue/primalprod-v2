@@ -28,7 +28,7 @@ export default {
                 number: 2,
                 title: 'Smart',
                 titleMenu: 'Smart',
-                route: "offer",
+                route: "smart",
                 button: "Offre smart",
                 preview: "L’offre Smart permet aux clients de bénéficier d’une présence en ligne optimisée et interactive. Elle inclut des fonctionnalités avancées pour valoriser leurs services, attirer plus de visiteurs et améliorer l’engagement grâce à des outils performants, assurant ainsi une communication fluide et efficace.",
                 points: [
@@ -50,7 +50,7 @@ export default {
                 number: 3,
                 title: 'Sur devis',
                 titleMenu: 'Devis',
-                route: "offer",
+                route: "request",
                 button: "Offre sur devis",
                 preview: "L’offre Sur Devis est pensée pour répondre aux besoins spécifiques des clients. Entièrement personnalisable, elle propose des solutions sur mesure afin d’optimiser leur présence en ligne, en intégrant des fonctionnalités adaptées, garantissant ainsi une communication efficace et un engagement renforcé.",
                 points: [
@@ -72,7 +72,7 @@ export default {
                 number: 4,
                 title: 'Maintenance',
                 titleMenu: 'Maintenance',
-                route: "offer",
+                route: "maintenance",
                 button: "En savoir plus",
                 preview: "L’offre Maintenance assure la pérennité et la performance des services en ligne des clients. Elle inclut des mises à jour régulières, une surveillance proactive et un support technique réactif, garantissant ainsi une sécurité optimale, une disponibilité constante et une expérience utilisateur sans interruption.",
                 points: [

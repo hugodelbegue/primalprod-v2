@@ -50,7 +50,11 @@ export default {
             questionList: [
                 { question: "Question 1 ?", response: "Something small enough to escape casual notice." },
                 { question: "Question 2 ?", response: "Something small enough to escape casual notice." },
-                { question: "Question 3 ?", response: "Something small enough to escape casual notice." }
+                { question: "Question 3 ?", response: "Something small enough to escape casual notice." },
+                { question: "Question 4 ?", response: "Something small enough to escape casual notice." },
+                { question: "Question 5 ?", response: "Something small enough to escape casual notice." },
+                { question: "Question 6 ?", response: "Something small enough to escape casual notice." },
+                { question: "Question 7 ?", response: "Something small enough to escape casual notice." }
             ]
         }
     }

@@ -64,7 +64,6 @@ export default {
 
     li {
         padding: 1em 0em;
-        text-decoration: underline;
 
         &:first-child {
             // padding-top: 0;

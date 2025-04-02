@@ -81,11 +81,13 @@ a {
 
 @keyframes rollOut {
     from {
-        transform: translateX(5%);
+        transform: scale(0);
+        transform-origin: bottom right;
     }
 
     to {
-        transform: translateX(0%);
+        transform: scale(1);
+        transform-origin: bottom right;
         opacity: 1;
     }
 }

@@ -35,7 +35,7 @@ defineProps({
 .layout-details {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: var(--side-between);
 }
 
 details {

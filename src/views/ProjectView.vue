@@ -5,9 +5,10 @@
                 <template #title-project>
                     Site . {{ data['full-title'] }}
                 </template>
-                <template #tag-project>
-                    {{ data.tag }}
-                </template>
+                <template #tag-project v-if="data['tag-url'] == 'basic'">Offre basic</template>
+                <template #tag-project v-if="data['tag-url'] == 'smart'">Offre smart</template>
+                <template #tag-project v-if="data['tag-url'] == 'request'">Offre sur devis</template>
+                <template #tag-project v-if="data['tag-url'] == 'maintenance'">Maintenance</template>
             </HeaderProject>
             <BodyProject :url="imgUrl(data.preview)" v-if="cleanUrl(data.title) === title">
                 <template #text-project>

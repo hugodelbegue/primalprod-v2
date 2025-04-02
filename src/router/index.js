@@ -45,6 +45,24 @@ const router = createRouter({
       props: true
     },
     {
+      path: '/prestations/offre-smart',
+      name: 'smart',
+      component: () => import('../views/SmartView.vue'),
+      props: true
+    },
+    {
+      path: '/prestations/offre-sur-devis',
+      name: 'request',
+      component: () => import('../views/RequestView.vue'),
+      props: true
+    },
+    {
+      path: '/prestations/maintenance',
+      name: 'maintenance',
+      component: () => import('../views/MaintenanceView.vue'),
+      props: true
+    },
+    {
       path: '/realisations',
       name: 'gallery',
       component: () => import('../views/GalleryView.vue')

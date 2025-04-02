@@ -1,9 +1,9 @@
 <template>
     <div class="layout-sociallinks">
         <div class="layout-networks">
-            <div>
-                <p>Retrouvre moi également sur</p>
-            </div>
+            <p>
+                Retrouvre moi également sur
+            </p>
             <ul class="networks">
                 <li>
                     <a :href="linkedin" target="_blank">
@@ -58,6 +58,10 @@ export default {
     @media #{$switch} {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    p {
+        line-height: 1;
     }
 }
 

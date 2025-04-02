@@ -1,7 +1,7 @@
 <template>
     <div ref="button" class="layout-list-info" :class="classStart">
         <Info v-if="list" :open-list="openList" />
-        <div class="button-return middle shadow-high" :class="addArrow" @click="openList">
+        <div class="button-info middle shadow-high" :class="addArrow" @click="openList">
             <Transition name="anim-arrow" mode="out-in">
                 <svg v-if="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--beige)"
                     class="icon-chevron" viewBox="0 0 16 16">
@@ -109,16 +109,20 @@ export default {
     }
 }
 
-.button-return {
+.button-info {
     --color-button: var(--color-text);
     cursor: pointer;
     background: var(--color-important);
     width: auto;
+    margin: auto;
     height: var(--size-button-high);
     aspect-ratio: 1 / 1;
-    margin: 0;
-    border-radius: var(--corner-button);
+    border-radius: 50%;
     transition: all 150ms linear;
+
+    @media #{$switch} {
+        margin: 0 0 0 auto;
+    }
 
     &:hover {
         @media #{$switch} {
