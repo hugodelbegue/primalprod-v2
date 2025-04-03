@@ -3,17 +3,17 @@
     <div class="layout-first-view frameworkX middle switch-direction">
       <Logo class="logo margin-x">
         <template #img>
-          <img class="logo-mobile" alt="Logo" :src="LogoMain" />
-          <img class="logo-desktop" alt="Logo" :src="Avatar" />
+          <img class="logo-mobile load" alt="Logo" :src="LogoMain" @load="loading" />
+          <img class="logo-desktop load" alt="Logo" :src="Avatar" @load="loading" />
         </template>
       </Logo>
       <AboutMe class="margin-x" />
       <!-- <Video class="logo-video" /> -->
     </div>
     <Video class="logo-video" />
-    <Paragraph background="var(--background-paragraph)" :img-right="true">
+    <Paragraph class="paragraph-profil" background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-profil img-paragraph load" alt="Logo" :src="Avatar" height="290" @load="loading" />
+        <img class="img-profil load" alt="Profil" :src="Profil" @load="loading" />
       </template>
       <template #title-paragraph>
         <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -74,6 +74,7 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
 import Video from '@/components/items/Video.vue'
 import Avatar from '@/assets/img/media-section/avatar.svg'
+import Profil from '@/assets/img/media-section/profil-test.png'
 import LogoMain from '@/assets/img/logo-primalprod.svg'
 </script>
 
@@ -133,7 +134,22 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
   }
 }
 
+.paragraph-profil :deep(.img-paragraph) {
+  @media #{$switch} {
+    margin: 0;
+  }
+}
+
 .img-profil {
-  margin: 1rem auto;
+  background: var(--black);
+  border-radius: 50%;
+  // border: 2px solid var(--color-line-box);
+  object-fit: cover;
+  margin: var(--side-y);
+
+  // marin-bottom: calc(var(--side-y) * -1);
+  @media #{$switch} {
+    margin: 0;
+  }
 }
 </style>

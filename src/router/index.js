@@ -33,12 +33,6 @@ const router = createRouter({
       component: () => import('../views/ServiceView.vue')
     },
     {
-      path: '/prestations/offre-default',
-      name: 'offer',
-      component: () => import('../views/OfferView.vue'),
-      props: true
-    },
-    {
       path: '/prestations/offre-basic',
       name: 'basic',
       component: () => import('../views/BasicView.vue'),

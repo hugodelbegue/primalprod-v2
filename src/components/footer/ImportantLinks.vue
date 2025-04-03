@@ -17,13 +17,13 @@
             <router-link :to="{ name: 'basic' }">Basic</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'offer' }">Smart</router-link>
+            <router-link :to="{ name: 'smart' }">Smart</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'offer' }">Sur devis</router-link>
+            <router-link :to="{ name: 'request' }">Sur devis</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'offer' }">Maintenance</router-link>
+            <router-link :to="{ name: 'maintenance' }">Maintenance</router-link>
         </li>
     </ul>
 </template>

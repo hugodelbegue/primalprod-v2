@@ -7,7 +7,7 @@
                     d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
             </svg>
         </div>
-        <router-link :to="{ name: 'contact' }" class="button-info middle shadow-high">
+        <router-link :to="{ name: 'contact' }" class="button-info middle shadow-high" @click="openList()">
             <li>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-question" viewBox="0 0 16 16">
@@ -16,7 +16,7 @@
                 </svg>
             </li>
         </router-link>
-        <router-link :to="{ name: 'faq' }" class="button-info middle shadow-high">
+        <router-link :to="{ name: 'faq' }" class="button-info middle shadow-high" @click="openList()">
             <li>
                 FAQ
             </li>
@@ -56,6 +56,7 @@ a {
     background: var(--color-list-info);
     width: auto;
     height: var(--size-button-high);
+    aspect-ratio: 1.5 / 1;
     padding: 0 1em;
     border-radius: var(--corner-button);
     line-height: normal;

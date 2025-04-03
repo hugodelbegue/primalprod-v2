@@ -92,6 +92,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper-main {
+  min-height: 100vh;
+}
+
 // Label background
 .paint-contact {
   background: url(@/assets/img/label.svg) top right / 25vh no-repeat;

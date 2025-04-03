@@ -13,7 +13,7 @@
                 </p>
                 <p class="space-text">
                     Si tu as un problème avec le formulaire, clique sur <a class="important-text"
-                        href="https://tally.so/r/wod0dN">ce lien</a>.
+                        href="https://tally.so/r/wod0dN" target="_blank">ce lien</a>.
                 </p>
             </div>
             <div class="form middle shadow-low">

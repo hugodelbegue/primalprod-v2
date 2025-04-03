@@ -108,6 +108,8 @@ export default {
 
 <style lang="scss" scoped>
 .background-offers-preview {
+    z-index: 1;
+    position: relative;
     margin-top: calc(var(--side-between) * -1);
     margin-bottom: calc(var(--side-between) * -1);
 
