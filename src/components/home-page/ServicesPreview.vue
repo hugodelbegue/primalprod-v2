@@ -24,41 +24,41 @@
                 </ul>
             </div>
             <div class="view-offers-preview">
-                <OfferDefault v-if="basic" class="offer anim-offer shadow-low" :offer="offerOne.number"
-                    :title="offerOne.title" :route="offerOne.route" :button-text="offerOne.button" :preview="true"
-                    :preview-text="offerOne.preview">
+                <OfferRenderPreview v-if="basic" class="offer anim-offer shadow-low" :offer="offerOne.number"
+                    :title="offerOne.title" :route="offerOne.route" :button-text="offerOne.button"
+                    :price="offerOne.price" :preview="true" :preview-text="offerOne.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
-                </OfferDefault>
-                <OfferDefault v-if="smart" class="offer anim-offer shadow-low" :offer="offerTwo.number"
-                    :title="offerTwo.title" :route="offerTwo.route" :button-text="offerTwo.button" :preview="true"
-                    :preview-text="offerTwo.preview">
+                </OfferRenderPreview>
+                <OfferRenderPreview v-if="smart" class="offer anim-offer shadow-low" :offer="offerTwo.number"
+                    :title="offerTwo.title" :route="offerTwo.route" :button-text="offerTwo.button"
+                    :price="offerTwo.price" :preview="true" :preview-text="offerTwo.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
-                </OfferDefault>
-                <OfferDefault v-if="request" class="offer anim-offer shadow-low" :offer="offerThree.number"
-                    :title="offerThree.title" :route="offerThree.route" :button-text="offerThree.button" :preview="true"
-                    :preview-text="offerThree.preview">
+                </OfferRenderPreview>
+                <OfferRenderPreview v-if="request" class="offer anim-offer shadow-low" :offer="offerThree.number"
+                    :title="offerThree.title" :route="offerThree.route" :button-text="offerThree.button"
+                    :price="offerThree.price" :preview="true" :preview-text="offerThree.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
-                </OfferDefault>
-                <OfferDefault v-if="maintenance" class="offer anim-offer shadow-low" :offer="offerFour.number"
+                </OfferRenderPreview>
+                <OfferRenderPreview v-if="maintenance" class="offer anim-offer shadow-low" :offer="offerFour.number"
                     :title="offerFour.title" :route="offerFour.route" :button-text="offerFour.button" :preview="true"
                     :preview-text="offerFour.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
-                </OfferDefault>
+                </OfferRenderPreview>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-import OfferDefault from '../service-page/offers/OfferDefault.vue'
+import OfferRenderPreview from '../service-page/offers/OfferRender.vue'
 </script>
 
 <script>

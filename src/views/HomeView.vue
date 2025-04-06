@@ -143,13 +143,14 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
 .img-profil {
   background: var(--black);
   border-radius: 50%;
-  // border: 2px solid var(--color-line-box);
   object-fit: cover;
-  margin: var(--side-y);
+  margin-top: var(--side-y);
+  margin-bottom: calc(var(--side-y) * -1);
+  width: 100%;
 
-  // marin-bottom: calc(var(--side-y) * -1);
   @media #{$switch} {
     margin: 0;
+    width: inherit;
   }
 }
 </style>

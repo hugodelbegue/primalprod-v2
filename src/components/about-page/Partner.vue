@@ -11,9 +11,6 @@
                 <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
                 <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
                 <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
-                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
-                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
-                <img class="partner load" src="../../assets/img/logo-2.svg" @load="loading">
             </div>
         </div>
     </div>

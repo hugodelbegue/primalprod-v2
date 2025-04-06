@@ -2,21 +2,30 @@
     <div class="background-offers frameworkX frameworkY animation-hover-active">
         <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
-            <OfferDefault class="part-one animation-part-one" :offer="offerOne.number" :title="offerOne.title"
-                :route="offerOne.route" :button-text="offerOne.button" :points="offerOne.points"
-                :text="offerOne.text" />
-            <OfferDefault class="part-two animation-part-two" :offer="offerTwo.number" :title="offerTwo.title"
-                :route="offerTwo.route" :button-text="offerTwo.button" :points="offerTwo.points"
-                :text="offerTwo.text" />
-            <OfferDefault class="part-three animation-part-three" :offer="offerThree.number" :title="offerThree.title"
-                :route="offerThree.route" :button-text="offerThree.button" :points="offerThree.points"
-                :text="offerThree.text" />
+            <OfferRender class="part-one animation-part-one" :offer="offerOne.number" :title="offerOne.title"
+                :route="offerOne.route" :popular="offerOne.popular" :button-text="offerOne.button"
+                :price="offerOne.price" :text="offerOne.text" :first-title="offerOne.firstTitle"
+                :first-points="offerOne.firstPoints" :second-title="offerOne.secondTitle"
+                :second-points="offerOne.secondPoints" :third-title="offerOne.thirdTitle"
+                :third-points="offerOne.thirdPoints" />
+            <OfferRender class="part-two animation-part-two" :offer="offerTwo.number" :title="offerTwo.title"
+                :route="offerTwo.route" :popular="offerTwo.popular" :button-text="offerTwo.button"
+                :price="offerTwo.price" :text="offerTwo.text" :first-title="offerTwo.firstTitle"
+                :first-points="offerTwo.firstPoints" :second-title="offerTwo.secondTitle"
+                :second-points="offerTwo.secondPoints" :third-title="offerTwo.thirdTitle"
+                :third-points="offerTwo.thirdPoints" />
+            <OfferRender class="part-three animation-part-three" :offer="offerThree.number" :title="offerThree.title"
+                :route="offerThree.route" :popular="offerThree.popular" :button-text="offerThree.button"
+                :price="offerThree.price" :text="offerThree.text" :first-title="offerThree.firstTitle"
+                :first-points="offerThree.firstPoints" :second-title="offerThree.secondTitle"
+                :second-points="offerThree.secondPoints" :third-title="offerThree.thirdTitle"
+                :third-points="offerThree.thirdPoints" />
             <div class="plus middle">
                 <icon-spin />
-                <span>Option supplémentaire</span>
+                <span>Soyez propriétaire de votre site</span>
             </div>
             <div class="banner-left"></div>
-            <OfferDefault class="offer part-four animation-part-four" :offer="offerFour.number" :title="offerFour.title"
+            <OfferRender class="offer part-four animation-part-four" :offer="offerFour.number" :title="offerFour.title"
                 :route="offerFour.route" :button-text="offerFour.button" :points="offerFour.points"
                 :text="offerFour.text" />
             <div class="banner-right"></div>
@@ -33,17 +42,19 @@
 
 <script setup>
 import IconSpin from '../icons/IconSpin.vue'
-import OfferDefault from './offers/OfferDefault.vue'
+import OfferRender from './offers/OfferRender.vue'
 </script>
 
 <style lang="scss" scoped>
 .layout-offers {
+    --margin-block-x: 20px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, auto);
+    // grid-template-columns: repeat(6, 1fr);
     grid-column-gap: var(--side-between);
     grid-row-gap: var(--side-y);
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         grid-row-gap: 1rem;
     }
 }
@@ -52,7 +63,7 @@ import OfferDefault from './offers/OfferDefault.vue'
     grid-column: 1 / 7;
     grid-row: 1;
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         grid-column: 1 / 3;
     }
 }
@@ -61,7 +72,7 @@ import OfferDefault from './offers/OfferDefault.vue'
     grid-column: 1 / 7;
     grid-row: 2;
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         grid-column: 3 / 5;
         grid-row: 1;
     }
@@ -71,7 +82,7 @@ import OfferDefault from './offers/OfferDefault.vue'
     grid-column: 1 / 7;
     grid-row: 3;
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         grid-column: 5 / 7;
         grid-row: 1;
     }
@@ -82,7 +93,7 @@ import OfferDefault from './offers/OfferDefault.vue'
     grid-row: 4;
     gap: var(--side-between);
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         grid-column: 3 / 5;
         grid-row: 2;
     }
@@ -103,14 +114,14 @@ import OfferDefault from './offers/OfferDefault.vue'
 .banner-right {
     display: none;
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         display: flex;
         border-radius: var(--radius-low);
     }
 }
 
 .banner-left {
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         background: var(--background-offer-banner);
         grid-column: 1;
         grid-row: 3;
@@ -118,7 +129,7 @@ import OfferDefault from './offers/OfferDefault.vue'
 }
 
 .banner-right {
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         background: var(--background-offer-banner);
         grid-column: 6;
         grid-row: 3;
@@ -129,7 +140,7 @@ import OfferDefault from './offers/OfferDefault.vue'
     grid-column: 1 / 7;
     grid-row: 5;
 
-    @media #{$mobileScreen} {
+    @media #{$switch} {
         grid-column: 2 / 6;
         grid-row: 3;
     }

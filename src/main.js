@@ -4,13 +4,19 @@ import api from './assets/api/data.json'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import offerVariable from '@/assets/js/offers'
+import offerOne from '@/assets/js/offers/offer-one'
+import offerTwo from '@/assets/js/offers/offer-two'
+import offerThree from '@/assets/js/offers/offer-three'
+import offerFour from '@/assets/js/offers/offer-four'
 
 
 const app = createApp(App)
 
 app.use(router)
 app.config.globalProperties.$api = api
-app.mixin(offerVariable)
+app.mixin(offerOne)
+app.mixin(offerTwo)
+app.mixin(offerThree)
+app.mixin(offerFour)
 
 app.mount('#app')
