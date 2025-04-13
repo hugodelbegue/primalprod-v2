@@ -12,6 +12,7 @@
                 consequuntur quia!
             </p>
         </div>
+        <div ref="test2"></div>
         <div class="layout-offers-preview margin-x">
             <div class="menu-offers-preview">
                 <ul class="list-offers-preview">
@@ -122,7 +123,7 @@ export default {
 .layout-offers-preview-text {
     background: var(--background-offer);
     border-radius: var(--radius-low);
-    padding: var(--side);
+    padding: var(--side-up) var(--side);
     margin-bottom: var(--side-between);
 }
 
@@ -177,10 +178,12 @@ export default {
         transition: all var(--time-animation);
 
         &:hover {
-            color: var(--color-important);
-
             @media #{$switch} {
                 transform: translateX(2em);
+
+                &::before {
+                    width: calc(100% - 2em) !important;
+                }
             }
         }
 
@@ -253,7 +256,7 @@ export default {
     @media #{$switch} {
         background: transparent !important;
         border-radius: 0;
-        transform: translateX(2em);
+        transform: translateX(var(--side));
 
         &::before {
             width: calc(100% - 2em) !important;

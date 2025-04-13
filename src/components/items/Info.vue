@@ -21,6 +21,11 @@
                 FAQ
             </li>
         </router-link>
+        <router-link :to="{ name: 'services' }" class="button-info middle shadow-high" @click="openList()">
+            <li>
+                Offres
+            </li>
+        </router-link>
     </div>
 </template>
 
@@ -66,6 +71,14 @@ a {
         @media #{$switch} {
             transform: scale(1.025);
             color: var(--color-important);
+        }
+    }
+
+    &:hover.router-link-active {
+        @media #{$switch} {
+            cursor: default !important;
+            transform: none !important;
+            color: initial !important;
         }
     }
 

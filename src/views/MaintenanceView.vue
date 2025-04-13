@@ -3,7 +3,7 @@
         <div class="background-header-maintenance frameworkX frameworkY animation-hover-active">
             <div class="layout-header-maintenance margin-x switch-direction">
                 <div class="layout-description-header-maintenance">
-                    <h1>Maintenance</h1>
+                    <h1>Offre maintenance</h1>
                     <div class="layout-img-header-maintenance"></div>
                 </div>
                 <div class="text-header-maintenance layout-title right">

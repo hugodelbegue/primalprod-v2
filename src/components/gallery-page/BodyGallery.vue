@@ -11,10 +11,10 @@
                         <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
                     </template>
                     <template #tag-gallery>
-                        <p v-if="data['tag-url'] == 'basic'" class="tag-card">Offre basic</p>
-                        <p v-if="data['tag-url'] == 'smart'" class="tag-card">Offre smart</p>
+                        <p v-if="data['tag-url'] == 'basic'" class="tag-card">{{ offerOne.button }}</p>
+                        <p v-if="data['tag-url'] == 'smart'" class="tag-card">{{ offerTwo.button }}</p>
+                        <p v-if="data['tag-url'] == 'maintenance'" class="tag-card">{{ offerThree.button }}</p>
                         <p v-if="data['tag-url'] == 'request'" class="tag-card">Offre sur devis</p>
-                        <p v-if="data['tag-url'] == 'maintenance'" class="tag-card">Maintenance</p>
                     </template>
                 </CardGallery>
             </article>

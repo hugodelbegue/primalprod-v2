@@ -13,7 +13,10 @@
     <Video class="logo-video" />
     <Paragraph class="paragraph-profil" background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
-        <img class="img-profil load" alt="Profil" :src="Profil" @load="loading" />
+        <div class="layout-img-profil">
+          <img v-if="profil" class="img-profil load" alt="Profil" :src="Profil" @load="loading" />
+          <img v-else class="img-profil load" alt="Profil" :src="Profil2" @load="loading" />
+        </div>
       </template>
       <template #title-paragraph>
         <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -30,7 +33,7 @@
         </p>
       </template>
     </Paragraph>
-    <ServicesPreview />
+    <ServicesPreview ref="test" />
     <ContactReminder class="contact-home" route="contact" routeText="Réservez votre rendez-vous !">
       <template #sendcontact-title>
         <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
@@ -75,7 +78,35 @@ import Testimonial from '@/components/items/section/Testimonial.vue'
 import Video from '@/components/items/Video.vue'
 import Avatar from '@/assets/img/media-section/avatar.svg'
 import Profil from '@/assets/img/media-section/profil-test.png'
+import Profil2 from '@/assets/img/media-section/profil-test-2.png'
 import LogoMain from '@/assets/img/logo-primalprod.svg'
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      profil: true
+    }
+  },
+  mounted() {
+    const refChangeProfil = this.$refs.test.$refs.test2
+    window.addEventListener("scroll", () => {
+      const changeProfil = refChangeProfil.getBoundingClientRect().top
+      const windowHeight = window.innerHeight
+      this.changeProfil(changeProfil > windowHeight)
+    })
+  },
+  methods: {
+    changeProfil(condition) {
+      if (condition) {
+        this.profil = true
+      } else {
+        this.profil = false
+      }
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -135,22 +166,31 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
 }
 
 .paragraph-profil :deep(.img-paragraph) {
+  place-items: center;
+
+  @media #{$switch} {
+    // margin: 0;
+  }
+}
+
+.layout-img-profil {
+  background: var(--black);
+  border-radius: 50%;
+  margin-top: var(--side-y);
+  margin-bottom: calc(var(--side-y) * -1);
+  width: fit-content;
+  height: 200px;
+  aspect-ratio: 2 / 1;
+
   @media #{$switch} {
     margin: 0;
+    height: 400px;
+    aspect-ratio: 1 / 1;
   }
 }
 
 .img-profil {
-  background: var(--black);
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: var(--side-y);
-  margin-bottom: calc(var(--side-y) * -1);
-  width: 100%;
-
-  @media #{$switch} {
-    margin: 0;
-    width: inherit;
-  }
+  height: inherit;
+  place-self: center;
 }
 </style>

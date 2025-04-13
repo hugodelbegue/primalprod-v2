@@ -1,7 +1,7 @@
 <template>
     <div ref="button" class="layout-list-info" :class="classStart">
         <Info v-if="list" :open-list="openList" />
-        <div class="button-open-info middle shadow-high" :class="addArrow" @click="openList">
+        <div class="button-open-info middle shadow-high" title="Support" :class="addArrow" @click="openList">
             <Transition name="anim-arrow" mode="out-in">
                 <svg v-if="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--beige)"
                     class="icon-chevron" viewBox="0 0 16 16">

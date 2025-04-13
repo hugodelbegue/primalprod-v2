@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 .background-proverb {
     background: var(--background-proverb);
-    padding: calc(var(--side-y) / 2) 0;
+    padding: calc(var(--side-y) / 3) 0;
     min-height: 130px;
 
     @media #{$mobileScreen} {

@@ -153,20 +153,29 @@ export default {
         display: flex;
         place-content: space-between;
         margin-bottom: 12px;
-        line-height: 1rem;
+        height: 1.25rem;
     }
 
     .popular {
-        background: var(--orange-opaque);
+        background: var(--orange);
         display: flex;
         place-items: center;
+        height: 20px;
         font-size: 12px;
         font-weight: var(--f-bold);
         padding: 2px 8px;
         border-radius: var(--radius-low);
+        position: absolute;
+        right: calc(var(--side) * 0.75);
+        top: -17px;
+        box-shadow: var(--shadow-low);
 
         svg {
             margin-right: 4px;
+        }
+
+        p {
+            line-height: normal;
         }
     }
 

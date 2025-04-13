@@ -91,5 +91,13 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 .img-right {
     filter: grayscale(1);
     opacity: var(--opacity-animation);
+
+    @media #{$switch} {
+        filter: grayscale(0);
+    }
+}
+
+.img-right {
+    border-left: 1px solid transparent;
 }
 </style>

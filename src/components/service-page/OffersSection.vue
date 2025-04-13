@@ -22,7 +22,7 @@
                 :third-points="offerThree.thirdPoints" />
             <div class="plus middle">
                 <icon-spin />
-                <span>Soyez propriétaire de votre site</span>
+                <span>Soyez maître de votre site</span>
             </div>
             <div class="banner-left"></div>
             <OfferRender class="offer part-four animation-part-four" :offer="offerFour.number" :title="offerFour.title"
