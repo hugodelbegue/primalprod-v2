@@ -12,7 +12,7 @@
                 consequuntur quia!
             </p>
         </div>
-        <div ref="test2"></div>
+        <div ref="refAnchor"></div>
         <div class="layout-offers-preview margin-x">
             <div class="menu-offers-preview">
                 <ul class="list-offers-preview">
@@ -20,7 +20,7 @@
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
-                        }}
+                    }}
                     </li>
                 </ul>
             </div>

@@ -13,9 +13,11 @@
     <Video class="logo-video" />
     <Paragraph class="paragraph-profil" background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
-        <div class="layout-img-profil">
-          <img v-if="profil" class="img-profil load" alt="Profil" :src="Profil" @load="loading" />
-          <img v-else class="img-profil load" alt="Profil" :src="Profil2" @load="loading" />
+        <div class="layout-img-profil middle">
+          <Transition name="anim-profil" mode="out-in" appear>
+            <img v-if="profil" class="img-profil" alt="Profil" :src="Profil" />
+            <img v-else class="img-profil" alt="Profil" :src="Profil2" />
+          </Transition>
         </div>
       </template>
       <template #title-paragraph>
@@ -33,7 +35,7 @@
         </p>
       </template>
     </Paragraph>
-    <ServicesPreview ref="test" />
+    <ServicesPreview ref="refServices" />
     <ContactReminder class="contact-home" route="contact" routeText="Réservez votre rendez-vous !">
       <template #sendcontact-title>
         <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
@@ -86,11 +88,11 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
 export default {
   data() {
     return {
-      profil: true
+      profil: null
     }
   },
   mounted() {
-    const refChangeProfil = this.$refs.test.$refs.test2
+    const refChangeProfil = this.$refs.refServices.$refs.refAnchor
     window.addEventListener("scroll", () => {
       const changeProfil = refChangeProfil.getBoundingClientRect().top
       const windowHeight = window.innerHeight
@@ -184,13 +186,33 @@ export default {
 
   @media #{$switch} {
     margin: 0;
-    height: 400px;
+    width: 400px;
+    height: auto;
     aspect-ratio: 1 / 1;
   }
 }
 
 .img-profil {
   height: inherit;
-  place-self: center;
+  width: initial;
+
+  @media #{$switch} {
+    border-radius: 50%;
+    width: 600px;
+  }
+}
+
+.anim-profil-enter-active {
+  transition: all 300ms ease-out;
+}
+
+.anim-profil-leave-active {
+  transition: all 500ms cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.anim-profil-enter-from,
+.anim-profil-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>
