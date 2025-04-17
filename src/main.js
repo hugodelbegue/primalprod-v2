@@ -9,6 +9,7 @@ import offerTwo from '@/assets/js/offers/offer-two'
 import offerThree from '@/assets/js/offers/offer-three'
 import offerFour from '@/assets/js/offers/offer-four'
 
+console.log("\nHello 👋\nRéalisé par PrimalProd.\n👉 https://primalprod.fr/\n ")
 
 const app = createApp(App)
 

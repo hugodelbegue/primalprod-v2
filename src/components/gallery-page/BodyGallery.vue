@@ -40,7 +40,6 @@ import RenderCardImg from './RenderCardImg.vue'
 export default {
     data() {
         return {
-            choice: "",
             currentPage: 1,
             itemsPerPage: 9
         }

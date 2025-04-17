@@ -125,7 +125,6 @@ export default {
     @media #{$switch} {
         padding: var(--side) calc(var(--side) * 0.75);
         min-width: 364px;
-        // min-width: 384px;
     }
 
     &::before,

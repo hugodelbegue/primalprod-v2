@@ -50,7 +50,6 @@ import OfferRender from './offers/OfferRender.vue'
     --margin-block-x: 20px;
     display: grid;
     grid-template-columns: repeat(6, auto);
-    // grid-template-columns: repeat(6, 1fr);
     grid-column-gap: var(--side-between);
     grid-row-gap: var(--side-y);
 

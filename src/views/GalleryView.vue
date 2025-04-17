@@ -65,10 +65,6 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
 .layout-header-gallery {
     display: flex;
     gap: var(--side-up);
-
-    @media #{$switch} {
-        gap: var(--side);
-    }
 }
 
 .layout-description-header-gallery {
@@ -81,10 +77,6 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
     display: flex;
     place-content: center;
     place-items: center;
-
-    @media #{$switch} {
-        place-content: flex-end;
-    }
 }
 
 .img-left,

@@ -88,7 +88,7 @@ import LogoMain from '@/assets/img/logo-primalprod.svg'
 export default {
   data() {
     return {
-      profil: null
+      profil: true
     }
   },
   mounted() {

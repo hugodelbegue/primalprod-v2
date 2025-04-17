@@ -1,7 +1,7 @@
 <template>
     <div class="button">
         <input :type="type" :style="{ 'padding': '0 ' + padding + 'em', 'width': width, 'height': height }" :value="msg"
-            :disabled="disabled" class="shadow-high">
+            :disabled="disabled" class="shadow-low">
     </div>
 </template>
 
@@ -37,7 +37,6 @@ defineProps({
         @media #{$switch} {
             &:hover {
                 background: var(--color-button-hover);
-                box-shadow: var(--shadow-low);
             }
         }
     }
@@ -46,7 +45,6 @@ defineProps({
     input[type="submit"]:disabled {
         cursor: auto !important;
         pointer-events: none;
-        box-shadow: var(--shadow-low);
         opacity: .3;
     }
 }

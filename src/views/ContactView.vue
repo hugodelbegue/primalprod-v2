@@ -22,7 +22,7 @@
             </div>
         </div>
         <Form />
-        <Testimonial background="var(--background-main)">
+        <Testimonial background="var(--background-main)" :picture="true">
             <template #title-testimonial>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
