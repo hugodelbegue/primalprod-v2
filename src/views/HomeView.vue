@@ -70,7 +70,7 @@
 </template>
 
 <script setup>
-import { loading } from '@/assets/js/utils'
+import { loading, isMobileDevice } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
@@ -93,10 +93,16 @@ export default {
   },
   mounted() {
     const refChangeProfil = this.$refs.refServices.$refs.refAnchor
+    const refChangeProfilMobile = this.$refs.refServices.$refs.refMiddleAnchor
     window.addEventListener("scroll", () => {
-      const changeProfil = refChangeProfil.getBoundingClientRect().top
       const windowHeight = window.innerHeight
-      this.changeProfil(changeProfil > windowHeight)
+      const changeProfil = refChangeProfil.getBoundingClientRect().top
+      const changeProfilMobile = refChangeProfilMobile.getBoundingClientRect().top
+      if (isMobileDevice()) {
+        this.changeProfil(changeProfilMobile > windowHeight)
+      } else {
+        this.changeProfil(changeProfil > windowHeight)
+      }
     })
   },
   methods: {

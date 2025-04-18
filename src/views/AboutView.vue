@@ -60,7 +60,7 @@
     </Paragraph>
     <Paragraph background="transparent" class="switch-reverse">
       <template #img-paragraph>
-        <img class="img-paragraph load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
+        <img class="img-paragraph scale-img load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
       </template>
       <template #title-paragraph>
         <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
@@ -134,5 +134,9 @@ import ContactReminder from '@/components/items/section/ContactReminder.vue'
   @media #{$switch} {
     flex-direction: inherit;
   }
+}
+
+.scale-img {
+  margin-bottom: calc(var(--side-y) * -1);
 }
 </style>

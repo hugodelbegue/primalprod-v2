@@ -11,6 +11,7 @@
                 culpa praesentium quod, architecto cum aliquam iste necessitatibus vel consectetur! Molestiae omnis
                 consequuntur quia!
             </p>
+            <div class="anchor" ref="refMiddleAnchor"></div>
         </div>
         <div ref="refAnchor"></div>
         <div class="layout-offers-preview margin-x">
@@ -20,7 +21,7 @@
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
-                    }}
+                        }}
                     </li>
                 </ul>
             </div>
@@ -125,6 +126,12 @@ export default {
     border-radius: var(--radius-low);
     padding: var(--side-up) var(--side);
     margin-bottom: var(--side-between);
+    position: relative;
+
+    .anchor {
+        position: absolute;
+        top: 50%;
+    }
 }
 
 .layout-offers-preview {
