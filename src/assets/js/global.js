@@ -21,6 +21,31 @@ export default {
             illustration: 'https://storyset.com/',
             icons: 'https://lordicon.com/',
 
+            // references
+            references: [
+                {
+                    nameRef: 'Media',
+                    refs: [
+                        { name: 'Pixabay', link: 'https://pixabay.com/' },
+                        { name: 'Storyset', link: 'https://storyset.com/' },
+                        { name: 'Lordicon', link: 'https://lordicon.com/' },
+                        { name: 'Flaticon', link: 'https://www.flaticon.com/' }
+                    ]
+                },
+                {
+                    nameRef: 'Site',
+                    refs: [
+                        { name: 'Infomaniak', link: 'https://www.infomaniak.com/' }
+                    ]
+                },
+                {
+                    nameRef: 'Partenaires',
+                    refs: [
+                        { name: 'PrimalProd', link: 'https://primalprod.fr/' }
+                    ]
+                }
+            ],
+
             // proverbs
             proverb: [
                 "Chaque idée mérite un espace digital pour exister et grandir.",

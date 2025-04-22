@@ -12,24 +12,28 @@
         <li>
             <router-link :to="{ name: 'contact' }">Formulaire de contact</router-link>
         </li>
-        <h3 class="title-importantlinks">Offres</h3>
         <li>
-            <router-link :to="{ name: 'basic' }">Basic</router-link>
+            <router-link :to="{ name: 'about' }">À propos de PrimalProd</router-link>
         </li>
         <li>
-            <router-link :to="{ name: 'smart' }">Smart</router-link>
+            <router-link :to="{ name: 'gallery' }">Réalisations</router-link>
         </li>
+        <h3 class="title-importantlinks">Développeurs</h3>
         <li>
-            <router-link :to="{ name: 'request' }">Sur devis</router-link>
+            <a :href="github" target="_blank">
+                GitHub
+            </a>
         </li>
+        <!-- <h3 class="title-importantlinks">Thème</h3> -->
         <li>
-            <router-link :to="{ name: 'maintenance' }">Maintenance</router-link>
+            <ButtonDarkMode class="dark-button" />
         </li>
     </ul>
 </template>
 
 <script setup>
 import globalVariable from '@/assets/js/global'
+import ButtonDarkMode from '../items/theme-mode/ButtonDarkMode.vue'
 </script>
 
 <script>
@@ -42,11 +46,9 @@ export default {
 .importantlinks {
     display: flex;
     flex-direction: column;
-    place-content: center;
     padding: 0;
 
     @media #{$switch} {
-        place-content: space-between;
         place-items: end;
     }
 
@@ -54,7 +56,7 @@ export default {
         margin: 2em 0 1em;
 
         &:first-child {
-            margin-top: 1em;
+            margin-top: 2em;
 
             @media #{$switch} {
                 margin-top: 0;
@@ -89,5 +91,9 @@ a.router-link-active {
     &:hover {
         opacity: 1 !important;
     }
+}
+
+.dark-button {
+    margin-top: var(--side);
 }
 </style>

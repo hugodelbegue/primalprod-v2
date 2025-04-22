@@ -9,16 +9,22 @@
         <br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit repellendus inventore doloremque
             tenetur error.</p>
+        <SocialLinks />
     </div>
 </template>
 
 <script setup>
 import PrimalProd from '../icons/PrimalprodLogo.vue'
+import SocialLinks from '@/components/footer/SocialLinks.vue'
 </script>
 
 <style lang="scss" scoped>
 .footer-logo {
-    margin-bottom: var(--side);
+    margin-bottom: 2rem;
+
+    @media #{$switch} {
+        line-height: 0;
+    }
 }
 
 .logo-color {

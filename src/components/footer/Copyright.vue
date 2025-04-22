@@ -1,6 +1,6 @@
 <template>
     <div class="copyright frameworkY margin-y padding-x">
-        <p>© Copyright {{ year }} - PrimalProd&nbsp;&nbsp;🐾
+        <p>© Copyright 2022-{{ year }},&nbsp;&nbsp;PrimalProd&nbsp;&nbsp;🐾
             <a class="link-host" href="https://www.infomaniak.com/fr/ecologie" target="_blank">&nbsp;Site hébergé de
                 manière
                 responsable</a>&nbsp;&nbsp;|

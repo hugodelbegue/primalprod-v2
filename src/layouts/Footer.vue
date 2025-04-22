@@ -1,47 +1,23 @@
 <template>
     <footer class="wrapper-footer">
-        <div class="background-footer">
-            <div class="layout-footer frameworkX frameworkY margin-x switch-direction">
+        <div class="background-footer frameworkY">
+            <div class="layout-footer frameworkX margin-x switch-direction">
                 <ReadMore class="readmore" />
+                <OfferLinks class="offerlinks" />
                 <ImportantLinks class="importantlinks" />
-                <SocialLinks class="sociallinks" />
-            </div>
-            <div class="layout-ref frameworkX frameworkY margin-x">
-                <ul class="layout-ref-list">
-                    <li>
-                        <span>Title :&nbsp;</span>
-                    </li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                </ul>
-                <ul class="layout-ref-list">
-                    <li>
-                        <span>Title 2 :&nbsp;</span>
-                    </li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                    <li>hbnbb</li>
-                </ul>
             </div>
         </div>
+        <ReferenceLinks />
         <Copyright />
     </footer>
 </template>
 
 <script setup>
-import SocialLinks from '@/components/footer/SocialLinks.vue'
 import ReadMore from '@/components/footer/ReadMore.vue'
 import Copyright from '@/components/footer/Copyright.vue'
 import ImportantLinks from '@/components/footer/ImportantLinks.vue'
+import OfferLinks from '@/components/footer/OfferLinks.vue'
+import ReferenceLinks from '@/components/footer/ReferenceLinks.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -62,37 +38,9 @@ footer {
     }
 }
 
-.layout-ref {
-    // background: red;
-    font-size: var(--f-reference);
-    padding-top: 0 !important;
-}
-
-.layout-ref ul li:not(:last-child):not(:first-child)::after {
-    content: " |\00a0";
-    padding: 0 .25rem;
-}
-
-.layout-ref-list {
-    line-height: .9rem;
-
-    span {
-        font-weight: var(--f-bold);
-    }
-
-    li {
-        display: inline-block;
-    }
-}
-
-.layout-ref ul:not(:last-child) {
-    padding-bottom: 1rem !important;
-}
-
 .readmore,
-// .offerlinks,
 .importantlinks,
-.sociallinks {
+.offerlinks {
     flex: 1;
 }
 </style>
