@@ -21,8 +21,7 @@
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
-                        }}
-                    </li>
+                        }}</li>
                 </ul>
             </div>
             <div class="view-offers-preview">

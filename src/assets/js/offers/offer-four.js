@@ -8,6 +8,7 @@ export default {
                 titleMenu: 'Devis',
                 route: "request",
                 popular: false,
+                important: false,
                 button: "En savoir plus",
                 preview: "L’offre Sur Devis est pensée pour répondre aux besoins spécifiques des clients. Entièrement personnalisable, elle propose des solutions sur mesure afin d’optimiser leur présence en ligne, en intégrant des fonctionnalités adaptées, garantissant ainsi une communication efficace et un engagement renforcé.",
                 points: [

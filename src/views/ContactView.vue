@@ -22,20 +22,11 @@
             </div>
         </div>
         <Form />
-        <Testimonial background="var(--background-main)" :picture="true">
-            <template #title-testimonial>
+        <InfosBlock background="var(--background-main)" page="infosBlockTwo">
+            <template #title-infosblock>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
-            <template #text-testimonial>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
-                consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
-                inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
-                nesciunt, tempore ratione voluptate, suscipit velit.
-            </template>
-            <template #full-name-testimonial>
-                Jean Dupont, Directeur Général
-            </template>
-        </Testimonial>
+        </InfosBlock>
         <ContactReminder class="servives-reminder" route="services" routeText="Consulter mes prestations !">
             <template #sendcontact-title>
                 <h2 class="space-title">Encore un&nbsp;<span class="animation-hover">doute</span>&nbsp;? Prends 5
@@ -53,7 +44,7 @@
 
 <script setup>
 import Form from '@/components/contact-page/Form.vue'
-import Testimonial from '@/components/items/section/Testimonial.vue'
+import InfosBlock from '@/components/items/section/InfosBlock.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import IconContact from '@/components/icons/IconEmail.vue'
 </script>

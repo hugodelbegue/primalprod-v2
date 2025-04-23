@@ -8,6 +8,7 @@ export default {
                 titleMenu: 'Basic',
                 route: "basic",
                 popular: false,
+                important: false,
                 button: "Offre basic",
                 price: "29",
                 preview: "L’offre Basic est conçue pour assurer aux clients une présence en ligne efficace et accessible. Elle met en avant leurs services et actualités, tout en facilitant la communication avec les visiteurs grâce à des moyens de contact intégrés, garantissant ainsi une interaction fluide et simplifiée.",

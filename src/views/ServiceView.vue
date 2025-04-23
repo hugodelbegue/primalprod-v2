@@ -25,20 +25,11 @@
             </div>
         </div>
         <OffersSection />
-        <Testimonial background="var(--background-testimonial)" :picture="true">
-            <template #title-testimonial>
+        <InfosBlock background="var(--background-infosblock)" page="infosBlockOne">
+            <template #title-infosblock>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
-            <template #text-testimonial>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
-                consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
-                inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
-                nesciunt, tempore ratione voluptate, suscipit velit.
-            </template>
-            <template #full-name-testimonial>
-                Jean Dupont, Directeur Général
-            </template>
-        </Testimonial>
+        </InfosBlock>
         <ContactReminder route="contact" routeText="Réservez votre rendez-vous !" class="small-margin-top">
             <template #sendcontact-title>
                 <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
@@ -62,7 +53,7 @@
 import { isMobileDevice, loadingHead } from '@/assets/js/utils'
 import OffersSection from '@/components/service-page/OffersSection.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
-import Testimonial from '@/components/items/section/Testimonial.vue'
+import InfosBlock from '@/components/items/section/InfosBlock.vue'
 </script>
 
 <style lang="scss" scoped>

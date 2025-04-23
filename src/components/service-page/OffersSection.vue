@@ -3,23 +3,23 @@
         <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
             <OfferRender class="part-one animation-part-one" :offer="offerOne.number" :title="offerOne.title"
-                :route="offerOne.route" :popular="offerOne.popular" :button-text="offerOne.button"
-                :price="offerOne.price" :text="offerOne.text" :first-title="offerOne.firstTitle"
-                :first-points="offerOne.firstPoints" :second-title="offerOne.secondTitle"
-                :second-points="offerOne.secondPoints" :third-title="offerOne.thirdTitle"
-                :third-points="offerOne.thirdPoints" />
+                :route="offerOne.route" :popular="offerOne.popular" :important="offerOne.important"
+                :button-text="offerOne.button" :price="offerOne.price" :text="offerOne.text"
+                :first-title="offerOne.firstTitle" :first-points="offerOne.firstPoints"
+                :second-title="offerOne.secondTitle" :second-points="offerOne.secondPoints"
+                :third-title="offerOne.thirdTitle" :third-points="offerOne.thirdPoints" />
             <OfferRender class="part-two animation-part-two" :offer="offerTwo.number" :title="offerTwo.title"
-                :route="offerTwo.route" :popular="offerTwo.popular" :button-text="offerTwo.button"
-                :price="offerTwo.price" :text="offerTwo.text" :first-title="offerTwo.firstTitle"
-                :first-points="offerTwo.firstPoints" :second-title="offerTwo.secondTitle"
-                :second-points="offerTwo.secondPoints" :third-title="offerTwo.thirdTitle"
-                :third-points="offerTwo.thirdPoints" />
+                :route="offerTwo.route" :popular="offerTwo.popular" :important="offerTwo.important"
+                :button-text="offerTwo.button" :price="offerTwo.price" :text="offerTwo.text"
+                :first-title="offerTwo.firstTitle" :first-points="offerTwo.firstPoints"
+                :second-title="offerTwo.secondTitle" :second-points="offerTwo.secondPoints"
+                :third-title="offerTwo.thirdTitle" :third-points="offerTwo.thirdPoints" />
             <OfferRender class="part-three animation-part-three" :offer="offerThree.number" :title="offerThree.title"
-                :route="offerThree.route" :popular="offerThree.popular" :button-text="offerThree.button"
-                :price="offerThree.price" :text="offerThree.text" :first-title="offerThree.firstTitle"
-                :first-points="offerThree.firstPoints" :second-title="offerThree.secondTitle"
-                :second-points="offerThree.secondPoints" :third-title="offerThree.thirdTitle"
-                :third-points="offerThree.thirdPoints" />
+                :route="offerThree.route" :popular="offerThree.popular" :important="offerThree.important"
+                :button-text="offerThree.button" :price="offerThree.price" :text="offerThree.text"
+                :first-title="offerThree.firstTitle" :first-points="offerThree.firstPoints"
+                :second-title="offerThree.secondTitle" :second-points="offerThree.secondPoints"
+                :third-title="offerThree.thirdTitle" :third-points="offerThree.thirdPoints" />
             <div class="plus middle">
                 <icon-spin />
                 <span>Soyez maître de votre site</span>

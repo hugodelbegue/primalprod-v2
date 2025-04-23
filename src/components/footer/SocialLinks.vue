@@ -3,12 +3,12 @@
         <ul class="networks">
             <li>
                 <a :href="instagram" target="_blank">
-                    <img src="../icons/instagram.png" alt="">
+                    <img src="../icons/instagram.png" alt="Logo Instagram">
                 </a>
             </li>
             <li>
                 <a :href="linkedin" target="_blank">
-                    <img src="../icons/linkedin.png" alt="">
+                    <img src="../icons/linkedin.png" alt="Logo LinkedIn">
                 </a>
             </li>
         </ul>

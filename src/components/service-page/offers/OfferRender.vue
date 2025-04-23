@@ -1,10 +1,9 @@
 <template>
     <section class="background-offer" :style="{ 'background': background }">
         <div v-if="preview" class="layout-image-offer">
-            <!-- <div class="image-offer-overlay"></div> -->
             <div class="image-offer" :class="paintOffers"></div>
         </div>
-        <div class="layout-offer">
+        <div class="layout-offer" :class="importantOffer">
             <div class="offer-price-render">
                 <div class="title-offer">
                     <h3>{{ title }}</h3>
@@ -20,6 +19,9 @@
                 <div v-if="offer != 4" class="price-render">
                     <h3 class="price">{{ price }} €</h3>
                     <span>/mois TTC</span>
+                </div>
+                <div v-if="preview && offer == 4" class="no-price-render">
+                    <span>Facture sur mesure à la réalisation du devis</span>
                 </div>
                 <p v-if="!preview && offer != 4" class="text-price-year">Facturé annuellement à {{ price * 12 }} €</p>
                 <p v-if="!preview && offer == 4" class="text-price-year">Facture sur mesure à la réalisation du devis
@@ -37,7 +39,7 @@
                 </template>
             </ButtonOffer>
             <h4 v-if="!preview" class="title-firt-point space-text">{{ firstTitle }}</h4>
-            <ul v-if="!preview" class="list-offer-points space-text">
+            <ul v-if="!preview && firstPoints" class="list-offer-points space-text">
                 <li v-for="(point, index) in firstPoints" :key="index">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="icon-check" viewBox="0 0 16 16">
@@ -48,7 +50,7 @@
                 </li>
             </ul>
             <h4 v-if="!preview" class="space-text">{{ secondTitle }}</h4>
-            <ul v-if="!preview" class="list-offer-points space-text">
+            <ul v-if="!preview && secondPoints" class="list-offer-points space-text">
                 <li v-for="(point, index) in secondPoints" :key="index">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="icon-check" viewBox="0 0 16 16">
@@ -59,7 +61,7 @@
                 </li>
             </ul>
             <h4 v-if="!preview" class="space-text">{{ thirdTitle }}</h4>
-            <ul v-if="!preview" class="list-offer-points space-text">
+            <ul v-if="!preview && thirdPoints" class="list-offer-points space-text">
                 <li v-for="(point, index) in thirdPoints" :key="index">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="icon-check" viewBox="0 0 16 16">
@@ -86,17 +88,18 @@ defineProps({
     title: String,
     route: String,
     popular: Boolean,
+    important: Boolean,
     buttonText: String,
     price: String,
     text: String,
     preview: Boolean,
     previewText: String,
     firstTitle: String,
-    firstPoints: String,
+    firstPoints: Array,
     secondTitle: String,
-    secondPoints: String,
+    secondPoints: Array,
     thirdTitle: String,
-    thirdPoints: String
+    thirdPoints: Array
 })
 </script>
 
@@ -107,8 +110,13 @@ export default {
             return {
                 'basic': this.offer == 1,
                 'smart': this.offer == 2,
-                'request': this.offer == 3,
-                'maintenance': this.offer == 4
+                'maintenance': this.offer == 3,
+                'request': this.offer == 4
+            }
+        },
+        importantOffer() {
+            return {
+                'important-offer-overlay': this.important == true
             }
         }
     }
@@ -212,6 +220,21 @@ export default {
     }
 }
 
+.no-price-render {
+    display: flex;
+    place-items: end;
+    height: 52px;
+    font-size: 14px;
+
+    @media #{$mobileScreen} {
+        height: 46px;
+    }
+
+    @media #{$tabletScreen} {
+        height: 40px;
+    }
+}
+
 .text-offer-description-preview {
     margin-top: 2.15rem;
     margin-bottom: 3rem;
@@ -272,11 +295,7 @@ export default {
     background: url(../img/desk.jpg) center / cover no-repeat;
 }
 
-// .image-offer-overlay {
-//     z-index: 1;
-//     position: absolute;
-//     background: var(--orange-opaque);
-//     display: flex;
-//     width: 100%;
-//     height: 100%;
-// }</style>
+.important-offer-overlay {
+    background: var(--color-important-offer) !important;
+}
+</style>
