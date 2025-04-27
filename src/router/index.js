@@ -30,7 +30,8 @@ const router = createRouter({
     {
       path: '/prestations',
       name: 'services',
-      component: () => import('../views/ServiceView.vue')
+      component: () => import('../views/ServiceView.vue'),
+      props: true
     },
     {
       path: '/prestations/offre-basic',
@@ -75,7 +76,8 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('../views/ContactView.vue')
+      component: () => import('../views/ContactView.vue'),
+      props: true
     },
     {
       path: '/faq',

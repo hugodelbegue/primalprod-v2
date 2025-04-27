@@ -16,16 +16,6 @@
     </ul>
 </template>
 
-<script setup>
-import globalVariable from '@/assets/js/global'
-</script>
-
-<script>
-export default {
-    mixins: [globalVariable]
-}
-</script>
-
 <style lang="scss" scoped>
 .offerlinks {
     display: flex;

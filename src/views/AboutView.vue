@@ -58,6 +58,7 @@
         </p>
       </template>
     </Paragraph>
+    <Values />
     <Paragraph background="transparent" class="switch-reverse">
       <template #img-paragraph>
         <img class="img-paragraph scale-img load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
@@ -98,6 +99,7 @@ import Partner from '@/components/about-page/Partner.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import Proverb from '@/components/about-page/Proverb.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
+import Values from '@/components/about-page/Values.vue'
 </script>
 
 <style lang="scss" scoped>

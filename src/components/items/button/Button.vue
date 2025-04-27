@@ -27,7 +27,7 @@ defineProps({
     input[type="submit"] {
         cursor: pointer;
         background: var(--color-button);
-        color: var(--color-text);
+        color: var(--color-text-button);
         font-size: var(--f-button);
         font-family: var(--f-family-button);
         border-radius: var(--corner-button);
@@ -36,7 +36,7 @@ defineProps({
 
         @media #{$switch} {
             &:hover {
-                background: var(--color-button-hover);
+                // background: var(--color-button-hover);
             }
         }
     }
@@ -45,6 +45,7 @@ defineProps({
     input[type="submit"]:disabled {
         cursor: auto !important;
         pointer-events: none;
+        transform: scale(.95);
         opacity: .3;
     }
 }

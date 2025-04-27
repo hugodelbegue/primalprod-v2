@@ -2,14 +2,14 @@ export default {
     data() {
         return {
             infosBlock: {
-                infosBlockOne: {
+                infosServices: {
                     infoOne: [
                         {
                             id: 1,
                             icon: 'fa-solid fa-user 11',
                             title: 'Lorem ipsum dolor sit amet',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: '/src/assets/img/media-section/neons.png'
+                            img: 'neons.png',
                         }
                     ],
                     infoTwo: [
@@ -18,7 +18,7 @@ export default {
                             icon: 'fa-solid fa-user',
                             title: 'Lorem ipsum dolor sit amet',
                             text: 'Lorem ipsum dolor sit amet consectetur anecessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: '/src/assets/img/media-section/gecko.png'
+                            img: 'gecko.png'
                         }
                     ],
                     infoThree: [
@@ -27,18 +27,19 @@ export default {
                             icon: 'fa-solid fa-user',
                             title: 'Lorem ipsum dolor sit amet',
                             text: 'Lorem ipsum dolor sit amet consectetur anecessitatibus ?',
-                            img: '/src/assets/img/media-section/neons.png'
+                            img: 'neons.png'
                         }
                     ]
                 },
-                infosBlockTwo: {
+                infosContact: {
                     infoOne: [
                         {
                             id: 1,
+                            card: true,
                             icon: 'fa-solid fa-user 2113',
-                            title: 'Lorem ipsum dolor sit amet',
-                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: '/src/assets/img/media-section/neons.png'
+                            title: 'Les valeurs de PrimalProd',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
+                            img: 'neons.png'
                         }
                     ],
                     infoTwo: [
@@ -46,8 +47,26 @@ export default {
                             id: 2,
                             icon: 'fa-solid fa-user',
                             title: 'Lorem ipsum dolor sit amet',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
+                            img: 'gecko.png'
+                        }
+                    ],
+                    infoThree: [
+                        {
+                            id: 3,
+                            icon: 'fa-solid fa-user',
+                            title: 'Lorem ipsum dolor sit amet',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: '/src//assets/img/media-section/gecko.png'
+                            img: 'neons.png'
+                        }
+                    ],
+                    infoFour: [
+                        {
+                            id: 4,
+                            icon: 'fa-solid fa-user',
+                            title: 'Lorem ipsum dolor sit amet',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
+                            img: 'gecko.png'
                         }
                     ]
                 }

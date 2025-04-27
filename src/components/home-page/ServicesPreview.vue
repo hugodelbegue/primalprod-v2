@@ -19,8 +19,9 @@
                 <ul class="list-offers-preview">
                     <li :class="{ 'anim-list-offers': basic }" @click="basic = true">{{ offerOne.titleMenu }}</li>
                     <li :class="{ 'anim-list-offers': smart }" @click="smart = true">{{ offerTwo.titleMenu }}</li>
-                    <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerThree.titleMenu }}</li>
-                    <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerFour.titleMenu
+                    <li :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{ offerThree.titleMenu
+                        }}</li>
+                    <li :class="{ 'anim-list-offers': request }" @click="request = true">{{ offerFour.titleMenu
                         }}</li>
                 </ul>
             </div>
@@ -39,14 +40,14 @@
                         <div class="image-offer"></div>
                     </template>
                 </OfferRenderPreview>
-                <OfferRenderPreview v-if="request" class="offer anim-offer shadow-low" :offer="offerThree.number"
+                <OfferRenderPreview v-if="maintenance" class="offer anim-offer shadow-low" :offer="offerThree.number"
                     :title="offerThree.title" :route="offerThree.route" :button-text="offerThree.button"
                     :price="offerThree.price" :preview="true" :preview-text="offerThree.preview">
                     <template #img-offer-preview>
                         <div class="image-offer"></div>
                     </template>
                 </OfferRenderPreview>
-                <OfferRenderPreview v-if="maintenance" class="offer anim-offer shadow-low" :offer="offerFour.number"
+                <OfferRenderPreview v-if="request" class="offer anim-offer shadow-low" :offer="offerFour.number"
                     :title="offerFour.title" :route="offerFour.route" :button-text="offerFour.button" :preview="true"
                     :preview-text="offerFour.preview">
                     <template #img-offer-preview>

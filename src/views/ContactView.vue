@@ -22,7 +22,7 @@
             </div>
         </div>
         <Form />
-        <InfosBlock background="var(--background-main)" page="infosBlockTwo">
+        <InfosBlock background="var(--background-main)" page="infosContact">
             <template #title-infosblock>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>

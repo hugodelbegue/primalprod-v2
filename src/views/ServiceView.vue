@@ -25,7 +25,7 @@
             </div>
         </div>
         <OffersSection />
-        <InfosBlock background="var(--background-infosblock)" page="infosBlockOne">
+        <InfosBlock background="var(--background-infosblock)" page="infosServices">
             <template #title-infosblock>
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>

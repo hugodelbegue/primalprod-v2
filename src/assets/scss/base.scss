@@ -168,8 +168,9 @@
   --color-heading-h1: var(--black);
   --color-heading-h2: var(--black);
   --color-heading-h3: var(--black);
-  --color-button: var(--color-3);
-  --color-button-hover: var(--beige);
+  --color-button: var(--orange);
+  --color-text-button: var(--beige);
+  --color-button-hover: var(--orange-opaque);
   --color-button-second: var(--beige);
   --color-button-second-hover: var(--background-main);
   --color-burger-lines: var(--color-text);
@@ -227,8 +228,9 @@
   --color-heading-h1: var(--beige);
   --color-heading-h2: var(--beige);
   --color-heading-h3: var(--beige);
-  --color-button: var(--color-3-dark);
-  --color-button-hover: var(--blue-dark);
+  --color-button: var(--orange);
+  --color-text-button: var(--beige);
+  --color-button-hover: var(--orange-opaque);
   --color-button-second: var(--blue-dark);
   --color-button-second-hover: var(--background-main);
   --color-burger-lines: var(--color-text);
