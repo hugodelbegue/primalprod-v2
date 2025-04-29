@@ -1,6 +1,6 @@
 <template>
-    <section class="background-values animation-hover-active" :style="{ 'background': background }">
-        <div class="layout-values frameworkX frameworkY margin-x switch-direction">
+    <section class="background-values animation-hover-active">
+        <div class="layout-values frameworkX frameworkY margin-x">
             <div class="card-values shadow-low">card</div>
             <div class="card-values shadow-low">card</div>
             <div class="card-values shadow-low">card</div>
@@ -9,26 +9,13 @@
     </section>
 </template>
 
-<script>
-export default {
-    setup() {
-
-
-        return {}
-    }
-}
-</script>
-
 <style lang="scss" scoped>
-.background-values {
-    background: var(--white);
-}
-
 .layout-values {
     display: flex;
     place-content: center;
     flex-wrap: wrap;
     gap: var(--side-between);
+    padding-bottom: 0;
 }
 
 .card-values {
@@ -42,6 +29,10 @@ export default {
 
     @media #{$mobileScreen} {
         width: calc(calc(100% / 2) - calc(var(--side-between) / 2));
+    }
+
+    @media #{$tabletScreen} {
+        width: calc(calc(100% / 4) - calc(var(--side-between) / 1));
     }
 }
 </style>

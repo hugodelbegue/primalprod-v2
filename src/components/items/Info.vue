@@ -26,11 +26,22 @@
                 Offres
             </li>
         </router-link>
+        <router-link v-if="isMobileDevice()" :to="{ name: 'home' }" class="button-info middle shadow-high"
+            @click="openList()">
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="icon-home"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                </svg>
+            </li>
+        </router-link>
     </div>
 </template>
 
 <script setup>
 import { inject } from "vue"
+import { isMobileDevice } from "@/assets/js/utils"
 const top = inject("top")
 const returnTop = () => {
     if (top) {
@@ -74,13 +85,13 @@ a {
         }
     }
 
-    &:hover.router-link-active {
-        @media #{$switch} {
-            cursor: default !important;
-            transform: none !important;
-            color: initial !important;
-        }
-    }
+    // &:hover.router-link-active {
+    //     @media #{$switch} {
+    //         cursor: default !important;
+    //         transform: none !important;
+    //         color: initial !important;
+    //     }
+    // }
 
     li {
         display: flex;

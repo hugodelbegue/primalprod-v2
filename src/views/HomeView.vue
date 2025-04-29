@@ -118,17 +118,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout-home {
-  flex-direction: column;
-}
-
 .layout-first-view {
   --side-x: calc(50% - var(--tablet) / 2);
   min-height: calc(100vh - var(--side-y) - calc(var(--margin-block-y) * 2) - 48px);
+  flex-direction: column-reverse;
   gap: 1.5rem;
   padding-bottom: calc(48px * 2);
 
   @media #{$switch} {
+    flex-direction: row;
     gap: 5rem;
   }
 }
@@ -159,6 +157,8 @@ export default {
 }
 
 .logo-mobile {
+  filter: drop-shadow(var(--shadow-logo));
+
   @media #{$switch} {
     display: none;
   }

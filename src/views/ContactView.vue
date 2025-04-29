@@ -22,11 +22,6 @@
             </div>
         </div>
         <Form />
-        <InfosBlock background="var(--background-main)" page="infosContact">
-            <template #title-infosblock>
-                <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
-            </template>
-        </InfosBlock>
         <ContactReminder class="servives-reminder" route="services" routeText="Consulter mes prestations !">
             <template #sendcontact-title>
                 <h2 class="space-title">Encore un&nbsp;<span class="animation-hover">doute</span>&nbsp;? Prends 5
@@ -44,7 +39,6 @@
 
 <script setup>
 import Form from '@/components/contact-page/Form.vue'
-import InfosBlock from '@/components/items/section/InfosBlock.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import IconContact from '@/components/icons/IconEmail.vue'
 </script>

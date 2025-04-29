@@ -7,7 +7,7 @@
         <div v-for="(block, blockName) in infosBlock" :key="blockName">
             <div v-if="blockName == page" v-for="(group, groupName) in block" :key="groupName">
                 <div v-for="(item, index) in group" :key="index">
-                    <div v-if="item.id == currentPage" class="layout-infosblock-picture">
+                    <div v-if="item.id == currentBlock" class="layout-infosblock-picture">
                         <div class="layout-infosblock margin-x">
                             <div v-if="item.card" class="layout-body-infos-card anim-text-infos">
                                 <div class="title-item">{{ item.title }}</div>
@@ -23,12 +23,12 @@
                             </div>
                             <div class="layout-button-picture">
                                 <div class="button-picture">
-                                    <Button @click="previousRender" :disabled="currentPage === 1" type="button" msg="<"
+                                    <Button @click="previousRender" :disabled="currentBlock === 1" type="button" msg="<"
                                         width="48px" height="48px" />
-                                    <Button @click="nextRender" :disabled="currentPage === totalRender" type="button"
+                                    <Button @click="nextRender" :disabled="currentBlock === totalRender" type="button"
                                         msg=">" width="48px" height="48px" />
                                 </div>
-                                <span>{{ currentPage }}&nbsp;/&nbsp;{{ totalRender }}</span>
+                                <span>{{ currentBlock }}&nbsp;/&nbsp;{{ totalRender }}</span>
                             </div>
                         </div>
                         <div class="layout-carousel margin-x">
@@ -60,7 +60,7 @@ defineProps({
 export default {
     data() {
         return {
-            currentPage: 1
+            currentBlock: 1
         }
     },
     computed: {
@@ -79,13 +79,13 @@ export default {
     },
     methods: {
         nextRender() {
-            if (this.currentPage < this.totalRender) {
-                this.currentPage++
+            if (this.currentBlock < this.totalRender) {
+                this.currentBlock++
             }
         },
         previousRender() {
-            if (this.currentPage > 1) {
-                this.currentPage--
+            if (this.currentBlock > 1) {
+                this.currentBlock--
             }
         }
     }

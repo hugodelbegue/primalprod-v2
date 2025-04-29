@@ -73,6 +73,11 @@
         </p>
       </template>
     </Paragraph>
+    <InfosBlock background="var(--background-infosblock)" page="infosContact">
+      <template #title-infosblock>
+        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
+      </template>
+    </InfosBlock>
     <Partner />
     <ContactReminder background="var(--background-main)">
       <template #sendcontact-title>
@@ -96,6 +101,7 @@
 <script setup>
 import { loading } from '@/assets/js/utils'
 import Partner from '@/components/about-page/Partner.vue'
+import InfosBlock from '@/components/items/section/InfosBlock.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import Proverb from '@/components/about-page/Proverb.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
