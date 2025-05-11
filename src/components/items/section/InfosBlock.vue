@@ -36,7 +36,7 @@
                                 <div class="carousel-picture anim-img-infos"
                                     :style="{ backgroundImage: `url(${path('media-section', item.img)})` }">
                                 </div>
-                                <div class="carousel-picture anim-img-infos-two"
+                                <div class="carousel-picture"
                                     :style="{ backgroundImage: `url(${path('media-section', item.img)})` }"></div>
                             </div>
                         </div>
@@ -223,20 +223,6 @@ export default {
             opacity: 1;
             filter: grayscale(0) blur(0);
             transform: translateX(0);
-        }
-    }
-}
-
-.anim-img-infos-two {
-    animation: anim-img-infos-two var(--time-transition) ease-in-out both;
-
-    @keyframes anim-img-infos-two {
-        0% {
-            opacity: .75;
-        }
-
-        100% {
-            opacity: 1;
         }
     }
 }

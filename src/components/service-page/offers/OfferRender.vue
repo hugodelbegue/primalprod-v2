@@ -33,36 +33,28 @@
             <p v-if="!preview && offer != 4" class="text-offer-description" v-html="text"></p>
             <p v-if="!preview && offer == 4" class="text-offer-description" :style="{ height: 'auto' }" v-html="text">
             </p>
+            <h4 v-if="!preview && offer == 4" class="title-preview-point space-text" v-html="previewTitle"></h4>
+            <ul v-if="!preview && offer == 4 && previewPoints" class="list-offer-four-points space-text">
+                <li v-for="(point, index) in previewPoints" :key="index">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="icon-check" viewBox="0 0 16 16">
+                        <path
+                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                    </svg>
+                    <p v-html="point"></p>
+                </li>
+            </ul>
+            <p v-if="!preview && offer == 4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vitae
+                dolores quaerat
+                necessitatibus ratione fuga inventore modi voluptates voluptatum tempore!</p>
             <ButtonOffer v-if="offer != 4" class="button-offer" :route="route">
                 <template #text-button>
                     {{ buttonText }}
                 </template>
             </ButtonOffer>
-            <h4 v-if="!preview" class="title-firt-point space-text">{{ firstTitle }}</h4>
-            <ul v-if="!preview && firstPoints" class="list-offer-points space-text">
-                <li v-for="(point, index) in firstPoints" :key="index">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="icon-check" viewBox="0 0 16 16">
-                        <path
-                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                    </svg>
-                    <p v-html="point"></p>
-                </li>
-            </ul>
-            <h4 v-if="!preview" class="space-text">{{ secondTitle }}</h4>
-            <ul v-if="!preview && secondPoints" class="list-offer-points space-text">
-                <li v-for="(point, index) in secondPoints" :key="index">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="icon-check" viewBox="0 0 16 16">
-                        <path
-                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                    </svg>
-                    <p v-html="point"></p>
-                </li>
-            </ul>
-            <h4 v-if="!preview" class="space-text">{{ thirdTitle }}</h4>
-            <ul v-if="!preview && thirdPoints" class="list-offer-points space-text">
-                <li v-for="(point, index) in thirdPoints" :key="index">
+            <h4 v-if="!preview && offer != 4" class="title-preview-point space-text" v-html="previewTitle"></h4>
+            <ul v-if="!preview && offer != 4 && previewPoints" class="list-offer-points space-text">
+                <li v-for="(point, index) in previewPoints" :key="index">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="icon-check" viewBox="0 0 16 16">
                         <path
@@ -94,6 +86,8 @@ defineProps({
     text: String,
     preview: Boolean,
     previewText: String,
+    previewTitle: String,
+    previewPoints: Array,
     firstTitle: String,
     firstPoints: Array,
     secondTitle: String,
@@ -133,6 +127,8 @@ export default {
     @media #{$switch} {
         padding: var(--side) calc(var(--side) * 0.75);
         min-width: 364px;
+        height: 100%;
+        min-height: 640px;
     }
 
     &::before,
@@ -173,8 +169,8 @@ export default {
         padding: 2px 8px;
         border-radius: var(--radius-low);
         position: absolute;
-        right: calc(var(--side) * 0.75);
-        top: -17px;
+        right: 15px;
+        top: 15px;
         box-shadow: var(--shadow-low);
 
         svg {
@@ -244,20 +240,29 @@ export default {
     margin: 2rem 0;
     line-height: 1.5rem;
     height: 72px;
+
+    @media #{$mobileScreen} {
+        height: 48px;
+    }
 }
 
 .button-offer {
     margin-top: 0 !important;
 }
 
-.title-firt-point {
+.title-preview-point {
     margin-top: 2rem;
 }
 
-.list-offer-points {
+.list-offer-points,
+.list-offer-four-points {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--side-between);
+}
+
+.list-offer-four-points {
+    --space-p: 2rem;
 }
 
 .layout-image-offer {

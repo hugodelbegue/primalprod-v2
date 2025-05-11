@@ -12,7 +12,17 @@ export default {
                 button: "Offre maintenance",
                 price: "24",
                 preview: "L’offre Maintenance assure la pérennité et la performance des services en ligne des clients. Elle inclut des mises à jour régulières, une surveillance proactive et un support technique réactif, garantissant ainsi une sécurité optimale, une disponibilité constante et une expérience utilisateur sans interruption.",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro ipsam reprehenderit id.",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro ipsam.",
+                previewTitle: "Maintenance tout compris",
+                previewPoints: [
+                    "Création d'une <u>page web simple<u/>",
+                    "Formulaire de contact",
+                    "Intégration des réseaux sociaux",
+                    "Widget commentaire",
+                    "Widget commentaire",
+                    "Widget commentaire",
+                    "Widget commentaire"
+                ],
                 firstTitle: "Solutions de maintenance",
                 firstPoints: [
                     "Reprise de l’ancien site",
@@ -27,7 +37,7 @@ export default {
                     "Certificat SSL inclus",
                     "Mise à jour et maintenance régulières"
                 ],
-                thirdTitle: "Assistance et suivi technique",
+                thirdTitle: "Assistance",
                 thirdPoints: [
                     "Support technique basique",
                     "Statistiques de fréquentation"

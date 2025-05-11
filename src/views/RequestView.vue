@@ -21,6 +21,7 @@
                 </div>
             </div>
         </div>
+        <Features offer-features="offerFour" />
         <StepsSection />
         <PriceSection id="price" />
         <ConditionsSection />
@@ -44,6 +45,7 @@ import PriceSection from '@/components/service-page/PriceSection.vue'
 import ConditionsSection from '@/components/service-page/ConditionsSection.vue'
 import Questions from '@/components/items/section/Questions.vue'
 import ButtonPrice from '@/components/items/button/ButtonSecond.vue'
+import Features from '@/components/items/section/Features.vue'
 </script>
 
 <script>

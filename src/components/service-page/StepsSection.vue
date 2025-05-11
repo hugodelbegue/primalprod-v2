@@ -1,5 +1,6 @@
 <template>
     <section class="background-steps-left">
+        <h2 class="title-steps-section frameworkY margin-x">Un accompagnement personnalisé à chaque étape du projet</h2>
         <div class="layout-steps-left frameworkX frameworkY margin-x switch-direction animation-hover-active">
             <div class="text-steps">
                 <h2 class="space-title">1.&nbsp;<span class="animation-hover">Étape une</span></h2>
@@ -78,6 +79,11 @@ import { loading } from '@/assets/js/utils'
 
 .background-steps-right {
     background: var(--background-steps-right);
+}
+
+.title-steps-section {
+    text-align: center;
+    font-size: 1.75rem;
 }
 
 .layout-steps-left,
