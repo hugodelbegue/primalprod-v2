@@ -7,10 +7,10 @@ import router from './router'
 
 import infosBlock from '@/assets/js/infos'
 
-import offerOne from '@/assets/js/offers/offer-one'
-import offerTwo from '@/assets/js/offers/offer-two'
-import offerThree from '@/assets/js/offers/offer-three'
-import offerFour from '@/assets/js/offers/offer-four'
+import offerRequest from '@/assets/js/offers/offer-request'
+import offerMaintenance from '@/assets/js/offers/offer-maintenance'
+import offerOne from '@/assets/js/offers/offer-basic'
+import offerTwo from '@/assets/js/offers/offer-smart'
 
 console.log("\nHello 👋\nRéalisé par PrimalProd.\n👉 https://primalprod.fr/\n ")
 
@@ -19,9 +19,9 @@ const app = createApp(App)
 app.use(router)
 app.config.globalProperties.$api = api
 app.mixin(infosBlock)
+app.mixin(offerRequest)
+app.mixin(offerMaintenance)
 app.mixin(offerOne)
 app.mixin(offerTwo)
-app.mixin(offerThree)
-app.mixin(offerFour)
 
 app.mount('#app')

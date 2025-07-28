@@ -4,6 +4,7 @@ export default {
             // basic offer
             offerOne: {
                 number: 1,
+                inProd: false,
                 title: 'Basic',
                 titleMenu: 'Basic',
                 route: "basic",

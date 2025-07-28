@@ -1,17 +1,17 @@
 <template>
     <ul class="offerlinks">
         <h3 class="title-offerlinks">Offres</h3>
-        <li>
-            <router-link :to="{ name: 'basic' }">Basic</router-link>
+        <li v-if="offerRequest.inProd">
+            <router-link :to="{ name: 'request' }">Sur devis</router-link>
         </li>
-        <li>
-            <router-link :to="{ name: 'smart' }">Smart</router-link>
-        </li>
-        <li>
+        <li v-if="offerMaintenance.inProd">
             <router-link :to="{ name: 'maintenance' }">Maintenance</router-link>
         </li>
-        <li>
-            <router-link :to="{ name: 'request' }">Sur devis</router-link>
+        <li v-if="offerOne.inProd">
+            <router-link :to="{ name: 'basic' }">Basic</router-link>
+        </li>
+        <li v-if="offerTwo.inProd">
+            <router-link :to="{ name: 'smart' }">Smart</router-link>
         </li>
     </ul>
 </template>

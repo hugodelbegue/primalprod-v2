@@ -2,11 +2,13 @@ export default {
     data() {
         return {
             // request offer
-            offerFour: {
+            offerRequest: {
                 number: 4,
+                inProd: true,
                 title: 'Sur devis',
                 titleMenu: 'Devis',
                 route: "request",
+                price: "request",
                 popular: false,
                 important: false,
                 button: "En savoir plus",

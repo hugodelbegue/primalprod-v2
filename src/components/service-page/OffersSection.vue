@@ -2,25 +2,27 @@
     <div class="background-offers frameworkX frameworkY animation-hover-active">
         <slot name="header-offers"></slot>
         <div class="layout-offers margin-x">
-            <OfferRender class="part-one animation-part-one" :offer="offerOne.number" :title="offerOne.title"
-                :route="offerOne.route" :popular="offerOne.popular" :important="offerOne.important"
-                :button-text="offerOne.button" :price="offerOne.price" :text="offerOne.text"
-                :preview-title="offerOne.previewTitle" :preview-points="offerOne.previewPoints" />
-            <OfferRender class="part-two animation-part-two" :offer="offerTwo.number" :title="offerTwo.title"
-                :route="offerTwo.route" :popular="offerTwo.popular" :important="offerTwo.important"
-                :button-text="offerTwo.button" :price="offerTwo.price" :text="offerTwo.text"
-                :preview-title="offerTwo.previewTitle" :preview-points="offerTwo.previewPoints" />
-            <OfferRender class="part-three animation-part-three" :offer="offerThree.number" :title="offerThree.title"
-                :route="offerThree.route" :popular="offerThree.popular" :important="offerThree.important"
-                :button-text="offerThree.button" :price="offerThree.price" :text="offerThree.text"
-                :preview-title="offerThree.previewTitle" :preview-points="offerThree.previewPoints" />
+            <OfferRender v-if="offerRequest.inProd" class="offer part-top-left animation-part-top-left"
+                :offer="offerRequest.number" :title="offerRequest.title" :route="offerRequest.route"
+                :button-text="offerRequest.button" :text="offerRequest.text" :preview-title="offerRequest.previewTitle"
+                :preview-points="offerRequest.previewPoints" />
+            <OfferRender v-if="offerMaintenance.inProd" class="part-top-right animation-part-top-right"
+                :offer="offerMaintenance.number" :title="offerMaintenance.title" :route="offerMaintenance.route"
+                :popular="offerMaintenance.popular" :important="offerMaintenance.important"
+                :button-text="offerMaintenance.button" :price="offerMaintenance.price" :text="offerMaintenance.text"
+                :preview-title="offerMaintenance.previewTitle" :preview-points="offerMaintenance.previewPoints" />
+            <OfferRender v-if="offerOne.inProd" class="part-bottom-left animation-part-bottom-left"
+                :offer="offerOne.number" :title="offerOne.title" :route="offerOne.route" :popular="offerOne.popular"
+                :important="offerOne.important" :button-text="offerOne.button" :price="offerOne.price"
+                :text="offerOne.text" :preview-title="offerOne.previewTitle" :preview-points="offerOne.previewPoints" />
+            <OfferRender v-if="offerTwo.inProd" class="part-bottom-right animation-part-bottom-right"
+                :offer="offerTwo.number" :title="offerTwo.title" :route="offerTwo.route" :popular="offerTwo.popular"
+                :important="offerTwo.important" :button-text="offerTwo.button" :price="offerTwo.price"
+                :text="offerTwo.text" :preview-title="offerTwo.previewTitle" :preview-points="offerTwo.previewPoints" />
             <!-- <div class="plus middle">
                 <icon-spin />
                 <span>Soyez maître de votre site</span>
             </div> -->
-            <OfferRender class="offer part-four animation-part-four" :offer="offerFour.number" :title="offerFour.title"
-                :route="offerFour.route" :button-text="offerFour.button" :text="offerFour.text"
-                :preview-title="offerFour.previewTitle" :preview-points="offerFour.previewPoints" />
         </div>
         <div class="offers-add margin-x">
             <p class="others-offer">
@@ -47,42 +49,46 @@ import OfferRender from './offers/OfferRender.vue'
     grid-row-gap: var(--side-between);
 }
 
-.part-one {
+.part-top-left {
     grid-column: 1 / 7;
     grid-row: 1;
+    margin-bottom: calc(var(--side-between) / 2);
 
     @media #{$switch} {
-        grid-column: 1 / 4;
+        grid-column: 1 / 5;
+        margin-bottom: initial;
     }
 }
 
-.part-two {
+.part-top-right {
     grid-column: 1 / 7;
     grid-row: 2;
 
     @media #{$switch} {
-        grid-column: 4 / 7;
+        grid-column: 5 / 7;
         grid-row: 1;
     }
 }
 
-.part-three {
+.part-bottom-right {
     grid-column: 1 / 7;
     grid-row: 3;
 
     @media #{$switch} {
-        grid-column: 5 / 7;
+        grid-column: 4 / 7;
         grid-row: 2;
     }
 }
 
-.part-four {
+.part-bottom-left {
     grid-column: 1 / 7;
-    grid-row: 5;
+    grid-row: 4;
+    margin-top: calc(var(--side-between) / 2);
 
     @media #{$switch} {
-        grid-column: 1 / 5;
+        grid-column: 1 / 4;
         grid-row: 2;
+        margin-top: initial;
     }
 }
 
@@ -133,7 +139,6 @@ import OfferRender from './offers/OfferRender.vue'
         grid-row: 3;
     }
 }
-
 
 .offer {
     & :deep(.button-base) {

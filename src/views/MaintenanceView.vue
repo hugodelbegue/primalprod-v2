@@ -17,13 +17,14 @@
                         quia,
                         ullam totam nisi doloremque laboriosam ratione molestiae nostrum enim sunt suscipit.
                     </p>
-                    <ButtonPrice class="button-price" :route="offerFour.maintenance" hash="#price" text="Tarif" />
+                    <ButtonPrice class="button-price" :route="offerMaintenance.maintenance" hash="#price"
+                        text="Tarif" />
                 </div>
             </div>
         </div>
-        <Features :offer-features="offerThree" />
+        <Features :offer-features="offerMaintenance" />
         <StepsSection />
-        <PriceSection id="price" />
+        <PriceSection id="price" :offer="offerMaintenance" />
         <ConditionsSection />
         <Questions :question-list="questionList">
             <template #questions-title>

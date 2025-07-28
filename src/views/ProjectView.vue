@@ -5,10 +5,15 @@
                 <template #title-project>
                     Site . {{ data['full-title'] }}
                 </template>
-                <template #tag-project v-if="data['tag-url'] == 'basic'">{{ offerOne.button }}</template>
-                <template #tag-project v-if="data['tag-url'] == 'smart'">{{ offerTwo.button }}</template>
-                <template #tag-project v-if="data['tag-url'] == 'maintenance'">{{ offerThree.button }}</template>
-                <template #tag-project v-if="data['tag-url'] == 'request'">Offre sur devis</template>
+                <template #tag-project v-if="data['tag-url'] == 'request'">Offre sur
+                    devis</template>
+                <template #tag-project v-if="data['tag-url'] == 'maintenance'">{{
+                    offerMaintenance.button }}</template>
+                <template #tag-project v-if="data['tag-url'] == 'basic'">{{ offerOne.button
+                    }}</template>
+                <template #tag-project v-if="data['tag-url'] == 'smart'">{{ offerTwo.button
+                    }}</template>
+                <template #tag-project v-if="data['tag-url'] == 'services'">Voir les offres</template>
             </HeaderProject>
             <BodyProject :url="imgUrl(data.preview)" v-if="cleanUrl(data.title) === title">
                 <template #text-project>
@@ -37,11 +42,7 @@
                 </template>
             </Testimonial>
         </div>
-        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
-            <template #sendcontact-title>
-                <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
-                    bla</h2>
-            </template>
+        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !" class="project-reminder">
             <template #sendcontact-paragraph>
                 <p class="space-text">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
@@ -99,5 +100,10 @@ export default {
     .picture {
         width: 100%;
     }
+}
+
+.project-reminder :deep(.layout-sendcontact) {
+    place-items: center;
+    text-align: center;
 }
 </style>

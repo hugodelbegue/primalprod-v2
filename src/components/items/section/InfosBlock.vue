@@ -105,6 +105,7 @@ export default {
     display: flex;
     flex-direction: column-reverse;
     gap: var(--side);
+    margin-bottom: var(--space-h);
 
     @media #{$tabletScreen} {
         height: var(--height-img);

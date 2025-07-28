@@ -4,6 +4,7 @@ export default {
             // smart offer
             offerTwo: {
                 number: 2,
+                inProd: false,
                 title: 'Smart',
                 titleMenu: 'Smart',
                 route: "smart",

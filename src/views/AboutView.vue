@@ -74,9 +74,9 @@
       </template>
     </Paragraph>
     <InfosBlock background="var(--background-infosblock)" page="infosContact">
-      <template #title-infosblock>
+      <!-- <template #title-infosblock>
         <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
-      </template>
+      </template> -->
     </InfosBlock>
     <Partner />
     <ContactReminder background="var(--background-main)">

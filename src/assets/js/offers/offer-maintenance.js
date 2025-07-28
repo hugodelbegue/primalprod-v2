@@ -2,15 +2,16 @@ export default {
     data() {
         return {
             // maintenance offer
-            offerThree: {
+            offerMaintenance: {
                 number: 3,
+                inProd: true,
                 title: 'Maintenance',
                 titleMenu: 'Maintenance',
                 route: "maintenance",
                 popular: false,
                 important: true,
                 button: "Offre maintenance",
-                price: "24",
+                price: "350",
                 preview: "L’offre Maintenance assure la pérennité et la performance des services en ligne des clients. Elle inclut des mises à jour régulières, une surveillance proactive et un support technique réactif, garantissant ainsi une sécurité optimale, une disponibilité constante et une expérience utilisateur sans interruption.",
                 text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro ipsam.",
                 previewTitle: "Maintenance tout compris",

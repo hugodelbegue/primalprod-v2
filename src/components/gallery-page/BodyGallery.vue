@@ -8,13 +8,19 @@
                             :title="data.title" />
                     </template>
                     <template #title-gallery>
-                        <div v-if="data.title" class="layout-title-card">{{ data.title }}</div>
+                        <div v-if="data.title" :style="data['tag-url'] == 'services' ? {
+                            paddingBottom: '1em'
+                        } : {}" class="layout-title-card">{{ data.title }}</div>
                     </template>
                     <template #tag-gallery>
-                        <p v-if="data['tag-url'] == 'basic'" class="tag-card">{{ offerOne.button }}</p>
-                        <p v-if="data['tag-url'] == 'smart'" class="tag-card">{{ offerTwo.button }}</p>
-                        <p v-if="data['tag-url'] == 'maintenance'" class="tag-card">{{ offerThree.button }}</p>
-                        <p v-if="data['tag-url'] == 'request'" class="tag-card">Offre sur devis</p>
+                        <p v-if="data['tag-url'] == 'request'" class="tag-card">Offre sur devis
+                        </p>
+                        <p v-if="data['tag-url'] == 'maintenance'" class="tag-card">{{
+                            offerMaintenance.button }}</p>
+                        <p v-if="data['tag-url'] == 'basic'" class="tag-card">{{ offerOne.button }}
+                        </p>
+                        <p v-if="data['tag-url'] == 'smart'" class="tag-card">{{ offerTwo.button }}
+                        </p>
                     </template>
                 </CardGallery>
             </article>

@@ -3,7 +3,9 @@
         <div v-if="preview" class="layout-image-offer">
             <div class="image-offer" :class="paintOffers"></div>
         </div>
-        <div class="layout-offer" :class="importantOffer">
+        <div class="layout-offer" :class="importantOffer" :style="preview ? {
+            minHeight: 'auto'
+        } : {}">
             <div class="offer-price-render">
                 <div class="title-offer">
                     <h3>{{ title }}</h3>
@@ -16,16 +18,6 @@
                         <p>Populaire</p>
                     </div>
                 </div>
-                <div v-if="offer != 4" class="price-render">
-                    <h3 class="price">{{ price }} €</h3>
-                    <span>/mois TTC</span>
-                </div>
-                <div v-if="preview && offer == 4" class="no-price-render">
-                    <span>Facture sur mesure à la réalisation du devis</span>
-                </div>
-                <p v-if="!preview && offer != 4" class="text-price-year">Facturé annuellement à {{ price * 12 }} €</p>
-                <p v-if="!preview && offer == 4" class="text-price-year">Facture sur mesure à la réalisation du devis
-                </p>
             </div>
             <p v-if="preview" class="text-offer-description-preview">
                 {{ previewText }}
@@ -47,7 +39,9 @@
             <p v-if="!preview && offer == 4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vitae
                 dolores quaerat
                 necessitatibus ratione fuga inventore modi voluptates voluptatum tempore!</p>
-            <ButtonOffer v-if="offer != 4" class="button-offer" :route="route">
+            <ButtonOffer class="button-offer" :style="preview ? {
+                margin: '0 auto !important',
+            } : {}" :route="route">
                 <template #text-button>
                     {{ buttonText }}
                 </template>
@@ -63,11 +57,6 @@
                     <p v-html="point"></p>
                 </li>
             </ul>
-            <ButtonOffer v-if="offer == 4" :route="route">
-                <template #text-button>
-                    {{ buttonText }}
-                </template>
-            </ButtonOffer>
         </div>
     </section>
 </template>
@@ -128,7 +117,6 @@ export default {
         padding: var(--side) calc(var(--side) * 0.75);
         min-width: 364px;
         height: 100%;
-        min-height: 640px;
     }
 
     &::before,
@@ -196,41 +184,6 @@ export default {
     }
 }
 
-.text-price-year {
-    font-size: 14px;
-    margin-top: 4px;
-}
-
-.price-render {
-    display: flex;
-    place-items: baseline;
-
-    .price {
-        font-size: 40px;
-        font-weight: var(--f-regular);
-        margin-right: 4px;
-    }
-
-    span {
-        font-size: 12px;
-    }
-}
-
-.no-price-render {
-    display: flex;
-    place-items: end;
-    height: 52px;
-    font-size: 14px;
-
-    @media #{$mobileScreen} {
-        height: 46px;
-    }
-
-    @media #{$tabletScreen} {
-        height: 40px;
-    }
-}
-
 .text-offer-description-preview {
     margin-top: 2.15rem;
     margin-bottom: 3rem;
@@ -239,15 +192,14 @@ export default {
 .text-offer-description {
     margin: 2rem 0;
     line-height: 1.5rem;
-    height: 72px;
-
-    @media #{$mobileScreen} {
-        height: 48px;
-    }
 }
 
 .button-offer {
-    margin-top: 0 !important;
+    margin: 2rem 4rem;
+
+    @media #{$mobileScreen} {
+        margin: 4rem;
+    }
 }
 
 .title-preview-point {
@@ -284,20 +236,20 @@ export default {
     height: 100%;
 }
 
-.basic {
-    background: url(../img/pen.jpg) center / cover no-repeat;
-}
-
-.smart {
-    background: url(../img/brush.jpg) center / cover no-repeat;
-}
-
 .request {
     background: url(../img/office.jpg) center / cover no-repeat;
 }
 
 .maintenance {
     background: url(../img/desk.jpg) center / cover no-repeat;
+}
+
+.basic {
+    background: url(../img/pen.jpg) center / cover no-repeat;
+}
+
+.smart {
+    background: url(../img/brush.jpg) center / cover no-repeat;
 }
 
 .important-offer-overlay {
