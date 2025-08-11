@@ -13,7 +13,7 @@
                         } : {}" class="layout-title-card">{{ data.title }}</div>
                     </template>
                     <template #tag-gallery>
-                        <p v-if="data['tag-url'] == 'request'" class="tag-card">Offre sur devis
+                        <p v-if="data['tag-url'] == 'request'" class="tag-card">Offre sur mesure
                         </p>
                         <p v-if="data['tag-url'] == 'maintenance'" class="tag-card">{{
                             offerMaintenance.button }}</p>

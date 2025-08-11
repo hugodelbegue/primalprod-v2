@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .layout-networks {
-    margin-top: calc(var(--side) + 3em);
+    margin-top: calc(var(--side) + 2rem);
     margin-bottom: 2em;
 
     @media #{$switch} {
@@ -39,11 +39,15 @@ export default {
 .networks {
     display: flex;
     gap: 3em;
+
+    @media #{$switch} {
+        gap: 2em;
+    }
 }
 
 svg,
 img {
-    width: 40px;
+    width: 32px;
     height: auto;
     aspect-ratio: 1 / 1;
 }

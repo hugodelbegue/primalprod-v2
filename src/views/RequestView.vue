@@ -3,7 +3,7 @@
         <div class="background-header-offer-request frameworkX frameworkY animation-hover-active">
             <div class="layout-header-offer-request margin-x switch-direction">
                 <div class="layout-description-header-offer-request">
-                    <h1>Offre sur devis</h1>
+                    <h1>Offre sur mesure</h1>
                     <div class="layout-img-header-offer-request"></div>
                 </div>
                 <div class="text-header-offer-request layout-title right">

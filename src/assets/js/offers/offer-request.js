@@ -5,8 +5,8 @@ export default {
             offerRequest: {
                 number: 4,
                 inProd: true,
-                title: 'Sur devis',
-                titleMenu: 'Devis',
+                title: 'Sur mesure',
+                titleMenu: 'Sur mesure',
                 route: "request",
                 price: "request",
                 popular: false,

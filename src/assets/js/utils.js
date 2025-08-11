@@ -38,11 +38,14 @@ export function loadingHead(element, anim) {
 }
 
 // animation loading form
-export function loadingOverlay(element, remove) {
-    const overlay = document.querySelector(`#${element}`)
+export function loadingOverlay(element, mask, remove) {
+    const form = document.querySelector(`#${element}`)
+    const overlay = document.querySelector(`#${mask}`)
     overlay.style.opacity = '0'
     if (remove === true) {
         setTimeout(() => {
+            form.style.transition = 'opacity var(--time-animation)'
+            form.style.opacity = '1'
             overlay.remove()
         }, 500)
     }

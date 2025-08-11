@@ -65,6 +65,7 @@ defineProps({
 }
 
 .text-price {
+    --space-h: 2rem;
     padding: var(--side) 0;
 
     @media #{$switch} {

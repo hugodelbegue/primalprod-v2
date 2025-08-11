@@ -46,7 +46,7 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/prestations/offre-sur-devis',
+      path: '/prestations/offre-sur-mesure',
       name: 'request',
       component: () => import('../views/RequestView.vue'),
       props: true

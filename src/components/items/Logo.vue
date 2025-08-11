@@ -1,6 +1,7 @@
 <template>
     <div class="img">
         <slot name="img"></slot>
+        <slot name="imgText"></slot>
     </div>
 </template>
 

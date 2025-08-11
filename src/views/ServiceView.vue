@@ -30,7 +30,8 @@
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
         </InfosBlock>
-        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !" class="small-margin-top">
+        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !"
+            class="contact-reminder small-margin-top">
             <template #sendcontact-title>
                 <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
                     bla</h2>
@@ -90,5 +91,10 @@ img.media-center {
 .media-center {
     filter: grayscale(1);
     opacity: var(--opacity-animation);
+}
+
+.contact-reminder :deep(.layout-sendcontact) {
+    place-items: center;
+    text-align: center;
 }
 </style>

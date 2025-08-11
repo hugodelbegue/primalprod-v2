@@ -1,7 +1,7 @@
 <template>
     <div class="background-partner-contact frameworkY animation-hover-active">
         <div class="layout-partner-contact">
-            <h2 class="space-title">Ils m'ont fait&nbsp;<span class="animation-hover">confiance</span></h2>
+            <h2 class="space-title">Ils me font&nbsp;<span class="animation-hover">confiance</span></h2>
             <div class="layout-partner" ref="sliderPartners">
                 <img v-for="(logo, index) in duplicatedLogos" :key="index" class="partner load" :src="logo"
                     alt="Logo partenaire" @load="loading" />
@@ -94,6 +94,5 @@ export default {
 .partner {
     width: initial;
     height: auto;
-    // aspect-ratio: 1 / 1;
 }
 </style>

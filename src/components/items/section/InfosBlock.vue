@@ -32,12 +32,10 @@
                             </div>
                         </div>
                         <div class="layout-carousel margin-x">
-                            <div class="layout-picture">
+                            <div class="layout-picture middle">
                                 <div class="carousel-picture anim-img-infos"
                                     :style="{ backgroundImage: `url(${path('media-section', item.img)})` }">
                                 </div>
-                                <div class="carousel-picture"
-                                    :style="{ backgroundImage: `url(${path('media-section', item.img)})` }"></div>
                             </div>
                         </div>
                     </div>
@@ -94,10 +92,10 @@ export default {
 
 <style lang="scss" scoped>
 .background-infosblock {
-    --height-img: min(500px, calc(100vw - 40px));
+    --height-img: min(400px, calc(100vw - 40px));
 
     @media #{$mobileScreen} {
-        --height-img: 500px;
+        --height-img: 400px;
     }
 }
 
@@ -105,7 +103,6 @@ export default {
     display: flex;
     flex-direction: column-reverse;
     gap: var(--side);
-    margin-bottom: var(--space-h);
 
     @media #{$tabletScreen} {
         height: var(--height-img);
@@ -129,23 +126,19 @@ export default {
 }
 
 .layout-carousel {
-    flex: 40%;
-    position: relative;
-    min-height: var(--height-img);
+    display: none;
 
     @media #{$tabletScreen} {
+        display: block;
+        flex: 40%;
+        position: relative;
+        min-height: var(--height-img);
         margin-left: calc(var(--margin-block-x) / 2);
-
     }
 
     .layout-picture {
-        display: flex;
         gap: var(--side-between);
         width: 100%;
-
-        @media #{$tabletScreen} {
-            position: absolute;
-        }
     }
 
     .carousel-picture {
@@ -211,19 +204,29 @@ export default {
 }
 
 .anim-img-infos {
-    animation: anim-img-infos var(--time-transition) ease-in-out both;
+    animation: anim-img-infos calc(var(--time-transition) * 2) ease-in-out both;
 
     @keyframes anim-img-infos {
         0% {
-            opacity: .25;
-            filter: grayscale(1) blur(5px);
-            transform: translateX(25%);
+            filter: grayscale(1);
         }
 
         100% {
-            opacity: 1;
-            filter: grayscale(0) blur(0);
-            transform: translateX(0);
+            filter: grayscale(0);
+        }
+    }
+}
+
+.anim-img-infos-color {
+    animation: anim-img-infos-color calc(var(--time-transition) * 3) ease-in-out both;
+
+    @keyframes anim-img-infos-color {
+        0% {
+            filter: grayscale(1);
+        }
+
+        100% {
+            filter: grayscale(0);
         }
     }
 }

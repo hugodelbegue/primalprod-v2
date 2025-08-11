@@ -22,7 +22,8 @@
             </div>
         </div>
         <Form />
-        <ContactReminder class="servives-reminder" route="services" routeText="Consulter mes prestations !">
+        <ContactReminder class="servives-reminder small-margin-top" route="services"
+            routeText="Consulter mes prestations !">
             <template #sendcontact-title>
                 <h2 class="space-title">Encore un&nbsp;<span class="animation-hover">doute</span>&nbsp;? Prends 5
                     minutes pour être sûr.</h2>

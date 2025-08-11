@@ -16,9 +16,11 @@
                         href="https://tally.so/r/wod0dN" target="_blank">ce lien</a>.
                 </p>
             </div>
-            <div class="form middle shadow-low">
+            <div class="form-container middle">
                 <div id="overlay-form" class="overlay-loading middle"></div>
-                <TallyForm @load="loadingOverlay('overlay-form', true)" />
+                <div id="form" class="iframe-container shadow-low">
+                    <TallyForm @load="loadingOverlay('form', 'overlay-form', true)" />
+                </div>
             </div>
         </div>
     </section>
@@ -43,25 +45,46 @@ import TallyForm from './TallyForm.vue'
     background: var(--background-tally-form);
     padding: var(--side);
     border-radius: var(--radius-high);
-    flex: 100%;
+    flex: 55%;
 }
 
-.form {
-    background: var(--background-tally-form);
+.form-container {
     position: relative;
-    padding: var(--side);
-    border-radius: var(--radius-high);
+    flex: 45%;
+    min-height: calc(255px + calc(var(--side) * 2));
+
+    @media #{$switch} {
+        min-height: auto;
+    }
+
+
+    .iframe-container {
+        background: var(--background-tally-form);
+        position: absolute;
+        padding: var(--side);
+        border-radius: var(--radius-high);
+        width: 100%;
+        height: 100%;
+
+        @media #{$switch} {
+            height: auto;
+        }
+    }
 
     iframe {
         display: flex;
-        min-height: 223px;
+        min-height: 207px;
 
         @media #{$switch} {
-            width: 500px;
+            width: 100%;
+            min-height: auto;
         }
     }
 }
 
+#form {
+    opacity: 0;
+}
 
 .overlay-loading {
     background: var(--background-form);

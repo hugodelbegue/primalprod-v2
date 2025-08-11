@@ -3,8 +3,11 @@
     <div class="layout-first-view frameworkX middle switch-direction">
       <Logo class="logo margin-x">
         <template #img>
-          <img class="logo-mobile load" alt="Logo" :src="LogoMain" @load="loading" />
+          <img class="logo-img logo-mobile load" alt="Logo" :src="LogoImg" @load="loading" />
           <img class="logo-desktop load" alt="Logo" :src="Avatar" @load="loading" />
+        </template>
+        <template #imgText>
+          <img class="logo-text logo-mobile load" alt="Logo" :src="LogoText" @load="loading" />
         </template>
       </Logo>
       <AboutMe class="margin-x" />
@@ -36,7 +39,22 @@
       </template>
     </Paragraph>
     <ServicesPreview ref="refServices" />
-    <ContactReminder class="contact-home" route="contact" routeText="Réservez votre rendez-vous !">
+    <Testimonial background="var(--background-testimonial)">
+      <template #title-testimonial>
+        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
+      </template>
+      <template #text-testimonial>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
+        consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
+        inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
+        nesciunt, tempore ratione voluptate, suscipit velit.
+      </template>
+      <template #full-name-testimonial>
+        Jean Dupont, Directeur Général
+      </template>
+    </Testimonial>
+    <Values />
+    <ContactReminder class="contact-home small-margin-top" route="contact" routeText="Réservez votre rendez-vous !">
       <template #sendcontact-title>
         <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
           bla</h2>
@@ -52,20 +70,6 @@
         </p>
       </template>
     </ContactReminder>
-    <Testimonial background="var(--background-testimonial)" class="small-margin-top">
-      <template #title-testimonial>
-        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
-      </template>
-      <template #text-testimonial>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid ipsam pariatur odit ad
-        consequatur omnis at unde sequi ullam beatae deserunt, aspernatur culpa quis alias quos facere! Pariatur
-        inventore temporibus optio ipsam laborum facere. Ut quasi nemo dolore amet magnam, magni dolor atque
-        nesciunt, tempore ratione voluptate, suscipit velit.
-      </template>
-      <template #full-name-testimonial>
-        Jean Dupont, Directeur Général
-      </template>
-    </Testimonial>
   </div>
 </template>
 
@@ -77,11 +81,13 @@ import Paragraph from '@/components/items/section/Paragraph.vue'
 import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import Testimonial from '@/components/items/section/Testimonial.vue'
+import Values from '@/components/about-page/Values.vue'
 import Video from '@/components/items/Video.vue'
 import Avatar from '@/assets/img/media-section/avatar.svg'
 import Profil from '@/assets/img/media-section/profil-test.png'
 import Profil2 from '@/assets/img/media-section/profil-test-2.png'
-import LogoMain from '@/assets/img/logo-primalprod.svg'
+import LogoImg from '@/assets/img/logo.svg'
+import LogoText from '@/assets/img/logo-text.svg'
 </script>
 
 <script>
@@ -120,10 +126,11 @@ export default {
 <style lang="scss" scoped>
 .layout-first-view {
   --side-x: calc(50% - var(--tablet) / 2);
+  --gap-logo: 3rem;
   min-height: calc(100vh - var(--side-y) - calc(var(--margin-block-y) * 2) - 48px);
   flex-direction: column-reverse;
-  gap: 1.5rem;
-  padding-bottom: calc(48px * 2);
+  gap: var(--gap-logo);
+  padding-bottom: calc(70px + 32px);
 
   @media #{$switch} {
     flex-direction: row;
@@ -141,8 +148,9 @@ export default {
 
 .logo {
   display: flex;
+  flex-direction: column;
   place-content: center;
-  place-items: flex-start;
+  gap: var(--gap-logo);
 }
 
 .logo-mobile,
@@ -157,11 +165,23 @@ export default {
 }
 
 .logo-mobile {
-  filter: drop-shadow(var(--shadow-logo));
-
   @media #{$switch} {
     display: none;
   }
+}
+
+.logo-img {
+  width: 30%;
+  filter: drop-shadow(var(--shadow-logo));
+
+  @media #{$mobileScreen} {
+    width: 50%;
+  }
+}
+
+.logo-text {
+  width: 100%;
+  margin-top: 32px;
 }
 
 .logo-video,
@@ -213,7 +233,7 @@ export default {
 }
 
 .anim-profil-leave-active {
-  transition: all 500ms cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 350ms cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .anim-profil-enter-from,

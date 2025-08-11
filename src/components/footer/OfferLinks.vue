@@ -2,16 +2,16 @@
     <ul class="offerlinks">
         <h3 class="title-offerlinks">Offres</h3>
         <li v-if="offerRequest.inProd">
-            <router-link :to="{ name: 'request' }">Sur devis</router-link>
+            <router-link :to="{ name: 'request' }">{{ offerRequest.title }}</router-link>
         </li>
         <li v-if="offerMaintenance.inProd">
-            <router-link :to="{ name: 'maintenance' }">Maintenance</router-link>
+            <router-link :to="{ name: 'maintenance' }">{{ offerMaintenance.title }}</router-link>
         </li>
         <li v-if="offerOne.inProd">
-            <router-link :to="{ name: 'basic' }">Basic</router-link>
+            <router-link :to="{ name: 'basic' }">{{ offerOne.title }}</router-link>
         </li>
         <li v-if="offerTwo.inProd">
-            <router-link :to="{ name: 'smart' }">Smart</router-link>
+            <router-link :to="{ name: 'smart' }">{{ offerTwo.title }}</router-link>
         </li>
     </ul>
 </template>

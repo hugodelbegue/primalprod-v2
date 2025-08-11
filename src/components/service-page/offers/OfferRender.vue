@@ -241,7 +241,7 @@ export default {
 }
 
 .maintenance {
-    background: url(../img/desk.jpg) center / cover no-repeat;
+    background: url(../img/pen.jpg) center / cover no-repeat;
 }
 
 .basic {

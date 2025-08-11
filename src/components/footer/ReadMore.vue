@@ -1,7 +1,7 @@
 <template>
     <div class="readmore">
         <div class="footer-logo">
-            <PrimalProd width="280" height="34" class="logo-color" />
+            <PrimalProd height="25" class="logo-color" />
         </div>
         <p>Développeur web passionné de front-end, je cherche continuellement à m'améliorer et reste ouvert à tout
             type

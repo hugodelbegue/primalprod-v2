@@ -12,6 +12,13 @@
 
 <style lang="scss" scoped>
 .aboutme {
+    br {
+        display: none;
+
+        @media #{$switch} {
+            display: block;
+        }
+    }
 
     h1,
     p {
@@ -33,6 +40,7 @@
 
     .mobile-catchphrase {
         font-variant-caps: small-caps;
+        margin-bottom: 32px;
 
         @media #{$switch} {
             display: none;

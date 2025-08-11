@@ -58,7 +58,6 @@
         </p>
       </template>
     </Paragraph>
-    <Values />
     <Paragraph background="transparent" class="switch-reverse">
       <template #img-paragraph>
         <img class="img-paragraph scale-img load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
@@ -73,12 +72,8 @@
         </p>
       </template>
     </Paragraph>
-    <InfosBlock background="var(--background-infosblock)" page="infosContact">
-      <!-- <template #title-infosblock>
-        <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
-      </template> -->
-    </InfosBlock>
-    <Partner />
+    <InfosBlock class="title-delete" background="var(--background-infosblock)" page="infosContact"></InfosBlock>
+    <Partner class="small-margin-top" />
     <ContactReminder background="var(--background-main)">
       <template #sendcontact-title>
         <h2 class="space-title">Comment faire pour travailler <span class="animation-hover">ensemble</span>&nbsp;?
@@ -105,7 +100,6 @@ import InfosBlock from '@/components/items/section/InfosBlock.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import Proverb from '@/components/about-page/Proverb.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
-import Values from '@/components/about-page/Values.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -146,5 +140,9 @@ import Values from '@/components/about-page/Values.vue'
 
 .scale-img {
   margin-bottom: calc(var(--side-y) * -1);
+}
+
+.title-delete :deep(h2) {
+  display: none;
 }
 </style>
