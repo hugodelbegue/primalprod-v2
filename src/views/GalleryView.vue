@@ -3,7 +3,7 @@
         <div class="background-header-gallery frameworkX frameworkY animation-hover-active">
             <div class="layout-header-gallery margin-x switch-direction">
                 <div class="layout-description-header-gallery">
-                    <h1>Découvre mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>
+                    <h1>Explore mes&nbsp;<span class="animation-hover">réalisations</span>&nbsp;de site web</h1>
                     <div class="text-header-gallery layout-title right">
                         <p class="space-text">
                             Lorem Ipsum is simply dummy text of the
@@ -30,19 +30,20 @@
             </div>
         </div>
         <BodyGallery />
-        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !">
+        <ContactReminder route="contact" routeText="Réserver son rendez-vous !">
             <template #sendcontact-title>
-                <h2 class="space-title">Rien de plus <span class="animation-hover">simple</span>&nbsp;!</h2>
+                <h2 class="space-title">Ça te donne&nbsp;<span class="animation-hover">envie</span>&nbsp;de continuer ?
+                </h2>
             </template>
             <template #sendcontact-paragraph>
-                <p class="space-text">
+                <p class="space-text max-width-p">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad delectus ducimus, fuga architecto eos
                     quis
                     commodi voluptate voluptatem nulla quod libero debitis ipsum sunt vero dolorum eligendi?
                     Consequatur, ut
                     fugit saepe nulla harum illum ad deserunt excepturi quia ipsa quaerat.
                 </p>
-                <p class="space-text">
+                <p class="space-text max-width-p">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio repellat repellendus quas
                     autem maxime ab voluptate voluptates eum maiores!
                 </p>

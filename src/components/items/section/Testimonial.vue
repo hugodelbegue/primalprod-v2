@@ -41,8 +41,8 @@ defineProps({
         right: 20px;
 
         @media #{$mobileScreen} {
-            --size-layout-illustration: 83px;
-            top: -70px;
+            --size-layout-illustration: 55px;
+            top: -47px;
             right: 40px;
         }
     }

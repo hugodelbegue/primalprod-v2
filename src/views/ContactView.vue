@@ -3,7 +3,7 @@
         <div class="background-header-contact frameworkX frameworkY animation-hover-active">
             <div class="layout-header-contact margin-x switch-direction">
                 <div class="layout-description-header-contact">
-                    <h1>Viens&nbsp;<span class="animation-hover">contacte</span>&nbsp;moi</h1>
+                    <h1>Et si on en&nbsp;<span class="animation-hover">parlait</span>&nbsp;?</h1>
                     <div class="text-header-contact layout-title right">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta veniam illo magnam optio.
@@ -25,14 +25,12 @@
         <ContactReminder class="servives-reminder small-margin-top" route="services"
             routeText="Consulter mes prestations !">
             <template #sendcontact-title>
-                <h2 class="space-title">Encore un&nbsp;<span class="animation-hover">doute</span>&nbsp;? Prends 5
-                    minutes pour être sûr.</h2>
+                <h2 class="space-title">Encore un&nbsp;<span class="animation-hover">doute</span>&nbsp;?</h2>
             </template>
             <template #sendcontact-paragraph>
-                <p class="space-text">
-                    Tu te questionnes et hésites toujours, n'hésite pas à consulter mes prestations. tu y trouveras
-                    sûrement les réponses que tu recherches.
-                </p>
+                <p class="space-text max-width-p">Prends 5 minutes pour être sûr. <br>
+                    Si tu questionnes encore, consulte mes prestations, tu y trouveras certainement toutes les réponses
+                    dont tu as besoin.</p>
             </template>
         </ContactReminder>
     </section>

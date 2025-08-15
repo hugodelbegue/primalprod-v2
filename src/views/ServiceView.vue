@@ -3,7 +3,7 @@
         <div class="background-header-service frameworkX frameworkY animation-hover-active">
             <div class="layout-header-service margin-x switch-direction">
                 <div class="layout-description-header-service">
-                    <h1>Voilà mes&nbsp;<span class="animation-hover">prestations</span>&nbsp;bla bla</h1>
+                    <h1>Découvre mes&nbsp;<span class="animation-hover">prestations</span></h1>
                     <div class="text-header-service layout-title right">
                         <p class="space-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio ullam
@@ -14,12 +14,13 @@
                     </div>
                 </div>
                 <div class="layout-media-header-service middle">
-                    <img v-if="isMobileDevice()" class="media-center load"
-                        src="@/assets/img/media-header/laptop-coffee.jpg" alt="Photo face à un ordinateur portable"
-                        height="360" @load="loadingHead('.media-center', 'move-left')">
+                    <img v-if="isMobileDevice()" class="media-center load" :src="PictureHeader"
+                        alt="Photo face à un ordinateur portable" height="360"
+                        @load="loadingHead('.media-center', 'move-left')">
                     <video v-else class="media-center load" height="360"
                         @loadeddata="loadingHead('.media-center', 'move-left')" autoplay>
-                        <source src="@/assets/video/video-service-version-desktop.mp4" type="video/mp4">
+                        <source :src="VideoHeader" type="video/mp4">
+                        <source :src="VideoHeaderMov" type="video/quicktime">
                     </video>
                 </div>
             </div>
@@ -30,20 +31,17 @@
                 <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
             </template>
         </InfosBlock>
-        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !"
-            class="contact-reminder small-margin-top">
+        <ContactReminder route="contact" routeText="Demander un devis" class="contact-reminder small-margin-top">
             <template #sendcontact-title>
-                <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
-                    bla</h2>
+                <h2 class="space-title">Prêt à concretiser ton&nbsp;<span class="animation-hover">idée</span>&nbsp;?
+                </h2>
             </template>
             <template #sendcontact-paragraph>
-                <p class="space-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
-                    exercitationem, unde alias
-                    perferendis voluptatibus autem harum earum laboriosam inventore.
-                </p>
-                <p class="space-text">
-                    Perferendis voluptatibus autem harum earum laboriosam inventore.
+                <p class="space-text max-width-p">
+                    Tu as un projet de site web ? Que ce soit pour présenter ton activité, vendre en ligne ou créer
+                    une
+                    plateforme sur mesure, je t’accompagne de l’idée à la mise en ligne. N'hésite pas à me demander
+                    un devis et reçois une estimation claire, rapide et sans engagement.
                 </p>
             </template>
         </ContactReminder>
@@ -55,6 +53,9 @@ import { isMobileDevice, loadingHead } from '@/assets/js/utils'
 import OffersSection from '@/components/service-page/OffersSection.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
 import InfosBlock from '@/components/items/section/InfosBlock.vue'
+import VideoHeader from '@/assets/video/video-prestations.mp4'
+import VideoHeaderMov from '@/assets/video/video-prestations.mov'
+import PictureHeader from '@/assets/img/media-header/laptop-coffee.jpg'    
 </script>
 
 <style lang="scss" scoped>
@@ -91,6 +92,10 @@ img.media-center {
 .media-center {
     filter: grayscale(1);
     opacity: var(--opacity-animation);
+
+    @media #{$switch} {
+        // filter: grayscale(0);
+    }
 }
 
 .contact-reminder :deep(.layout-sendcontact) {

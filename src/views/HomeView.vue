@@ -1,5 +1,9 @@
 <template>
   <div class="layout-home frameworkY padding-bottom-page">
+    <link rel="preload" as="image" href="/src/components/service-page/img/office.jpg" />
+    <link rel="preload" as="image" href="/src/components/service-page/img/pen.jpg" />
+    <link rel="preload" as="image" href="/src/assets/img/media-section/profil-test.png" />
+    <link rel="preload" as="image" href="/src/assets/img/media-section/profil-test-2.png" />
     <div class="layout-first-view frameworkX middle switch-direction">
       <Logo class="logo margin-x">
         <template #img>
@@ -13,7 +17,7 @@
       <AboutMe class="margin-x" />
       <!-- <Video class="logo-video" /> -->
     </div>
-    <Video class="logo-video" />
+    <!-- <Video class="logo-video" /> -->
     <Paragraph class="paragraph-profil" background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
         <div class="layout-img-profil middle">
@@ -24,7 +28,7 @@
         </div>
       </template>
       <template #title-paragraph>
-        <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-title">Vous êtes la&nbsp;<span class="animation-hover">bienvenue</span>&nbsp;!</h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
@@ -39,7 +43,8 @@
       </template>
     </Paragraph>
     <ServicesPreview ref="refServices" />
-    <Testimonial background="var(--background-testimonial)">
+    <Values />
+    <Testimonial background="var(--background-testimonial-home)">
       <template #title-testimonial>
         <span class="animation-hover">Travailler</span>&nbsp;avec moi buibib hhbh bla bla bla
       </template>
@@ -53,19 +58,21 @@
         Jean Dupont, Directeur Général
       </template>
     </Testimonial>
-    <Values />
-    <ContactReminder class="contact-home small-margin-top" route="contact" routeText="Réservez votre rendez-vous !">
+    <ContactReminder class="contact-home small-margin-top" route="contact" routeText="Réserver son rendez-vous !">
       <template #sendcontact-title>
-        <h2 class="space-title">Si tu souhaite me&nbsp;<span class="animation-hover">contacter</span>&nbsp;bala
-          bla</h2>
+        <h2 class="space-title">Tu as pris ta&nbsp;<span class="animation-hover">décision</span>&nbsp;?</h2>
       </template>
       <template #sendcontact-paragraph>
-        <p class="space-text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
-          exercitationem, unde alias
-          perferendis voluptatibus autem harum earum laboriosam inventore.
+        <p class="space-text max-width-p">
+          Fixons un rendez-vous ensemble dès maintenant si tu le souhaites, et discutons tranquillement de ton
+          projet
+          lors d'un appel téléphone ou même autour d'un café si tu préfères.
+          <br> Je
+          t’accompagne à chaque étape
+          pour
+          un site qui te ressemble.
         </p>
-        <p class="space-text">
+        <p class="space-text max-width-p">
           Perferendis voluptatibus autem harum earum laboriosam inventore.
         </p>
       </template>

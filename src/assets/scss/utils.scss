@@ -81,6 +81,12 @@
     margin-bottom: 0 !important;
 }
 
+.max-width-p {
+    @media #{$switch} {
+        width: 75%;
+    }
+}
+
 // responsive
 .switch-direction {
     flex-direction: column;

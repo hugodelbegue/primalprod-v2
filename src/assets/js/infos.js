@@ -37,7 +37,7 @@ export default {
                             id: 1,
                             card: true,
                             icon: 'fa-solid fa-user 2113',
-                            title: 'Les valeurs de PrimalProd',
+                            title: 'Une approche humaine',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
                             img: 'neons.png'
                         }
@@ -45,8 +45,9 @@ export default {
                     infoTwo: [
                         {
                             id: 2,
+                            card: true,
                             icon: 'fa-solid fa-user',
-                            title: 'Lorem ipsum dolor sit amet',
+                            title: 'Écouter le monde',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
                             img: 'gecko.png'
                         }
@@ -54,8 +55,9 @@ export default {
                     infoThree: [
                         {
                             id: 3,
+                            card: true,
                             icon: 'fa-solid fa-user',
-                            title: 'Lorem ipsum dolor sit amet',
+                            title: 'Une nouvelle énergie',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
                             img: 'neons.png'
                         }
@@ -63,8 +65,9 @@ export default {
                     infoFour: [
                         {
                             id: 4,
+                            card: true,
                             icon: 'fa-solid fa-user',
-                            title: 'Lorem ipsum dolor sit amet',
+                            title: 'Créer du lien',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
                             img: 'gecko.png'
                         }

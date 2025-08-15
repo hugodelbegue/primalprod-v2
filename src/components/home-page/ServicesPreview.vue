@@ -55,12 +55,13 @@ export default {
             basic: false,
             smart: false,
             request: true,
-            maintenance: false
+            maintenance: false,
+            subscription: false
         }
     },
     methods: {
         resetValues(activeOption) {
-            const options = ['basic', 'smart', 'request', 'maintenance']
+            const options = ['basic', 'smart', 'request', 'maintenance', 'subscription']
             options.forEach(option => {
                 if (option !== activeOption) {
                     this[option] = false
@@ -74,6 +75,8 @@ export default {
                 return this.offerRequest
             } else if (this.maintenance === true) {
                 return this.offerMaintenance
+            } else if (this.subscription === true) {
+                return this.offerSubscription
             } else if (this.basic === true) {
                 return this.offerOne
             } else if (this.smart === true) {
@@ -102,6 +105,11 @@ export default {
         maintenance(newValue) {
             if (newValue) {
                 this.resetValues('maintenance')
+            }
+        },
+        subscription(newValue) {
+            if (newValue) {
+                this.resetValues('subscription')
             }
         }
     }

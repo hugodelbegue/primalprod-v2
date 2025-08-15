@@ -11,10 +11,9 @@
                         <div class="layout-infosblock margin-x">
                             <div v-if="item.card" class="layout-body-infos-card anim-text-infos">
                                 <div class="title-item">{{ item.title }}</div>
-                                <div class="body-infos shadow-low">
+                                <div class="body-infos">
                                     {{ item.text }}
                                 </div>
-                                <div>Autres textes</div>
                             </div>
                             <div v-else class="layout-body-infos">
                                 <div class="body-infos shadow-low anim-text-infos">
@@ -160,17 +159,19 @@ export default {
     .title-item {
         font-size: 20px;
         margin-bottom: 1rem;
+        font-weight: var(--f-bold);
     }
+}
 
+.layout-body-infos {
     .body-infos {
-        margin-bottom: 24px;
+        background: var(--background-infosblock-bubble);
+        padding: var(--side);
+        border-radius: var(--radius-high);
     }
 }
 
 .body-infos {
-    background: var(--background-second-opaque);
-    padding: var(--side);
-    border-radius: var(--radius-high);
     width: 100%;
 
     @media #{$mobileScreen} {

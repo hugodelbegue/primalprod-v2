@@ -94,7 +94,8 @@ export default {
                 'basic': this.offer == 1,
                 'smart': this.offer == 2,
                 'maintenance': this.offer == 3,
-                'request': this.offer == 4
+                'request': this.offer == 4,
+                'subscription': this.offer == 5
             }
         },
         importantOffer() {
@@ -242,6 +243,10 @@ export default {
 
 .maintenance {
     background: url(../img/pen.jpg) center / cover no-repeat;
+}
+
+.subscription {
+    background: url(../img/brush.jpg) center / cover no-repeat;
 }
 
 .basic {

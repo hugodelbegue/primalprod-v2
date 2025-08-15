@@ -165,6 +165,7 @@ header {
 .layout-nav {
     background: var(--background-navbar);
     border-radius: var(--radius-high);
+    place-content: center;
     width: 100%;
 
     @media #{$switch} {

@@ -2,7 +2,6 @@
     <section class="background-features animation-hover-active">
         <div v-if="offerFeatures" class="layout-features frameworkX frameworkY margin-x">
             <div class="card-features shadow-low">
-                <!-- <IconDavinci class="icon-feature" target=".card-features" /> -->
                 <h3 class="title-features">{{ offerFeatures.firstTitle }}</h3>
                 <ul class="list-features-points space-text">
                     <li v-if="offerFeatures.firstPoints" v-for="(point, index) in offerFeatures.firstPoints"
@@ -17,7 +16,6 @@
                 </ul>
             </div>
             <div class="card-features shadow-low">
-                <!-- <IconGlobe class="icon-feature" target=".card-features" /> -->
                 <h3 class="title-features">{{ offerFeatures.secondTitle }}</h3>
                 <ul class="list-features-points space-text">
                     <li v-if="offerFeatures.secondPoints" v-for="(point, index) in offerFeatures.secondPoints"
@@ -32,7 +30,6 @@
                 </ul>
             </div>
             <div class="card-features shadow-low">
-                <!-- <IconBattery class="icon-feature" target=".card-features" /> -->
                 <h3 class="title-features">{{ offerFeatures.thirdTitle }}</h3>
                 <ul v-if="offerFeatures.thirdPoints" class="list-features-points space-text">
                     <li v-for="(point, index) in offerFeatures.thirdPoints" :key="index">
@@ -50,10 +47,6 @@
 </template>
 
 <script setup>
-// import IconBattery from '../icons/IconBattery.vue';
-// import IconDavinci from '../icons/IconDavinci.vue';
-// import IconGlobe from '../icons/IconGlobe.vue';
-// import IconLink from '../icons/IconLink.vue';
 defineProps({
     offerFeatures: {
         type: Object,
@@ -72,7 +65,7 @@ defineProps({
 }
 
 .card-features {
-    background: var(--white);
+    background: var(--background-card);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -99,6 +92,8 @@ defineProps({
 }
 
 .list-features-points {
+    display: flex;
+    flex-direction: column;
     margin: auto !important;
 
     li {

@@ -19,6 +19,7 @@
   --f-size-h3: 1em;
   --f-size-important: 1.9em;
   --f-button: 14px;
+  --f-menu: 16px;
   --f-footer: 14px;
   --f-reference: 12px;
 
@@ -65,7 +66,7 @@
 
   // shadow layout
   --base-shadow: 3px 3px 0px;
-  --shadow-logo: -1px 1px 1px rgba(var(--base-black), .75);
+  --shadow-logo: -1px 0px 1px rgba(var(--base-black), .75);
 
   // color for elements
   --color-important: var(--orange);
@@ -158,7 +159,9 @@
   --background-tally-form: var(--color-main-opaque);
   --background-paragraph: var(--color-3);
   --background-testimonial: var(--color-3);
+  --background-testimonial-home: var(--color-2);
   --background-infosblock: var(--color-3);
+  --background-infosblock-bubble: var(--color-main-opaque);
   --background-reminder: var(--white);
   --background-questions: var(--color-2);
   --background-details: var(--white);
@@ -216,10 +219,12 @@
   --background-steps-right: var(--color-3-dark);
   --background-partner: var(--black);
   --background-form: var(--color-3-dark);
-  --background-tally-form: var(--color-main-opaque);
+  --background-tally-form: var(--color-main-opaque-dark);
   --background-paragraph: var(--color-3-dark);
   --background-testimonial: var(--color-3-dark);
+  --background-testimonial-home: var(--color-2-dark);
   --background-infosblock: var(--color-3-dark);
+  --background-infosblock-bubble: var(--color-main-opaque-dark);
   --background-reminder: var(--black);
   --background-questions: var(--color-2-dark);
   --background-details: var(--black);
@@ -268,8 +273,8 @@
   list-style-type: none;
   outline: transparent !important;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
 }

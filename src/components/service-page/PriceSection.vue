@@ -12,9 +12,13 @@
                     <li class="space-text">Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur
                         adipisicing elit. Iusto minima sit commodi.</li>
                 </ul>
+                <div class="time-render">
+                    <span>Durée : </span>
+                    <p class="time">{{ offer.time }}</p>
+                </div>
                 <div class="price-render">
                     <span>Prix : </span>
-                    <h3 v-if="offer.price !== 'request'" class="price">{{ offer.price }} €</h3>
+                    <h3 v-if="offer.price !== 'request'" class="price"> {{ offer.price }} €</h3>
                     <span v-if="offer.price !== 'request'" class="price-year">/an TTC</span>
                     <p v-if="offer.price == 'request'" class="text-price-request">Sur mesure à la réalisation du devis
                     </p>
@@ -104,15 +108,24 @@ defineProps({
     }
 }
 
-.text-price-request {
-    font-weight: var(--f-bold);
-    margin-left: 8px;
+.time-render {
+    margin-top: var(--space-h);
 }
 
 .price-render {
+    margin-top: calc(var(--space-h) / 2);
+}
+
+.price-render,
+.time-render {
     display: flex;
     place-items: baseline;
-    margin-top: var(--space-h);
+
+    .text-price-request,
+    .time {
+        font-weight: var(--f-bold);
+        margin-left: 8px;
+    }
 
     .price {
         font-size: 22px;

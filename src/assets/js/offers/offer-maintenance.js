@@ -11,6 +11,7 @@ export default {
                 popular: false,
                 important: true,
                 button: "Offre maintenance",
+                time: "engagement 12 mois",
                 price: "360",
                 preview: "L’offre Maintenance assure la pérennité et la performance des services en ligne des clients. Elle inclut des mises à jour régulières, une surveillance proactive et un support technique réactif, garantissant ainsi une sécurité optimale, une disponibilité constante et une expérience utilisateur sans interruption.",
                 text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro ipsam.",
@@ -24,12 +25,12 @@ export default {
                     "Widget commentaire",
                     "Widget commentaire"
                 ],
-                firstTitle: "Solutions de maintenance",
+                firstTitle: "Solution de maintenance",
                 firstPoints: [
                     "Reprise de l’ancien site",
                     "Mise à jour du site et des plugins",
                     "Maintenance à l'année",
-                    "Autre point"
+                    "Autre point",
                 ],
                 secondTitle: "Hébergement",
                 secondPoints: [

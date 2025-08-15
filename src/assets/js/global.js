@@ -2,7 +2,7 @@ export default {
     data() {
         return {
             // link address
-            email: 'contact@primalprod.fr?subject=PrimalProd - Indiquez votre question ou demande ci-dessous.',
+            email: 'contact@primalprod.fr?subject=PrimalProd - Demande',
             linkedin: 'https://fr.linkedin.com/in/hugo-delbegue/',
             github: 'https://github.com/hugodelbegue',
             instagram: '/',
@@ -13,7 +13,7 @@ export default {
             // legal informations
             website: 'primalprod.fr',
             owner: 'PRIMALPROD',
-            ownerAddress: '5 rue Lachmann, 38000 Grenoble',
+            ownerAddress: '12 rue d\'Austerlitz, 69004 Lyon',
             host: 'INFOMANIAK – Rue Eugène-Marziano 25 - 1227 Genève - Suisse',
             designer: 'Hugo DELBEGUE',
             publication: 'Hugo DELBEGUE',

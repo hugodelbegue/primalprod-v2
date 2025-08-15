@@ -3,7 +3,7 @@
     <div class="background-header-about frameworkX frameworkY animation-hover-active">
       <div class="layout-header-about margin-x switch-direction">
         <div class="layout-description-header-about">
-          <h1>À&nbsp;<span class="animation-hover">propos</span>&nbsp;de moi</h1>
+          <h1>À propos de&nbsp;<span class="animation-hover">PrimalProd</span></h1>
           <div class="text-header-about layout-title right">
             <p class="space-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque aperiam autem nulla voluptatibus
@@ -63,12 +63,19 @@
         <img class="img-paragraph scale-img load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
       </template>
       <template #title-paragraph>
-        <h2 class="space-title">Titre&nbsp;<span class="animation-hover">section</span></h2>
+        <h2 class="space-title"><span class="animation-hover">Pourquoi</span>&nbsp;choisir PrimalProd&nbsp;?</h2>
       </template>
       <template #text-paragraph>
         <p class="space-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil facere omnis officiis consectetur
-          accusamus, soluta rerum laboriosam aspernatur ratione.
+          Et si la terre était orange ? Non non, revenons sur des choses plus concrètes ! <br> Vous l'avez bien compris,
+          j'aime le orange, mais pas que ! <br> En
+          tant que freelance, je vous offre une écoute attentive, des conseils personnalisés et un suivi de proximité.
+          Mon objectif est simple : vous aider à atteindre vos ambitions grâce à un site efficace et qui vous ressemble.
+        </p>
+        <p class="space-text">
+          Avec PrimalPord, je ne crée pas
+          seulement
+          des sites web, je construis des outils pour développer votre activité.
         </p>
       </template>
     </Paragraph>
@@ -80,7 +87,7 @@
         </h2>
       </template>
       <template #sendcontact-paragraph>
-        <p class="space-text">
+        <p class="space-text max-width-p">
           Lorem, ipsum dolor sit amet <a class="important-text" href="/">consectetur</a> adipisicing elit. Ad delectus
           ducimus, fuga architecto eos
           quis

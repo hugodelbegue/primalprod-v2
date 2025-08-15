@@ -49,9 +49,10 @@ import TallyForm from './TallyForm.vue'
 }
 
 .form-container {
+    --height-frame: 321px;
     position: relative;
     flex: 45%;
-    min-height: calc(255px + calc(var(--side) * 2));
+    min-height: calc(var(--height-frame) + calc(var(--side) * 2));
 
     @media #{$switch} {
         min-height: auto;

@@ -11,6 +11,10 @@
                 :popular="offerMaintenance.popular" :important="offerMaintenance.important"
                 :button-text="offerMaintenance.button" :price="offerMaintenance.price" :text="offerMaintenance.text"
                 :preview-title="offerMaintenance.previewTitle" :preview-points="offerMaintenance.previewPoints" />
+            <OfferRender v-if="offerSubscription.inProd" class="animation-part-bottom-right no-button"
+                :offer="offerSubscription.number" :title="offerSubscription.title" :text="offerSubscription.text" />
+
+
             <OfferRender v-if="offerOne.inProd" class="part-bottom-left animation-part-bottom-left"
                 :offer="offerOne.number" :title="offerOne.title" :route="offerOne.route" :popular="offerOne.popular"
                 :important="offerOne.important" :button-text="offerOne.button" :price="offerOne.price"
@@ -156,5 +160,24 @@ import OfferRender from './offers/OfferRender.vue'
 
 .offers-add {
     margin-top: var(--side-y);
+}
+
+.no-button {
+    grid-column: 1 / 7;
+    grid-row: 3;
+
+    @media #{$switch} {
+        grid-column: 3 / 6;
+        grid-row: 2;
+    }
+
+    & :deep(.text-offer-description) {
+        text-align: center;
+        font-size: larger;
+    }
+
+    & :deep(.button-base) {
+        display: none;
+    }
 }
 </style>

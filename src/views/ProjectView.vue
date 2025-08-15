@@ -42,14 +42,14 @@
                 </template>
             </Testimonial>
         </div>
-        <ContactReminder route="contact" routeText="Réservez votre rendez-vous !" class="project-reminder">
+        <ContactReminder route="contact" routeText="Réserver son rendez-vous !" class="project-reminder">
             <template #sendcontact-paragraph>
-                <p class="space-text">
+                <p class="space-text max-width-p">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
                     exercitationem, unde alias
                     perferendis voluptatibus autem harum earum laboriosam inventore.
                 </p>
-                <p class="space-text">
+                <p class="space-text max-width-p">
                     Perferendis voluptatibus autem harum earum laboriosam inventore.
                 </p>
             </template>

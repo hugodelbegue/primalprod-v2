@@ -8,6 +8,7 @@ export default {
                 title: 'Sur mesure',
                 titleMenu: 'Sur mesure',
                 route: "request",
+                time: "Sur devis",
                 price: "request",
                 popular: false,
                 important: false,

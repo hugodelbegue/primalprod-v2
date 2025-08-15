@@ -1,42 +1,29 @@
 <template>
-    <nav class="wrapper-nav-mobile middle">
+    <nav class="wrapper-nav-mobile">
         <ul class="menu-layout">
-            <!-- <li class="nav-link one-link">
-                <router-link :to="{ name: 'home' }">
-                    <icon-home />
-                </router-link>
-            </li> -->
             <li class="nav-link one-link">
                 <router-link :to="{ name: 'services' }">
-                    <icon-service />
+                    Offres
                 </router-link>
             </li>
             <li class="nav-link two-link">
                 <router-link :to="{ name: 'gallery' }">
-                    <icon-project />
+                    Réalisations
                 </router-link>
             </li>
             <li class="nav-link three-link">
                 <router-link :to="{ name: 'about' }">
-                    <icon-profil />
+                    Bio
                 </router-link>
             </li>
             <li class="nav-link four-link">
                 <router-link :to="{ name: 'contact' }">
-                    <icon-contact />
+                    Contact
                 </router-link>
             </li>
         </ul>
     </nav>
 </template>
-
-<script setup>
-import IconHome from '@/components/icons/IconHome.vue'
-import IconProject from '@/components/icons/IconArticle.vue'
-import IconProfil from '@/components/icons/IconAvatar.vue'
-import IconContact from '@/components/icons/IconContact.vue'
-import IconService from '@/components/icons/IconSearch.vue'
-</script>
 
 <style lang="scss" scoped>
 nav {
