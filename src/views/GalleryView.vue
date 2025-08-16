@@ -30,7 +30,7 @@
             </div>
         </div>
         <BodyGallery />
-        <ContactReminder route="contact" routeText="Réserver son rendez-vous !">
+        <ContactReminder route="contact" routeText="Demander une estimation !">
             <template #sendcontact-title>
                 <h2 class="space-title">Ça te donne&nbsp;<span class="animation-hover">envie</span>&nbsp;de continuer ?
                 </h2>

@@ -10,9 +10,9 @@
                 <template #tag-project v-if="data['tag-url'] == 'maintenance'">{{
                     offerMaintenance.button }}</template>
                 <template #tag-project v-if="data['tag-url'] == 'basic'">{{ offerOne.button
-                }}</template>
+                    }}</template>
                 <template #tag-project v-if="data['tag-url'] == 'smart'">{{ offerTwo.button
-                }}</template>
+                    }}</template>
                 <template #tag-project v-if="data['tag-url'] == 'services'">Voir les offres</template>
             </HeaderProject>
             <BodyProject :url="imgUrl(data.preview)" v-if="cleanUrl(data.title) === title">
@@ -42,7 +42,7 @@
                 </template>
             </Testimonial>
         </div>
-        <ContactReminder route="contact" routeText="Réserver son rendez-vous !" class="project-reminder">
+        <ContactReminder route="contact" routeText="Une question ?" class="project-reminder">
             <template #sendcontact-paragraph>
                 <p class="space-text max-width-p">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolorum
