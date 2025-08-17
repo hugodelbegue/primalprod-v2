@@ -245,17 +245,17 @@ export default {
     background: url(../img/pen.jpg) center / cover no-repeat;
 }
 
-.subscription {
-    background: url(../img/brush.jpg) center / cover no-repeat;
-}
+// .subscription {
+//     background: url(../img/brush.jpg) center / cover no-repeat;
+// }
 
-.basic {
-    background: url(../img/pen.jpg) center / cover no-repeat;
-}
+// .basic {
+//     background: url(../img/pen.jpg) center / cover no-repeat;
+// }
 
-.smart {
-    background: url(../img/brush.jpg) center / cover no-repeat;
-}
+// .smart {
+//     background: url(../img/brush.jpg) center / cover no-repeat;
+// }
 
 .important-offer-overlay {
     background: var(--color-important-offer) !important;

@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <Features offer-features="offerRequest" />
+        <Features :offer-features="offerRequest" />
         <StepsSection />
         <PriceSection id="price" :offer="offerRequest" />
         <ConditionsSection />

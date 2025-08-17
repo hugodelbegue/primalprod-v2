@@ -1,9 +1,5 @@
 <template>
   <div class="layout-home frameworkY padding-bottom-page">
-    <link rel="preload" as="image" href="/src/components/service-page/img/office.jpg" />
-    <link rel="preload" as="image" href="/src/components/service-page/img/pen.jpg" />
-    <link rel="preload" as="image" href="/src/assets/img/media-section/profil-test.png" />
-    <link rel="preload" as="image" href="/src/assets/img/media-section/profil-test-2.png" />
     <div class="layout-first-view frameworkX middle switch-direction">
       <Logo class="logo margin-x">
         <template #img>
@@ -15,15 +11,13 @@
         </template>
       </Logo>
       <AboutMe class="margin-x" />
-      <!-- <Video class="logo-video" /> -->
     </div>
     <!-- <Video class="logo-video" /> -->
     <Paragraph class="paragraph-profil" background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
         <div class="layout-img-profil middle">
           <Transition name="anim-profil" mode="out-in" appear>
-            <img v-if="profil" class="img-profil" alt="Profil" :src="Profil" />
-            <img v-else class="img-profil" alt="Profil" :src="Profil2" />
+            <img class="img-profil" :key="profil" :src="profil ? Profil : Profil2" />
           </Transition>
         </div>
       </template>
@@ -81,6 +75,7 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue"
 import { loading, isMobileDevice } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
@@ -95,6 +90,10 @@ import Profil from '@/assets/img/media-section/profil-test.png'
 import Profil2 from '@/assets/img/media-section/profil-test-2.png'
 import LogoImg from '@/assets/img/logo.svg'
 import LogoText from '@/assets/img/logo-text.svg'
+onMounted(() => {
+  const img = new Image()
+  img.src = Profil2
+})
 </script>
 
 <script>

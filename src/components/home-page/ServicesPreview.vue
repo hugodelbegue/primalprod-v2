@@ -17,17 +17,19 @@
         <div class="layout-offers-preview margin-x">
             <div class="menu-offers-preview">
                 <ul class="list-offers-preview">
-                    <li v-if="offerRequest.inProd" :class="{ 'anim-list-offers': request }" @click="request = true">{{
-                        offerRequest.titleMenu
+                    <li v-if="offerRequest.inProd" @mouseenter="preloadImage(ImgRequest)"
+                        :class="{ 'anim-list-offers': request }" @click="request = true">{{
+                            offerRequest.titleMenu
                         }}</li>
-                    <li v-if="offerMaintenance.inProd" :class="{ 'anim-list-offers': maintenance }"
-                        @click="maintenance = true">{{
+                    <li v-if="offerMaintenance.inProd" @mouseenter="preloadImage(ImgMaintenance)"
+                        :class="{ 'anim-list-offers': maintenance }" @click="maintenance = true">{{
                             offerMaintenance.titleMenu
                         }}</li>
-                    <li v-if="offerOne.inProd" :class="{ 'anim-list-offers': basic }" @click="basic = true">{{
+
+                    <!-- <li v-if="offerOne.inProd" :class="{ 'anim-list-offers': basic }" @click="basic = true">{{
                         offerOne.titleMenu }}</li>
                     <li v-if="offerTwo.inProd" :class="{ 'anim-list-offers': smart }" @click="smart = true">{{
-                        offerTwo.titleMenu }}</li>
+                        offerTwo.titleMenu }}</li> -->
                 </ul>
             </div>
             <div class="view-offers-preview">
@@ -46,6 +48,21 @@
 
 <script setup>
 import OfferRenderPreview from '../service-page/offers/OfferRender.vue'
+import ImgRequest from '@/components/service-page/img/office.jpg'
+import ImgMaintenance from '@/components/service-page/img/pen.jpg'
+import { ref } from 'vue'
+
+const imageLoaded = ref(false)
+const imageSrc = ref('')
+function preloadImage(src) {
+    if (imageLoaded.value) return
+    const img = new Image()
+    img.src = src
+    img.onload = () => {
+        imageSrc.value = src
+        imageLoaded.value = true
+    }
+}
 </script>
 
 <script>

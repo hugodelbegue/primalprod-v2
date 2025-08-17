@@ -21,9 +21,9 @@
                     </div>
                 </div>
                 <div class="layout-img-header-gallery">
-                    <img class="img-left load" src="@/assets/img/media-header/coffee.jpg" height="360"
-                        alt="Tasse de café sur une table" @load="loadingHead('.img-left', 'img-left-move')">
-                    <img class="img-right load" src="@/assets/img/media-header/laptop.jpg" height="280"
+                    <img class="img-left load" :src="ImgLeft" height="360" alt="Tasse de café sur une table"
+                        @load="loadingHead('.img-left', 'img-left-move')">
+                    <img class="img-right load" :src="ImgRight" height="280"
                         alt="Personne qui tape sur un ordinateur portable"
                         @load="loadingHead('.img-right', 'img-right-move')">
                 </div>
@@ -56,6 +56,8 @@
 import { loadingHead } from '@/assets/js/utils'
 import BodyGallery from '@/components/gallery-page/BodyGallery.vue'
 import ContactReminder from '@/components/items/section/ContactReminder.vue'
+import ImgLeft from '@/assets/img/media-header/coffee.jpg'
+import ImgRight from '@/assets/img/media-header/laptop.jpg'
 </script>
 
 <style lang="scss" scoped>
