@@ -170,6 +170,8 @@ header {
 
     @media #{$switch} {
         width: 60%;
+        padding-left: clamp(2rem, 3vw, 4rem);
+        padding-right: clamp(2rem, 3vw, 4rem);
     }
 }
 

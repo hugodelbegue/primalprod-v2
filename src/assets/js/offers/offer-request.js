@@ -23,6 +23,26 @@ export default {
                     "Widget commentaire",
                     "Widget commentaire"
                 ],
+                firstTitle: "Un site sur mesure",
+                firstPoints: [
+                    "Reprise de l’ancien site",
+                    "Mise à jour du site et des plugins",
+                    "Maintenance à l'année",
+                    "Autre point",
+                    "Autre point"
+                ],
+                secondTitle: "Hébergement",
+                secondPoints: [
+                    "Gestion de l’hébergement",
+                    "Prise en charge des renouvellements",
+                    "Certificat SSL inclus",
+                    "Mise à jour et maintenance régulières"
+                ],
+                thirdTitle: "Assistance",
+                thirdPoints: [
+                    "Support technique basique",
+                    "Statistiques de fréquentation"
+                ]
             }
         }
     }

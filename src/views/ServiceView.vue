@@ -99,6 +99,8 @@ img.media-center {
 }
 
 .contact-reminder :deep(.layout-sendcontact) {
+    display: flex;
+    flex-direction: column;
     place-items: center;
     text-align: center;
 }

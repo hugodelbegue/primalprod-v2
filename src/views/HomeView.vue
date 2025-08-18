@@ -7,7 +7,7 @@
           <img class="logo-desktop load" alt="Logo" :src="Avatar" @load="loading" />
         </template>
         <template #imgText>
-          <img class="logo-text logo-mobile load" alt="Logo" :src="LogoText" @load="loading" />
+          <PrimalProd height="28" class="logo-color logo-text logo-mobile logo-animation" />
         </template>
       </Logo>
       <AboutMe class="margin-x" />
@@ -78,6 +78,7 @@
 import { onMounted } from "vue"
 import { loading, isMobileDevice } from '@/assets/js/utils'
 import Logo from '@/components/items/Logo.vue'
+import PrimalProd from '@/components/icons/PrimalprodLogo.vue'
 import AboutMe from '@/components/home-page/section-aboutme/AboutMe.vue'
 import Paragraph from '@/components/items/section/Paragraph.vue'
 import ServicesPreview from '@/components/home-page/ServicesPreview.vue'
@@ -89,10 +90,14 @@ import Avatar from '@/assets/img/media-section/avatar.svg'
 import Profil from '@/assets/img/media-section/profil-test.png'
 import Profil2 from '@/assets/img/media-section/profil-test-2.png'
 import LogoImg from '@/assets/img/logo.svg'
-import LogoText from '@/assets/img/logo-text.svg'
+function preloadImages(images) {
+  images.forEach(src => {
+    const img = new Image()
+    img.src = src
+  })
+}
 onMounted(() => {
-  const img = new Image()
-  img.src = Profil2
+  preloadImages([Profil, Profil2])
 })
 </script>
 
@@ -106,7 +111,7 @@ export default {
   mounted() {
     const refChangeProfil = this.$refs.refServices.$refs.refAnchor
     const refChangeProfilMobile = this.$refs.refServices.$refs.refMiddleAnchor
-    window.addEventListener("scroll", () => {
+    this._scrolling = () => {
       const windowHeight = window.innerHeight
       const changeProfil = refChangeProfil.getBoundingClientRect().top
       const changeProfilMobile = refChangeProfilMobile.getBoundingClientRect().top
@@ -115,7 +120,11 @@ export default {
       } else {
         this.changeProfil(changeProfil > windowHeight)
       }
-    })
+    }
+    window.addEventListener("scroll", this._scrolling)
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this._scrolling)
   },
   methods: {
     changeProfil(condition) {
@@ -152,6 +161,16 @@ export default {
   }
 }
 
+.logo-color {
+  &:deep(.s0) {
+    fill: var(--color-text);
+  }
+
+  &:deep(.s1) {
+    fill: var(--orange) !important;
+  }
+}
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -177,17 +196,26 @@ export default {
 }
 
 .logo-img {
-  width: 30%;
-  filter: drop-shadow(var(--shadow-logo));
+  width: 40%;
 
   @media #{$mobileScreen} {
     width: 50%;
   }
 }
 
+.logo-color {
+  &:deep(.s0) {
+    fill: var(--color-text);
+  }
+
+  &:deep(.s1) {
+    fill: var(--orange) !important;
+  }
+}
+
 .logo-text {
-  width: 100%;
   margin-top: 32px;
+  opacity: 0;
 }
 
 .logo-video,
@@ -201,10 +229,6 @@ export default {
 
 .paragraph-profil :deep(.img-paragraph) {
   place-items: center;
-
-  @media #{$switch} {
-    // margin: 0;
-  }
 }
 
 .layout-img-profil {
@@ -244,7 +268,7 @@ export default {
 
 .anim-profil-enter-from,
 .anim-profil-leave-to {
-  transform: translateX(20px);
+  transform: translateY(5px);
   opacity: 0;
 }
 </style>

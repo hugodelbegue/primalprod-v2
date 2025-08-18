@@ -89,6 +89,8 @@ import IconContact from '@/components/icons/IconEmail.vue'
 }
 
 .servives-reminder :deep(.layout-sendcontact) {
+    display: flex;
+    flex-direction: column;
     place-items: center;
     text-align: center;
 }

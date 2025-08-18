@@ -37,6 +37,7 @@ export default {
     },
     mounted() {
         const { button } = this.$refs
+        button.classList.add("hide")
         window.addEventListener("scroll", () => {
             const bottomPage = this.bottomRef.getBoundingClientRect().top
             const windowHeight = window.innerHeight
