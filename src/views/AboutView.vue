@@ -40,6 +40,28 @@
     </Paragraph>
     <Paragraph background="var(--background-paragraph)" :img-right="true">
       <template #img-paragraph>
+        <img class="img-paragraph scale-img load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
+      </template>
+      <template #title-paragraph>
+        <h2 class="space-title"><span class="animation-hover">Pourquoi</span>&nbsp;choisir PrimalProd&nbsp;?</h2>
+      </template>
+      <template #text-paragraph>
+        <p class="space-text">
+          Et si la terre était orange ? <br> Non non, revenons sur des choses plus concrètes ! <br> Vous l'avez bien
+          compris,
+          j'aime le orange, mais pas que ! <br> En
+          tant que freelance, je vous offre une écoute attentive, des conseils personnalisés et un suivi de proximité.
+          Mon objectif est simple : vous aider à atteindre vos ambitions grâce à un site efficace et qui vous ressemble.
+        </p>
+        <p class="space-text">
+          Avec PrimalPord, je ne crée pas
+          seulement
+          des sites web, je construis des outils pour développer votre activité.
+        </p>
+      </template>
+    </Paragraph>
+    <Paragraph background="transparent" class="switch-reverse">
+      <template #img-paragraph>
         <img class="img-paragraph load" src="@/assets/img/media-section/typing.svg" @load="loading">
       </template>
       <template #title-paragraph>
@@ -55,27 +77,6 @@
           idées de chacun permettent d’améliorer la collaboration. Enfin, l’utilisation d’outils adaptés et de méthodes
           de travail agiles facilite la coordination et la productivité. En mettant en place ces bonnes pratiques, il
           devient plus simple de créer une dynamique de groupe harmonieuse et efficace.
-        </p>
-      </template>
-    </Paragraph>
-    <Paragraph background="transparent" class="switch-reverse">
-      <template #img-paragraph>
-        <img class="img-paragraph scale-img load" src="@/assets/img/media-section/man-thinking.svg" @load="loading">
-      </template>
-      <template #title-paragraph>
-        <h2 class="space-title"><span class="animation-hover">Pourquoi</span>&nbsp;choisir PrimalProd&nbsp;?</h2>
-      </template>
-      <template #text-paragraph>
-        <p class="space-text">
-          Et si la terre était orange ? Non non, revenons sur des choses plus concrètes ! <br> Vous l'avez bien compris,
-          j'aime le orange, mais pas que ! <br> En
-          tant que freelance, je vous offre une écoute attentive, des conseils personnalisés et un suivi de proximité.
-          Mon objectif est simple : vous aider à atteindre vos ambitions grâce à un site efficace et qui vous ressemble.
-        </p>
-        <p class="space-text">
-          Avec PrimalPord, je ne crée pas
-          seulement
-          des sites web, je construis des outils pour développer votre activité.
         </p>
       </template>
     </Paragraph>

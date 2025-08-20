@@ -39,7 +39,7 @@ export default {
                             icon: 'fa-solid fa-user 2113',
                             title: 'Une approche humaine',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: 'Creative-team-bro.svg'
+                            img: 'creative-team.svg'
                         }
                     ],
                     infoTwo: [
@@ -49,7 +49,7 @@ export default {
                             icon: 'fa-solid fa-user',
                             title: 'Écouter le monde',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: 'Learning-bro.svg'
+                            img: 'team-work-animate.svg'
                         }
                     ],
                     infoThree: [
@@ -59,7 +59,7 @@ export default {
                             icon: 'fa-solid fa-user',
                             title: 'Une nouvelle énergie',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: 'Team-spirit-bro.svg'
+                            img: 'time-management-animate.svg'
                         }
                     ],
                     infoFour: [
@@ -69,7 +69,7 @@ export default {
                             icon: 'fa-solid fa-user',
                             title: 'Créer du lien',
                             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, adipisci velit quos est laudantium illum necessitatibus provident. Maiores ducimus modi temporibus voluptatibus quos tempore cum impedit veniam iure sed. Laborum?',
-                            img: 'Team-work-bro.svg'
+                            img: 'Team-spirit-bro.svg'
                         }
                     ]
                 }

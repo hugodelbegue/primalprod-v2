@@ -35,7 +35,7 @@
                         <div class="layout-carousel margin-x">
                             <div class="layout-picture middle">
                                 <div class="carousel-picture anim-img-infos"
-                                    :style="{ backgroundImage: `url(${path('media-infos', item.img)})` }">
+                                    :style="{ backgroundImage: `url(${path('media-infos', item.img)}?v=${item.img})` }">
                                 </div>
                             </div>
                         </div>
@@ -50,10 +50,10 @@
 import { useRoute } from 'vue-router'
 import { path } from '@/assets/js/utils'
 import Button from '@/components/items/button/Button.vue'
-import Img1 from '@/assets/img/media-infos/Creative-team-bro.svg'
-import Img2 from '@/assets/img/media-infos/Learning-bro.svg'
-import Img3 from '@/assets/img/media-infos/Team-spirit-bro.svg'
-import Img4 from '@/assets/img/media-infos/Team-work-bro.svg'
+import Img1 from '@/assets/img/media-infos/creative-team.svg'
+import Img2 from '@/assets/img/media-infos/team-work-animate.svg'
+import Img3 from '@/assets/img/media-infos/time-management-animate.svg'
+import Img4 from '@/assets/img/media-infos/Team-spirit-bro.svg'
 import Img5 from '@/assets/img/media-infos/neons.png'
 import Img6 from '@/assets/img/media-infos/gecko.png'
 defineProps({
