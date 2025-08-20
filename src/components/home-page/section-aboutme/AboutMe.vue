@@ -1,7 +1,7 @@
 <template>
     <div class="aboutme">
-        <h1 class="catchphrase desktop-catchphrase">Hello ! Phrase d'accroche desktop</h1>
         <h1 class="catchphrase mobile-catchphrase logo-animation">Créateur de sites & applications web</h1>
+        <h1 class="catchphrase desktop-catchphrase">Hello ! Phrase d'accroche desktop</h1>
         <br>
         <p class="space-text">
             Développeur web junior curieux et impliqué, je souhaite mettre à profit mes compétences pour mener à bien

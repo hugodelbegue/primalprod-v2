@@ -22,10 +22,12 @@
                             </div>
                             <div class="layout-button-picture">
                                 <div class="button-picture">
-                                    <Button @click="previousRender" :disabled="currentBlock === 1" type="button" msg="<"
-                                        width="48px" height="48px" />
-                                    <Button @click="nextRender" :disabled="currentBlock === totalRender" type="button"
-                                        msg=">" width="48px" height="48px" />
+                                    <Button @mouseenter="handleHover" @click="previousRender"
+                                        :disabled="currentBlock === 1" type="button" msg="<" width="48px"
+                                        height="48px" />
+                                    <Button @mouseenter="handleHover" @click="nextRender"
+                                        :disabled="currentBlock === totalRender" type="button" msg=">" width="48px"
+                                        height="48px" />
                                 </div>
                                 <span>{{ currentBlock }}&nbsp;/&nbsp;{{ totalRender }}</span>
                             </div>
@@ -33,7 +35,7 @@
                         <div class="layout-carousel margin-x">
                             <div class="layout-picture middle">
                                 <div class="carousel-picture anim-img-infos"
-                                    :style="{ backgroundImage: `url(${path('media-section', item.img)})` }">
+                                    :style="{ backgroundImage: `url(${path('media-infos', item.img)})` }">
                                 </div>
                             </div>
                         </div>
@@ -45,12 +47,33 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
 import { path } from '@/assets/js/utils'
 import Button from '@/components/items/button/Button.vue'
+import Img1 from '@/assets/img/media-infos/Creative-team-bro.svg'
+import Img2 from '@/assets/img/media-infos/Learning-bro.svg'
+import Img3 from '@/assets/img/media-infos/Team-spirit-bro.svg'
+import Img4 from '@/assets/img/media-infos/Team-work-bro.svg'
+import Img5 from '@/assets/img/media-infos/neons.png'
+import Img6 from '@/assets/img/media-infos/gecko.png'
 defineProps({
     background: String,
     page: String
 })
+const route = useRoute()
+function preloadImages(srcArray) {
+    srcArray.forEach(src => {
+        const img = new Image()
+        img.src = src
+    })
+}
+function handleHover() {
+    if (route.name === 'about') {
+        preloadImages([Img1, Img2, Img3, Img4])
+    } else if (route.name === 'services') {
+        preloadImages([Img5, Img6])
+    }
+}
 </script>
 
 <script>
@@ -94,7 +117,7 @@ export default {
     --height-img: min(400px, calc(100vw - 40px));
 
     @media #{$mobileScreen} {
-        --height-img: 400px;
+        --height-img: 300px;
     }
 }
 

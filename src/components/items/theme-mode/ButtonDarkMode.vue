@@ -14,9 +14,9 @@ export default {
     },
     mounted() {
         const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        // document.body.classList.toggle('theme-dark', prefersDark)
-        // document.body.classList.toggle('theme-light', !prefersDark)
-        // this.checked = prefersDark
+        document.body.classList.toggle('theme-dark', prefersDark)
+        document.body.classList.toggle('theme-light', !prefersDark)
+        this.checked = prefersDark
     },
     methods: {
         // Dark mode
